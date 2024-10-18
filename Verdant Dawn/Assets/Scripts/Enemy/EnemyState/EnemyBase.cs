@@ -50,17 +50,11 @@ public class EnemyBase : IEnemyState<EnemyController>
 
         if (materials == null)
         {
-            // SkinnedMeshRenderer 찾기 
-            SkinnedMeshRenderer[] skinnedMeshRenderers = new SkinnedMeshRenderer[3];
-            skinnedMeshRenderers[0] = sender.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
-            skinnedMeshRenderers[1] = sender.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
-            skinnedMeshRenderers[2] = sender.transform.GetChild(3).GetComponent<SkinnedMeshRenderer>();
-
             // material 찾기
-            materials = new Material[3];
+            materials = new Material[sender.skinnedMeshRenderers.Length];
             for (int i = 0; i < materials.Length; i++)
             {
-                materials[i] = skinnedMeshRenderers[i].material;
+                materials[i] = sender.skinnedMeshRenderers[i].material;
             }
         }
     }

@@ -7,7 +7,13 @@ public class Test : TestBase
 {
     protected override void OnTest1(InputAction.CallbackContext context)
     {
-        EnemyController ghoul = FindAnyObjectByType<EnemyController>();
+        GhoulController ghoul = FindAnyObjectByType<GhoulController>();
         ghoul.enemyStateMachine.TransitionTo(ghoul.die);
+    }
+
+    protected override void OnTest2(InputAction.CallbackContext context)
+    {
+        SkeletonController skeleton = FindAnyObjectByType<SkeletonController>();
+        skeleton.enemyStateMachine.TransitionTo(skeleton.die);
     }
 }

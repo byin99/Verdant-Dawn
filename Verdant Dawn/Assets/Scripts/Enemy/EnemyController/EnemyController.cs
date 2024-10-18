@@ -7,7 +7,14 @@ public class EnemyController : RecycleObject
     /// <summary>
     /// 순찰 목표 지점
     /// </summary>
+    [HideInInspector] 
     public Vector3 target;
+
+    /// <summary>
+    /// Dissolve를 위한 skinnedMeshRenderer들
+    /// </summary>
+    [HideInInspector]
+    public SkinnedMeshRenderer[] skinnedMeshRenderers;
 
     /// <summary>
     /// StateMachine
@@ -22,7 +29,7 @@ public class EnemyController : RecycleObject
     public IEnemyState<EnemyController> comeBack;
     public IEnemyState<EnemyController> die;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         // State 만들기
         idle = new EnemyIdle();

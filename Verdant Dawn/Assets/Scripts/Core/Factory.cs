@@ -10,6 +10,11 @@ public class Factory : Singleton<Factory>
     GhoulPool ghoul;
 
     /// <summary>
+    /// SkeletonPool 선언
+    /// </summary>
+    SkeletonPool skeleton;
+
+    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -18,6 +23,10 @@ public class Factory : Singleton<Factory>
         ghoul = GetComponentInChildren<GhoulPool>();
         if (ghoul != null)
             ghoul.Initialize();
+
+        skeleton = GetComponentInChildren<SkeletonPool>();
+        if (skeleton != null)
+            skeleton.Initialize();
     }
 
     /// <summary>
@@ -26,8 +35,19 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns></returns>
-    public EnemyController GetGhoul(Vector3? position = null, Vector3? eulerAngle = null)
+    public GhoulController GetGhoul(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return ghoul.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Skeleton 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns></returns>
+    public SkeletonController GetSkeleton(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return skeleton.GetObject(position, eulerAngle);
     }
 }
