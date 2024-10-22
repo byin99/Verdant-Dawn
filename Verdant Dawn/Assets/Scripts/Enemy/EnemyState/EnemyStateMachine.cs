@@ -1,3 +1,4 @@
+#define PrintLog
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,10 +35,15 @@ public class EnemyStateMachine<T>
     {
         // 전환되기 전 상태의 Exit() 실행
         Current.Exit(sender);
-        Debug.Log($"[{Current}] State");
+#if PrintLog
+        Debug.Log($"[{sender}]의 [{Current}] State에서");
+#endif
+
         // 바꿀 상태로 전화
         Current = nextState;
-        Debug.Log($"[{Current}] State 로 바뀜");
+#if PrintLog
+        Debug.Log($"[{sender}]의 [{Current}] State로 바뀜");
+#endif
 
         // 바꾼 상태의 Enter() 실행
         Current.Enter(sender);

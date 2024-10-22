@@ -10,7 +10,7 @@ public class RollUI : MonoBehaviour
     /// <summary>
     /// 플레이어
     /// </summary>
-    Player player;
+    PlayerMovement player;
 
     // 컴포넌트들
     CanvasGroup canvasGroup;
@@ -20,7 +20,7 @@ public class RollUI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameManager.Instance.Player;
+        player = GameManager.Instance.Movement;
         canvasGroup = GetComponent<CanvasGroup>();
         Transform child = transform.GetChild(0);
         child = child.transform.GetChild(0);

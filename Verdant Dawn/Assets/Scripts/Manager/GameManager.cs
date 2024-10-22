@@ -5,12 +5,17 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     /// <summary>
-    /// 플레이어 선언
+    /// Player
     /// </summary>
     Player player;
 
     /// <summary>
-    /// 플레이어를 공유받을 프로퍼티(읽기 전용)
+    /// PlayerMovement
+    /// </summary>
+    PlayerMovement movement;
+
+    /// <summary>
+    /// Player를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Player Player
     {
@@ -24,8 +29,24 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    /// <summary>
+    /// PlayerMovement를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerMovement Movement
+    {
+        get
+        {
+            if (movement == null)
+            {
+                movement = FindAnyObjectByType<PlayerMovement>();
+            }
+            return movement;
+        }
+    }
+
     protected override void OnInitialize()
     {
-        player = FindAnyObjectByType<Player>(); // 플레이어 찾기
+        player = FindAnyObjectByType<Player>();             // Player 찾기
+        movement = FindAnyObjectByType<PlayerMovement>();   // PlayerMovement 찾기
     }
 }

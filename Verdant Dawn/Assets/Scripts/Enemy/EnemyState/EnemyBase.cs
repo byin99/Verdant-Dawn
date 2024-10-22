@@ -20,7 +20,7 @@ public class EnemyBase : IEnemyState<EnemyController>
     /// <summary>
     /// 현재상태를 공격상태로 변경하는 거리
     /// </summary>
-    protected float attackDistance = 1.0f;
+    protected float attackDistance = 4.0f;
 
     // 해쉬 값들
     protected readonly int Move_Hash = Animator.StringToHash("Move");

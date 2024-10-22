@@ -13,7 +13,7 @@ public class PointerVFX : MonoBehaviour
     /// <summary>
     /// 플레이어
     /// </summary>
-    Player player;
+    PlayerMovement player;
 
     // VFX ID들
     readonly int OnStartEventID = Shader.PropertyToID("OnStart");
@@ -22,7 +22,7 @@ public class PointerVFX : MonoBehaviour
     private void Awake()
     {
         effect = GetComponent<VisualEffect>();
-        player = GameManager.Instance.Player;
+        player = GameManager.Instance.Movement;
     }
 
     private void Start()
