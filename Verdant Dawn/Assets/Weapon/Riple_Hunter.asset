@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd5e6c932516e6469c4acbb48bdd6a3, type: 3}
+  m_Name: Riple_Hunter
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 6244240167923175255, guid: 600482d7e08a20a4795a6375d6f57668, type: 3}
+  equipType: 1
+  weaponTransform: {fileID: 1633363471418910283, guid: 600482d7e08a20a4795a6375d6f57668,
+    type: 3}

@@ -44,5 +44,4 @@ public class RecycleObject : MonoBehaviour
         yield return new WaitForSeconds(time);
         gameObject.SetActive(false);
     }
-
 }

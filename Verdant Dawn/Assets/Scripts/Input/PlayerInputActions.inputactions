@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Change",
-                    "type": "Button",
-                    "id": "32f7576e-6c28-49db-b17f-157747b01fb2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "8ff64710-62e6-47da-a8e5-2bc482adc517",
@@ -115,15 +106,32 @@
                     "action": "Skill2",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "9e9e4e0c-3ba7-4a15-86ba-b74029a2dfd5",
+            "actions": [
+                {
+                    "name": "WeaponChange",
+                    "type": "Button",
+                    "id": "59db3a4c-c063-42c3-a116-6d59bd2e4984",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "741e6370-f921-4235-9eb7-00b58be045af",
-                    "path": "<Keyboard>/e",
+                    "id": "979e5821-c3fb-4371-8b27-2707efe8862f",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "KM",
-                    "action": "Change",
+                    "action": "WeaponChange",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

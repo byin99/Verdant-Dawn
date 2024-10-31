@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd5e6c932516e6469c4acbb48bdd6a3, type: 3}
+  m_Name: GreatSword_Berserker
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 5887193135126555442, guid: f614b87a173a72f489cc12d5fb323cc1, type: 3}
+  equipType: 1
+  weaponTransform: {fileID: 6393824609418748013, guid: f614b87a173a72f489cc12d5fb323cc1,
+    type: 3}

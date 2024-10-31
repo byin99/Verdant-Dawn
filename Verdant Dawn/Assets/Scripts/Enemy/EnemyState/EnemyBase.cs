@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // 컴포넌트를 모아놓기 위한 상태들의 부모 클래스
-public class EnemyBase : IEnemyState<EnemyController>
+public class EnemyBase : IState<EnemyController>
 {
     // 컴포넌트들
     protected NavMeshAgent agent;

@@ -19,15 +19,15 @@ public class EnemyController : RecycleObject
     /// <summary>
     /// StateMachine
     /// </summary>
-    public EnemyStateMachine<EnemyController> enemyStateMachine;
+    public StateMachine<EnemyController> enemyStateMachine;
 
     // State들
-    public IEnemyState<EnemyController> idle;
-    public IEnemyState<EnemyController> patrol;
-    public IEnemyState<EnemyController> trace;
-    public IEnemyState<EnemyController> attack;
-    public IEnemyState<EnemyController> comeBack;
-    public IEnemyState<EnemyController> die;
+    public IState<EnemyController> idle;
+    public IState<EnemyController> patrol;
+    public IState<EnemyController> trace;
+    public IState<EnemyController> attack;
+    public IState<EnemyController> comeBack;
+    public IState<EnemyController> die;
 
     protected virtual void Awake()
     {
@@ -40,7 +40,7 @@ public class EnemyController : RecycleObject
         die = new EnemyDie();
 
         // StateMachine 만들기
-        enemyStateMachine = new EnemyStateMachine<EnemyController>(this, idle);
+        enemyStateMachine = new StateMachine<EnemyController>(this, idle);
     }
 
     private void Update()

@@ -46,15 +46,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Change"",
-                    ""type"": ""Button"",
-                    ""id"": ""32f7576e-6c28-49db-b17f-157747b01fb2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""8ff64710-62e6-47da-a8e5-2bc482adc517"",
@@ -137,15 +128,32 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Skill2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""9e9e4e0c-3ba7-4a15-86ba-b74029a2dfd5"",
+            ""actions"": [
+                {
+                    ""name"": ""WeaponChange"",
+                    ""type"": ""Button"",
+                    ""id"": ""59db3a4c-c063-42c3-a116-6d59bd2e4984"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""741e6370-f921-4235-9eb7-00b58be045af"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""979e5821-c3fb-4371-8b27-2707efe8862f"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KM"",
-                    ""action"": ""Change"",
+                    ""action"": ""WeaponChange"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -175,10 +183,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Roll = m_Player.FindAction("Roll", throwIfNotFound: true);
-        m_Player_Change = m_Player.FindAction("Change", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Skill1 = m_Player.FindAction("Skill1", throwIfNotFound: true);
         m_Player_Skill2 = m_Player.FindAction("Skill2", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_WeaponChange = m_UI.FindAction("WeaponChange", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -242,7 +252,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Roll;
-    private readonly InputAction m_Player_Change;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Skill1;
     private readonly InputAction m_Player_Skill2;
@@ -252,7 +261,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Roll => m_Wrapper.m_Player_Roll;
-        public InputAction @Change => m_Wrapper.m_Player_Change;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Skill1 => m_Wrapper.m_Player_Skill1;
         public InputAction @Skill2 => m_Wrapper.m_Player_Skill2;
@@ -271,9 +279,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Roll.started += instance.OnRoll;
             @Roll.performed += instance.OnRoll;
             @Roll.canceled += instance.OnRoll;
-            @Change.started += instance.OnChange;
-            @Change.performed += instance.OnChange;
-            @Change.canceled += instance.OnChange;
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
@@ -293,9 +298,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Roll.started -= instance.OnRoll;
             @Roll.performed -= instance.OnRoll;
             @Roll.canceled -= instance.OnRoll;
-            @Change.started -= instance.OnChange;
-            @Change.performed -= instance.OnChange;
-            @Change.canceled -= instance.OnChange;
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
@@ -322,6 +324,52 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_WeaponChange;
+    public struct UIActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @WeaponChange => m_Wrapper.m_UI_WeaponChange;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @WeaponChange.started += instance.OnWeaponChange;
+            @WeaponChange.performed += instance.OnWeaponChange;
+            @WeaponChange.canceled += instance.OnWeaponChange;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @WeaponChange.started -= instance.OnWeaponChange;
+            @WeaponChange.performed -= instance.OnWeaponChange;
+            @WeaponChange.canceled -= instance.OnWeaponChange;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     private int m_KMSchemeIndex = -1;
     public InputControlScheme KMScheme
     {
@@ -335,9 +383,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
-        void OnChange(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnSkill1(InputAction.CallbackContext context);
         void OnSkill2(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnWeaponChange(InputAction.CallbackContext context);
     }
 }

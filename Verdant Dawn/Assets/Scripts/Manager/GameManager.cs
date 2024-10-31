@@ -15,6 +15,11 @@ public class GameManager : Singleton<GameManager>
     PlayerMovement movement;
 
     /// <summary>
+    /// PlayerClass
+    /// </summary>
+    PlayerClass playerClass;
+
+    /// <summary>
     /// Player를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Player Player
@@ -44,9 +49,25 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    /// <summary>
+    /// PlayerClass를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerClass PlayerClass
+    {
+        get
+        {
+            if (playerClass == null)
+            {
+                playerClass = FindAnyObjectByType<PlayerClass>();
+            }
+            return playerClass;
+        }
+    }
+
     protected override void OnInitialize()
     {
         player = FindAnyObjectByType<Player>();             // Player 찾기
         movement = FindAnyObjectByType<PlayerMovement>();   // PlayerMovement 찾기
+        playerClass = FindAnyObjectByType<PlayerClass>();   // PlayerClass 찾기
     }
 }
