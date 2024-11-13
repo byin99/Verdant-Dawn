@@ -10,10 +10,9 @@ public class PointerVFX : MonoBehaviour
     /// </summary>
     VisualEffect effect;
 
-    /// <summary>
-    /// 플레이어
-    /// </summary>
-    PlayerMovement player;
+    // 델리게이트 연결용 변수들
+    PlayerMovement playerMovement;
+    PlayerInputController playerInputController;
 
     // VFX ID들
     readonly int OnStartEventID = Shader.PropertyToID("OnStart");
@@ -22,17 +21,18 @@ public class PointerVFX : MonoBehaviour
     private void Awake()
     {
         effect = GetComponent<VisualEffect>();
-        player = GameManager.Instance.Movement;
+        playerMovement = GameManager.Instance.PlayerMovement;
+        playerInputController = GameManager.Instance.PlayerInputController;
     }
 
     private void Start()
     {
-        player.onDirection += VFXStart; 
-        player.onArrive += VFXEnd;
+        playerInputController.onMove += VFXStart; 
+        playerMovement.onArrive += VFXEnd;
     }
 
     /// <summary>
-    /// 플레이어가 목표로 하는 지점에 VFX설치
+    /// 플레이어가 목표로 하는 지점에 VFX 설치하는 함수
     /// </summary>
     /// <param name="spawnPosition">목표로 하는 지점</param>
     private void VFXStart(Vector3 spawnPosition)
@@ -42,6 +42,9 @@ public class PointerVFX : MonoBehaviour
         effect.SendEvent(OnStartEventID);   // VFX 시작
     }
 
+    /// <summary>
+    /// VFX 제거 함수
+    /// </summary>
     private void VFXEnd()
     {
         effect.SendEvent(OnEndEventID);     // VFX 종료

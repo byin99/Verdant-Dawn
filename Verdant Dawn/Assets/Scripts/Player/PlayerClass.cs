@@ -107,7 +107,7 @@ public class PlayerClass : MonoBehaviour, IEquipTarget
     /// <returns>장착한 무기오브젝트</returns>
     public GameObject EquipItem(EquipType part, Weapon weapon)
     {
-        GameObject weaponInstance = Instantiate(weapon.weapon, weapon.weaponTransform.position, weapon.weaponTransform.rotation);   // 무기 오브젝트 생성
+        GameObject weaponInstance = Instantiate(weapon.weapon, weapon.weaponGenerationTransform.position, weapon.weaponGenerationTransform.rotation);   // 무기 오브젝트 생성
 
         weaponInstance.transform.SetParent(GetEquipParentTransform(part), false);   // 무기의 장착 부위의 자식으로 설정하기
 

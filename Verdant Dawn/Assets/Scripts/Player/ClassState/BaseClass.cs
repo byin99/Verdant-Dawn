@@ -5,11 +5,6 @@ using UnityEngine;
 public class BaseClass : IState<PlayerClass>
 {
     /// <summary>
-    /// 직업별 구르기 시간
-    /// </summary>
-    protected float rollTime;
-
-    /// <summary>
     /// 장비하는 시간
     /// </summary>
     protected float equipTime;
@@ -17,6 +12,7 @@ public class BaseClass : IState<PlayerClass>
     // 컴포넌트들
     protected Animator animator;
     protected PlayerMovement movement;
+    protected PlayerAttack attack;
 
     // 해쉬 값
     protected readonly int Class_Hash = Animator.StringToHash("Class");
@@ -30,10 +26,13 @@ public class BaseClass : IState<PlayerClass>
 
         if (movement == null)
         {
-            movement = sender.gameObject.GetComponent<PlayerMovement>();
+            movement = GameManager.Instance.PlayerMovement;
         }
 
-        movement.rollAnimTime = rollTime;
+        if (attack == null)
+        {
+            attack = GameManager.Instance.PlayerAttack;
+        }
     }
 
     public virtual void Exit(PlayerClass sender)
@@ -42,5 +41,6 @@ public class BaseClass : IState<PlayerClass>
 
     public virtual void UpdateState(PlayerClass sender)
     {
+        
     }
 }

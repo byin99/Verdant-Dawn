@@ -37,7 +37,6 @@ public class ClassSlotUI : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            Debug.Log($"{gameObject.name}");
             onChangeClass?.Invoke(classSlot);   // 델리게이트 실행
         }
     }

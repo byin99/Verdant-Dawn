@@ -12,12 +12,22 @@ public class GameManager : Singleton<GameManager>
     /// <summary>
     /// PlayerMovement
     /// </summary>
-    PlayerMovement movement;
+    PlayerMovement playerMovement;
+
+    /// <summary>
+    /// PlayerInputController
+    /// </summary>
+    PlayerInputController playerInputController;
 
     /// <summary>
     /// PlayerClass
     /// </summary>
     PlayerClass playerClass;
+
+    /// <summary>
+    /// PlayerAttack
+    /// </summary>
+    PlayerAttack playerAttack;
 
     /// <summary>
     /// Player를 공유받을 프로퍼티(읽기 전용)
@@ -37,15 +47,30 @@ public class GameManager : Singleton<GameManager>
     /// <summary>
     /// PlayerMovement를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
-    public PlayerMovement Movement
+    public PlayerMovement PlayerMovement
     {
         get
         {
-            if (movement == null)
+            if (playerMovement == null)
             {
-                movement = FindAnyObjectByType<PlayerMovement>();
+                playerMovement = FindAnyObjectByType<PlayerMovement>();
             }
-            return movement;
+            return playerMovement;
+        }
+    }
+
+    /// <summary>
+    /// PlayerInputController를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerInputController PlayerInputController
+    {
+        get
+        {
+            if (playerInputController == null)
+            {
+                playerInputController = FindAnyObjectByType<PlayerInputController>();
+            }
+            return playerInputController;
         }
     }
 
@@ -64,10 +89,27 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    /// <summary>
+    /// PlayerAttack을 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerAttack PlayerAttack
+    {
+        get
+        {
+            if (playerAttack == null)
+            {
+                playerAttack = FindAnyObjectByType<PlayerAttack>();
+            }
+            return playerAttack;
+        }
+    }
+
     protected override void OnInitialize()
     {
-        player = FindAnyObjectByType<Player>();             // Player 찾기
-        movement = FindAnyObjectByType<PlayerMovement>();   // PlayerMovement 찾기
-        playerClass = FindAnyObjectByType<PlayerClass>();   // PlayerClass 찾기
+        player = FindAnyObjectByType<Player>();                                 // Player 찾기
+        playerMovement = FindAnyObjectByType<PlayerMovement>();                 // PlayerMovement 찾기
+        playerClass = FindAnyObjectByType<PlayerClass>();                       // PlayerClass 찾기
+        playerAttack = FindAnyObjectByType<PlayerAttack>();                     // PlayerAttack 찾기
+        playerInputController = FindAnyObjectByType<PlayerInputController>();   // PlayerInputController 찾기
     }
 }

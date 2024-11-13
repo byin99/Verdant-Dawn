@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fist_Fighter_R
   m_EditorClassIdentifier: 
   weapon: {fileID: 5455870075001535714, guid: 985672dadba792e49aa59c1308d6d094, type: 3}
+  weaponClass: 0
   equipType: 1
-  weaponTransform: {fileID: 506623765931368948, guid: 985672dadba792e49aa59c1308d6d094,
+  weaponGenerationTransform: {fileID: 506623765931368948, guid: 985672dadba792e49aa59c1308d6d094,
     type: 3}

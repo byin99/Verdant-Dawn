@@ -14,11 +14,6 @@ public class PlayerMovement : MonoBehaviour
     public Action onArrive;
 
     /// <summary>
-    /// VFX의 실행위치를 알려주는 델리게이트
-    /// </summary>
-    public Action<Vector3> onDirection;
-
-    /// <summary>
     /// 구르기를 하면 실행하는 델리게이트(UI 용)
     /// </summary>
     public Action onRoll;
@@ -41,6 +36,12 @@ public class PlayerMovement : MonoBehaviour
     public float rollAnimTime = 0.8f;
 
     /// <summary>
+    /// 다른 행동중일때 움직임을 제한하기 위한 변수
+    /// </summary>
+    [HideInInspector]
+    public bool canMove = true;
+
+    /// <summary>
     /// 다음 구르기까지 남은 시간
     /// </summary>
     float rollRemainTime = 0.0f;
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     // 컴포넌트들
     NavMeshAgent agent;
     Animator animator;
-    PlayerAttack attack;
+    PlayerAttack playerAttack;
 
     // Animator에 있는 Parameter를 Hash값으로 저장하기
     readonly int Move_Hash = Animator.StringToHash("Move");
@@ -68,65 +69,52 @@ public class PlayerMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        attack = gameObject.GetComponent<PlayerAttack>();
+        playerAttack = GameManager.Instance.PlayerAttack;
     }
 
     private void Update()
     {
-        if (agent.enabled && agent.remainingDistance < 0.2f && !agent.pathPending)
+        if (agent.remainingDistance < 0.2f && !agent.pathPending)
         {
             animator.SetBool(Move_Hash, false);             // 이동이 끝나면 Idle 애니메이션 주기
             onArrive?.Invoke();                             // VFX 제거
         }
-
-        if (rollRemainTime < rollCoolTime - rollAnimTime)
-        {
-            // 다시 agent 사용하기
-            if (agent.isStopped)
-            {
-                animator.SetBool(Move_Hash, false);
-                agent.ResetPath();
-                agent.isStopped = false;
-            }
-        }
     }
 
-    public void SetDestination(Vector2 screen)
+    /// <summary>
+    /// 움직이기 함수
+    /// </summary>
+    /// <param name="direction">움직이는 방향</param>
+    public void SetDestination(Vector3 direction)
     {
-        Ray ray = Camera.main.ScreenPointToRay(screen);         // 마우스의 좌표로 쏘는 Ray 만들기
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, 1000, LayerMask.GetMask("Ground")))    // Ray가 Ground에 맞았다면
+        // 움직일 수 있는 상황이면
+        if (canMove)
         {
-            onDirection?.Invoke(new Vector3(hitInfo.point.x, 0.001f, hitInfo.point.z));         // 새로운 목표지점을 보내준다.
-            agent.SetDestination(hitInfo.point);                // 맞은 곳으로 이동하기
-            if (!agent.isStopped)
-            {
-                animator.SetBool(Move_Hash, true);              // 이동하면서 Move 애니메이션 주기
-            }
+            agent.SetDestination(direction);    // 목표 지점으로 이동하기
+            animator.SetBool(Move_Hash, true);  // 이동하면서 Move 애니메이션 주기
         }
     }
 
+    /// <summary>
+    /// 구르기 함수(구르기는 다른 핸동과 다르게 우선되어야 한다.)
+    /// </summary>
     public void Roll()
     {
-        if (rollRemainTime < 0.0f)                                // 구르기 쿨타임이 끝났다면
+        // 구르기 쿨타임이 끝났다면
+        if (rollRemainTime < 0.0f)                                
         {
             Vector2 screen = Mouse.current.position.ReadValue();
-            Debug.Log(screen);
             Ray ray = Camera.main.ScreenPointToRay(screen);
 
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, 1000, LayerMask.GetMask("Ground")))
+            if (Physics.Raycast(ray, out RaycastHit hitInfo, 1000))
             {
+                // 몸 회전하기 전에 공격못하게 막기(몸 회전 후에 공격이 가능하면 플레이어의 forward가 돌아감)
+                playerAttack.canAttack = false;
+
                 // 플레이어 마우스 방향으로 몸 회전하기
                 transform.LookAt(hitInfo.point);
 
-                // 구르기 준비
-                agent.isStopped = true;
-
-                // 구르기
-                animator.SetTrigger(Roll_Hash);
-
-                // 구른 후에 조치
-                rollRemainTime = rollCoolTime;      // 구르기 쿨타임 주기
-                onRoll?.Invoke();                   // UI에 신호보내기
+                StartCoroutine(PerformedRoll());
             }
         }
     }
@@ -144,5 +132,27 @@ public class PlayerMovement : MonoBehaviour
             transform.position += rollDirection * rollPower;
         }
         rollRemainTime -= Time.deltaTime;
+    }
+
+    IEnumerator PerformedRoll()
+    {
+        // 움직임 제한
+        agent.ResetPath();
+        canMove = false;
+
+        rollRemainTime = rollCoolTime;      // 구르기 쿨타임 주기
+        onRoll?.Invoke();                   // UI에 신호보내기
+
+        // 구르기
+        animator.SetTrigger(Roll_Hash);
+
+        yield return new WaitForSeconds(rollAnimTime);
+
+        // 다시 움직이기
+        canMove = true;
+
+        // 공격모션이 씹히지 않기 위해 한프레임 뒤에 공격이 가능함
+        yield return null;
+        playerAttack.canAttack = true;
     }
 }

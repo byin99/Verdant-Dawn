@@ -9,7 +9,7 @@ public class PlayerInputController : MonoBehaviour
     /// <summary>
     /// 마우스 우클릭을 하면 실행되는 델리게이트
     /// </summary>
-    public event Action<Vector2> onMove;
+    public event Action<Vector3> onMove;
 
     /// <summary>
     /// 스페이스바를 누르면 실행되는 델리게이트
@@ -53,7 +53,11 @@ public class PlayerInputController : MonoBehaviour
     private void OnMove(InputAction.CallbackContext _)
     {
         Vector2 screen = Mouse.current.position.ReadValue();    // 스크린 좌표에서 마우스의 좌표를 저장하기
-        onMove?.Invoke(screen);
+        Ray ray = Camera.main.ScreenPointToRay(screen);         // 마우스의 좌표로 쏘는 Ray 만들기
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, 1000, LayerMask.GetMask("Ground")))    // Ray가 Ground에 맞았다면
+        {
+            onMove?.Invoke(hitInfo.point);
+        }
     }
 
     /// <summary>

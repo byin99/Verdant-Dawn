@@ -23,7 +23,7 @@ public class Weapon : ScriptableObject, IEquipable
     /// <summary>
     /// 무기 생성 위치
     /// </summary>
-    public Transform weaponTransform;
+    public Transform weaponGenerationTransform;
 
     /// <summary>
     /// 무기를 장비하는 함수

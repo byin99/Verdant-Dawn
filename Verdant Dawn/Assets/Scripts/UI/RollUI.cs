@@ -20,7 +20,7 @@ public class RollUI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameManager.Instance.Movement;
+        player = GameManager.Instance.PlayerMovement;
         canvasGroup = GetComponent<CanvasGroup>();
         Transform child = transform.GetChild(0);
         child = child.transform.GetChild(0);

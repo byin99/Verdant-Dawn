@@ -8,7 +8,7 @@ public class SimpleCharacterMotor : MonoBehaviour
 {
     public CursorLockMode cursorLockMode = CursorLockMode.Locked;
     public bool cursorVisible = false;
-    [Header("Movement")]
+    [Header("PlayerMovement")]
     public float walkSpeed = 2;
     public float runSpeed = 4;
     public float gravity = 9.8f;
