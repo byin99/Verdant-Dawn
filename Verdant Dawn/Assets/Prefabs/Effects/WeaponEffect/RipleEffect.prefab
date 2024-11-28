@@ -9846,7 +9846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2578598508676880883}
-  - component: {fileID: 3634500951809285872}
+  - component: {fileID: 1041041932078625965}
   m_Layer: 0
   m_Name: RipleEffect
   m_TagString: Untagged
@@ -9871,7 +9871,7 @@ Transform:
   - {fileID: 6950744537488917781}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3634500951809285872
+--- !u!114 &1041041932078625965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9880,7 +9880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2721905691821575966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685e9ea95663c96469da56933d5e4cd2, type: 3}
+  m_Script: {fileID: 11500000, guid: cf84ade138898a24690cb341949d1580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4755544544166649762

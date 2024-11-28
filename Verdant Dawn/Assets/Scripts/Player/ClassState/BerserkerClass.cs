@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BerserkerClass : BaseClass
+public class BerserkerClass : BaseClass, IClass
 { 
     /// <summary>
     /// 무기
     /// </summary>
     Weapon greatSword;
-
-    /// <summary>
-    /// 장비하는 코루틴 저장용(무기를 장비하는 도중에 다른 무기로 바꿀때 이전 코루틴 제거용)
-    /// </summary>
-    IEnumerator equipWeapon;
 
     // 공격할 때의 시간들
     float attack1AnimTime = 1.4f;
@@ -55,6 +50,9 @@ public class BerserkerClass : BaseClass
 
         // Effect함수 연결하기
         attack.onEffect += AttackEffect;
+        attack.onCharge_Prepare += W_Skill_Prepare;
+        attack.onCharge_Success += W_Skill_Success;
+        attack.onCharge_Fail += W_Skill_Fail;
     }
 
     public override void Exit(PlayerClass sender)
@@ -66,34 +64,14 @@ public class BerserkerClass : BaseClass
         greatSword.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.onCharge_Fail -= W_Skill_Fail;
+        attack.onCharge_Success -= W_Skill_Success;
+        attack.onCharge_Prepare -= W_Skill_Prepare;
         attack.onEffect -= AttackEffect;
     }
 
     public override void UpdateState(PlayerClass sender)
     {
-    }
-
-    /// <summary>
-    /// 무기를 장착하는 코루틴(무기가 애니메이션에 맞게 보여지기 위함)
-    /// </summary>
-    /// <param name="sender">장착할 플레이어</param>
-    IEnumerator EquipWeapon(PlayerClass sender)
-    {
-        animator.SetInteger(Class_Hash, 1);
-
-        GameObject weapon = greatSword.Equip(sender.gameObject);
-
-        weapon.SetActive(false);
-
-        attack.canAttack = false;
-
-        yield return new WaitForSeconds(equipTime);
-
-        weapon.SetActive(true);
-
-        yield return new WaitForSeconds(drawAnimTime - equipTime);
-
-        attack.canAttack = true;
     }
 
     /// <summary>
@@ -114,8 +92,60 @@ public class BerserkerClass : BaseClass
     /// GreatSwordEffect 소환 함수
     /// </summary>
     /// <param name="attackTransform">Effect 소환 트랜스폼</param>
-    void AttackEffect(Transform attackTransform)
+    public void AttackEffect(Transform attackTransform)
     {
         Factory.Instance.GetGreatSwordEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// W스킬 이펙트(준비)
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    public void W_Skill_Prepare(Transform attackTransform)
+    {
+        w_SkillEffect = Factory.Instance.GetBerserkerWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// W스킬 이펙트(성공)
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    public void W_Skill_Success(Transform attackTransform)
+    {
+        w_SkillEffect.gameObject.SetActive(false);
+        Factory.Instance.GetBerserkerWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// W스킬 이펙트(실패)
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    public void W_Skill_Fail(Transform attackTransform)
+    {
+        w_SkillEffect.gameObject.SetActive(false);
+        Factory.Instance.GetBerserkerWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// 무기를 장착하는 코루틴(무기가 애니메이션에 맞게 보여지기 위함)
+    /// </summary>
+    /// <param name="sender">장착할 플레이어</param>
+    public IEnumerator EquipWeapon(PlayerClass sender)
+    {
+        animator.SetInteger(Class_Hash, 1);
+
+        GameObject weapon = greatSword.Equip(sender.gameObject);
+
+        weapon.SetActive(false);
+
+        sender.isChange = true;
+
+        yield return new WaitForSeconds(equipTime);
+
+        weapon.SetActive(true);
+
+        yield return new WaitForSeconds(drawAnimTime - equipTime);
+
+        sender.isChange = false;
     }
 }

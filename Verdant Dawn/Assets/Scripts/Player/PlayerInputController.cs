@@ -21,6 +21,31 @@ public class PlayerInputController : MonoBehaviour
     /// </summary>
     public event Action onAttack;
 
+    /// <summary>
+    /// Q키를 누르면 실행되는 델리게이트
+    /// </summary>
+    public event Action onIdentitySkill;
+
+    /// <summary>
+    /// W키를 누르면 실행되는 델리게이트
+    /// </summary>
+    public event Action onChargingSkill;
+
+    /// <summary>
+    /// W키를 떼면 실행되는 델리게이트
+    /// </summary>
+    public event Action offChargingSkill;
+
+    /// <summary>
+    /// E키를 누르면 실행되는 델리게이트
+    /// </summary>
+    public event Action onComboSkill;
+
+    /// <summary>
+    /// R키를 누르면 실행되는 델리게이트
+    /// </summary>
+    public event Action onUltimateSkill;
+
     // 인풋 액션
     PlayerInputActions inputActions;
 
@@ -31,24 +56,41 @@ public class PlayerInputController : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActions.Player.Enable();                       // PlayerInputActions의 Player맵 활성화
-        inputActions.Player.Move.performed += OnMove;       // Move의 performed에 OnMove함수 넣기
-        inputActions.Player.Roll.performed += OnRoll;       // Roll의 performed에 OnRoll함수 넣기
-        inputActions.Player.Attack.performed += OnAttack;   // Attack의 performed에 OnAttack함수 넣기
+        inputActions.Player.Enable();                               // PlayerInputActions의 Player맵 활성화
+        inputActions.Player.Move.performed += OnMove;               // Move의 performed에 OnMove함수 넣기
+        inputActions.Player.Roll.performed += OnRoll;               // Roll의 performed에 OnRoll함수 넣기
+
+        inputActions.Player.Attack.performed += OnAttack;           // Attack의 performed에 OnAttack함수 넣기
+
+        inputActions.Player.Skill1.performed += OnIdentitySkill;    // Skill1의 performed에 OnIdentitySkill함수 넣기
+
+        inputActions.Player.Skill2.performed += OnChargingSkill;    // Skill2의 performed에 OnChargingSkill함수 넣기
+        inputActions.Player.Skill2.canceled += OffChargingSkill;    // Skill2의 canceled에 OnChargingSkill함수 넣기
+
+        inputActions.Player.Skill3.performed += OnComboSkill;       // Skill3의 performed에 OnComboSkill함수 넣기
+
+        inputActions.Player.Skill4.performed += OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 넣기
     }
-
-
 
     private void OnDisable()
     {
-        inputActions.Player.Attack.performed -= OnAttack;   // Attack의 performed에 OnAttack함수 빼기
-        inputActions.Player.Roll.performed -= OnRoll;       // Roll의 performed에 OnRoll함수 빼기
-        inputActions.Player.Move.performed -= OnMove;       // Move의 performed에 OnMove함수 빼기
-        inputActions.Player.Disable();                      // PlayerInputActions의 Player맵 비활성화
+        inputActions.Player.Skill4.performed -= OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 빼기
+
+        inputActions.Player.Skill3.performed -= OnComboSkill;       // Skill3의 performed에 OnComboSkill함수 빼기
+
+        inputActions.Player.Skill2.canceled -= OffChargingSkill;    // Skill2의 canceled에 OnChargingSkill함수 넣기
+        inputActions.Player.Skill2.performed -= OnChargingSkill;    // Skill2의 performed에 OnChargingSkill함수 빼기
+        inputActions.Player.Skill1.performed -= OnIdentitySkill;    // Skill1의 performed에 OnIdentitySkill함수 빼기
+
+        inputActions.Player.Attack.performed -= OnAttack;           // Attack의 performed에 OnAttack함수 빼기
+
+        inputActions.Player.Roll.performed -= OnRoll;               // Roll의 performed에 OnRoll함수 빼기
+        inputActions.Player.Move.performed -= OnMove;               // Move의 performed에 OnMove함수 빼기
+        inputActions.Player.Disable();                              // PlayerInputActions의 Player맵 비활성화
     }
 
     /// <summary>
-    /// 마우스 우클릭
+    /// 마우스 우클릭(움직임)
     /// </summary>
     private void OnMove(InputAction.CallbackContext _)
     {
@@ -61,18 +103,58 @@ public class PlayerInputController : MonoBehaviour
     }
 
     /// <summary>
-    /// 스페이스 바
+    /// 스페이스 바(구르기)
     /// </summary>
     private void OnRoll(InputAction.CallbackContext _)
     {
-        onRoll?.Invoke();   // 구르기
+        onRoll?.Invoke();
     }
 
     /// <summary>
-    /// 마우스 왼쪽 버튼
+    /// 마우스 좌클릭(기본 공격)
     /// </summary>
     private void OnAttack(InputAction.CallbackContext _)
     {
         onAttack?.Invoke();
+    }
+
+    /// <summary>
+    /// Q 키(아이덴티티 스킬)
+    /// </summary>
+    private void OnIdentitySkill(InputAction.CallbackContext _)
+    {
+        onIdentitySkill?.Invoke();
+    }
+
+    /// <summary>
+    /// W 키(차징 스킬)
+    /// </summary>
+    private void OnChargingSkill(InputAction.CallbackContext _)
+    {
+        onChargingSkill?.Invoke();
+    }
+
+    /// <summary>
+    /// W 키(차징 스킬)
+    /// </summary>
+    private void OffChargingSkill(InputAction.CallbackContext _)
+    {
+        offChargingSkill?.Invoke();
+    }
+
+    /// <summary>
+    /// E 키(연속 공격)
+    /// </summary>
+    private void OnComboSkill(InputAction.CallbackContext _)
+    {
+        onComboSkill?.Invoke();
+    }
+
+    /// <summary>
+    /// R 키(궁극기 스킬)
+    /// </summary>
+    private void OnUltimateSkill(InputAction.CallbackContext _)
+    {
+        onUltimateSkill?.Invoke();
     }
 }

@@ -40,6 +40,81 @@ public class Factory : Singleton<Factory>
     DaggerEffectPool daggerEffect;
 
     /// <summary>
+    /// F_W_SkillEffectPool_Prepare 선언
+    /// </summary>
+    F_W_SkillEffectPool_Prepare f_W_Skill_Prepare;
+
+    /// <summary>
+    /// F_W_SkillEffectPool_Success 선언
+    /// </summary>
+    F_W_SkillEffectPool_Success f_W_Skill_Success;
+
+    /// <summary>
+    /// F_W_SkillEffectPool_Fail 선언
+    /// </summary>
+    F_W_SkillEffectPool_Fail f_W_Skill_Fail;
+
+    /// <summary>
+    /// B_W_SkillEffectPool_Prepare 선언
+    /// </summary>
+    B_W_SkillEffectPool_Prepare b_W_Skill_Prepare;
+
+    /// <summary>
+    /// B_W_SkillEffectPool_Success 선언
+    /// </summary>
+    B_W_SkillEffectPool_Success b_W_Skill_Success;
+
+    /// <summary>
+    /// B_W_SkillEffectPool_Fail 선언
+    /// </summary>
+    B_W_SkillEffectPool_Fail b_W_Skill_Fail;
+
+    /// <summary>
+    /// H_W_SkillEffectPool_Prepare 선언
+    /// </summary>
+    H_W_SkillEffectPool_Prepare h_W_Skill_Prepare;
+
+    /// <summary>
+    /// H_W_SkillEffectPool_Success 선언
+    /// </summary>
+    H_W_SkillEffectPool_Success h_W_Skill_Success;
+
+    /// <summary>
+    /// H_W_SkillEffectPool_Fail 선언
+    /// </summary>
+    H_W_SkillEffectPool_Fail h_W_Skill_Fail;
+
+    /// <summary>
+    /// M_W_SkillEffectPool_Prepare 선언
+    /// </summary>
+    M_W_SkillEffectPool_Prepare m_W_Skill_Prepare;
+
+    /// <summary>
+    /// M_W_SkillEffectPool_Success 선언
+    /// </summary>
+    M_W_SkillEffectPool_Success m_W_Skill_Success;
+
+    /// <summary>
+    /// M_W_SkillEffectPool_Fail 선언
+    /// </summary>
+    M_W_SkillEffectPool_Fail m_W_Skill_Fail;
+
+    /// <summary>
+    /// A_W_SkillEffectPool_Prepare 선언
+    /// </summary>
+    A_W_SkillEffectPool_Prepare a_W_Skill_Prepare;
+
+    /// <summary>
+    /// A_W_SkillEffectPool_Success 선언
+    /// </summary>
+    A_W_SkillEffectPool_Success a_W_Skill_Success;
+
+    /// <summary>
+    /// A_W_SkillEffectPool_Fail 선언
+    /// </summary>
+    A_W_SkillEffectPool_Fail a_W_Skill_Fail;
+
+    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -78,6 +153,81 @@ public class Factory : Singleton<Factory>
         daggerEffect = GetComponentInChildren<DaggerEffectPool>();
         if (daggerEffect != null)
             daggerEffect.Initialize();
+
+        // F_W_SkillEffectPool(Prepare) 초기화 및 생성
+        f_W_Skill_Prepare = GetComponentInChildren<F_W_SkillEffectPool_Prepare>();
+        if (f_W_Skill_Prepare != null)
+            f_W_Skill_Prepare.Initialize();
+
+        // F_W_SkillEffectPool(Success) 초기화 및 생성
+        f_W_Skill_Success = GetComponentInChildren<F_W_SkillEffectPool_Success>();
+        if (f_W_Skill_Success != null)
+            f_W_Skill_Success.Initialize();
+
+        // F_W_SkillEffectPool(Fail) 초기화 및 생성
+        f_W_Skill_Fail = GetComponentInChildren<F_W_SkillEffectPool_Fail>();
+        if (f_W_Skill_Fail != null)
+            f_W_Skill_Fail.Initialize();
+
+        // B_W_SkillEffectPool(Prepare) 초기화 및 생성
+        b_W_Skill_Prepare = GetComponentInChildren<B_W_SkillEffectPool_Prepare>();
+        if (b_W_Skill_Prepare != null)
+            b_W_Skill_Prepare.Initialize();
+
+        // B_W_SkillEffectPool(Success) 초기화 및 생성
+        b_W_Skill_Success = GetComponentInChildren<B_W_SkillEffectPool_Success>();
+        if (b_W_Skill_Success != null)
+            b_W_Skill_Success.Initialize();
+
+        // B_W_SkillEffectPool(Fail) 초기화 및 생성
+        b_W_Skill_Fail = GetComponentInChildren<B_W_SkillEffectPool_Fail>();
+        if (b_W_Skill_Fail != null)
+            b_W_Skill_Fail.Initialize();
+
+        // H_W_SkillEffectPool(Prepare) 초기화 및 생성
+        h_W_Skill_Prepare = GetComponentInChildren<H_W_SkillEffectPool_Prepare>();
+        if (h_W_Skill_Prepare != null)
+            h_W_Skill_Prepare.Initialize();
+
+        // H_W_SkillEffectPool(Success) 초기화 및 생성
+        h_W_Skill_Success = GetComponentInChildren<H_W_SkillEffectPool_Success>();
+        if (h_W_Skill_Success != null)
+            h_W_Skill_Success.Initialize();
+
+        // H_W_SkillEffectPool(Fail) 초기화 및 생성
+        h_W_Skill_Fail = GetComponentInChildren<H_W_SkillEffectPool_Fail>();
+        if (h_W_Skill_Fail != null)
+            h_W_Skill_Fail.Initialize();
+
+        // M_W_SkillEffectPool(Prepare) 초기화 및 생성
+        m_W_Skill_Prepare = GetComponentInChildren<M_W_SkillEffectPool_Prepare>();
+        if (m_W_Skill_Prepare != null)
+            m_W_Skill_Prepare.Initialize();
+    
+        // M_W_SkillEffectPool(Success) 초기화 및 생성
+        m_W_Skill_Success = GetComponentInChildren<M_W_SkillEffectPool_Success>();
+        if (m_W_Skill_Success != null)
+            m_W_Skill_Success.Initialize();
+
+        // M_W_SkillEffectPool(Fail) 초기화 및 생성
+        m_W_Skill_Fail = GetComponentInChildren<M_W_SkillEffectPool_Fail>();
+        if (m_W_Skill_Fail != null)
+            m_W_Skill_Fail.Initialize();
+
+        // A_W_SkillEffectPool(Prepare) 초기화 및 생성
+        a_W_Skill_Prepare = GetComponentInChildren<A_W_SkillEffectPool_Prepare>();
+        if (a_W_Skill_Prepare != null)
+            a_W_Skill_Prepare.Initialize();
+
+        // A_W_SkillEffectPool(Success) 초기화 및 생성
+        a_W_Skill_Success = GetComponentInChildren<A_W_SkillEffectPool_Success>();
+        if (a_W_Skill_Success != null)
+            a_W_Skill_Success.Initialize();
+
+        // A_W_SkillEffectPool(Fail) 초기화 및 생성
+        a_W_Skill_Fail = GetComponentInChildren<A_W_SkillEffectPool_Fail>();
+        if (a_W_Skill_Fail != null)
+            a_W_Skill_Fail.Initialize();
     }
 
     /// <summary>
@@ -108,7 +258,7 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 FistEffect</returns>
-    public FistEffect GetFistEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    public WeaponEffect GetFistEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return fistEffect.GetObject(position, eulerAngle);
     }
@@ -119,7 +269,7 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 GreatSwordEffect</returns>
-    public GreatSwordEffect GetGreatSwordEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    public WeaponEffect GetGreatSwordEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return greatSwordEffect.GetObject(position, eulerAngle);
     }
@@ -130,7 +280,7 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 RipleEffect</returns>
-    public RipleEffect GetRipleEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    public WeaponEffect GetRipleEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return ripleEffect.GetObject(position, eulerAngle);
     }
@@ -141,7 +291,7 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 StaffEffect</returns>
-    public StaffEffect GetStaffEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    public WeaponEffect GetStaffEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return staffEffect.GetObject(position, eulerAngle);
     }
@@ -152,8 +302,173 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 DaggerEffect</returns>
-    public DaggerEffect GetDaggerEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    public WeaponEffect GetDaggerEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return daggerEffect.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Fighter W스킬 이펙트 소환 함수(준비 단계)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetFighterWSkill_Prepare(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return f_W_Skill_Prepare.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Fighter W스킬 이펙트 소환 함수(성공 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetFighterWSkill_Success(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return f_W_Skill_Success.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Fighter W스킬 이펙트 소환 함수(실패 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetFighterWSkill_Fail(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return f_W_Skill_Fail.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Berserker W스킬 이펙트 소환 함수(준비 단계)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetBerserkerWSkill_Prepare(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return b_W_Skill_Prepare.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Berserker W스킬 이펙트 소환 함수(성공 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetBerserkerWSkill_Success(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return b_W_Skill_Success.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Berserker W스킬 이펙트 소환 함수(실패 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetBerserkerWSkill_Fail(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return b_W_Skill_Fail.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Hunter W스킬 이펙트 소환 함수(준비 단계)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetHunterWSkill_Prepare(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return h_W_Skill_Prepare.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Hunter W스킬 이펙트 소환 함수(성공 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetHunterWSkill_Success(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return h_W_Skill_Success.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Hunter W스킬 이펙트 소환 함수(실패 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetHunterWSkill_Fail(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return h_W_Skill_Fail.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Magician W스킬 이펙트 소환 함수(준비 단계)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetMagicianWSkill_Prepare(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return m_W_Skill_Prepare.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Magician W스킬 이펙트 소환 함수(성공 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetMagicianWSkill_Success(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return m_W_Skill_Success.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Magician W스킬 이펙트 소환 함수(실패 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetMagicianWSkill_Fail(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return m_W_Skill_Fail.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Assassin W스킬 이펙트 소환 함수(준비 단계)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetAssassinWSkill_Prepare(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return a_W_Skill_Prepare.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Assassin W스킬 이펙트 소환 함수(성공 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetAssassinWSkill_Success(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return a_W_Skill_Success.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Assassin W스킬 이펙트 소환 함수(실패 시)
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public W_SkillEffect GetAssassinWSkill_Fail(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return a_W_Skill_Fail.GetObject(position, eulerAngle);
     }
 }

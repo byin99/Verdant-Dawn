@@ -15,9 +15,6 @@ public class Test : TestBase
 
     protected override void OnTest1(InputAction.CallbackContext context)
     {
-        Quaternion rotation = player.transform.rotation;
-        Vector3 eulerAngle = rotation.eulerAngles;
-        Factory.Instance.GetFistEffect(player.transform.position + Vector3.up + player.transform.forward * 2, eulerAngle);
     }
 
     protected override void OnTest2(InputAction.CallbackContext context)

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,10 @@ public class ObjectMove : MonoBehaviour
     private void Start()
     {
         m_scalefactor = VariousEffectsScene.m_gaph_scenesizefactor;//transform.parent.localScale.x;
+    }
+
+    private void OnEnable()
+    {
         m_time = Time.time;
         m_time2 = Time.time;
     }
@@ -26,7 +30,7 @@ public class ObjectMove : MonoBehaviour
     void LateUpdate()
     {
         if (Time.time > m_time + time)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
 
         transform.Translate(Vector3.forward * Time.deltaTime * MoveSpeed * m_scalefactor);
         if(AbleHit)

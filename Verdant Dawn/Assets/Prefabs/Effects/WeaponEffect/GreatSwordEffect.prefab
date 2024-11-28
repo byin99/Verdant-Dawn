@@ -9832,7 +9832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2663956724015875512}
-  - component: {fileID: 1334969031871489610}
+  - component: {fileID: -662038433248902769}
   m_Layer: 0
   m_Name: GreatSwordEffect
   m_TagString: Untagged
@@ -9858,7 +9858,7 @@ Transform:
   - {fileID: 3085451142460496949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1334969031871489610
+--- !u!114 &-662038433248902769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9867,7 +9867,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6523685999841070862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3c91b25116a4742805d1cf1378081d, type: 3}
+  m_Script: {fileID: 11500000, guid: cf84ade138898a24690cb341949d1580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8317456471161690505

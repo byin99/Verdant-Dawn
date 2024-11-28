@@ -6,6 +6,11 @@ using UnityEngine;
 public class PlayerClass : MonoBehaviour, IEquipTarget
 {
     /// <summary>
+    /// 클래스를 바꾸면 실행되는 델리게이트
+    /// </summary>
+    public event Action<CharacterClass> onChangeClass;
+
+    /// <summary>
     /// 무기들 오브젝트
     /// </summary>
     [Header("무기들")]
@@ -16,6 +21,12 @@ public class PlayerClass : MonoBehaviour, IEquipTarget
     /// </summary>
     [Header("무기 장착 트랜스폼")]
     public Transform[] equipTransform;
+
+    /// <summary>
+    /// 무기를 바꾸고 있는지 알려주는 변수(true면 바꾸고 있는 중)
+    /// </summary>
+    [HideInInspector]
+    public bool isChange = false;
 
     /// <summary>
     /// Class상태별 enum부여하기
@@ -51,6 +62,7 @@ public class PlayerClass : MonoBehaviour, IEquipTarget
             if (CurrentClass != value)
             {
                 currentClass = value;
+                onChangeClass?.Invoke(currentClass);
                 switch (currentClass)
                 {
                     case CharacterClass.Fighter:

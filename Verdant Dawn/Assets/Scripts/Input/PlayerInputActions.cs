@@ -71,6 +71,24 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill3"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab0d9c30-14f4-40b2-a6ce-45ef11b8ca19"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill4"",
+                    ""type"": ""Button"",
+                    ""id"": ""124c635d-5b7c-4023-a917-f18f6163be89"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -128,6 +146,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Skill2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da152ae9-9829-437b-9731-d807c0ede196"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KM"",
+                    ""action"": ""Skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""573a1346-5097-49df-8aea-b490e6fba406"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KM"",
+                    ""action"": ""Skill4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -143,6 +183,33 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""WButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d348cc4-c8c4-41e1-8eda-1b3d681a1a70"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""5c7cfa23-6ec7-49ab-a012-0815bf2d2eb1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""f666dae7-ceeb-4931-8b57-36282039270d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +221,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KM"",
                     ""action"": ""WeaponChange"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""525abdb5-15b4-42a3-9478-3ea706ac631d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KM"",
+                    ""action"": ""WButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09448863-6dbb-4ea7-940f-be79bbf03bd1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KM"",
+                    ""action"": ""EButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""859ff20e-f7ff-4cc1-b04a-8ec822b51fba"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KM"",
+                    ""action"": ""RButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -186,9 +286,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Skill1 = m_Player.FindAction("Skill1", throwIfNotFound: true);
         m_Player_Skill2 = m_Player.FindAction("Skill2", throwIfNotFound: true);
+        m_Player_Skill3 = m_Player.FindAction("Skill3", throwIfNotFound: true);
+        m_Player_Skill4 = m_Player.FindAction("Skill4", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_WeaponChange = m_UI.FindAction("WeaponChange", throwIfNotFound: true);
+        m_UI_WButton = m_UI.FindAction("WButton", throwIfNotFound: true);
+        m_UI_EButton = m_UI.FindAction("EButton", throwIfNotFound: true);
+        m_UI_RButton = m_UI.FindAction("RButton", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -255,6 +360,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Skill1;
     private readonly InputAction m_Player_Skill2;
+    private readonly InputAction m_Player_Skill3;
+    private readonly InputAction m_Player_Skill4;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -264,6 +371,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Skill1 => m_Wrapper.m_Player_Skill1;
         public InputAction @Skill2 => m_Wrapper.m_Player_Skill2;
+        public InputAction @Skill3 => m_Wrapper.m_Player_Skill3;
+        public InputAction @Skill4 => m_Wrapper.m_Player_Skill4;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -288,6 +397,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Skill2.started += instance.OnSkill2;
             @Skill2.performed += instance.OnSkill2;
             @Skill2.canceled += instance.OnSkill2;
+            @Skill3.started += instance.OnSkill3;
+            @Skill3.performed += instance.OnSkill3;
+            @Skill3.canceled += instance.OnSkill3;
+            @Skill4.started += instance.OnSkill4;
+            @Skill4.performed += instance.OnSkill4;
+            @Skill4.canceled += instance.OnSkill4;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -307,6 +422,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Skill2.started -= instance.OnSkill2;
             @Skill2.performed -= instance.OnSkill2;
             @Skill2.canceled -= instance.OnSkill2;
+            @Skill3.started -= instance.OnSkill3;
+            @Skill3.performed -= instance.OnSkill3;
+            @Skill3.canceled -= instance.OnSkill3;
+            @Skill4.started -= instance.OnSkill4;
+            @Skill4.performed -= instance.OnSkill4;
+            @Skill4.canceled -= instance.OnSkill4;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -329,11 +450,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_WeaponChange;
+    private readonly InputAction m_UI_WButton;
+    private readonly InputAction m_UI_EButton;
+    private readonly InputAction m_UI_RButton;
     public struct UIActions
     {
         private @PlayerInputActions m_Wrapper;
         public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @WeaponChange => m_Wrapper.m_UI_WeaponChange;
+        public InputAction @WButton => m_Wrapper.m_UI_WButton;
+        public InputAction @EButton => m_Wrapper.m_UI_EButton;
+        public InputAction @RButton => m_Wrapper.m_UI_RButton;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -346,6 +473,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @WeaponChange.started += instance.OnWeaponChange;
             @WeaponChange.performed += instance.OnWeaponChange;
             @WeaponChange.canceled += instance.OnWeaponChange;
+            @WButton.started += instance.OnWButton;
+            @WButton.performed += instance.OnWButton;
+            @WButton.canceled += instance.OnWButton;
+            @EButton.started += instance.OnEButton;
+            @EButton.performed += instance.OnEButton;
+            @EButton.canceled += instance.OnEButton;
+            @RButton.started += instance.OnRButton;
+            @RButton.performed += instance.OnRButton;
+            @RButton.canceled += instance.OnRButton;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -353,6 +489,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @WeaponChange.started -= instance.OnWeaponChange;
             @WeaponChange.performed -= instance.OnWeaponChange;
             @WeaponChange.canceled -= instance.OnWeaponChange;
+            @WButton.started -= instance.OnWButton;
+            @WButton.performed -= instance.OnWButton;
+            @WButton.canceled -= instance.OnWButton;
+            @EButton.started -= instance.OnEButton;
+            @EButton.performed -= instance.OnEButton;
+            @EButton.canceled -= instance.OnEButton;
+            @RButton.started -= instance.OnRButton;
+            @RButton.performed -= instance.OnRButton;
+            @RButton.canceled -= instance.OnRButton;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -386,9 +531,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnSkill1(InputAction.CallbackContext context);
         void OnSkill2(InputAction.CallbackContext context);
+        void OnSkill3(InputAction.CallbackContext context);
+        void OnSkill4(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
         void OnWeaponChange(InputAction.CallbackContext context);
+        void OnWButton(InputAction.CallbackContext context);
+        void OnEButton(InputAction.CallbackContext context);
+        void OnRButton(InputAction.CallbackContext context);
     }
 }

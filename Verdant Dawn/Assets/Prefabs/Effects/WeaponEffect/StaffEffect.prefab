@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074523248187037363}
   - component: {fileID: 7736468544085696114}
-  - component: {fileID: 9010135808294402076}
+  - component: {fileID: -6327526207983292556}
   m_Layer: 0
   m_Name: StaffEffect
   m_TagString: Untagged
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_randomRot: {x: 0, y: 0, z: 0}
   m_randomScale: {x: 0, y: 0, z: 0}
   isObjectAttachToParent: 1
---- !u!114 &9010135808294402076
+--- !u!114 &-6327526207983292556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,6 +64,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9099089391226836083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 307a95dc355c3ed41a87d154aa212498, type: 3}
+  m_Script: {fileID: 11500000, guid: cf84ade138898a24690cb341949d1580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

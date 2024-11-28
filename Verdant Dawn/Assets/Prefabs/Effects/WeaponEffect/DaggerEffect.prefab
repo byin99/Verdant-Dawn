@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 818763117489403560}
   - component: {fileID: 3316308200311394171}
-  - component: {fileID: 2692271723505262261}
+  - component: {fileID: 7651440450349635613}
   m_Layer: 0
   m_Name: DaggerEffect
   m_TagString: Untagged
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_randomRot: {x: 0, y: 0, z: 0}
   m_randomScale: {x: 0, y: 0, z: 0}
   isObjectAttachToParent: 1
---- !u!114 &2692271723505262261
+--- !u!114 &7651440450349635613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,6 +63,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 252488953403170513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e6a4b1f939a97468206495d5b376f0, type: 3}
+  m_Script: {fileID: 11500000, guid: cf84ade138898a24690cb341949d1580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
