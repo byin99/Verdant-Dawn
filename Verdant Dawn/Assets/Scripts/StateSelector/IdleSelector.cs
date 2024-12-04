@@ -10,7 +10,7 @@ public class IdleSelector : StateMachineBehaviour
 
     int prevSelect = 0;
 
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    // OnStateEnter is called when a transition starts and the playerClass machine starts to evaluate this playerClass
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetInteger(IdleSelect_Hash, RandomSelect());

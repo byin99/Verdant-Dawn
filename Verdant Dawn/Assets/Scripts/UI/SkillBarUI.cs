@@ -16,6 +16,7 @@ public class SkillBarUI : MonoBehaviour
     PlayerAttack attack;
     CanvasGroup canvasGroup;
     Slider slider;
+    TextMeshProUGUI timeText;
     TextMeshProUGUI successText;
     TextMeshProUGUI failText;
 
@@ -30,9 +31,12 @@ public class SkillBarUI : MonoBehaviour
         slider = child.GetComponent<Slider>();
 
         child = transform.GetChild(1);
-        successText = child.GetComponent<TextMeshProUGUI>();
+        timeText = child.GetComponent<TextMeshProUGUI>();
 
         child = transform.GetChild(2);
+        successText = child.GetComponent<TextMeshProUGUI>();
+
+        child = transform.GetChild(3);
         failText = child.GetComponent<TextMeshProUGUI>();
     }
 
@@ -73,6 +77,7 @@ public class SkillBarUI : MonoBehaviour
         slider.value = 0.0f;
         while (slider.value < 1.0f)
         {
+            timeText.text = $"{attack.ChargingTimeElapsed:f1}초";
             slider.value = attack.ChargingTimeElapsed / attack.chargingTime;
             yield return null;
         }

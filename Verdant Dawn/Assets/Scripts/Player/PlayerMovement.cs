@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (agent.enabled && agent.remainingDistance < 0.2f && !agent.pathPending)
+        if (!agent.enabled || agent.remainingDistance < 0.2f && !agent.pathPending)
         {
             animator.SetBool(Move_Hash, false);             // 이동이 끝나면 Idle 애니메이션 주기
             onArrive?.Invoke();                             // VFX 제거
@@ -96,8 +96,8 @@ public class PlayerMovement : MonoBehaviour
         // 움직일 수 있는 상황이면
         if (player.CanMove)
         {
-            agent.SetDestination(direction);    // 목표 지점으로 이동하기
             animator.SetBool(Move_Hash, true);  // 이동하면서 Move 애니메이션 주기
+            agent.SetDestination(direction);    // 목표 지점으로 이동하기
         }
     }
 
@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator PerformedRoll()
     {
         // 움직임 제한
-        agent.ResetPath();
+        agent.enabled = false;
 
         rollRemainTime = rollCoolTime;      // 구르기 쿨타임 주기
         onRoll?.Invoke();                   // UI에 신호보내기
@@ -156,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
 
         // 구르기 끝
         isRoll = false;
+        agent.enabled = true;
 
         // 공격모션이 씹히지 않기 위해 한프레임 뒤에 공격이 가능함
         yield return null;

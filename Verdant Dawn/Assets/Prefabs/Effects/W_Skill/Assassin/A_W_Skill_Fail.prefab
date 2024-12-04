@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5479346822877130518}
   - component: {fileID: 751515548757376587}
+  - component: {fileID: 9022814735203675329}
   m_Layer: 0
   m_Name: A_W_Skill_Fail
   m_TagString: Untagged
@@ -43,6 +44,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9022814735203675329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054619414119538942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ee264b4a9a7264b8a5fdd4101e7090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8514190077391196687

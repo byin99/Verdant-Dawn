@@ -183,33 +183,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""WButton"",
-                    ""type"": ""Button"",
-                    ""id"": ""5d348cc4-c8c4-41e1-8eda-1b3d681a1a70"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""EButton"",
-                    ""type"": ""Button"",
-                    ""id"": ""5c7cfa23-6ec7-49ab-a012-0815bf2d2eb1"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""RButton"",
-                    ""type"": ""Button"",
-                    ""id"": ""f666dae7-ceeb-4931-8b57-36282039270d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -221,39 +194,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KM"",
                     ""action"": ""WeaponChange"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""525abdb5-15b4-42a3-9478-3ea706ac631d"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KM"",
-                    ""action"": ""WButton"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""09448863-6dbb-4ea7-940f-be79bbf03bd1"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KM"",
-                    ""action"": ""EButton"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""859ff20e-f7ff-4cc1-b04a-8ec822b51fba"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KM"",
-                    ""action"": ""RButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -291,9 +231,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_WeaponChange = m_UI.FindAction("WeaponChange", throwIfNotFound: true);
-        m_UI_WButton = m_UI.FindAction("WButton", throwIfNotFound: true);
-        m_UI_EButton = m_UI.FindAction("EButton", throwIfNotFound: true);
-        m_UI_RButton = m_UI.FindAction("RButton", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -450,17 +387,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_WeaponChange;
-    private readonly InputAction m_UI_WButton;
-    private readonly InputAction m_UI_EButton;
-    private readonly InputAction m_UI_RButton;
     public struct UIActions
     {
         private @PlayerInputActions m_Wrapper;
         public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @WeaponChange => m_Wrapper.m_UI_WeaponChange;
-        public InputAction @WButton => m_Wrapper.m_UI_WButton;
-        public InputAction @EButton => m_Wrapper.m_UI_EButton;
-        public InputAction @RButton => m_Wrapper.m_UI_RButton;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -473,15 +404,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @WeaponChange.started += instance.OnWeaponChange;
             @WeaponChange.performed += instance.OnWeaponChange;
             @WeaponChange.canceled += instance.OnWeaponChange;
-            @WButton.started += instance.OnWButton;
-            @WButton.performed += instance.OnWButton;
-            @WButton.canceled += instance.OnWButton;
-            @EButton.started += instance.OnEButton;
-            @EButton.performed += instance.OnEButton;
-            @EButton.canceled += instance.OnEButton;
-            @RButton.started += instance.OnRButton;
-            @RButton.performed += instance.OnRButton;
-            @RButton.canceled += instance.OnRButton;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -489,15 +411,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @WeaponChange.started -= instance.OnWeaponChange;
             @WeaponChange.performed -= instance.OnWeaponChange;
             @WeaponChange.canceled -= instance.OnWeaponChange;
-            @WButton.started -= instance.OnWButton;
-            @WButton.performed -= instance.OnWButton;
-            @WButton.canceled -= instance.OnWButton;
-            @EButton.started -= instance.OnEButton;
-            @EButton.performed -= instance.OnEButton;
-            @EButton.canceled -= instance.OnEButton;
-            @RButton.started -= instance.OnRButton;
-            @RButton.performed -= instance.OnRButton;
-            @RButton.canceled -= instance.OnRButton;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -537,8 +450,5 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnWeaponChange(InputAction.CallbackContext context);
-        void OnWButton(InputAction.CallbackContext context);
-        void OnEButton(InputAction.CallbackContext context);
-        void OnRButton(InputAction.CallbackContext context);
     }
 }

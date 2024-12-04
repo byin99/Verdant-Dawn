@@ -42,9 +42,19 @@ public class PlayerInputController : MonoBehaviour
     public event Action onComboSkill;
 
     /// <summary>
+    /// E키를 떼면 실행되는 델리게이트
+    /// </summary>
+    public event Action offComboSkill;
+
+    /// <summary>
     /// R키를 누르면 실행되는 델리게이트
     /// </summary>
     public event Action onUltimateSkill;
+
+    /// <summary>
+    /// R키를 떼면 실행되는 델리게이트
+    /// </summary>
+    public event Action offUltimateSkill;
 
     // 인풋 액션
     PlayerInputActions inputActions;
@@ -68,6 +78,7 @@ public class PlayerInputController : MonoBehaviour
         inputActions.Player.Skill2.canceled += OffChargingSkill;    // Skill2의 canceled에 OnChargingSkill함수 넣기
 
         inputActions.Player.Skill3.performed += OnComboSkill;       // Skill3의 performed에 OnComboSkill함수 넣기
+        inputActions.Player.Skill3.canceled += OffComboSkill;       // Skill3의 canceled에 OffComboSkill함수 넣기
 
         inputActions.Player.Skill4.performed += OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 넣기
     }
@@ -80,6 +91,7 @@ public class PlayerInputController : MonoBehaviour
 
         inputActions.Player.Skill2.canceled -= OffChargingSkill;    // Skill2의 canceled에 OnChargingSkill함수 넣기
         inputActions.Player.Skill2.performed -= OnChargingSkill;    // Skill2의 performed에 OnChargingSkill함수 빼기
+
         inputActions.Player.Skill1.performed -= OnIdentitySkill;    // Skill1의 performed에 OnIdentitySkill함수 빼기
 
         inputActions.Player.Attack.performed -= OnAttack;           // Attack의 performed에 OnAttack함수 빼기
@@ -151,10 +163,26 @@ public class PlayerInputController : MonoBehaviour
     }
 
     /// <summary>
+    /// E 키(연속 공격)
+    /// </summary>
+    private void OffComboSkill(InputAction.CallbackContext _)
+    {
+        offComboSkill?.Invoke();
+    }
+
+    /// <summary>
     /// R 키(궁극기 스킬)
     /// </summary>
     private void OnUltimateSkill(InputAction.CallbackContext _)
     {
         onUltimateSkill?.Invoke();
+    }
+
+    /// <summary>
+    /// R 키(궁극기 스킬)
+    /// </summary>
+    private void OffUltimateSkill(InputAction.CallbackContext _)
+    {
+        offUltimateSkill?.Invoke();
     }
 }

@@ -53,7 +53,7 @@ public class CharacterInfoUI : MonoBehaviour
     Image w_Glow;
     Image e_Glow;
     Image r_Glow;
-    PlayerInputActions inputActions;
+    PlayerAttack player;
 
 
     private void Awake()
@@ -105,8 +105,7 @@ public class CharacterInfoUI : MonoBehaviour
         child = child.GetChild(0);
         r_Glow = child.GetComponent<Image>();
 
-        // UI용 InputActions 만들기
-        inputActions = new PlayerInputActions();
+        player = GameManager.Instance.PlayerAttack;
     }
 
     private void Start()
@@ -118,72 +117,50 @@ public class CharacterInfoUI : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActions.UI.Enable();
-        inputActions.UI.WButton.performed += OnWButton;
-        inputActions.UI.WButton.canceled += OffWButton;
-        inputActions.UI.EButton.performed += OnEButton;
-        inputActions.UI.EButton.canceled += OffEButton;
-        inputActions.UI.RButton.performed += OnRButton;
-        inputActions.UI.RButton.canceled += OffRButton;
+        player.onCharge += OnChargeSkill;
+        player.offCharge += OffChargeSkill;
+        player.onComboSkill += OnComboSkill;
+        player.offComboSkill += OffComboSkill;
     }
 
     private void OnDisable()
     {
-        inputActions.UI.RButton.canceled -= OffRButton;
-        inputActions.UI.RButton.performed -= OnRButton;
-        inputActions.UI.EButton.canceled -= OffEButton;
-        inputActions.UI.EButton.performed -= OnEButton;
-        inputActions.UI.WButton.canceled -= OffWButton;
-        inputActions.UI.WButton.performed -= OnWButton;
-        inputActions.UI.Disable();
+        player.offComboSkill -= OffComboSkill;
+        player.onComboSkill -= OnComboSkill;
+        player.offCharge -= OffChargeSkill;
+        player.onCharge -= OnChargeSkill;
     }
 
     /// <summary>
-    /// w키 누를 때
+    /// W키 누를 때
     /// </summary>
-    private void OnWButton(InputAction.CallbackContext _)
+    void OnChargeSkill()
     {
         w_Glow.enabled = true;
     }
 
     /// <summary>
-    /// w키 뗐을 때
+    /// W키 뗐을 때
     /// </summary>
-    private void OffWButton(InputAction.CallbackContext _)
+    void OffChargeSkill()
     {
         w_Glow.enabled = false;
     }
 
     /// <summary>
-    /// e키 누를 때
+    /// E키 누를 때
     /// </summary>
-    private void OnEButton(InputAction.CallbackContext _)
+    void OnComboSkill()
     {
         e_Glow.enabled = true;
     }
 
     /// <summary>
-    /// e키 뗐을 때
+    /// E키 뗐을 때
     /// </summary>
-    private void OffEButton(InputAction.CallbackContext _)
+    void OffComboSkill()
     {
         e_Glow.enabled = false;
-    }
-
-    /// <summary>
-    /// r키 누를 때
-    /// </summary>
-    private void OnRButton(InputAction.CallbackContext _)
-    {
-        r_Glow.enabled = true;
-    }
-
-    /// <summary>
-    /// r키 뗐을 때
-    /// </summary>
-    private void OffRButton(InputAction.CallbackContext _)
-    {
-        r_Glow.enabled = false;
     }
 
     /// <summary>

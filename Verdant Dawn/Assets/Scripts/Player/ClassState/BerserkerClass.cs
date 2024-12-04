@@ -10,9 +10,15 @@ public class BerserkerClass : BaseClass, IClass
     Weapon greatSword;
 
     // 공격할 때의 시간들
-    float attack1AnimTime = 1.4f;
-    float attack2AnimTime = 1.0f;
-    float attack3AnimTime = 1.333f;
+    float attackAnimTime1 = 1.4f;
+    float attackAnimTime2 = 1.0f;
+    float attackAnimTime3 = 1.333f;
+
+    // 콤보 공격할 때의 시간들
+    float comboAnimTime1 = 1.133f;
+    float comboAnimTime2 = 1.267f;
+    float comboAnimTime3 = 0.500f;
+    float comboAnimTime4 = 1.333f;
 
     /// <summary>
     /// 구르기 시간
@@ -28,6 +34,11 @@ public class BerserkerClass : BaseClass, IClass
     /// 공격 애니메이션 개수
     /// </summary>
     int attackCount = 3;
+
+    /// <summary>
+    /// 콤보 공격 애니메이션 개수
+    /// </summary>
+    int comboCount = 4;
 
     public override void Enter(PlayerClass sender)
     {
@@ -49,10 +60,12 @@ public class BerserkerClass : BaseClass, IClass
         sender.StartCoroutine(equipWeapon);
 
         // Effect함수 연결하기
-        attack.onEffect += AttackEffect;
+        attack.onAttack += AttackEffect;
         attack.onCharge_Prepare += W_Skill_Prepare;
         attack.onCharge_Success += W_Skill_Success;
         attack.onCharge_Fail += W_Skill_Fail;
+        attack.comboEffect1 += E_Skill1;
+        attack.comboEffect2 += E_Skill2;
     }
 
     public override void Exit(PlayerClass sender)
@@ -64,10 +77,12 @@ public class BerserkerClass : BaseClass, IClass
         greatSword.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.comboEffect2 -= E_Skill2;
+        attack.comboEffect1 -= E_Skill1;
         attack.onCharge_Fail -= W_Skill_Fail;
         attack.onCharge_Success -= W_Skill_Success;
         attack.onCharge_Prepare -= W_Skill_Prepare;
-        attack.onEffect -= AttackEffect;
+        attack.onAttack -= AttackEffect;
     }
 
     public override void UpdateState(PlayerClass sender)
@@ -80,11 +95,23 @@ public class BerserkerClass : BaseClass, IClass
     public void ChangeAnimTime()
     {
         attack.attackAnimTime = new float[attackCount];
-        attack.attackAnimTime[0] = attack1AnimTime;
-        attack.attackAnimTime[1] = attack2AnimTime;
-        attack.attackAnimTime[2] = attack3AnimTime;
+        attack.attackAnimTime[0] = attackAnimTime1;
+        attack.attackAnimTime[1] = attackAnimTime2;
+        attack.attackAnimTime[2] = attackAnimTime3;
         attack.attackCount = attackCount;
         attack.attackIndex = 0;
+
+        attack.canChargeRotate = false;
+
+        attack.comboAnimTime = new float[comboCount];
+        attack.comboAnimTime[0] = comboAnimTime1;
+        attack.comboAnimTime[1] = comboAnimTime2;
+        attack.comboAnimTime[2] = comboAnimTime3;
+        attack.comboAnimTime[3] = comboAnimTime4;
+        attack.comboCount = comboCount;
+
+        attack.returnTime = 0.0f;
+
         movement.rollAnimTime = rollTime;
     }
 
@@ -124,6 +151,24 @@ public class BerserkerClass : BaseClass, IClass
     {
         w_SkillEffect.gameObject.SetActive(false);
         Factory.Instance.GetBerserkerWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// E스킬1 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void E_Skill1(Transform attackTransform)
+    {
+        Factory.Instance.GetBerserkerESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// E스킬2 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void E_Skill2(Transform attackTransform)
+    {
+        Factory.Instance.GetBerserkerESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>

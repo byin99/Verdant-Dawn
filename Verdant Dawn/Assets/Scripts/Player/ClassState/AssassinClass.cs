@@ -15,10 +15,16 @@ public class AssassinClass : BaseClass, IClass
     Weapon rightDagger;
 
     // 공격할 때의 시간들
-    float attack1AnimTime = 1.267f;
-    float attack2AnimTime = 1.0f;
-    float attack3AnimTime = 1.067f;
-    float attack4AnimTime = 1.05f;
+    float attackAnimTime1 = 1.267f;
+    float attackAnimTime2 = 1.0f;
+    float attackAnimTime3 = 1.067f;
+    float attackAnimTime4 = 1.05f;
+
+    // 콤보 공격할 때의 시간들
+    float comboAnimTime1 = 0.933f;
+    float comboAnimTime2 = 0.883f;
+    float comboAnimTime3 = 1.383f;
+    float comboAnimTime4 = 1.783f;
 
     /// <summary>
     /// 구르기 시간
@@ -35,8 +41,10 @@ public class AssassinClass : BaseClass, IClass
     /// </summary>
     int attackCount = 4;
 
-    Transform effectParent;
-    W_SkillEffect effect;
+    /// <summary>
+    /// 콤보 공격 애니메이션 개수
+    /// </summary>
+    int comboCount = 4;
 
     public override void Enter(PlayerClass sender)
     {
@@ -59,10 +67,13 @@ public class AssassinClass : BaseClass, IClass
         sender.StartCoroutine(equipWeapon);
 
         // Effect함수 연결하기
-        attack.onEffect += AttackEffect;
+        attack.onAttack += AttackEffect;
         attack.onCharge_Prepare += W_Skill_Prepare;
         attack.onCharge_Success += W_Skill_Success;
         attack.onCharge_Fail += W_Skill_Fail;
+        attack.comboEffect1 += E_Skill1;
+        attack.comboEffect2 += E_Skill2;
+        attack.comboEffect3 += E_Skill3;
     }
 
     public override void Exit(PlayerClass sender)
@@ -75,10 +86,13 @@ public class AssassinClass : BaseClass, IClass
         rightDagger.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.comboEffect3 -= E_Skill3;
+        attack.comboEffect2 -= E_Skill2;
+        attack.comboEffect1 -= E_Skill1;
         attack.onCharge_Fail -= W_Skill_Fail;
         attack.onCharge_Success -= W_Skill_Success;
         attack.onCharge_Prepare -= W_Skill_Prepare;
-        attack.onEffect -= AttackEffect;
+        attack.onAttack -= AttackEffect;
     }
 
     public override void UpdateState(PlayerClass sender)
@@ -91,12 +105,24 @@ public class AssassinClass : BaseClass, IClass
     public void ChangeAnimTime()
     {
         attack.attackAnimTime = new float[attackCount];
-        attack.attackAnimTime[0] = attack1AnimTime;
-        attack.attackAnimTime[1] = attack2AnimTime;
-        attack.attackAnimTime[2] = attack3AnimTime;
-        attack.attackAnimTime[3] = attack4AnimTime;
+        attack.attackAnimTime[0] = attackAnimTime1;
+        attack.attackAnimTime[1] = attackAnimTime2;
+        attack.attackAnimTime[2] = attackAnimTime3;
+        attack.attackAnimTime[3] = attackAnimTime4;
         attack.attackCount = attackCount;
         attack.attackIndex = 0;
+
+        attack.canChargeRotate = true;
+
+        attack.comboAnimTime = new float[comboCount];
+        attack.comboAnimTime[0] = comboAnimTime1;
+        attack.comboAnimTime[1] = comboAnimTime2;
+        attack.comboAnimTime[2] = comboAnimTime3;
+        attack.comboAnimTime[3] = comboAnimTime4;
+        attack.comboCount = comboCount;
+
+        attack.returnTime = 0.0f;
+
         movement.rollAnimTime = rollTime;
     }
 
@@ -125,8 +151,8 @@ public class AssassinClass : BaseClass, IClass
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
-        effect = Factory.Instance.GetAssassinWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
-        attack.StartCoroutine(AssassinChargingSkill(attackTransform));
+        w_SkillEffect = Factory.Instance.GetAssassinWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
+        attack.StartCoroutine(AssassinChargingSkill());
     }
 
     /// <summary>
@@ -136,8 +162,35 @@ public class AssassinClass : BaseClass, IClass
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
-        effect = Factory.Instance.GetAssassinWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
-        attack.StartCoroutine(AssassinChargingSkill(attackTransform));
+        w_SkillEffect = Factory.Instance.GetAssassinWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
+        attack.StartCoroutine(AssassinChargingSkill());
+    }
+
+    /// <summary>
+    /// E스킬1 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void E_Skill1(Transform attackTransform)
+    {
+        Factory.Instance.GetAssassinESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// E스킬2 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void E_Skill2(Transform attackTransform)
+    {
+        Factory.Instance.GetAssassinESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// E스킬3 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void E_Skill3(Transform attackTransform)
+    {
+        Factory.Instance.GetAssassinESkill3(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>
@@ -170,17 +223,13 @@ public class AssassinClass : BaseClass, IClass
     /// 어쌔신 전용 차징 스킬(이펙트)
     /// </summary>
     /// <returns></returns>
-    IEnumerator AssassinChargingSkill(Transform attackTransform)
+    IEnumerator AssassinChargingSkill()
     {
-        effectParent = effect.transform.parent;
-        effect.transform.SetParent(attackTransform);
-
         while (attack.isUseSkill)
         {
             yield return null;
         }
 
-        effect.transform.SetParent(effectParent);
-        effect.gameObject.SetActive(false);
+        w_SkillEffect.gameObject.SetActive(false);
     }
 }

@@ -161,33 +161,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "WButton",
-                    "type": "Button",
-                    "id": "5d348cc4-c8c4-41e1-8eda-1b3d681a1a70",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "EButton",
-                    "type": "Button",
-                    "id": "5c7cfa23-6ec7-49ab-a012-0815bf2d2eb1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RButton",
-                    "type": "Button",
-                    "id": "f666dae7-ceeb-4931-8b57-36282039270d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -199,39 +172,6 @@
                     "processors": "",
                     "groups": "KM",
                     "action": "WeaponChange",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "525abdb5-15b4-42a3-9478-3ea706ac631d",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KM",
-                    "action": "WButton",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "09448863-6dbb-4ea7-940f-be79bbf03bd1",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KM",
-                    "action": "EButton",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "859ff20e-f7ff-4cc1-b04a-8ec822b51fba",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KM",
-                    "action": "RButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
