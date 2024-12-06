@@ -21,6 +21,11 @@ public class BerserkerClass : BaseClass, IClass
     float comboAnimTime4 = 1.333f;
 
     /// <summary>
+    /// 궁극기 시간
+    /// </summary>
+    float ultimateAnimTime = 6.433f;
+
+    /// <summary>
     /// 구르기 시간
     /// </summary>
     float rollTime = 1.0f;
@@ -39,6 +44,11 @@ public class BerserkerClass : BaseClass, IClass
     /// 콤보 공격 애니메이션 개수
     /// </summary>
     int comboCount = 4;
+
+    /// <summary>
+    /// 궁극기 이펙트
+    /// </summary>
+    R_SkillEffect r_SkillEffect;
 
     public override void Enter(PlayerClass sender)
     {
@@ -66,6 +76,8 @@ public class BerserkerClass : BaseClass, IClass
         attack.onCharge_Fail += W_Skill_Fail;
         attack.comboEffect1 += E_Skill1;
         attack.comboEffect2 += E_Skill2;
+        attack.ultimateEffect1 += R_Skill1;
+        attack.ultimateEffect2 += R_Skill2;
     }
 
     public override void Exit(PlayerClass sender)
@@ -77,6 +89,8 @@ public class BerserkerClass : BaseClass, IClass
         greatSword.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.ultimateEffect2 -= R_Skill2;
+        attack.ultimateEffect1 -= R_Skill1;
         attack.comboEffect2 -= E_Skill2;
         attack.comboEffect1 -= E_Skill1;
         attack.onCharge_Fail -= W_Skill_Fail;
@@ -113,6 +127,8 @@ public class BerserkerClass : BaseClass, IClass
         attack.returnTime = 0.0f;
 
         movement.rollAnimTime = rollTime;
+
+        attack.ultimateAnimTime = ultimateAnimTime;
     }
 
     /// <summary>
@@ -169,6 +185,24 @@ public class BerserkerClass : BaseClass, IClass
     void E_Skill2(Transform attackTransform)
     {
         Factory.Instance.GetBerserkerESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// R스킬1,2 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void R_Skill1(Transform attackTransform)
+    {
+        r_SkillEffect = Factory.Instance.GetBerserkerRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
+        Factory.Instance.GetBerserkerRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// R스킬 이펙트 지우기
+    /// </summary>
+    void R_Skill2(Transform _)
+    {
+        r_SkillEffect.gameObject.SetActive(false);
     }
 
     /// <summary>

@@ -121,10 +121,14 @@ public class CharacterInfoUI : MonoBehaviour
         player.offCharge += OffChargeSkill;
         player.onComboSkill += OnComboSkill;
         player.offComboSkill += OffComboSkill;
+        player.onUltimate += OnUltimateSkill;
+        player.offUltimate += OffUltimateSkill;
     }
 
     private void OnDisable()
     {
+        player.offUltimate -= OffUltimateSkill;
+        player.onUltimate -= OnUltimateSkill;
         player.offComboSkill -= OffComboSkill;
         player.onComboSkill -= OnComboSkill;
         player.offCharge -= OffChargeSkill;
@@ -161,6 +165,22 @@ public class CharacterInfoUI : MonoBehaviour
     void OffComboSkill()
     {
         e_Glow.enabled = false;
+    }
+
+    /// <summary>
+    /// R키 눌렀을 때
+    /// </summary>
+    void OnUltimateSkill()
+    {
+        r_Glow.enabled = true;
+    }
+
+    /// <summary>
+    /// R키 뗐을 때
+    /// </summary>
+    void OffUltimateSkill()
+    {
+        r_Glow.enabled = false;
     }
 
     /// <summary>

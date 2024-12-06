@@ -21,6 +21,11 @@ public class MagicianClass : BaseClass, IClass
     float comboAnimTime4 = 1.95f;
 
     /// <summary>
+    /// 궁극기 시간
+    /// </summary>
+    float ultimateAnimTime = 2.767f;
+
+    /// <summary>
     /// 구르기 시간
     /// </summary>
     float rollTime = 0.55f;
@@ -43,7 +48,12 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// E스킬 이펙트
     /// </summary>
-    E_SkillEffect2 e_SkillEffect;
+    E_SkillEffect2 e_SkillEffect1;
+
+    /// <summary>
+    /// E스킬 이펙트
+    /// </summary>
+    E_SkillEffect e_SkillEffect2;
 
     public override void Enter(PlayerClass sender)
     {
@@ -73,6 +83,8 @@ public class MagicianClass : BaseClass, IClass
         attack.comboEffect2 += E_Skill2;
         attack.comboEffect3 += E_Skill3;
         attack.finishComboSkill += E_SkillFinish;
+        attack.ultimateEffect1 += R_Skill1;
+        attack.ultimateEffect2 += R_Skill2;
     }
 
     public override void Exit(PlayerClass sender)
@@ -84,6 +96,8 @@ public class MagicianClass : BaseClass, IClass
         staff.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.ultimateEffect2 -= R_Skill2;
+        attack.ultimateEffect1 -= R_Skill1;
         attack.finishComboSkill -= E_SkillFinish;
         attack.comboEffect3 -= E_Skill3;
         attack.comboEffect2 -= E_Skill2;
@@ -122,6 +136,8 @@ public class MagicianClass : BaseClass, IClass
         attack.returnTime = 0.0f;
 
         movement.rollAnimTime = rollTime;
+
+        attack.ultimateAnimTime = ultimateAnimTime;
     }
 
     /// <summary>
@@ -168,7 +184,7 @@ public class MagicianClass : BaseClass, IClass
     /// <param name="attackTransform">Effect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
-        e_SkillEffect = Factory.Instance.GetMagicianESkill1(attackTransform.position, Vector3.zero);
+        e_SkillEffect1 = Factory.Instance.GetMagicianESkill1(attackTransform.position, Vector3.zero);
     }
 
     /// <summary>
@@ -176,7 +192,7 @@ public class MagicianClass : BaseClass, IClass
     /// </summary>
     void E_Skill2(Transform _)
     {
-        Factory.Instance.GetMagicianESkill2(e_SkillEffect.transform.position, e_SkillEffect.transform.rotation.eulerAngles);
+        e_SkillEffect2 = Factory.Instance.GetMagicianESkill2(e_SkillEffect1.transform.position, e_SkillEffect1.transform.rotation.eulerAngles);
     }
 
     /// <summary>
@@ -184,7 +200,7 @@ public class MagicianClass : BaseClass, IClass
     /// </summary>
     void E_Skill3(Transform _)
     {
-        Factory.Instance.GetMagicianESkill3(e_SkillEffect.transform.position, e_SkillEffect.transform.rotation.eulerAngles);
+        Factory.Instance.GetMagicianESkill3(e_SkillEffect2.transform.position, e_SkillEffect2.transform.rotation.eulerAngles);
     }
 
     /// <summary>
@@ -192,7 +208,25 @@ public class MagicianClass : BaseClass, IClass
     /// </summary>
     void E_SkillFinish()
     {
-        e_SkillEffect.gameObject.SetActive(false);
+        e_SkillEffect1.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// R스킬1 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void R_Skill1(Transform attackTransform)
+    {
+        Factory.Instance.GetMagicianRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// E스킬2 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void R_Skill2(Transform attackTransform)
+    {
+        Factory.Instance.GetMagicianRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>

@@ -81,10 +81,12 @@ public class PlayerInputController : MonoBehaviour
         inputActions.Player.Skill3.canceled += OffComboSkill;       // Skill3의 canceled에 OffComboSkill함수 넣기
 
         inputActions.Player.Skill4.performed += OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 넣기
+        inputActions.Player.Skill4.canceled += OffUltimateSkill;    // Skill4의 canceled에 OffUltimateSkill함수 넣기
     }
 
     private void OnDisable()
     {
+        inputActions.Player.Skill4.canceled -= OffUltimateSkill;    // Skill4의 canceled에 OffUltimateSkill함수 빼기
         inputActions.Player.Skill4.performed -= OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 빼기
 
         inputActions.Player.Skill3.performed -= OnComboSkill;       // Skill3의 performed에 OnComboSkill함수 빼기

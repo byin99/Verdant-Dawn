@@ -254,7 +254,7 @@ public class PlayerAttack : MonoBehaviour
     /// <summary>
     /// 콤보 스킬 전용 변수(움직임 제한을 풀기 위한 변수)
     /// </summary>
-    public bool isCombo;
+    public bool isCombo = false;
 
     /// <summary>
     /// 콤보 스킬 쿨타임을 재기위한 변수
@@ -275,6 +275,56 @@ public class PlayerAttack : MonoBehaviour
     /// 콤보 스킬 코루틴 저장용
     /// </summary>
     IEnumerator comboCoroutine;
+
+    // R 스킬---------------------------------------------------------------------------------------------------------------------------------------
+    /// <summary>
+    /// 궁극기가 시작되면 실행되는 델리게이트
+    /// </summary>
+    public event Action onUltimate;
+
+    /// <summary>
+    /// 궁극기버튼에서 손을 떼면 실행되는 델리게이트
+    /// </summary>
+    public event Action offUltimate;
+
+    /// <summary>
+    /// 궁극기가 끝나면 실행되는 델리게이트
+    /// </summary>
+    public event Action finishUltimate;
+
+    /// <summary>
+    /// 궁극기 이펙트 소환 델리게이트1
+    /// </summary>
+    public event Action<Transform> ultimateEffect1;
+
+    /// <summary>
+    /// 궁극기 이펙트 소환 델리게이트2
+    /// </summary>
+    public event Action<Transform> ultimateEffect2;
+
+    [Header("궁극기용 변수들")]
+    /// <summary>
+    /// 궁극기 쿨타임
+    /// </summary>
+    public float ultimateCoolTime = 40.0f;
+
+    /// <summary>
+    /// 궁극기 애니메이션 시간
+    /// </summary>
+    [HideInInspector]
+    public float ultimateAnimTime;
+
+    /// <summary>
+    /// 궁극기 쿨타임 남은시간
+    /// </summary>
+    float ultimateRemainTime;
+
+    /// <summary>
+    /// 궁극기 쿨타임 남은시간 알려주는 프로퍼티
+    /// </summary>
+    public float UltimateRemainTime => ultimateRemainTime;
+
+
     // ---------------------------------------------------------------------------------------------------------------------------------------------
 
     /// <summary>
@@ -292,6 +342,7 @@ public class PlayerAttack : MonoBehaviour
     readonly int Attack_Hash = Animator.StringToHash("Attack");
     readonly int WSkill_Hash = Animator.StringToHash("WSkill");
     readonly int ESkill_Hash = Animator.StringToHash("ESkill");
+    readonly int RSkill_Hash = Animator.StringToHash("RSkill");
     readonly int SkillCancel_Hash = Animator.StringToHash("SkillCancel");
 
     private void Awake()
@@ -420,16 +471,40 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     public void CancelCombo()
     {
-        StopAllCoroutines();
-        isUseSkill = false;
+        if (isCombo) 
+        {
+            StopAllCoroutines();
+            isUseSkill = false;
 
-        agent.enabled = true;
-        agent.ResetPath();
+            agent.enabled = true;
+            agent.ResetPath();
 
-        comboIndex = 0;
-        comboRemainTime = comboCoolTime;
-        isCombo = false;
-        finishComboSkill?.Invoke();
+            comboIndex = 0;
+            comboRemainTime = comboCoolTime;
+            isCombo = false;
+            finishComboSkill?.Invoke();
+        }
+
+    }
+
+    /// <summary>
+    /// 궁극기 시작
+    /// </summary>
+    public void StartUltimateSkill()
+    {
+        if (player.CanUseSkill && ultimateRemainTime < 0.0f)
+        {
+            onUltimate?.Invoke();
+            StartCoroutine(UltimateSkill());
+        }
+    }
+
+    /// <summary>
+    /// 궁극기 끝
+    /// </summary>
+    public void FinishUltimateSkill()
+    {
+        offUltimate?.Invoke();
     }
 
     /// <summary>
@@ -452,11 +527,18 @@ public class PlayerAttack : MonoBehaviour
         chargeRemainTime -= Time.deltaTime;
 
         // E스킬
-        if (comboRemainTime < comboTime)
+        if (isCombo)
         {
             transform.position += animator.deltaPosition;
         }
         comboRemainTime -= Time.deltaTime;
+
+        // R스킬
+        if (isUseSkill)
+        {
+            transform.position += animator.deltaPosition;
+        }
+        ultimateRemainTime -= Time.deltaTime;
     }
 
     /// <summary>
@@ -580,7 +662,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (comboIndex != comboCount)
         {
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(2.0f - comboTime);
         }
         else
         {
@@ -599,6 +681,43 @@ public class PlayerAttack : MonoBehaviour
         comboRemainTime = comboCoolTime;
         isCombo = false;
         finishComboSkill?.Invoke();
+    }
+
+    /// <summary>
+    /// 궁극기용 코루틴
+    /// </summary>
+    IEnumerator UltimateSkill()
+    {
+        // 스킬 시작
+        isUseSkill = true;
+        agent.enabled = false;
+
+        // 플레이어 방향을 마우스 방향으로 바꾸기
+        do
+        {
+            RotateToMouse();
+            yield return null;
+        }
+        while (angleDifference > stopThreshold);
+
+        // 궁극기 쿨타임 주기
+        ultimateRemainTime = ultimateCoolTime;
+        finishUltimate?.Invoke();
+
+        // 카메라 조정 및 애니메이션 시작
+        SwitchToUltimateCamera();
+        animator.SetBool(RSkill_Hash, true);
+        ultimateRemainTime = ultimateCoolTime;
+
+        yield return new WaitForSeconds(ultimateAnimTime);
+
+        // 카메라 조정 및 애니메이션 끝
+        animator.SetBool(RSkill_Hash, false);
+        SwitchToUltimateCamera();
+
+        // 궁극기 종료
+        agent.enabled = true;
+        isUseSkill = false;
     }
 
     /// <summary>
@@ -640,6 +759,15 @@ public class PlayerAttack : MonoBehaviour
             angleDifference = Quaternion.Angle(transform.rotation, targetRotation);
         }
 
+    }
+
+    /// <summary>
+    /// 궁극기를 사용했을 때 카메라의 위치를 바꿔주는 함수
+    /// </summary>
+    void SwitchToUltimateCamera()
+    {
+        virtualCamera.Priority += 10;
+        virtualCamera.Priority %= 20;
     }
 
     /// <summary>
@@ -698,6 +826,22 @@ public class PlayerAttack : MonoBehaviour
     void ComboSkill3()
     {
         comboEffect3?.Invoke(attackTransform);
+    }
+
+    /// <summary>
+    /// 궁극기1(Animation Clip Event용)
+    /// </summary>
+    void UltimateSkill1()
+    {
+        ultimateEffect1?.Invoke(attackTransform);
+    }
+
+    /// <summary>
+    /// 궁극기2(Animation Clip Event용)
+    /// </summary>
+    void UltimateSkill2()
+    {
+        ultimateEffect2?.Invoke(attackTransform);
     }
 
     /// <summary>

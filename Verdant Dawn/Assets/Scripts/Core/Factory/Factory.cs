@@ -180,6 +180,52 @@ public class Factory : Singleton<Factory>
     A_E_SkillEffectPool3 a_E_SkillEffectPool3;
 
     /// <summary>
+    /// F_R_SkillEffectPool1 선언
+    /// </summary>
+    F_R_SkillEffectPool1 f_R_SkillEffectPool1;
+
+    /// <summary>
+    /// F_R_SkillEffectPool2 선언
+    /// </summary>
+    F_R_SkillEffectPool2 f_R_SkillEffectPool2;
+
+    /// <summary>
+    /// B_R_SkillEffectPool1 선언
+    /// </summary>
+    B_R_SkillEffectPool1 b_R_SkillEffectPool1;
+
+    /// <summary>
+    /// B_R_SkillEffectPool2 선언
+    /// </summary>
+    B_R_SkillEffectPool2 b_R_SkillEffectPool2;
+
+    /// <summary>
+    /// H_R_SkillEffectPool1 선언
+    /// </summary>
+    H_R_SkillEffectPool1 h_R_SkillEffectPool1;
+
+    /// <summary>
+    /// M_R_SkillEffectPool1 선언
+    /// </summary>
+    M_R_SkillEffectPool1 m_R_SkillEffectPool1;
+
+    /// <summary>
+    /// M_R_SkillEffectPool2 선언
+    /// </summary>
+    M_R_SkillEffectPool2 m_R_SkillEffectPool2;
+
+
+    /// <summary>
+    /// A_R_SkillEffectPool1 선언
+    /// </summary>
+    A_R_SkillEffectPool1 a_R_SkillEffectPool1;
+
+    /// <summary>
+    /// A_R_SkillEffectPool2 선언
+    /// </summary>
+    A_R_SkillEffectPool2 a_R_SkillEffectPool2;
+
+    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -358,6 +404,51 @@ public class Factory : Singleton<Factory>
         a_E_SkillEffectPool3 = GetComponentInChildren<A_E_SkillEffectPool3>();
         if (a_E_SkillEffectPool3 != null)
             a_E_SkillEffectPool3.Initialize();
+
+        // F_R_SkillEffectPool1 초기화 및 생성
+        f_R_SkillEffectPool1 = GetComponentInChildren<F_R_SkillEffectPool1>();
+        if (f_R_SkillEffectPool1 != null)
+            f_R_SkillEffectPool1.Initialize();
+
+        // F_R_SkillEffectPool2 초기화 및 생성
+        f_R_SkillEffectPool2 = GetComponentInChildren<F_R_SkillEffectPool2>();
+        if (f_R_SkillEffectPool2 != null)
+            f_R_SkillEffectPool2.Initialize();
+
+        // B_R_SkillEffectPool1 초기화 및 생성
+        b_R_SkillEffectPool1 = GetComponentInChildren<B_R_SkillEffectPool1>();
+        if (b_R_SkillEffectPool1 != null)
+            b_R_SkillEffectPool1.Initialize();
+
+        // B_R_SkillEffectPool2 초기화 및 생성
+        b_R_SkillEffectPool2 = GetComponentInChildren<B_R_SkillEffectPool2>();
+        if (b_R_SkillEffectPool2 != null)
+            b_R_SkillEffectPool2.Initialize();
+
+        // H_R_SkillEffectPool1 초기화 및 생성
+        h_R_SkillEffectPool1 = GetComponentInChildren<H_R_SkillEffectPool1>();
+        if (h_R_SkillEffectPool1 != null)
+            h_R_SkillEffectPool1.Initialize();
+
+        // M_R_SkillEffectPool1 초기화 및 생성
+        m_R_SkillEffectPool1 = GetComponentInChildren<M_R_SkillEffectPool1>();
+        if (m_R_SkillEffectPool1 != null)
+            m_R_SkillEffectPool1.Initialize();
+
+        // M_R_SkillEffectPool2 초기화 및 생성
+        m_R_SkillEffectPool2 = GetComponentInChildren<M_R_SkillEffectPool2>();
+        if (m_R_SkillEffectPool2 != null)
+            m_R_SkillEffectPool2.Initialize();
+
+        // A_R_SkillEffectPool1 초기화 및 생성
+        a_R_SkillEffectPool1 = GetComponentInChildren<A_R_SkillEffectPool1>();
+        if (a_R_SkillEffectPool1 != null)
+            a_R_SkillEffectPool1.Initialize();
+
+        // A_R_SkillEffectPool2 초기화 및 생성
+        a_R_SkillEffectPool2 = GetComponentInChildren<A_R_SkillEffectPool2>();
+        if (a_R_SkillEffectPool2 != null)
+            a_R_SkillEffectPool2.Initialize();
     }
 
     /// <summary>
@@ -743,5 +834,104 @@ public class Factory : Singleton<Factory>
     public E_SkillEffect GetAssassinESkill3(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return a_E_SkillEffectPool3.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Fighter R스킬 이펙트1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetFighterRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return f_R_SkillEffectPool1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Fighter R스킬 이펙트2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetFighterRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return f_R_SkillEffectPool2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Berserker R스킬 이펙트1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetBerserkerRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return b_R_SkillEffectPool1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Berserker R스킬 이펙트2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetBerserkerRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return b_R_SkillEffectPool2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Hunter R스킬 이펙트1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetHunterRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return h_R_SkillEffectPool1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Magician R스킬 이펙트1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetMagicianRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return m_R_SkillEffectPool1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Magician R스킬 이펙트2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetMagicianRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return m_R_SkillEffectPool2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Assassin R스킬 이펙트1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetAssassinRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return a_R_SkillEffectPool1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Assassin R스킬 이펙트2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public R_SkillEffect GetAssassinRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return a_R_SkillEffectPool2.GetObject(position, eulerAngle);
     }
 }

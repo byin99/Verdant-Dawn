@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
         inputcontroller.onComboSkill += attack.StartCombo;
         inputcontroller.offComboSkill += attack.FinishCombo;
         movement.onRoll += attack.CancelCombo;
+        inputcontroller.onUltimateSkill += attack.StartUltimateSkill;
+        inputcontroller.offUltimateSkill += attack.FinishUltimateSkill;
     }
-
 }

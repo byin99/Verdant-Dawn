@@ -20,6 +20,11 @@ public class HunterClass : BaseClass, IClass
     float comboAnimTime3 = 0.5f;
 
     /// <summary>
+    /// 궁극기 시간
+    /// </summary>
+    float ultimateAnimTime = 2.617f;
+
+    /// <summary>
     /// 구르기 시간
     /// </summary>
     float rollTime = 0.633f;
@@ -81,6 +86,7 @@ public class HunterClass : BaseClass, IClass
         attack.comboEffect1 += E_Skill1;
         attack.comboEffect2 += E_Skill2;
         attack.finishComboSkill += E_SkillFinish;
+        attack.ultimateEffect1 += R_Skill1;
     }
 
     
@@ -94,6 +100,7 @@ public class HunterClass : BaseClass, IClass
         riple.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.ultimateEffect1 -= R_Skill1;
         attack.finishComboSkill -= E_SkillFinish;
         attack.comboEffect2 -= E_Skill2;
         attack.comboEffect1 -= E_Skill1;
@@ -130,6 +137,8 @@ public class HunterClass : BaseClass, IClass
         attack.returnTime = 1.1f;
 
         movement.rollAnimTime = rollTime;
+
+        attack.ultimateAnimTime = ultimateAnimTime;
     }
 
     /// <summary>
@@ -195,6 +204,15 @@ public class HunterClass : BaseClass, IClass
     {
         attack.StartCoroutine(OffZoom());
         e_SkillEffect.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// R스킬1 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void R_Skill1(Transform attackTransform)
+    {
+        Factory.Instance.GetHunterRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>

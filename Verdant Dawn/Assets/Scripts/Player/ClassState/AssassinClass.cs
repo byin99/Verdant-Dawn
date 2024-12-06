@@ -27,6 +27,11 @@ public class AssassinClass : BaseClass, IClass
     float comboAnimTime4 = 1.783f;
 
     /// <summary>
+    /// 궁극기 시간
+    /// </summary>
+    float ultimateAnimTime = 2.467f;
+
+    /// <summary>
     /// 구르기 시간
     /// </summary>
     float rollTime = 0.55f;
@@ -45,6 +50,11 @@ public class AssassinClass : BaseClass, IClass
     /// 콤보 공격 애니메이션 개수
     /// </summary>
     int comboCount = 4;
+
+    /// <summary>
+    /// 궁극기 이펙트
+    /// </summary>
+    R_SkillEffect r_SkillEffect;
 
     public override void Enter(PlayerClass sender)
     {
@@ -74,6 +84,8 @@ public class AssassinClass : BaseClass, IClass
         attack.comboEffect1 += E_Skill1;
         attack.comboEffect2 += E_Skill2;
         attack.comboEffect3 += E_Skill3;
+        attack.ultimateEffect1 += R_Skill1;
+        attack.ultimateEffect2 += R_Skill2;
     }
 
     public override void Exit(PlayerClass sender)
@@ -86,6 +98,8 @@ public class AssassinClass : BaseClass, IClass
         rightDagger.UnEquip(sender.gameObject);
 
         // Effect함수 없애기
+        attack.ultimateEffect2 -= R_Skill2;
+        attack.ultimateEffect1 -= R_Skill1;
         attack.comboEffect3 -= E_Skill3;
         attack.comboEffect2 -= E_Skill2;
         attack.comboEffect1 -= E_Skill1;
@@ -124,6 +138,8 @@ public class AssassinClass : BaseClass, IClass
         attack.returnTime = 0.0f;
 
         movement.rollAnimTime = rollTime;
+
+        attack.ultimateAnimTime = ultimateAnimTime;
     }
 
     /// <summary>
@@ -191,6 +207,25 @@ public class AssassinClass : BaseClass, IClass
     void E_Skill3(Transform attackTransform)
     {
         Factory.Instance.GetAssassinESkill3(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// R스킬1 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void R_Skill1(Transform attackTransform)
+    {
+        r_SkillEffect = Factory.Instance.GetAssassinRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// E스킬2 이펙트
+    /// </summary>
+    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    void R_Skill2(Transform attackTransform)
+    {
+        r_SkillEffect.gameObject.SetActive(false);
+        Factory.Instance.GetAssassinRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>

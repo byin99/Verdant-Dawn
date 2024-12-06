@@ -2090,6 +2090,11 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 976811778}
+    - target: {fileID: 7339731712621528142, guid: 0919e8946b9cf0d4484b3404e14ad513,
+        type: 3}
+      propertyPath: m_Priority
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8912710629574339713, guid: 0919e8946b9cf0d4484b3404e14ad513,
         type: 3}
       propertyPath: m_LocalPosition.x
