@@ -16,6 +16,7 @@ public class WeaponChangeUI : MonoBehaviour
     CanvasGroup canvasGroup;
     PlayerClass playerClass;
     PlayerAttack playerAttack;
+    Player player;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class WeaponChangeUI : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         playerClass = GameManager.Instance.PlayerClass;
         playerAttack = GameManager.Instance.PlayerAttack;
+        player = GameManager.Instance.Player;
     }
 
     private void Start()
@@ -94,7 +96,7 @@ public class WeaponChangeUI : MonoBehaviour
     public void ChangeClass(CharacterClass nextClass)
     {
         // 지금 클래스와 바꿀 클래스가 다르다면
-        if (playerClass.CurrentClass != nextClass)
+        if (player.CanChange && playerClass.CurrentClass != nextClass)
         {
             // 클래스 바꾸기
             borders[playerClass.CurrentClass].enabled = false;

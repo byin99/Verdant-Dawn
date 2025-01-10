@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2171501122490316075}
   - component: {fileID: 5370817986945680283}
-  m_Layer: 0
+  - component: {fileID: 2813851030252885310}
+  m_Layer: 7
   m_Name: Effect_05_HolyLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,6 +61,29 @@ MonoBehaviour:
   mtag: 
   isShieldActive: 0
   isHitMake: 1
+--- !u!136 &2813851030252885310
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458142351401330316}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Height: 0.92
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5963439782513631100
 GameObject:
   m_ObjectHideFlags: 0

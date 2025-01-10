@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6511595651663851528}
+  - component: {fileID: 2843766575504648937}
   - component: {fileID: 818730163508565929}
   - component: {fileID: 5086706277775360514}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M_W_Skill_Fail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5117125505497364665}
@@ -36,6 +37,27 @@ Transform:
   - {fileID: 4302168537327917405}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2843766575504648937
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817777574196397802}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &818730163508565929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +84,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillDamageRatio: 1
+  knockBackPower: 10
+  skillDelayTime: 0
+  isDamage: 1
+  isContinuous: 0
+  isAnimation: 0
 --- !u!1 &2182324175288735076
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +117,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8825564549577626895}
@@ -140,7 +168,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6511595651663851528}
@@ -9869,7 +9897,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a1d6217af1f32df42823abb0e5226cb7, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14779,7 +14806,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a1d6217af1f32df42823abb0e5226cb7, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14860,7 +14886,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6511595651663851528}
@@ -24589,7 +24615,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a1d6217af1f32df42823abb0e5226cb7, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

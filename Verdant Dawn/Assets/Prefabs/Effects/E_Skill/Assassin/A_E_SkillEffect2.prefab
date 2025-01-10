@@ -62,8 +62,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2238769517747528886}
+  - component: {fileID: 6947917586902506997}
   - component: {fileID: 3830610357227766242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: A_E_SkillEffect2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +87,29 @@ Transform:
   - {fileID: 310190566626796870}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6947917586902506997
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587384827411746334}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 5
+  m_Direction: 2
+  m_Center: {x: 0, y: 1, z: 2}
 --- !u!114 &3830610357227766242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,3 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b59835bfbb2972469bc93da782cab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableTime: 1
+  skillDamageRatio: 0.5
+  knockBackPower: 5
+  skillDelayTime: 0.2
+  isDamage: 1
+  isContinuous: 1

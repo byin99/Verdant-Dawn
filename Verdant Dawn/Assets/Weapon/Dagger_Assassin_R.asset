@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Dagger_Assassin_R
   m_EditorClassIdentifier: 
   weapon: {fileID: 21452664747648378, guid: c31991d324d68074293e38c0f234f02b, type: 3}
-  weaponClass: 0
   equipType: 1
   weaponGenerationTransform: {fileID: 272142421889896650, guid: c31991d324d68074293e38c0f234f02b,
     type: 3}

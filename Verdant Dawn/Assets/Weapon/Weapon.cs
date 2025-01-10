@@ -11,11 +11,6 @@ public class Weapon : ScriptableObject, IEquipable
     public GameObject weapon;
 
     /// <summary>
-    /// 무기를 장착할 직업
-    /// </summary>
-    public CharacterClass weaponClass;
-
-    /// <summary>
     /// 무기 장비 부위
     /// </summary>
     public EquipType equipType;

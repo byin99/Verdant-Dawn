@@ -194,7 +194,7 @@ public class CFXEasyEditor : EditorWindow
 		
 		EditorGUILayout.BeginHorizontal();
 		
-		GUILayout.Label("Test effect(s):");
+		GUILayout.Label("Test23 effect(s):");
 		using(new EditorGUI.DisabledScope(SelectedParticleSystemsCount <= 0))
 		{
 

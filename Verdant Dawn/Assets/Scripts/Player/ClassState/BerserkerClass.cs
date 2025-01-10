@@ -15,9 +15,9 @@ public class BerserkerClass : BaseClass, IClass
     float attackAnimTime3 = 1.333f;
 
     // 콤보 공격할 때의 시간들
-    float comboAnimTime1 = 1.133f;
-    float comboAnimTime2 = 1.267f;
-    float comboAnimTime3 = 0.500f;
+    float comboAnimTime1 = 1.233f;
+    float comboAnimTime2 = 1.067f;
+    float comboAnimTime3 = 1.000f;
     float comboAnimTime4 = 1.333f;
 
     /// <summary>
@@ -134,7 +134,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// GreatSwordEffect 소환 함수
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
         Factory.Instance.GetGreatSwordEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -143,7 +143,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(준비)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
         w_SkillEffect = Factory.Instance.GetBerserkerWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -152,7 +152,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(성공)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -162,7 +162,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(실패)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -172,7 +172,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// E스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
         Factory.Instance.GetBerserkerESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -181,7 +181,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// E스킬2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill2(Transform attackTransform)
     {
         Factory.Instance.GetBerserkerESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -190,7 +190,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <summary>
     /// R스킬1,2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
         r_SkillEffect = Factory.Instance.GetBerserkerRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);

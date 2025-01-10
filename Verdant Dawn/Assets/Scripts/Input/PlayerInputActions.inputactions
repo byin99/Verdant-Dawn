@@ -161,6 +161,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Status",
+                    "type": "Button",
+                    "id": "53f1983b-8293-48ac-8e4c-b9d35fcee41f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -172,6 +181,17 @@
                     "processors": "",
                     "groups": "KM",
                     "action": "WeaponChange",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eea326e6-7117-4564-b035-9a0cab6f2fd9",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KM",
+                    "action": "Status",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

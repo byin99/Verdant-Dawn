@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Riple_Hunter
   m_EditorClassIdentifier: 
   weapon: {fileID: 6244240167923175255, guid: 600482d7e08a20a4795a6375d6f57668, type: 3}
-  weaponClass: 0
   equipType: 1
   weaponGenerationTransform: {fileID: 1633363471418910283, guid: 600482d7e08a20a4795a6375d6f57668,
     type: 3}

@@ -4948,6 +4948,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillDamageRatio: 0
+  knockBackPower: 0
+  isPrepare: 1
 --- !u!1 &1832438712239492972
 GameObject:
   m_ObjectHideFlags: 0

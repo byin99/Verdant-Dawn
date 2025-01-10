@@ -226,6 +226,36 @@ public class Factory : Singleton<Factory>
     A_R_SkillEffectPool2 a_R_SkillEffectPool2;
 
     /// <summary>
+    /// LevelUpEffectPool
+    /// </summary>
+    LevelUpEffectPool levelUpEffectPool;
+
+    /// <summary>
+    /// DamageText_E_Pool
+    /// </summary>
+    DamageText_E_Pool damageText_E_Pool;
+
+    /// <summary>
+    /// DamageText_P_Pool
+    /// </summary>
+    DamageText_P_Pool damageText_P_Pool;
+
+    /// <summary>
+    /// HitEnemyEffectPool
+    /// </summary>
+    HitEnemyEffectPool hitEnemyEffectPool;
+
+    /// <summary>
+    /// HitPlayerEffectPool
+    /// </summary>
+    HitPlayerEffectPool hitPlayerEffectPool;
+
+    /// <summary>
+    /// GhoulAttackPool
+    /// </summary>
+    GhoulAttackPool ghoulAttackPool;
+
+    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -449,6 +479,36 @@ public class Factory : Singleton<Factory>
         a_R_SkillEffectPool2 = GetComponentInChildren<A_R_SkillEffectPool2>();
         if (a_R_SkillEffectPool2 != null)
             a_R_SkillEffectPool2.Initialize();
+
+        // LevelUpEffectPool 초기화 및 생성
+        levelUpEffectPool = GetComponentInChildren<LevelUpEffectPool>();
+        if (levelUpEffectPool != null)
+            levelUpEffectPool.Initialize();
+
+        // DamageText_E_Pool 초기화 및 생성
+        damageText_E_Pool = GetComponentInChildren<DamageText_E_Pool>();
+        if (damageText_E_Pool != null)
+            damageText_E_Pool.Initialize();
+
+        // DamageText_P_Pool 초기화 및 생성
+        damageText_P_Pool = GetComponentInChildren<DamageText_P_Pool>();
+        if (damageText_P_Pool != null)
+            damageText_P_Pool.Initialize();
+
+        // HitEnemyEffectPool 초기화 및 생성
+        hitEnemyEffectPool = GetComponentInChildren<HitEnemyEffectPool>();
+        if (hitEnemyEffectPool != null)
+            hitEnemyEffectPool.Initialize();
+
+        // HitPlayerEffectPool 초기화 및 생성
+        hitPlayerEffectPool = GetComponentInChildren<HitPlayerEffectPool>();
+        if (hitPlayerEffectPool != null)
+            hitPlayerEffectPool.Initialize();
+
+        // GhoulAttackPool 초기화 및 생성
+        ghoulAttackPool = GetComponentInChildren<GhoulAttackPool>();
+        if (ghoulAttackPool != null)
+            ghoulAttackPool.Initialize();
     }
 
     /// <summary>
@@ -754,7 +814,7 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 이펙트</returns>
-    public E_SkillEffect2 GetHunterESkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    public E_SkillEffect GetHunterESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return h_E_SkillEffectPool1.GetObject(position, eulerAngle);
     }
@@ -776,7 +836,7 @@ public class Factory : Singleton<Factory>
     /// <param name="position">소환 위치</param>
     /// <param name="eulerAngle">소환 각도</param>
     /// <returns>소환된 이펙트</returns>
-    public E_SkillEffect2 GetMagicianESkill1(Vector3? position = null, Vector3? eulerAngle = null)
+    public E_SkillEffect GetMagicianESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return m_E_SkillEffectPool1.GetObject(position, eulerAngle);
     }
@@ -933,5 +993,73 @@ public class Factory : Singleton<Factory>
     public R_SkillEffect GetAssassinRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return a_R_SkillEffectPool2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// LevelUpEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 이펙트</returns>
+    public LevelUpEffect GetLevelUpEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return levelUpEffectPool.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// 데미지 텍스트 소환 함수(Enemy용)
+    /// </summary>
+    /// <param name="damage">데미지 양</param>
+    /// <param name="position">소환 위치</param>
+    /// <returns>소환된 데미지 텍스트</returns>
+    public DamageText MakeDamageText_E(int damage, Vector3? position = null)
+    {
+        DamageText damageText = damageText_E_Pool.GetObject(position);
+        damageText.SetDamage(damage);
+        return damageText;
+    }
+
+    /// <summary>
+    /// 데미지 텍스트 소환 함수(Player용)
+    /// </summary>
+    /// <param name="damage">데미지 양</param>
+    /// <param name="position">소환 위치</param>
+    /// <returns>소환된 데미지 텍스트</returns>
+    public DamageText MakeDamageText_P(int damage, Vector3? position = null)
+    {
+        DamageText damageText = damageText_P_Pool.GetObject(position);
+        damageText.SetDamage(damage);
+        return damageText;
+    }
+
+    /// <summary>
+    /// HitEnemyEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <returns>소환된 HitEffect</returns>
+    public HitEffect GetHitEnemyEffect(Vector3? position = null)
+    {
+        return hitEnemyEffectPool.GetObject(position);
+    }
+
+    /// <summary>
+    /// HitPlayerEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <returns>소환된 HitEffect</returns>
+    public HitEffect GetHitPlayerEffect(Vector3? position = null)
+    {
+        return hitPlayerEffectPool.GetObject(position);
+    }
+
+    /// <summary>
+    /// GhoulAttackEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 GhoulAttackEffect</returns>
+    public EnemyAttackEffect GetGhoulAttackEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return ghoulAttackPool.GetObject(position, eulerAngle);
     }
 }

@@ -9,6 +9,7 @@ public class EnemyBase : IState<EnemyController>
     // 컴포넌트들
     protected NavMeshAgent agent;
     protected Animator animator;
+    protected Rigidbody rigid;
     protected Player player;
     protected Material[] materials;
 
@@ -22,10 +23,22 @@ public class EnemyBase : IState<EnemyController>
     /// </summary>
     protected float attackDistance = 4.0f;
 
+    /// <summary>
+    /// 플레이어와의 거리
+    /// </summary>
+    protected float playerDistance;
+
+    /// <summary>
+    /// 적이 살아있음을 알려주는 변수(true면 살아있음, false면 죽음)
+    /// </summary>
+    protected bool isAlive = true;
+
     // 해쉬 값들
-    protected readonly int Move_Hash = Animator.StringToHash("Move");
-    protected readonly int Chase_Hash = Animator.StringToHash("Chase");
+    protected readonly int Idle_Hash = Animator.StringToHash("Idle");
+    protected readonly int Walk_Hash = Animator.StringToHash("Walk");
+    protected readonly int Run_Hash = Animator.StringToHash("Run");
     protected readonly int Attack_Hash = Animator.StringToHash("Attack");
+    protected readonly int Hit_Hash = Animator.StringToHash("Hit");
     protected readonly int Death_Hash = Animator.StringToHash("Death");
 
     // 쉐이터 프로퍼티용 ID들
@@ -41,6 +54,11 @@ public class EnemyBase : IState<EnemyController>
         if (animator == null)
         {
             animator = sender.GetComponent<Animator>();     // Animator 찾기
+        }
+
+        if (rigid == null)
+        {
+            rigid = sender.GetComponent<Rigidbody>();       // Rigidbody 찾기
         }
 
         if (player == null)
@@ -61,7 +79,7 @@ public class EnemyBase : IState<EnemyController>
 
     public virtual void UpdateState(EnemyController sender)
     {
-        float playerDistance = (sender.transform.position - player.transform.position).sqrMagnitude;    // 플레이어와의 거리 계산
+        playerDistance = (sender.transform.position - player.transform.position).sqrMagnitude;    // 플레이어와의 거리 계산
 
         if (playerDistance < attackDistance)    // 공격할 수 있는 거리가 되면
         {
@@ -72,7 +90,6 @@ public class EnemyBase : IState<EnemyController>
         {
             sender.enemyStateMachine.TransitionTo(sender.trace);    // Trace 상태로 전환
         }
-
     }
 
     public virtual void Exit(EnemyController sender)

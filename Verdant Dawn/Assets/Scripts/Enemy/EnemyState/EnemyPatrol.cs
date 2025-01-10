@@ -13,7 +13,7 @@ public class EnemyPatrol : EnemyBase
     {
         base.Enter(sender);
 
-        animator.SetBool(Move_Hash, true);      // 순찰 애니에이션 적용
+        animator.SetTrigger(Walk_Hash);         // 순찰 애니에이션 적용
 
         agent.speed = walkSpeed;                // 순찰 속도 적용
         agent.isStopped = false;                // agent를 다시 사용
@@ -34,7 +34,6 @@ public class EnemyPatrol : EnemyBase
 
     public override void Exit(EnemyController sender)
     {
-        animator.SetBool(Move_Hash, false); // 순찰 애니메이션 끄기
         agent.isStopped = true;             // agent 중지
     }
 

@@ -18,9 +18,9 @@ public class EnemyTrace : EnemyBase
     {
         base.Enter(sender);
 
-        animator.SetBool(Chase_Hash, true); // 추적 애니메이션 적용
-        agent.speed = runSpeed;             // 추적 속도 적용
-        agent.isStopped = false;            // agent 다시 사용하기
+        animator.SetTrigger(Run_Hash);  // 추적 애니메이션 적용
+        agent.speed = runSpeed;         // 추적 속도 적용
+        agent.isStopped = false;        // agent 다시 사용하기
     }
 
     public override void UpdateState(EnemyController sender)
@@ -46,7 +46,6 @@ public class EnemyTrace : EnemyBase
 
     public override void Exit(EnemyController sender)
     {
-        animator.SetBool(Chase_Hash, false);    // 추적 애니메이션 끄기
         agent.isStopped = true;                 // agent 중지
     }
 }

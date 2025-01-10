@@ -10,7 +10,7 @@ public class MagicianClass : BaseClass, IClass
     Weapon staff;
 
     // 공격할 때의 시간들
-    float attackAnimTime1 = 1.25f;
+    float attackAnimTime1 = 1.45f;
     float attackAnimTime2 = 1.167f;
     float attackAnimTime3 = 1.033f;
 
@@ -48,7 +48,7 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// E스킬 이펙트
     /// </summary>
-    E_SkillEffect2 e_SkillEffect1;
+    E_SkillEffect e_SkillEffect1;
 
     /// <summary>
     /// E스킬 이펙트
@@ -143,7 +143,7 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// StaffEffect 소환 함수
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
         Factory.Instance.GetStaffEffect(attackTransform.position, attack.transform.rotation.eulerAngles);
@@ -152,7 +152,7 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(준비)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
         w_SkillEffect = Factory.Instance.GetMagicianWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -161,7 +161,7 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(성공)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -171,7 +171,7 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(실패)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -181,7 +181,7 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// E스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
         e_SkillEffect1 = Factory.Instance.GetMagicianESkill1(attackTransform.position, Vector3.zero);
@@ -214,16 +214,16 @@ public class MagicianClass : BaseClass, IClass
     /// <summary>
     /// R스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
         Factory.Instance.GetMagicianRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>
-    /// E스킬2 이펙트
+    /// R스킬2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill2(Transform attackTransform)
     {
         Factory.Instance.GetMagicianRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);

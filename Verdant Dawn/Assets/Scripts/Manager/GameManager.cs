@@ -30,6 +30,11 @@ public class GameManager : Singleton<GameManager>
     PlayerAttack playerAttack;
 
     /// <summary>
+    /// PlayerStatus
+    /// </summary>
+    PlayerStatus playerStatus;
+
+    /// <summary>
     /// Player를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Player Player
@@ -104,12 +109,28 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    /// <summary>
+    /// PlayerStatus를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerStatus PlayerStatus
+    {
+        get
+        {
+            if (playerStatus == null)
+            {
+                playerStatus = FindAnyObjectByType<PlayerStatus>();
+            }
+            return playerStatus;
+        }
+    }
+
     protected override void OnInitialize()
     {
         player = FindAnyObjectByType<Player>();                                 // Player 찾기
         playerMovement = FindAnyObjectByType<PlayerMovement>();                 // PlayerMovement 찾기
+        playerInputController = FindAnyObjectByType<PlayerInputController>();   // PlayerInputController 찾기
         playerClass = FindAnyObjectByType<PlayerClass>();                       // PlayerClass 찾기
         playerAttack = FindAnyObjectByType<PlayerAttack>();                     // PlayerAttack 찾기
-        playerInputController = FindAnyObjectByType<PlayerInputController>();   // PlayerInputController 찾기
+        playerStatus = FindAnyObjectByType<PlayerStatus>();                     // PlayerStatus 찾기
     }
 }

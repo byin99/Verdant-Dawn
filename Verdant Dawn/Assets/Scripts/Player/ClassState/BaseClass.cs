@@ -66,6 +66,7 @@ public class BaseClass : IState<PlayerClass>
         if (attack == null)
         {
             attack = GameManager.Instance.PlayerAttack;
+            attack.onCancelSkill += W_SkillEffectCancel;
         }
 
         if (input == null)
@@ -86,5 +87,14 @@ public class BaseClass : IState<PlayerClass>
     public virtual void UpdateState(PlayerClass sender)
     {
         
+    }
+
+    /// <summary>
+    /// W스킬 잔상 없애는 함수
+    /// </summary>
+    void W_SkillEffectCancel()
+    {
+        if (w_SkillEffect != null)
+            w_SkillEffect.gameObject.SetActive(false);
     }
 }

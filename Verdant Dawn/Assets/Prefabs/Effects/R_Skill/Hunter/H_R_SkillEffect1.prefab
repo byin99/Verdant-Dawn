@@ -92,8 +92,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 219802874723063972}
+  - component: {fileID: 7446245811936643288}
+  - component: {fileID: 6701674856443764309}
   - component: {fileID: -8247293363686903357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: H_R_SkillEffect1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +122,48 @@ Transform:
   - {fileID: 7252700758803191157}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7446245811936643288
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270129510527127500}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 43
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6701674856443764309
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270129510527127500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00904403b8b85ba41b1b652e3b189f37, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &-8247293363686903357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +176,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec88f0bf3b98044e9389b205280009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableTime: 10
+  skillDamageRatio: 0.55
+  knockBackPower: 1
+  skillDelayTime: 0.4
+  isDamage: 1
+  isContinuous: 1
+  isAnimation: 1
 --- !u!1 &333577798475982396
 GameObject:
   m_ObjectHideFlags: 0

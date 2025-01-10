@@ -62,8 +62,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8093711311783819436}
+  - component: {fileID: 4481223014276828191}
+  - component: {fileID: 9065026624801066803}
   - component: {fileID: -2390296924402797641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M_E_SkillEffect3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +88,48 @@ Transform:
   - {fileID: 1100414215989086138}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4481223014276828191
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080959568753533710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f57482b47926d741bef4dbf603f9c40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!135 &9065026624801066803
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080959568753533710}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-2390296924402797641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,3 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b59835bfbb2972469bc93da782cab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableTime: 3
+  skillDamageRatio: 2.4
+  knockBackPower: 1
+  skillDelayTime: 0
+  isDamage: 1
+  isContinuous: 0
+  isAnimation: 1

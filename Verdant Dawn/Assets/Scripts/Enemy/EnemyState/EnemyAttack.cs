@@ -62,13 +62,11 @@ public class EnemyAttack : EnemyBase
         timeElasped = 0.0f;     // 공격 쿨타임 변수 초기화
         Vector3 direction = (player.transform.position - sender.transform.position).normalized;     // player가 enemy에서 어디에있는지 방향계산하기
         targetRotation = Quaternion.LookRotation(direction);                                        // 목표로하는 회전 설정
-        animator.SetBool(Move_Hash, true);                                                          // 걷는 애니메이션 주기
         while ((direction - sender.transform.forward).sqrMagnitude > 0.01f)                         // 플레이어를 쳐다볼때까지
         {
             sender.transform.rotation = Quaternion.Slerp(sender.transform.rotation, targetRotation, Time.deltaTime * turnSmooth);   // 돌기
             yield return null;
         }
-        animator.SetBool(Move_Hash, false); // 걷기 애니메이션 끄기
         animator.SetTrigger(Attack_Hash);   // 공격하기
     }
 }

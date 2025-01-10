@@ -145,7 +145,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// DaggerEffect 소환 함수
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
         Factory.Instance.GetDaggerEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -154,7 +154,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(준비)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
         w_SkillEffect = Factory.Instance.GetAssassinWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -163,7 +163,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(성공)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -174,7 +174,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(실패)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -185,7 +185,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// E스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
         Factory.Instance.GetAssassinESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -194,7 +194,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// E스킬2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill2(Transform attackTransform)
     {
         Factory.Instance.GetAssassinESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -203,7 +203,7 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// E스킬3 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill3(Transform attackTransform)
     {
         Factory.Instance.GetAssassinESkill3(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -212,16 +212,16 @@ public class AssassinClass : BaseClass, IClass
     /// <summary>
     /// R스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
         r_SkillEffect = Factory.Instance.GetAssassinRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
     /// <summary>
-    /// E스킬2 이펙트
+    /// R스킬2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill2(Transform attackTransform)
     {
         r_SkillEffect.gameObject.SetActive(false);

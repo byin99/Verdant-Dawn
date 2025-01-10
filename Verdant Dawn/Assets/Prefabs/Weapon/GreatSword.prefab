@@ -9672,7 +9672,7 @@ GameObject:
   - component: {fileID: 6393824609418748013}
   - component: {fileID: 8495954628904360845}
   - component: {fileID: 3529256224946040044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GreatSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

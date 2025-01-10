@@ -8,12 +8,13 @@ public class EnemyComeBack : EnemyBase
     /// 순찰 복귀 속도
     /// </summary>
     private float returnSpeed = 20.0f;
+
     public override void Enter(EnemyController sender)
     {
         base.Enter(sender);
 
         agent.speed = returnSpeed;              // 순찰 복귀 속도로 바꾸기
-        animator.SetBool(Chase_Hash, true);     // 달리기 애니메이션 주기
+        animator.SetTrigger(Run_Hash);          // 달리기 애니메이션 주기
         agent.isStopped = false;                // agent 사용하기 
         agent.SetDestination(sender.target);    // 복귀 시작
     }
@@ -29,7 +30,6 @@ public class EnemyComeBack : EnemyBase
 
     public override void Exit(EnemyController sender)
     {
-        animator.SetBool(Chase_Hash, false);    // 달리기 애니메이션 끄기
         agent.isStopped = true;                 // agent 사용 중지
     }
 }

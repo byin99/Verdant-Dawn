@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: GreatSword_Berserker
   m_EditorClassIdentifier: 
   weapon: {fileID: 5887193135126555442, guid: f614b87a173a72f489cc12d5fb323cc1, type: 3}
-  weaponClass: 0
   equipType: 1
   weaponGenerationTransform: {fileID: 6393824609418748013, guid: f614b87a173a72f489cc12d5fb323cc1,
     type: 3}

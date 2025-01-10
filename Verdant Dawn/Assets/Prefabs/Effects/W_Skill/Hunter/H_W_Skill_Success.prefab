@@ -4918,8 +4918,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7836827017905843377}
+  - component: {fileID: 7752747745934399947}
+  - component: {fileID: 2755034600390397964}
   - component: {fileID: 6353517548195950238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: H_W_Skill_Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4943,6 +4945,48 @@ Transform:
   - {fileID: 6986361522825051140}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7752747745934399947
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579018058532975924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &2755034600390397964
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579018058532975924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ea6f82ecc795db4dba73a32758c1e2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6353517548195950238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4955,6 +4999,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillDamageRatio: 10
+  knockBackPower: 20
+  skillDelayTime: 0
+  isDamage: 1
+  isContinuous: 0
+  isAnimation: 0
 --- !u!1 &2409766738335819112
 GameObject:
   m_ObjectHideFlags: 0
@@ -9812,7 +9862,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 56a419b91af352342a26947930febf37, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14857,7 +14906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 0.5
-  parent: {fileID: 7836827017905843377}
 --- !u!1 &5539348246431613768
 GameObject:
   m_ObjectHideFlags: 0
@@ -19715,7 +19763,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: c9bfd5e8964f1df4fa5ca56fd54b429c, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24625,7 +24672,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 56a419b91af352342a26947930febf37, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34444,7 +34490,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 56a419b91af352342a26947930febf37, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

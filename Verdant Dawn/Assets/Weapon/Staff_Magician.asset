@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Staff_Magician
   m_EditorClassIdentifier: 
   weapon: {fileID: 7267873690039882949, guid: 586a851556140c54b95e720d25dd0de4, type: 3}
-  weaponClass: 0
   equipType: 1
   weaponGenerationTransform: {fileID: 4182075775105901913, guid: 586a851556140c54b95e720d25dd0de4,
     type: 3}

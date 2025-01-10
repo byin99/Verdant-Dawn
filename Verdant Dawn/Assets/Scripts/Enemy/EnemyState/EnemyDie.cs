@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 
 public class EnemyDie : EnemyBase
 {
@@ -14,6 +13,7 @@ public class EnemyDie : EnemyBase
     {
         base.Enter(sender);
 
+        isAlive = false;
         sender.StartCoroutine(Dissolve(sender));    // 사망 연출 시작
     }
 

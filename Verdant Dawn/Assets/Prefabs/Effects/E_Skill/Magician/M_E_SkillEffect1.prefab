@@ -14727,7 +14727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6635543009612935774}
-  - component: {fileID: 3986106708426525248}
+  - component: {fileID: 8792631719756474954}
   - component: {fileID: -5298757505921637071}
   m_Layer: 0
   m_Name: M_E_SkillEffect1
@@ -14755,7 +14755,7 @@ Transform:
   - {fileID: 3072355796606782634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3986106708426525248
+--- !u!114 &8792631719756474954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14764,9 +14764,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7305432601368149521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc1e8a2be642674c9e4a3cdbe91204e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b59835bfbb2972469bc93da782cab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableTime: 20
 --- !u!114 &-5298757505921637071
 MonoBehaviour:
   m_ObjectHideFlags: 0

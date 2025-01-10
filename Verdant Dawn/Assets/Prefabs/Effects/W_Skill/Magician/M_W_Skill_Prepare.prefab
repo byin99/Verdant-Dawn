@@ -9753,8 +9753,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4218217168366515849}
-  - component: {fileID: 7111244230996208078}
   - component: {fileID: -4174620447847918795}
+  - component: {fileID: 7111244230996208078}
   m_Layer: 0
   m_Name: M_W_Skill_Prepare
   m_TagString: Untagged
@@ -9781,18 +9781,6 @@ Transform:
   - {fileID: 1669165007684176954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7111244230996208078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4568706586783095560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-4174620447847918795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9805,6 +9793,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ee264b4a9a7264b8a5fdd4101e7090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7111244230996208078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4568706586783095560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillDamageRatio: 0
+  knockBackPower: 0
+  skillDelayTime: 0
+  isDamage: 0
+  isContinuous: 0
 --- !u!1 &6450080120551943595
 GameObject:
   m_ObjectHideFlags: 0

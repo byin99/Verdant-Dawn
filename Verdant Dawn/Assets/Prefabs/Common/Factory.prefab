@@ -46,6 +46,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6409303163985227074, guid: 21d5e199376625a4fb8e92bea4aae9d9, type: 3}
   poolSize: 1
+--- !u!1 &196193721378216908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7803301396067952276}
+  - component: {fileID: 7037462627575420539}
+  m_Layer: 0
+  m_Name: GhoulAttackEffectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7803301396067952276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196193721378216908}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662872783862036582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7037462627575420539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196193721378216908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8441c1a46e75843a98b44c01bc56e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4305465852818910889, guid: 9378f061cbed71e47abbea61a169bc7a, type: 3}
+  poolSize: 64
 --- !u!1 &204025690700697782
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22b2afdc1e29d94dbc7a91ef6d6017a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9099089391226836083, guid: caf7923dbe0245245836cecd99228eb4, type: 3}
+  prefab: {fileID: 7918655682843018351, guid: caf7923dbe0245245836cecd99228eb4, type: 3}
   poolSize: 8
 --- !u!1 &3169784828293475772
 GameObject:
@@ -964,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1bbc507c9b8fb4bb94c4b6b0c79197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9207101207821984154, guid: a9e4513a235658f4886139554d9af5e5, type: 3}
+  prefab: {fileID: 354394210303319903, guid: a9e4513a235658f4886139554d9af5e5, type: 3}
   poolSize: 1
 --- !u!1 &3996661784823222047
 GameObject:
@@ -1104,6 +1150,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1018573821124372458, guid: a1ac141d3d7b50b4eb0824a45eba6bfb, type: 3}
   poolSize: 4
+--- !u!1 &4447315657340705234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3286158668601720070}
+  - component: {fileID: 578353566226742426}
+  m_Layer: 0
+  m_Name: DamageText_P_Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3286158668601720070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447315657340705234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662872783862036582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578353566226742426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447315657340705234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31436b627b4d37e48852ab897dedc331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3857331924561366174, guid: b3f0731c964f54b4384f992875d1dc11, type: 3}
+  poolSize: 32
 --- !u!1 &5304998091002798706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1500,12 @@ Transform:
   - {fileID: 8412341083327579412}
   - {fileID: 1201716208177340442}
   - {fileID: 4561848618855419952}
+  - {fileID: 76265607342796103}
+  - {fileID: 1769684629263887863}
+  - {fileID: 3286158668601720070}
+  - {fileID: 8962542675629949340}
+  - {fileID: 1298878307130273817}
+  - {fileID: 7803301396067952276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1916037341653750418
@@ -1467,7 +1565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 252488953403170513, guid: e8fffe8d21388f44eafc4257f9f74427, type: 3}
-  poolSize: 8
+  poolSize: 16
 --- !u!1 &7097523349679439754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7424c0e68e7da50428b37dd0fa77ed61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6194418452283411166, guid: 0c1e765695f258e4ab37e1c322908252, type: 3}
+  prefab: {fileID: 6297523127454180183, guid: 7608aaa77134c1d498981093ee8158d5, type: 3}
   poolSize: 1
 --- !u!1 &7163389299985048863
 GameObject:
@@ -1559,6 +1657,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2146022766728356850, guid: 813a2c1217fb16c47a52c54ecef1348f, type: 3}
+  poolSize: 1
+--- !u!1 &7253207860606693478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76265607342796103}
+  - component: {fileID: 5955862606447257614}
+  m_Layer: 0
+  m_Name: LevelUpEffectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76265607342796103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253207860606693478}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662872783862036582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5955862606447257614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253207860606693478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85dde3c7dda22a45a5d238ad0245fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2406372934352188714, guid: 5bb914b7d81c83e499138c9e0994dccb, type: 3}
   poolSize: 1
 --- !u!1 &7266444119488623242
 GameObject:
@@ -1652,6 +1796,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7305432601368149521, guid: 5dd6cc93d19d2464a946e768750fc11f, type: 3}
   poolSize: 4
+--- !u!1 &7429680734759314097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8962542675629949340}
+  - component: {fileID: 5379938324694070120}
+  m_Layer: 0
+  m_Name: EnemyHitEffectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8962542675629949340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429680734759314097}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662872783862036582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5379938324694070120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429680734759314097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08674db9088e221448037c7c1b9a7d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7291474658135344909, guid: 29c3f2992bf319f4ebcb82512bbac869, type: 3}
+  poolSize: 64
 --- !u!1 &7881225834870476388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1980,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6108564187604953773, guid: 41e3247cec9e61848be93154220ba43c, type: 3}
   poolSize: 4
+--- !u!1 &8065173142950280431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1298878307130273817}
+  - component: {fileID: 4871949531915734481}
+  m_Layer: 0
+  m_Name: PlayerHitEffectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1298878307130273817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065173142950280431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662872783862036582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4871949531915734481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065173142950280431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154cee6f447df64995c71dafa40d0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7291474658135344909, guid: a5adb43cb2a8c4644b4c28aaca4f4499, type: 3}
+  poolSize: 64
 --- !u!1 &8065755996824657835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,6 +2164,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2963431410590026195, guid: dadf2c4339919fa4082a2ee36d834d5e, type: 3}
   poolSize: 1
+--- !u!1 &8879172048544400348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769684629263887863}
+  - component: {fileID: 8757950074180378174}
+  m_Layer: 0
+  m_Name: DamageText_E_Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1769684629263887863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879172048544400348}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662872783862036582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8757950074180378174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879172048544400348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed414e48d721b1a4eb51bd011ad02475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7083794654921233487, guid: 1f5311f69bde73a42b9c699dfdfe8361, type: 3}
+  poolSize: 64
 --- !u!1 &8958832223113865053
 GameObject:
   m_ObjectHideFlags: 0

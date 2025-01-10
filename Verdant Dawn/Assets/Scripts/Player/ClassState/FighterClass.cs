@@ -139,7 +139,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// FistEffect 소환 함수
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
         Factory.Instance.GetFistEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -148,7 +148,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(준비)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
         w_SkillEffect = Factory.Instance.GetFighterWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -157,7 +157,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(성공)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -167,7 +167,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// W스킬 이펙트(실패)
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
@@ -177,7 +177,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// E스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
         Factory.Instance.GetFighterESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -186,7 +186,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// E스킬2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill2(Transform attackTransform)
     {
         Factory.Instance.GetFighterESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -195,7 +195,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// E스킬3 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill3(Transform attackTransform)
     {
         Factory.Instance.GetFighterESkill3(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -204,7 +204,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// R스킬1 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
         r_SkillEffect = Factory.Instance.GetFighterRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
@@ -213,7 +213,7 @@ public class FighterClass : BaseClass, IClass
     /// <summary>
     /// R스킬2 이펙트
     /// </summary>
-    /// <param name="attackTransform">Effect 소환 트랜스폼</param>
+    /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill2(Transform attackTransform)
     {
         r_SkillEffect.gameObject.SetActive(false);

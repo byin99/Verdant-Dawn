@@ -4909,8 +4909,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848922036959811754}
-  - component: {fileID: 4839844965587203945}
   - component: {fileID: 5070338818663879913}
+  - component: {fileID: 2981635489853388631}
   m_Layer: 0
   m_Name: H_E_SkillEffect1
   m_TagString: Untagged
@@ -4935,18 +4935,6 @@ Transform:
   - {fileID: 4882251451275572192}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4839844965587203945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2609742916368225582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc1e8a2be642674c9e4a3cdbe91204e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5070338818663879913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4959,10 +4947,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f4733f2c9863045b6d22304b23ab01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vignette: {fileID: 0}
-  virtualCamera: {fileID: 7339731712621528142, guid: 0919e8946b9cf0d4484b3404e14ad513,
-    type: 3}
-  zoomTime: 0.2
+--- !u!114 &2981635489853388631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609742916368225582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b59835bfbb2972469bc93da782cab75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 20
+  skillDamageRatio: 0
+  knockBackPower: 0
+  skillDelayTime: 0
+  isDamage: 0
+  isContinuous: 0
 --- !u!1 &6848152407497976254
 GameObject:
   m_ObjectHideFlags: 0

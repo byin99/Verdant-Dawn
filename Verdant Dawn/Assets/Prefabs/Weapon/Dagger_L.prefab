@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 4570309558708034906}
   - component: {fileID: 4680473133491480950}
   - component: {fileID: 1277947327136470706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dagger_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

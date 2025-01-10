@@ -82,7 +82,7 @@ public class WFX_Demo : MonoBehaviour
 		GUILayout.BeginArea(new Rect(5,20,Screen.width-10,60));
 		
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Effect: " + ParticleExamples[exampleIndex].name, GUILayout.Width(280));
+		GUILayout.Label("LevelUpEffect: " + ParticleExamples[exampleIndex].name, GUILayout.Width(280));
 		if(GUILayout.Button("<", GUILayout.Width(30)))
 		{
 			prevParticle();

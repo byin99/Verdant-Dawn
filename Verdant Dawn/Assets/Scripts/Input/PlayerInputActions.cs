@@ -183,6 +183,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Status"",
+                    ""type"": ""Button"",
+                    ""id"": ""53f1983b-8293-48ac-8e4c-b9d35fcee41f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -194,6 +203,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KM"",
                     ""action"": ""WeaponChange"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eea326e6-7117-4564-b035-9a0cab6f2fd9"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KM"",
+                    ""action"": ""Status"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -231,6 +251,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_WeaponChange = m_UI.FindAction("WeaponChange", throwIfNotFound: true);
+        m_UI_Status = m_UI.FindAction("Status", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -387,11 +408,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_WeaponChange;
+    private readonly InputAction m_UI_Status;
     public struct UIActions
     {
         private @PlayerInputActions m_Wrapper;
         public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @WeaponChange => m_Wrapper.m_UI_WeaponChange;
+        public InputAction @Status => m_Wrapper.m_UI_Status;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -404,6 +427,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @WeaponChange.started += instance.OnWeaponChange;
             @WeaponChange.performed += instance.OnWeaponChange;
             @WeaponChange.canceled += instance.OnWeaponChange;
+            @Status.started += instance.OnStatus;
+            @Status.performed += instance.OnStatus;
+            @Status.canceled += instance.OnStatus;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -411,6 +437,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @WeaponChange.started -= instance.OnWeaponChange;
             @WeaponChange.performed -= instance.OnWeaponChange;
             @WeaponChange.canceled -= instance.OnWeaponChange;
+            @Status.started -= instance.OnStatus;
+            @Status.performed -= instance.OnStatus;
+            @Status.canceled -= instance.OnStatus;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -450,5 +479,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnWeaponChange(InputAction.CallbackContext context);
+        void OnStatus(InputAction.CallbackContext context);
     }
 }

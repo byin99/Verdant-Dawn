@@ -4841,7 +4841,7 @@ GameObject:
   - component: {fileID: 3851789212142628194}
   - component: {fileID: 7765283464241870857}
   - component: {fileID: 3843156969074443091}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: futuristic_weapon1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4924,7 +4924,7 @@ GameObject:
   - component: {fileID: 5851487994664659591}
   - component: {fileID: 2001303317786249413}
   - component: {fileID: 6124802682946360476}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: futuristic_weapon1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5007,7 +5007,7 @@ GameObject:
   - component: {fileID: 6975026521633257819}
   - component: {fileID: 1620005612184371785}
   - component: {fileID: 7674270082555805136}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: futuristic_weapon1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5088,7 +5088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633363471418910283}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Riple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
