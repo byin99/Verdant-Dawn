@@ -1033,26 +1033,6 @@ public class Factory : Singleton<Factory>
     }
 
     /// <summary>
-    /// HitEnemyEffect 소환 함수
-    /// </summary>
-    /// <param name="position">소환 위치</param>
-    /// <returns>소환된 HitEffect</returns>
-    public HitEffect GetHitEnemyEffect(Vector3? position = null)
-    {
-        return hitEnemyEffectPool.GetObject(position);
-    }
-
-    /// <summary>
-    /// HitPlayerEffect 소환 함수
-    /// </summary>
-    /// <param name="position">소환 위치</param>
-    /// <returns>소환된 HitEffect</returns>
-    public HitEffect GetHitPlayerEffect(Vector3? position = null)
-    {
-        return hitPlayerEffectPool.GetObject(position);
-    }
-
-    /// <summary>
     /// GhoulAttackEffect 소환 함수
     /// </summary>
     /// <param name="position">소환 위치</param>

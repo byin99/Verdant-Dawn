@@ -14,6 +14,12 @@ public interface IMana
 
     /// <summary>
     /// 최대 MP를 확인하기 위한 프로퍼티
-    /// </summary>
+    /// </summary>\
     public float MaxMP { get; }
+
+    /// <summary>
+    /// MP를 바꾸는 함수
+    /// </summary>
+    /// <param name="change">바뀐 MP<</param>
+    public void ManaChange(float change);
 }

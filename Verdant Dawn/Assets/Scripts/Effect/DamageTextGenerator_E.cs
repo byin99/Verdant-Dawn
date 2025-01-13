@@ -17,6 +17,5 @@ public class DamageTextGenerator_E : MonoBehaviour
     private void DamageEffectGenerate(float damage, Vector3 damagePoint)
     {
         Factory.Instance.MakeDamageText_E((int)damage, damagePoint);
-        Factory.Instance.GetHitEnemyEffect(damagePoint);
     }
 }

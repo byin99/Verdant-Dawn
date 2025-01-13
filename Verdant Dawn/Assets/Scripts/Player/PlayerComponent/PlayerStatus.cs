@@ -105,10 +105,15 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
     float maxExperiencePoint = 100.0f;
 
     /// <summary>
-    /// 맞고 있는지 기록하는 변수(trueㅁ8ㄴ 맞고있음, false면 안 맞고 있음)
+    /// 맞고 있는지 기록하는 변수(true면 맞고있음, false면 안 맞고 있음)
     /// </summary>
     [HideInInspector] 
     public bool isHit;
+
+    /// <summary>
+    /// 마나가 가득 차 있는지 판단하는 변수(true면 가득 차있음, false면 가득 차있지 않음)
+    /// </summary>
+    bool isManaFull;
 
     /// <summary>
     /// 맞는 동안 시간을 재기위한 변수
@@ -129,6 +134,17 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
     /// 넉백되는 힘
     /// </summary>
     float knockBackPower;
+
+    /// <summary>
+    /// 마나가 차기위해 필요한 딜레이 시간
+    /// </summary>
+    [SerializeField]
+    float manaDelayTime;
+
+    /// <summary>
+    /// 마나를 채우기 위해 시간을 재는 변수
+    /// </summary>
+    float manaRechargeTimer;
 
     /// <summary>
     /// 맞은 부위
@@ -172,6 +188,16 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         {
             if (IsAlive)    // 살아있을 때만 적용
             {
+                if (value > maxMP)
+                {
+                    isManaFull = true;
+                }
+                else
+                {
+                    isManaFull = false;
+                    manaRechargeTimer = 0.0f;
+                }
+
                 mp = Mathf.Clamp(value, 0.0f, maxMP);   // 최대/최소치를 벗어날 수 없음
                 onManaChange?.Invoke(mp / maxMP);
             }
@@ -274,6 +300,17 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
                 isHit = false;
             }
         }
+
+        // 마나를 시간당 채우기
+        if (!isManaFull && manaRechargeTimer < manaDelayTime)
+        {
+            manaRechargeTimer += Time.fixedDeltaTime;
+            if (manaRechargeTimer > manaDelayTime)
+            {
+                MP += maxMP * 0.2f;
+                manaRechargeTimer = 0.0f;
+            }
+        }
     }
 
     /// <summary>
@@ -339,8 +376,6 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
 
             HP -= realDamage;
 
-            Factory.Instance.GetHitPlayerEffect(damagePoint);
-
             hitPoint = damagePoint;
             hitPoint.y = 0;
             transform.LookAt(hitPoint);
@@ -382,6 +417,15 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
 
         onLevelUp?.Invoke();
         onStatus?.Invoke();
+    }
+
+    /// <summary>
+    /// MP를 바꾸는 함수
+    /// </summary>
+    /// <param name="change">바뀐 MP<</param>
+    public void ManaChange(float change)
+    {
+        MP = change;
     }
 
     public void Test() 

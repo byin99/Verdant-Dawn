@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
     /// </summary>
     public bool CanKnockBack => (status.IsAlive && !movement.isRoll && !attack.isUltimate);
 
+    /// <summary>
+    /// 플레이어의 마나를 보여주는 프로퍼티
+    /// </summary>
+    public float ManaPoint => status.MP;
+
     // 플레이어 컴포넌트들
     PlayerInputController inputcontroller;
     PlayerMovement movement;
@@ -67,6 +72,14 @@ public class Player : MonoBehaviour
         playerClass.onChangeClass += status.ChangeClassStatus;
 
         status.onKnockBack += attack.CancelSkill;
-        
+    }
+
+    /// <summary>
+    /// 마나를 바꾸는 함수
+    /// </summary>
+    /// <param name="mana">바꾸는 마나</param>
+    public void ManaChange(float mana)
+    {
+        status.ManaChange(mana);
     }
 }

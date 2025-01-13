@@ -413,7 +413,7 @@ public class PlayerAttack : MonoBehaviour
     public void StartCharge()
     {
         // 스킬이 사용 가능하다면
-        if (player.CanUseSkill && chargeRemainTime < 0.0f && !isCombo)
+        if (player.CanUseSkill && chargeRemainTime < 0.0f && !isCombo && player.ManaPoint > 30.0f)
         {
             // 차징 시작
             onCharge?.Invoke();
@@ -465,6 +465,12 @@ public class PlayerAttack : MonoBehaviour
             && comboRemainTime < 0
             && comboIndex != comboCount)
         {
+            // 마나가 부족하다면
+            if (comboIndex == 0 && player.ManaPoint < 40.0f)
+            {
+                return;
+            }
+
             onComboSkill?.Invoke();
             isCombo = true;
 
@@ -515,7 +521,7 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     public void StartUltimateSkill()
     {
-        if (player.CanUseSkill && ultimateRemainTime < 0.0f)
+        if (player.CanUseSkill && ultimateRemainTime < 0.0f && player.ManaPoint > 50.0f)
         {
             onUltimate?.Invoke();
             StartCoroutine(UltimateSkill());
@@ -613,6 +619,7 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator ChargingSkill()
     {
         // 차징 스킬 시작
+        player.ManaChange(player.ManaPoint - 30.0f);
         animator.SetBool(WSkill_Hash, true);
         chargingTimeElapsed = 0.0f;
         isChargeSuccessful = false;
@@ -685,6 +692,11 @@ public class PlayerAttack : MonoBehaviour
         while (angleDifference > stopThreshold);
 
         // 콤보 공격 시작
+        if (comboIndex == 0)
+        {
+            player.ManaChange(player.ManaPoint - 40.0f);
+        }
+
         animator.SetTrigger(ESkill_Hash);
         animator.SetBool(SkillCancel_Hash, false);
         comboTime = comboAnimTime[comboIndex] * 0.5f;
@@ -724,6 +736,7 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator UltimateSkill()
     {
         // 스킬 시작
+        player.ManaChange(player.ManaPoint - 50.0f);
         agent.enabled = false;
 
         // 플레이어 방향을 마우스 방향으로 바꾸기
@@ -735,6 +748,7 @@ public class PlayerAttack : MonoBehaviour
         while (angleDifference > stopThreshold);
 
         // 궁극기 쿨타임 주기
+        isUltimate = true;
         ultimateRemainTime = ultimateCoolTime;
         finishUltimate?.Invoke();
 

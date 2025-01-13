@@ -58,9 +58,6 @@ public class EnemyController : RecycleObject
         hit = new EnemyHit();
         die = new EnemyDie();
 
-        // StateMachine 만들기
-        enemyStateMachine = new StateMachine<EnemyController>(this, idle);
-
         // 컴포넌트들 찾기
         rigid = GetComponent<Rigidbody>();
         player = GameManager.Instance.Player;
@@ -76,6 +73,9 @@ public class EnemyController : RecycleObject
     protected override void OnReset()
     {
         target = transform.position;
+
+        // StateMachine 만들기
+        enemyStateMachine = new StateMachine<EnemyController>(this, idle);
         status.HP = status.maxHP;
     }
 

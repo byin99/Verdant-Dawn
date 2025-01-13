@@ -100,6 +100,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     private void OnEnable()
     {
         hp = maxHP;
+        onHealthChange?.Invoke(hp / maxHP);
     }
 
     /// <summary>
