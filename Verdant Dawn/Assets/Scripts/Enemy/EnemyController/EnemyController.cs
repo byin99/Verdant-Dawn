@@ -126,7 +126,6 @@ public class EnemyController : RecycleObject
     void Die()
     {
         enemyStateMachine.TransitionTo(die);
-        playerStatus.ExperiencePoint += status.expPoint;
     }
 
     /// <summary>

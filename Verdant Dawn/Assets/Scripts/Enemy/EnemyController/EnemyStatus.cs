@@ -138,6 +138,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     /// </summary>
     public void Die()
     {
+        playerStatus.ExperiencePoint += expPoint;
         onDie?.Invoke();
     }
 

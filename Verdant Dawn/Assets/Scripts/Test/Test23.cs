@@ -24,7 +24,7 @@ public class Test23 : TestBase
 
     protected override void OnTest2(InputAction.CallbackContext context)
     {
-        Factory.Instance.GetGhoul(new Vector3(20, 0, 0), Vector3.zero);
+        Factory.Instance.GetSkeleton(new Vector3(20, 0, 0), Vector3.zero);
     }
 
     protected override void OnTest3(InputAction.CallbackContext context)

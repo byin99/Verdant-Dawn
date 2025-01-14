@@ -256,6 +256,16 @@ public class Factory : Singleton<Factory>
     GhoulAttackPool ghoulAttackPool;
 
     /// <summary>
+    /// SkeletonAttack1Pool
+    /// </summary>
+    SkeletonAttack1Pool skeletonAttack1Pool;
+
+    /// <summary>
+    /// SkeletonAttack2Pool
+    /// </summary>
+    SkeletonAttack2Pool skeletonAttack2Pool;
+
+    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -509,6 +519,16 @@ public class Factory : Singleton<Factory>
         ghoulAttackPool = GetComponentInChildren<GhoulAttackPool>();
         if (ghoulAttackPool != null)
             ghoulAttackPool.Initialize();
+
+        // SkeletonAttack1Pool 초기화 및 생성
+        skeletonAttack1Pool = GetComponentInChildren<SkeletonAttack1Pool>();
+        if (skeletonAttack1Pool != null)
+            skeletonAttack1Pool.Initialize();
+
+        // SkeletonAttack2Pool 초기화 및 생성
+        skeletonAttack2Pool = GetComponentInChildren<SkeletonAttack2Pool>();
+        if (skeletonAttack2Pool != null)
+            skeletonAttack2Pool.Initialize();
     }
 
     /// <summary>
@@ -1041,5 +1061,27 @@ public class Factory : Singleton<Factory>
     public EnemyAttackEffect GetGhoulAttackEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return ghoulAttackPool.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// SkeletonAttackEffect1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 SkeletonAttackEffect1</returns>
+    public EnemyAttackEffect GetSkeletonAttack1Effect(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return skeletonAttack1Pool.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// SkeletonAttackEffect2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 SkeletonAttackEffect2</returns>
+    public EnemyAttackEffect GetSkeletonAttack2Effect(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return skeletonAttack2Pool.GetObject(position, eulerAngle);
     }
 }
