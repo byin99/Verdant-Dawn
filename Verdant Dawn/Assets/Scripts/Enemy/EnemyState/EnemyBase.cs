@@ -12,6 +12,7 @@ public class EnemyBase : IState<EnemyController>
     protected Rigidbody rigid;
     protected Player player;
     protected Material[] materials;
+    protected EnemyStatus enemyStatus;
 
     /// <summary>
     /// 플레이어를 감지하는 거리(제곱)
@@ -74,6 +75,11 @@ public class EnemyBase : IState<EnemyController>
             {
                 materials[i] = sender.skinnedMeshRenderers[i].material;
             }
+        }
+
+        if (enemyStatus == null)
+        {
+            enemyStatus = sender.GetComponent<EnemyStatus>();
         }
     }
 

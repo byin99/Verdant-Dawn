@@ -29,7 +29,7 @@ public class Test23 : TestBase
 
     protected override void OnTest3(InputAction.CallbackContext context)
     {
-        attack.CancelSkill(0.0f);
+        status.IdentityGauge = 100.0f;
     }
 
     protected override void OnTest4(InputAction.CallbackContext context)

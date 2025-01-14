@@ -24,6 +24,7 @@ public class EnemyComeBack : EnemyBase
         // 복귀에 완료했다면
         if (agent.remainingDistance < 0.2f)
         {
+            enemyStatus.HP = enemyStatus.MaxHP;
             sender.enemyStateMachine.TransitionTo(sender.idle); // Idle 상태로 전환
         }
     }

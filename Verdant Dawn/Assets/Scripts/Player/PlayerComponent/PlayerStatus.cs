@@ -248,6 +248,62 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         }
     }
 
+    // -----------------------------------------------------------------------------------------------------
+
+    /// <summary>
+    /// 아이덴 스킬을 쓰면 실행되는 델리게이트
+    /// </summary>
+    public event Action onIdentitySkill;
+
+    /// <summary>
+    /// 아이덴 스킬이 끝나면 실행되는 델리게이트(중간에 꺼도 실행됨)
+    /// </summary>
+    public event Action offIdentitySkill;
+
+    /// <summary>
+    /// 아이덴티티 게이지가 변하면 실행되는 델리게이트
+    /// </summary>
+    public event Action<float> onChangeIdentityGauge;
+
+    /// <summary>
+    /// 아이덴티티 게이지
+    /// </summary>
+    float identityGauge;
+
+    /// <summary>
+    /// 아이덴티티 줄어드는 딜레이 타임
+    /// </summary>
+    float identityDelayTime = 3;
+
+    /// <summary>
+    /// 아이덴티티 스킬을 사용할 수 있으면 true, 아니면 false를 기록하는 변수
+    /// </summary>
+    bool canIdentity;
+
+    /// <summary>
+    /// 아이덴티티 스킬을 사용중이면 true, 아니면 false
+    /// </summary>
+    [HideInInspector]
+    public bool isIdentity;
+
+    public float IdentityGauge
+    {
+        get => identityGauge;
+        set
+        {
+            if (IsAlive && !canIdentity)
+            {
+                if (value > 99.99f)
+                {
+                    canIdentity = true;
+                }
+
+                identityGauge = Mathf.Clamp(value, 0.0f, 100);
+                onChangeIdentityGauge?.Invoke(identityGauge);
+            }
+        }
+    }
+
     /// <summary>
     /// 플레이어의 생존 여부를 확인하기 위한 프로퍼티
     /// </summary>
@@ -277,6 +333,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         HP = maxHP;
         MP = maxMP;
         ExperiencePoint = 0.0f;
+        IdentityGauge = 0.0f;
     }
 
     private void FixedUpdate()
@@ -402,6 +459,26 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
     }
 
     /// <summary>
+    /// 아이덴티티 스킬을 사용하면 실행되는 함수
+    /// </summary>
+    public void IdentitySkill()
+    {
+        if (canIdentity)
+        {
+            onIdentitySkill?.Invoke();
+            StartCoroutine(StartIdentitySkill());
+        }
+        else if (isIdentity)
+        {
+            StopAllCoroutines();
+            OffIDentitySkill();
+            isIdentity = false;
+            offIdentitySkill?.Invoke();
+        }
+        
+    }
+
+    /// <summary>
     /// 레벨업을 하는 함수
     /// </summary>
     void LevelUp()
@@ -419,6 +496,28 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         onStatus?.Invoke();
     }
 
+    IEnumerator StartIdentitySkill()
+    {
+        canIdentity = false;
+        isIdentity = true;
+        OnIdentitySkill();
+
+        while (IdentityGauge > 0.1f)
+        {
+            float timeElapsed = 0.0f;
+            IdentityGauge -= 10.0f;
+            while (timeElapsed < identityDelayTime)
+            {
+                timeElapsed += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        OffIDentitySkill();
+        offIdentitySkill?.Invoke();
+        isIdentity = false;
+    }
+
     /// <summary>
     /// MP를 바꾸는 함수
     /// </summary>
@@ -428,19 +527,21 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         MP = change;
     }
 
-    public void Test() 
+    /// <summary>
+    /// 아이덴티티 스킬을 사용하면 능력치가 오르게 하는 함수
+    /// </summary>
+    void OnIdentitySkill()
     {
-        ExperiencePoint += 50.0f;
+        baseAttackPower *= 2.0f;
+        baseDefensePower *= 2.0f;
     }
 
-    public void Test2()
+    /// <summary>
+    /// 아이덴티티 스킬이 끝나면 능력치를 돌아오게 하는 함수
+    /// </summary>
+    void OffIDentitySkill()
     {
-        HP -= 50.0f;
+        baseAttackPower *= 0.5f;
+        baseDefensePower *= 0.5f;
     }
-
-    public void Test3()
-    {
-        MP -= 50.0f;
-    }
-
 }

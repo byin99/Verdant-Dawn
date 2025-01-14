@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     /// <summary>
     /// Class를 바꿀 수 있음을 알리는 프로퍼티(true면 바꿀 수 있음)
     /// </summary>
-    public bool CanChange => (status.IsAlive && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit);
+    public bool CanChange => (status.IsAlive && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !status.isIdentity);
 
     /// <summary>
     /// 스킬을 사용할 수 있음을 알리는 프로퍼티(true면 사용할 수 있음)
@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
         inputcontroller.onMove += movement.SetDestination;
         inputcontroller.onRoll += movement.Roll;
         inputcontroller.onAttack += attack.Attack;
+        inputcontroller.onIdentitySkill += status.IdentitySkill;
         inputcontroller.onChargingSkill += attack.StartCharge;
         inputcontroller.offChargingSkill += attack.FinishCharge;
         inputcontroller.onComboSkill += attack.StartCombo;

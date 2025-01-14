@@ -97,6 +97,14 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     /// </summary>
     public float DefensePower => defencePower;
 
+    // 컴포넌트들
+    PlayerStatus playerStatus;
+
+    private void Awake()
+    {
+        playerStatus = GameManager.Instance.PlayerStatus;
+    }
+
     private void OnEnable()
     {
         hp = maxHP;
@@ -121,6 +129,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
 
             HP -= realDamage;
             onHit?.Invoke(realDamage, damagePoint);
+            playerStatus.IdentityGauge += 1;
         }
     }
 

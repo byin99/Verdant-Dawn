@@ -46,6 +46,7 @@ public class FrameUI : MonoBehaviour
 
     // 컴포넌트들
     PlayerStatus playerStatus;
+    PlayerClass playerClass;
 
     private void Awake()
     {
@@ -71,12 +72,15 @@ public class FrameUI : MonoBehaviour
         assassinFrame = child.GetComponent<CanvasGroup>();
 
         playerStatus = GameManager.Instance.PlayerStatus;
+        playerClass = GameManager.Instance.PlayerClass;
     }
 
     private void Start()
     {
         playerStatus.onLevelUp += ActivateLevelUp;
         playerStatus.onHit += ActivateBlood;
+        playerStatus.onIdentitySkill += ActivateIdentity;
+        playerStatus.offIdentitySkill += DeactivateIdentity;
     }
 
     /// <summary>
@@ -99,6 +103,64 @@ public class FrameUI : MonoBehaviour
 
         bloodCoroutine = OnBloodCoroutine();
         StartCoroutine(bloodCoroutine);
+    }
+
+    /// <summary>
+    /// 아이덴티티 스킬을 켜면 테두리를 켜주는 함수
+    /// </summary>
+    void ActivateIdentity()
+    {
+        switch (playerClass.CurrentClass)
+        {
+            case CharacterClass.Fighter:
+                ActivateFighter();
+                break;
+
+            case CharacterClass.Berserker:
+                ActivateBerserker();
+                break;
+
+            case CharacterClass.Hunter:
+                ActivateHunter();
+                break;
+
+            case CharacterClass.Magician:
+                ActivateMagician();
+                break;
+
+            case CharacterClass.Assassin:
+                ActivateAssassin();
+                break;
+        }
+    }
+
+    /// <summary>
+    /// 아이덴티티 스킬을 끄면 테두리를 꺼주는 함수
+    /// </summary>
+    void DeactivateIdentity()
+    {
+        switch (playerClass.CurrentClass)
+        {
+            case CharacterClass.Fighter:
+                DeactivateFighter();
+                break;
+
+            case CharacterClass.Berserker:
+                DeactivateBerserker();
+                break;
+
+            case CharacterClass.Hunter:
+                DeactivateHunter();
+                break;
+
+            case CharacterClass.Magician:
+                DeactivateMagician();
+                break;
+
+            case CharacterClass.Assassin:
+                DeactivateAssassin();
+                break;
+        }
     }
 
     /// <summary>
