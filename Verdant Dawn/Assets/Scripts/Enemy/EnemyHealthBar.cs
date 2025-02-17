@@ -31,7 +31,6 @@ public class EnemyHealthBar : MonoBehaviour
     private void LateUpdate()
     {
         // 빌보드 효과 넣기
-        transform.rotation = Camera.main.transform.rotation;
+        transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
     }
-
 }

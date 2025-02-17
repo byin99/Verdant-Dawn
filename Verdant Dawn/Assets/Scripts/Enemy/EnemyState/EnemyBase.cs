@@ -20,7 +20,7 @@ public class EnemyBase : IState<EnemyController>
     protected float detectDistance = 25.0f;
 
     /// <summary>
-    /// 현재상태를 공격상태로 변경하는 거리
+    /// 현재상태를 공격상태로 변경하는 거리(제곱)
     /// </summary>
     protected float attackDistance = 4.0f;
 

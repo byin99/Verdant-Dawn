@@ -1,0 +1,2389 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &72114859968199134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3372275198015371833}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3372275198015371833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72114859968199134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.009479385, y: -0.04794993, z: -0.18574837, w: 0.98138094}
+  m_LocalPosition: {x: -0.22216018, y: -0.010763397, z: -0.024003983}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1545915073021362228}
+  m_Father: {fileID: 629780918988395712}
+  m_LocalEulerAnglesHint: {x: 2.2921536, y: -7.84429, z: -44.952114}
+--- !u!1 &216177449065274782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8818913849389046949}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8818913849389046949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216177449065274782}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000016596525, y: -0.000000015523343, z: -0.19511642,
+    w: 0.98078007}
+  m_LocalPosition: {x: -0.0537294, y: 0.000000076293944, z: 0.000000076293944}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6820678725394905905}
+  m_LocalEulerAnglesHint: {x: 0.00000042269602, y: 0.0000000597139, z: 8.040811}
+--- !u!1 &226240452195586069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2526593759932562311}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2526593759932562311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226240452195586069}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000000054344946, y: -0.000000014366234, z: -0.11640219,
+    w: 0.9932022}
+  m_LocalPosition: {x: -0.071526565, y: -0.00000015258789, z: 0.00000022888183}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5669203772372629274}
+  m_Father: {fileID: 4692479097596309510}
+  m_LocalEulerAnglesHint: {x: -0.0000016713857, y: -0.000002978185, z: -29.30157}
+--- !u!1 &462631858484635798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3192536136189756366}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3192536136189756366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462631858484635798}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.49999934, w: 0.50000066}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1468814025326615011}
+  - {fileID: 2042975382483787810}
+  - {fileID: 7451742417865033926}
+  m_Father: {fileID: 1926027105180177440}
+  m_LocalEulerAnglesHint: {x: -71.96918, y: -24.83258, z: 118.525215}
+--- !u!1 &529229185761842839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4608136092165192536}
+  - component: {fileID: 2643152376191703353}
+  m_Layer: 0
+  m_Name: SK_Vampire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4608136092165192536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529229185761842839}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7363981982339565182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &2643152376191703353
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529229185761842839}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e01513919dc8511449302d97d28b0e50, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300002, guid: 5da3aca44823c9a428809c35b49e5182, type: 3}
+  m_Bones:
+  - {fileID: 6064750210073266396}
+  - {fileID: 7451742417865033926}
+  - {fileID: 4712040689350290584}
+  - {fileID: 6586754331015144006}
+  - {fileID: 2042975382483787810}
+  - {fileID: 629780918988395712}
+  - {fileID: 2635572196676209428}
+  - {fileID: 4078874759123021335}
+  - {fileID: 4593341505774700706}
+  - {fileID: 4761661032601788422}
+  - {fileID: 8725052523265011708}
+  - {fileID: 1545915073021362228}
+  - {fileID: 2533799100459413845}
+  - {fileID: 3129267377399574061}
+  - {fileID: 2646354741486744899}
+  - {fileID: 1021780373675155119}
+  - {fileID: 6504328031240941209}
+  - {fileID: 3372275198015371833}
+  - {fileID: 8201282998661446395}
+  - {fileID: 3319343225697595437}
+  - {fileID: 5285970055842974301}
+  - {fileID: 3828077011769342014}
+  - {fileID: 7635115837836348646}
+  - {fileID: 6833455254254814894}
+  - {fileID: 5743968157090647927}
+  - {fileID: 2663277403969546193}
+  - {fileID: 2139080215402630762}
+  - {fileID: 3192536136189756366}
+  - {fileID: 1468814025326615011}
+  - {fileID: 7396517353016162168}
+  - {fileID: 7010150618798762067}
+  - {fileID: 5719581422524019134}
+  - {fileID: 1654988189263675072}
+  - {fileID: 6295388853071897563}
+  - {fileID: 4999242839312002691}
+  - {fileID: 694164431396479518}
+  - {fileID: 8818913849389046949}
+  - {fileID: 6820678725394905905}
+  - {fileID: 8775989973629243786}
+  - {fileID: 1840729471704476939}
+  - {fileID: 6601595998171061677}
+  - {fileID: 1459502772564744217}
+  - {fileID: 8244237789910360100}
+  - {fileID: 5319216502132546151}
+  - {fileID: 4692479097596309510}
+  - {fileID: 5669203772372629274}
+  - {fileID: 2526593759932562311}
+  - {fileID: 8768985197393769048}
+  - {fileID: 2092833954558832956}
+  - {fileID: 8489010465945249881}
+  - {fileID: 3614759005682094072}
+  - {fileID: 2823584799634736376}
+  - {fileID: 4346650284262302808}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 3192536136189756366}
+  m_AABB:
+    m_Center: {x: 0.25701964, y: 0.24078566, z: -0.0000019073486}
+    m_Extent: {x: 1.4184216, y: 0.9204666, z: 1.5283787}
+  m_DirtyAABB: 0
+--- !u!1 &713341338134352511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7010150618798762067}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7010150618798762067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713341338134352511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000004939549, y: -0.000000014058646, z: 0.3314875, w: 0.94345963}
+  m_LocalPosition: {x: -0.7081842, y: 0, z: 0.000000076293944}
+  m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1654988189263675072}
+  m_Father: {fileID: 1468814025326615011}
+  m_LocalEulerAnglesHint: {x: -0.0000022147424, y: 0.0000027362385, z: 53.023304}
+--- !u!1 &721153453342742472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8244237789910360100}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8244237789910360100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721153453342742472}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000006966301, y: 0.00000000456723, z: -0.11640218, w: 0.9932022}
+  m_LocalPosition: {x: -0.07385864, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5319216502132546151}
+  m_Father: {fileID: 1840729471704476939}
+  m_LocalEulerAnglesHint: {x: -0.000001724641, y: 0.000003905027, z: -29.30157}
+--- !u!1 &766355013012861957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3319343225697595437}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3319343225697595437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766355013012861957}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000003653691, y: 7.268655e-10, z: -0.19511646, w: 0.98078007}
+  m_LocalPosition: {x: -0.0537294, y: -0.000000114440915, z: -0.000000076293944}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2823584799634736376}
+  m_LocalEulerAnglesHint: {x: -0.00000006441769, y: -0.0000025958782, z: 8.040807}
+--- !u!1 &872233020418695880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6504328031240941209}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6504328031240941209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872233020418695880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.08154717, y: -0.1485792, z: -0.24301745, w: 0.9551004}
+  m_LocalPosition: {x: -0.2046984, y: -0.013076324, z: -0.064442515}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4761661032601788422}
+  m_Father: {fileID: 629780918988395712}
+  m_LocalEulerAnglesHint: {x: 4.793036, y: -18.940489, z: -61.139153}
+--- !u!1 &1024174502462008743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1801570063588243330}
+  - component: {fileID: 4963421814543101817}
+  - component: {fileID: 6083689929571151210}
+  m_Layer: 8
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1801570063588243330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024174502462008743}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.029, y: -0.006, z: 0}
+  m_LocalScale: {x: 2.08, y: 0.37, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 694113643189959389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4963421814543101817
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024174502462008743}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6083689929571151210
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024174502462008743}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 86bf7b91c4b2855449b2384910566781, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1325855497894243613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4078874759123021335}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4078874759123021335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325855497894243613}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.05383305, y: -0.011744948, z: -0.08627676, w: 0.9947464}
+  m_LocalPosition: {x: -0.72360307, y: 0.0000000023841857, z: -0.000000038146972}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6586754331015144006}
+  m_Father: {fileID: 5719581422524019134}
+  m_LocalEulerAnglesHint: {x: 10.605776, y: -28.588284, z: -21.213654}
+--- !u!1 &1472994476244640801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5161180645951687837}
+  - component: {fileID: 5943451349446511169}
+  m_Layer: 8
+  m_Name: DamageTextGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5161180645951687837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472994476244640801}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7363981982339565182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5943451349446511169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472994476244640801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2238fcff0c8e9d4eb29975042a08114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1495378191133529095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654988189263675072}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654988189263675072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495378191133529095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.053833127, y: 0.011744812, z: -0.08627671, w: 0.99474645}
+  m_LocalPosition: {x: -0.72360295, y: 0, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6295388853071897563}
+  m_Father: {fileID: 7010150618798762067}
+  m_LocalEulerAnglesHint: {x: 4.375787, y: 22.128115, z: -26.894873}
+--- !u!1 &1504183681778566537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8725052523265011708}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8725052523265011708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504183681778566537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000073014808, y: -0.0000000014830741, z: -0.19905488,
+    w: 0.97998834}
+  m_LocalPosition: {x: -0.052702103, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545915073021362228}
+  m_LocalEulerAnglesHint: {x: 0.0000017366799, y: 0.00000079287645, z: -38.895943}
+--- !u!1 &1514606996762220150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5319216502132546151}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5319216502132546151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514606996762220150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000178275, y: -0.000000012549682, z: -0.2615248, w: 0.9651968}
+  m_LocalPosition: {x: -0.06565285, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8244237789910360100}
+  m_LocalEulerAnglesHint: {x: 0.0000006964418, y: -0.0000007276026, z: -46.25367}
+--- !u!1 &2168047281999131609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459502772564744217}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459502772564744217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168047281999131609}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000029248499, y: 0.000000013812312, z: -0.3200359, w: 0.9474054}
+  m_LocalPosition: {x: -0.056883696, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6601595998171061677}
+  m_LocalEulerAnglesHint: {x: -0.00000012767234, y: 0.00000017105216, z: -53.262753}
+--- !u!1 &2326320179713472167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468814025326615011}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468814025326615011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326320179713472167}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.23204985, y: 0.9599935, z: 0.049738407, w: 0.14863218}
+  m_LocalPosition: {x: 0.00000015258789, y: 0.0000002670288, z: 0.1531008}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7010150618798762067}
+  m_Father: {fileID: 3192536136189756366}
+  m_LocalEulerAnglesHint: {x: -29.153687, y: -175.43477, z: -42.761223}
+--- !u!1 &2372948564327348385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4346650284262302808}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4346650284262302808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372948564327348385}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0090809865, y: 0.052037, z: -0.17905086, w: 0.98242074}
+  m_LocalPosition: {x: -0.22750698, y: -0.005468292, z: 0.08032844}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1021780373675155119}
+  m_Father: {fileID: 629780918988395712}
+  m_LocalEulerAnglesHint: {x: 0.04536996, y: 6.0557623, z: -28.120869}
+--- !u!1 &2439422737278146103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092833954558832956}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092833954558832956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439422737278146103}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.01271551, y: 0.058389913, z: -0.21240135, w: 0.9753536}
+  m_LocalPosition: {x: -0.054512635, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8489010465945249881}
+  m_LocalEulerAnglesHint: {x: 2.8435194, y: 6.236563, z: -20.632717}
+--- !u!1 &2469769375439221575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3129267377399574061}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3129267377399574061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469769375439221575}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000033964245, y: -0.000000030236087, z: -0.116402216,
+    w: 0.9932022}
+  m_LocalPosition: {x: -0.07385857, y: 0, z: -0.00000015258789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2533799100459413845}
+  m_Father: {fileID: 8201282998661446395}
+  m_LocalEulerAnglesHint: {x: 0.0000022336362, y: -0.0000012535415, z: -29.301567}
+--- !u!1 &2481398880692023116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6603276624875514950}
+  m_Layer: 8
+  m_Name: attackTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6603276624875514950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481398880692023116}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7363981982339565182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2787980474241651003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5285970055842974301}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Ponytail1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5285970055842974301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787980474241651003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1.5394573e-12, y: 0.0000020684072, z: -0.74574864, w: 0.6662274}
+  m_LocalPosition: {x: 0.009317779, y: 0.092475735, z: 0.0000015491496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6064750210073266396}
+  m_LocalEulerAnglesHint: {x: 0.00020504504, y: 0.00015321127, z: -106.57295}
+--- !u!1 &3160904777039580343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2823584799634736376}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2823584799634736376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160904777039580343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000014891394, y: -5.3945043e-10, z: -0.036201905, w: 0.9993445}
+  m_LocalPosition: {x: -0.072152406, y: -0.000000038146972, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3319343225697595437}
+  m_Father: {fileID: 3614759005682094072}
+  m_LocalEulerAnglesHint: {x: 0.00000028273533, y: 0.00000258124, z: 3.2113614}
+--- !u!1 &3280536993523829611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6586754331015144006}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Toe0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6586754331015144006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3280536993523829611}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000017780705, y: -0.000000013829436, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.119958065, y: 0.21688896, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4078874759123021335}
+  m_LocalEulerAnglesHint: {x: -3.1075099, y: -8.395043, z: -122.880394}
+--- !u!1 &3467557985952978429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6820678725394905905}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6820678725394905905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3467557985952978429}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000007985148, y: -0.000000014621669, z: -0.03620189,
+    w: 0.9993445}
+  m_LocalPosition: {x: -0.07215225, y: 0, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8818913849389046949}
+  m_Father: {fileID: 694164431396479518}
+  m_LocalEulerAnglesHint: {x: 0.000000047828365, y: -0.00000085244113, z: 3.211362}
+--- !u!1 &3808012897165254938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2533799100459413845}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2533799100459413845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808012897165254938}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000002636976, y: -0.000000008293454, z: -0.26152483, w: 0.9651967}
+  m_LocalPosition: {x: -0.06565277, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3129267377399574061}
+  m_LocalEulerAnglesHint: {x: -0.0000009662575, y: 0.0000010094923, z: -46.25367}
+--- !u!1 &3893751265066998672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2547296555988793344}
+  - component: {fileID: 5200809600544368904}
+  - component: {fileID: 4418804999738595758}
+  m_Layer: 8
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2547296555988793344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893751265066998672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 2.1, y: 0.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2680629262274201017}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5200809600544368904
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893751265066998672}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4418804999738595758
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893751265066998672}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8d38ad5d467f39845a279dc41c919d20, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4211425399014916518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2646354741486744899}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2646354741486744899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4211425399014916518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000011559723, y: 2.71944e-11, z: -0.3200359, w: 0.94740546}
+  m_LocalPosition: {x: -0.05688362, y: 0, z: -0.000000076293944}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1021780373675155119}
+  m_LocalEulerAnglesHint: {x: 0.0000011130763, y: 0.0000013634801, z: -53.262745}
+--- !u!1 &4217289247088715767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8768985197393769048}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8768985197393769048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217289247088715767}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.08154717, y: 0.14857924, z: -0.2430175, w: 0.9551004}
+  m_LocalPosition: {x: -0.2046984, y: -0.013076477, z: 0.064442515}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8489010465945249881}
+  m_Father: {fileID: 4999242839312002691}
+  m_LocalEulerAnglesHint: {x: -4.7930374, y: 18.940495, z: -61.139156}
+--- !u!1 &4233479581707218944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139080215402630762}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139080215402630762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4233479581707218944}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.15155508, y: -0.16927712, z: -0.010050183, w: 0.9737943}
+  m_LocalPosition: {x: -0.20939632, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7396517353016162168}
+  m_Father: {fileID: 5743968157090647927}
+  m_LocalEulerAnglesHint: {x: -29.138727, y: -41.84274, z: -5.719986}
+--- !u!1 &4553920650181879235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021780373675155119}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021780373675155119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553920650181879235}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000009683549, y: 0.0000000026158868, z: -0.11640219, w: 0.9932022}
+  m_LocalPosition: {x: -0.07500328, y: 0, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2646354741486744899}
+  m_Father: {fileID: 4346650284262302808}
+  m_LocalEulerAnglesHint: {x: -0.0000017589068, y: 0.0000000653169, z: -16.162943}
+--- !u!1 &4560854569395294864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8489010465945249881}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8489010465945249881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560854569395294864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0014298989, y: 0.027399939, z: -0.052097164, w: 0.998265}
+  m_LocalPosition: {x: -0.06001625, y: 0.00000015258789, z: -0.00000015258789}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2092833954558832956}
+  m_Father: {fileID: 8768985197393769048}
+  m_LocalEulerAnglesHint: {x: 0.32715264, y: 3.1274228, z: -15.401063}
+--- !u!1 &5108577019498701182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6833455254254814894}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6833455254254814894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108577019498701182}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.2545593e-13, y: 0.0000004066182, z: -0.14660302, w: 0.9891954}
+  m_LocalPosition: {x: -0.32410002, y: -0.000117645264, z: -3.2625394e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3828077011769342014}
+  m_Father: {fileID: 7635115837836348646}
+  m_LocalEulerAnglesHint: {x: 3.087491, y: -11.194168, z: -14.904282}
+--- !u!1 &5323878923469489147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6295388853071897563}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Toe0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6295388853071897563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5323878923469489147}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000000027988145, y: 0.000000018274612, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.11995807, y: 0.21688898, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1654988189263675072}
+  m_LocalEulerAnglesHint: {x: 0.00007562236, y: 0.00001494089, z: -90.0001}
+--- !u!1 &5649196164868036293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2663277403969546193}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2663277403969546193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649196164868036293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.61030716, y: 0.00024186872, z: 0.7921648, w: -0.00031620328}
+  m_LocalPosition: {x: -0.32406446, y: 0.00000015258789, z: -0.08124866}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4712040689350290584}
+  m_Father: {fileID: 7635115837836348646}
+  m_LocalEulerAnglesHint: {x: -1.4592197, y: 95.85626, z: -166.47858}
+--- !u!1 &5697308999104679641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4593341505774700706}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4593341505774700706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697308999104679641}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.012715531, y: -0.058389887, z: -0.21240145, w: 0.9753536}
+  m_LocalPosition: {x: -0.054512635, y: -0.00000015258789, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4761661032601788422}
+  m_LocalEulerAnglesHint: {x: -2.8435163, y: -6.236563, z: -20.632717}
+--- !u!1 &5766811438494817033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4999242839312002691}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4999242839312002691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766811438494817033}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.52801186, y: 0.042813476, z: 0.06842673, w: 0.8453924}
+  m_LocalPosition: {x: -0.622532, y: 0.000000038146972, z: 0.00000015258789}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 694164431396479518}
+  - {fileID: 8775989973629243786}
+  - {fileID: 1840729471704476939}
+  - {fileID: 4692479097596309510}
+  - {fileID: 8768985197393769048}
+  m_Father: {fileID: 7396517353016162168}
+  m_LocalEulerAnglesHint: {x: -67.75557, y: 13.874865, z: 24.163582}
+--- !u!1 &5775420355724107145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4712040689350290584}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4712040689350290584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5775420355724107145}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1515551, y: 0.16927706, z: -0.010050204, w: 0.9737943}
+  m_LocalPosition: {x: -0.20939633, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2635572196676209428}
+  m_Father: {fileID: 2663277403969546193}
+  m_LocalEulerAnglesHint: {x: 14.354687, y: 39.15585, z: 24.984749}
+--- !u!1 &6156865835270397519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3614759005682094072}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3614759005682094072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156865835270397519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.62318826, y: -0.58662885, z: -0.16072075, w: -0.49160123}
+  m_LocalPosition: {x: -0.06633896, y: 0.008854522, z: 0.05141853}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2823584799634736376}
+  m_Father: {fileID: 629780918988395712}
+  m_LocalEulerAnglesHint: {x: -53.253204, y: 141.00659, z: -52.609787}
+--- !u!1 &6163973118981652855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7635115837836348646}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7635115837836348646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163973118981652855}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.151667e-10, y: 0.00000038897025, z: -0.14023432, w: 0.9901184}
+  m_LocalPosition: {x: -0.32413557, y: -0.000247879, z: -6.87578e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5743968157090647927}
+  - {fileID: 6833455254254814894}
+  - {fileID: 2663277403969546193}
+  m_Father: {fileID: 7451742417865033926}
+  m_LocalEulerAnglesHint: {x: 1.1473838, y: -2.0604239, z: -12.465654}
+--- !u!1 &6239331350281400115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3828077011769342014}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Neck1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3828077011769342014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239331350281400115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1.0041377e-13, y: 0.00000040661814, z: -0.14660303, w: 0.9891954}
+  m_LocalPosition: {x: -0.15421508, y: -0.00011749267, z: -3.259629e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6064750210073266396}
+  m_Father: {fileID: 6833455254254814894}
+  m_LocalEulerAnglesHint: {x: 7.6859627, y: 5.28242, z: -15.784512}
+--- !u!1 &6242443124798754444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4761661032601788422}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4761661032601788422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242443124798754444}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0014299506, y: -0.027399935, z: -0.05209715, w: 0.998265}
+  m_LocalPosition: {x: -0.060016327, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4593341505774700706}
+  m_Father: {fileID: 6504328031240941209}
+  m_LocalEulerAnglesHint: {x: -0.3271513, y: -3.1274216, z: -15.401061}
+--- !u!1 &6322510478537215359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7656785770819787132}
+  m_Layer: 0
+  m_Name: root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7656785770819787132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322510478537215359}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1926027105180177440}
+  m_Father: {fileID: 7363981982339565182}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &6476762157948811474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7396517353016162168}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7396517353016162168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476762157948811474}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000015314617, y: 0.00000010969698, z: 0.4633181, w: 0.886192}
+  m_LocalPosition: {x: -0.5829747, y: -0.000000038146972, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4999242839312002691}
+  m_Father: {fileID: 2139080215402630762}
+  m_LocalEulerAnglesHint: {x: 0.000004030567, y: -0.00000327499, z: 131.44247}
+--- !u!1 &6831010259470331480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840729471704476939}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1840729471704476939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831010259470331480}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00039495167, y: -0.0000502924, z: -0.12633494, w: 0.9919876}
+  m_LocalPosition: {x: -0.22734459, y: -0.008575592, z: -0.024715042}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8244237789910360100}
+  m_Father: {fileID: 4999242839312002691}
+  m_LocalEulerAnglesHint: {x: -0.045623377, y: -0.00000090047365, z: -33.023094}
+--- !u!1 &6885867978373701392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4692479097596309510}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4692479097596309510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885867978373701392}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.009479362, y: 0.047949918, z: -0.1857484, w: 0.98138094}
+  m_LocalPosition: {x: -0.22215995, y: -0.010763397, z: 0.02400383}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2526593759932562311}
+  m_Father: {fileID: 4999242839312002691}
+  m_LocalEulerAnglesHint: {x: -2.2921553, y: 7.8442893, z: -44.952118}
+--- !u!1 &7012534940298884271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694164431396479518}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694164431396479518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012534940298884271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6231883, y: -0.5866288, z: 0.16072078, w: 0.49160126}
+  m_LocalPosition: {x: -0.06633888, y: 0.008854522, z: -0.05141838}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6820678725394905905}
+  m_Father: {fileID: 4999242839312002691}
+  m_LocalEulerAnglesHint: {x: 53.253193, y: -141.00658, z: -52.609768}
+--- !u!1 &7028224351397598406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7451742417865033926}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7451742417865033926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7028224351397598406}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000002157074, y: 0.0000007833293, z: -0.14062855, w: 0.9900624}
+  m_LocalPosition: {x: -0.14340775, y: -0.00024778367, z: 0.00000019915488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7635115837836348646}
+  m_Father: {fileID: 3192536136189756366}
+  m_LocalEulerAnglesHint: {x: 9.568619, y: 15.440057, z: -23.506023}
+--- !u!1 &7111647937459282584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 629780918988395712}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &629780918988395712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111647937459282584}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.52801186, y: -0.04281349, z: 0.0684267, w: 0.8453924}
+  m_LocalPosition: {x: -0.622532, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3614759005682094072}
+  - {fileID: 4346650284262302808}
+  - {fileID: 8201282998661446395}
+  - {fileID: 3372275198015371833}
+  - {fileID: 6504328031240941209}
+  m_Father: {fileID: 2635572196676209428}
+  m_LocalEulerAnglesHint: {x: 22.062056, y: -47.498302, z: -15.520613}
+--- !u!1 &7113881311392052280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8775989973629243786}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8775989973629243786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113881311392052280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.009080974, y: -0.052036975, z: -0.17905083, w: 0.98242074}
+  m_LocalPosition: {x: -0.2275069, y: -0.005468292, z: -0.08032844}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6601595998171061677}
+  m_Father: {fileID: 4999242839312002691}
+  m_LocalEulerAnglesHint: {x: -0.045372415, y: -6.0557637, z: -28.120869}
+--- !u!1 &7394639352586437133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5743968157090647927}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5743968157090647927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394639352586437133}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.61030716, y: -0.00024406318, z: 0.7921648, w: -0.00031450702}
+  m_LocalPosition: {x: -0.32406446, y: -0.00000030517577, z: 0.08124866}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2139080215402630762}
+  m_Father: {fileID: 7635115837836348646}
+  m_LocalEulerAnglesHint: {x: 1.459174, y: -95.85628, z: -166.47888}
+--- !u!1 &7657974243202041961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694113643189959389}
+  m_Layer: 8
+  m_Name: FillPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694113643189959389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657974243202041961}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.029, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1801570063588243330}
+  m_Father: {fileID: 2680629262274201017}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7832604118791845800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6601595998171061677}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6601595998171061677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832604118791845800}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000002338524, y: -0.000000023514792, z: -0.11640219, w: 0.9932022}
+  m_LocalPosition: {x: -0.0750032, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1459502772564744217}
+  m_Father: {fileID: 8775989973629243786}
+  m_LocalEulerAnglesHint: {x: 0.00000071300303, y: 0.000002460108, z: -16.162943}
+--- !u!1 &7976116155605647331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545915073021362228}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1545915073021362228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976116155605647331}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000036999663, y: -4.3363196e-10, z: -0.1164022, w: 0.9932022}
+  m_LocalPosition: {x: -0.07152664, y: 0, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8725052523265011708}
+  m_Father: {fileID: 3372275198015371833}
+  m_LocalEulerAnglesHint: {x: -0.0000039050287, y: -0.0000017246449, z: -29.30157}
+--- !u!1 &7983472469430968976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042975382483787810}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042975382483787810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983472469430968976}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.23204966, y: 0.95999324, z: -0.049739435, w: -0.14863384}
+  m_LocalPosition: {x: -0.00000015258789, y: -0.00000015258789, z: -0.1531008}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5719581422524019134}
+  m_Father: {fileID: 3192536136189756366}
+  m_LocalEulerAnglesHint: {x: -7.573815, y: -139.49814, z: -7.220343}
+--- !u!1 &8171453228052748671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2680629262274201017}
+  - component: {fileID: 5716576858927215273}
+  m_Layer: 8
+  m_Name: HP_Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2680629262274201017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171453228052748671}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2547296555988793344}
+  - {fileID: 694113643189959389}
+  m_Father: {fileID: 7363981982339565182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5716576858927215273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171453228052748671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa22c78d2c27c8c48a39e5a9d0df806a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8209484028339865549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926027105180177440}
+  m_Layer: 0
+  m_Name: VAMPIRE_
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926027105180177440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8209484028339865549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000000037866283, y: 0.0000000037866337, z: 0.7071063, w: 0.70710725}
+  m_LocalPosition: {x: -0, y: 0.26499775, z: 1.4173405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3192536136189756366}
+  m_Father: {fileID: 7656785770819787132}
+  m_LocalEulerAnglesHint: {x: 26.860249, y: 7.927233, z: 96.514244}
+--- !u!1 &8744782550653800394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6064750210073266396}
+  m_Layer: 0
+  m_Name: VAMPIRE_ Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6064750210073266396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8744782550653800394}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.8480474e-10, y: -0.000000532826, z: 0.19225395, w: 0.98134524}
+  m_LocalPosition: {x: -0.1541796, y: -0.00000015258789, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5285970055842974301}
+  m_Father: {fileID: 3828077011769342014}
+  m_LocalEulerAnglesHint: {x: -6.5224056, y: 8.925883, z: 31.701035}
+--- !u!1 &8992836078858455663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5719581422524019134}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5719581422524019134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8992836078858455663}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000016528418, y: 0.0000000020897726, z: 0.33148754, w: 0.94345963}
+  m_LocalPosition: {x: -0.70818424, y: 0, z: 0.000000038146972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4078874759123021335}
+  m_Father: {fileID: 2042975382483787810}
+  m_LocalEulerAnglesHint: {x: -0.000000761643, y: 0.000002590239, z: 34.820587}
+--- !u!1 &9006515950162446858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2635572196676209428}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2635572196676209428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9006515950162446858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 9.040029e-10, y: -0.00000004997184, z: 0.46331823, w: 0.886192}
+  m_LocalPosition: {x: -0.58297455, y: 0.000000038146972, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 629780918988395712}
+  m_Father: {fileID: 4712040689350290584}
+  m_LocalEulerAnglesHint: {x: -0.0000013086412, y: 0.0000010969217, z: 140.02972}
+--- !u!1 &9034928675723756995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5669203772372629274}
+  m_Layer: 0
+  m_Name: VAMPIRE_ L Finger32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5669203772372629274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9034928675723756995}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000014260667, y: 0.0000000047061013, z: -0.19905485, w: 0.97998834}
+  m_LocalPosition: {x: -0.052702103, y: 0, z: 0.000000076293944}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2526593759932562311}
+  m_LocalEulerAnglesHint: {x: -0.000000015199134, y: 0.000004400268, z: -38.89594}
+--- !u!1 &9135870145274074171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7363981982339565182}
+  - component: {fileID: 8849305427100763784}
+  - component: {fileID: 970263651814702976}
+  - component: {fileID: 1318989296249461313}
+  - component: {fileID: 7255892639053408128}
+  - component: {fileID: 1330818567593552819}
+  - component: {fileID: 6481032482844517997}
+  m_Layer: 8
+  m_Name: Vampire
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7363981982339565182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7656785770819787132}
+  - {fileID: 4608136092165192536}
+  - {fileID: 6603276624875514950}
+  - {fileID: 5161180645951687837}
+  - {fileID: 2680629262274201017}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8849305427100763784
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5da3aca44823c9a428809c35b49e5182, type: 3}
+  m_Controller: {fileID: 22100000, guid: ad59f1a62b70f7d439dc3d996adfabc1, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!195 &970263651814702976
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2
+  m_Acceleration: 10000
+  avoidancePriority: 50
+  m_AngularSpeed: 1000
+  m_StoppingDistance: 0.2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: -0.083
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &1318989296249461313
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!54 &7255892639053408128
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &1330818567593552819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52d1b8c4cb7a464d9f6eb195f23e659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0, y: 0, z: 0}
+  isHit: 0
+  skinnedMeshRenderers: []
+--- !u!114 &6481032482844517997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135870145274074171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ae3fd38467abb418b1d6bc19f369eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  attackPower: 15
+  defencePower: 5
+  expPoint: 20
+--- !u!1 &9137865661524794538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8201282998661446395}
+  m_Layer: 0
+  m_Name: VAMPIRE_ R Finger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8201282998661446395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137865661524794538}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00039495534, y: 0.000050291932, z: -0.1263349, w: 0.9919876}
+  m_LocalPosition: {x: -0.22734462, y: -0.008575592, z: 0.024715118}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3129267377399574061}
+  m_Father: {fileID: 629780918988395712}
+  m_LocalEulerAnglesHint: {x: 0.045622677, y: -0.00000016925587, z: -33.023094}

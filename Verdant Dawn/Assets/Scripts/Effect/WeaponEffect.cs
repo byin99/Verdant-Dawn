@@ -45,7 +45,7 @@ public class WeaponEffect : RecycleObject
             if (damageable != null)
             {
                 Vector3 collisionPoint = other.ClosestPoint(transform.position);
-                damageable.TakeDamage(status.AttackPower, collisionPoint);
+                damageable.TakeDamage(status.AttackPower * attackDamageRatio, collisionPoint);
                 damageable.KnockbackOnHit(knockBackPower);
 
                 // 콜라이더 끄기(중복 충돌 방지)

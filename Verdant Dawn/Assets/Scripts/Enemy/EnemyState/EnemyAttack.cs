@@ -20,7 +20,7 @@ public class EnemyAttack : EnemyBase
     private float turnSmooth = 10.0f;
 
     /// <summary>
-    /// 플레이어가 목표로 하는 회전
+    /// 플레이어를 목표로 하는 회전
     /// </summary>
     private Quaternion targetRotation;
 

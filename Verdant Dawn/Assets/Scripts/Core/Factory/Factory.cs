@@ -15,6 +15,71 @@ public class Factory : Singleton<Factory>
     SkeletonPool skeleton;
 
     /// <summary>
+    /// MummyPool 선언
+    /// </summary>
+    MummyPool mummy;
+
+    /// <summary>
+    /// UndeadPool 선언
+    /// </summary>
+    UndeadPool undead;
+
+    /// <summary>
+    /// VampirePool 선언
+    /// </summary>
+    VampirePool vampire;
+
+    /// <summary>
+    /// DemonLordPool 선언
+    /// </summary>
+    DemonLordPool demonLord;
+
+    /// <summary>
+    /// GhoulAttackPool 선언
+    /// </summary>
+    GhoulAttackPool ghoulAttack;
+
+    /// <summary>
+    /// SkeletonAttackPool 선언
+    /// </summary>
+    SkeletonAttackPool skeletonAttack;
+
+    /// <summary>
+    /// MummyAttack1Pool 선언
+    /// </summary>
+    MummyAttack1Pool mummyAttack1;
+
+    /// <summary>
+    /// MummyAttack2Pool 선언
+    /// </summary>
+    MummyAttack2Pool mummyAttack2;
+
+    /// <summary>
+    /// UndeadAttackPool 선언
+    /// </summary>
+    UndeadAttackPool undeadAttack;
+
+    /// <summary>
+    /// VampireAttack1Pool 선언
+    /// </summary>
+    VampireAttack1Pool vampireAttack1;
+
+    /// <summary>
+    /// VampireAttack2Pool 선언
+    /// </summary>
+    VampireAttack2Pool vampireAttack2;
+
+    /// <summary>
+    /// BossRoarPool 선언
+    /// </summary>
+    BossRoarPool bossRoar;
+
+    /// <summary>
+    /// BossAttack1Pool 선언
+    /// </summary>
+    BossAttack1Pool bossAttack1;
+
+    /// <summary>
     /// FistEffectPool 선언
     /// </summary>
     FistEffectPool fistEffect;
@@ -251,21 +316,6 @@ public class Factory : Singleton<Factory>
     HitPlayerEffectPool hitPlayerEffectPool;
 
     /// <summary>
-    /// GhoulAttackPool
-    /// </summary>
-    GhoulAttackPool ghoulAttackPool;
-
-    /// <summary>
-    /// SkeletonAttack1Pool
-    /// </summary>
-    SkeletonAttack1Pool skeletonAttack1Pool;
-
-    /// <summary>
-    /// SkeletonAttack2Pool
-    /// </summary>
-    SkeletonAttack2Pool skeletonAttack2Pool;
-
-    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -279,6 +329,71 @@ public class Factory : Singleton<Factory>
         skeleton = GetComponentInChildren<SkeletonPool>();
         if (skeleton != null)
             skeleton.Initialize();
+
+        // MummyPool 초기화 및 생성
+        mummy = GetComponentInChildren<MummyPool>();
+        if (mummy != null)
+            mummy.Initialize();
+
+        // UndeadPool 초기화 및 생성
+        undead = GetComponentInChildren<UndeadPool>();
+        if (undead != null)
+            undead.Initialize();
+
+        // VampirePool 초기화 및 생성
+        vampire = GetComponentInChildren<VampirePool>();
+        if (vampire != null)
+            vampire.Initialize();
+
+        // DemonLordPool 초기화 및 생성
+        demonLord = GetComponentInChildren<DemonLordPool>();
+        if (demonLord != null)
+            demonLord.Initialize();
+
+        // GhoulAttackPool 초기화 및 생성
+        ghoulAttack = GetComponentInChildren<GhoulAttackPool>();
+        if (ghoulAttack != null)
+            ghoulAttack.Initialize();
+
+        // SkeletonAttackPool 초기화 및 생성
+        skeletonAttack = GetComponentInChildren<SkeletonAttackPool>();
+        if (skeletonAttack != null)
+            skeletonAttack.Initialize();
+
+        // MummyAttack1Pool 초기화 및 생성
+        mummyAttack1 = GetComponentInChildren<MummyAttack1Pool>();
+        if (mummyAttack1 != null)
+            mummyAttack1.Initialize();
+
+        // MummyAttack2Pool 초기화 및 생성
+        mummyAttack2 = GetComponentInChildren<MummyAttack2Pool>();
+        if (mummyAttack2 != null)
+            mummyAttack2.Initialize();
+
+        // UndeadAttackPool 초기화 및 생성
+        undeadAttack = GetComponentInChildren<UndeadAttackPool>();
+        if (undeadAttack != null)
+            undeadAttack.Initialize();
+
+        // VampireAttack1Pool 초기화 및 생성
+        vampireAttack1 = GetComponentInChildren<VampireAttack1Pool>();
+        if (vampireAttack1 != null)
+            vampireAttack1.Initialize();
+
+        // VampireAttack2Pool 초기화 및 생성
+        vampireAttack2 = GetComponentInChildren<VampireAttack2Pool>();
+        if (vampireAttack2 != null)
+            vampireAttack2.Initialize();
+
+        // BossRoarPool 초기화 및 생성
+        bossRoar = GetComponentInChildren<BossRoarPool>();
+        if (bossRoar != null)
+            bossRoar.Initialize();
+
+        // BossAttack1Pool 초기화 및 생성
+        bossAttack1 = GetComponentInChildren<BossAttack1Pool>();
+        if (bossAttack1 != null)
+            bossAttack1.Initialize();
 
         // FistEffectPool 초기화 및 생성
         fistEffect = GetComponentInChildren<FistEffectPool>();
@@ -514,21 +629,6 @@ public class Factory : Singleton<Factory>
         hitPlayerEffectPool = GetComponentInChildren<HitPlayerEffectPool>();
         if (hitPlayerEffectPool != null)
             hitPlayerEffectPool.Initialize();
-
-        // GhoulAttackPool 초기화 및 생성
-        ghoulAttackPool = GetComponentInChildren<GhoulAttackPool>();
-        if (ghoulAttackPool != null)
-            ghoulAttackPool.Initialize();
-
-        // SkeletonAttack1Pool 초기화 및 생성
-        skeletonAttack1Pool = GetComponentInChildren<SkeletonAttack1Pool>();
-        if (skeletonAttack1Pool != null)
-            skeletonAttack1Pool.Initialize();
-
-        // SkeletonAttack2Pool 초기화 및 생성
-        skeletonAttack2Pool = GetComponentInChildren<SkeletonAttack2Pool>();
-        if (skeletonAttack2Pool != null)
-            skeletonAttack2Pool.Initialize();
     }
 
     /// <summary>
@@ -551,6 +651,149 @@ public class Factory : Singleton<Factory>
     public SkeletonController GetSkeleton(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return skeleton.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Mummy 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 Mummy</returns>
+    public MummyController GetMummy(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return mummy.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Undead 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 Undead</returns>
+    public UndeadController GetUndead(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return undead.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// Vampire 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 Vampire</returns>
+    public VampireController GetVampire(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return vampire.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// DemonLord 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 DemonLord</returns>
+    public BossController GetDemonLord(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return demonLord.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// GhoulAttack 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 GhoulAttack</returns>
+    public EnemyAttackEffect GetGhoulAttack(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return ghoulAttack.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// SkeletonAttack 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 SkeletonAttack</returns>
+    public EnemyAttackEffect GetSkeletonAttack(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return skeletonAttack.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// MummyAttack1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 MummyAttack1</returns>
+    public EnemyAttackEffect GetMummyAttack1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return mummyAttack1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// MummyAttack2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 MummyAttack2</returns>
+    public EnemyAttackEffect GetMummyAttack2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return mummyAttack2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// UndeadAttack 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 UndeadAttack</returns>
+    public EnemyAttackEffect GetUndeadAttack(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return undeadAttack.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// VampireAttack1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 VampireAttack1</returns>
+    public EnemyAttackEffect GetVampireAttack1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return vampireAttack1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// VampireAttack2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 VampireAttack2</returns>
+    public EnemyAttackEffect GetVampireAttack2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return vampireAttack2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossRoar 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossRoar</returns>
+    public BossEffect GetBossRoar(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossRoar.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack1</returns>
+    public BossAttackEffect GetBossAttack1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1050,38 +1293,5 @@ public class Factory : Singleton<Factory>
         DamageText damageText = damageText_P_Pool.GetObject(position);
         damageText.SetDamage(damage);
         return damageText;
-    }
-
-    /// <summary>
-    /// GhoulAttackEffect 소환 함수
-    /// </summary>
-    /// <param name="position">소환 위치</param>
-    /// <param name="eulerAngle">소환 각도</param>
-    /// <returns>소환된 GhoulAttackEffect</returns>
-    public EnemyAttackEffect GetGhoulAttackEffect(Vector3? position = null, Vector3? eulerAngle = null)
-    {
-        return ghoulAttackPool.GetObject(position, eulerAngle);
-    }
-
-    /// <summary>
-    /// SkeletonAttackEffect1 소환 함수
-    /// </summary>
-    /// <param name="position">소환 위치</param>
-    /// <param name="eulerAngle">소환 각도</param>
-    /// <returns>소환된 SkeletonAttackEffect1</returns>
-    public EnemyAttackEffect GetSkeletonAttack1Effect(Vector3? position = null, Vector3? eulerAngle = null)
-    {
-        return skeletonAttack1Pool.GetObject(position, eulerAngle);
-    }
-
-    /// <summary>
-    /// SkeletonAttackEffect2 소환 함수
-    /// </summary>
-    /// <param name="position">소환 위치</param>
-    /// <param name="eulerAngle">소환 각도</param>
-    /// <returns>소환된 SkeletonAttackEffect2</returns>
-    public EnemyAttackEffect GetSkeletonAttack2Effect(Vector3? position = null, Vector3? eulerAngle = null)
-    {
-        return skeletonAttack2Pool.GetObject(position, eulerAngle);
     }
 }
