@@ -53,7 +53,7 @@ public class EnemyHit : EnemyBase
 
             if (playerDistance < attackDistance)    // 공격할 수 있는 거리가 되면
             {
-                sender.enemyStateMachine.TransitionTo(sender.attack);   // Attack 상태로 전환
+                sender.enemyStateMachine.TransitionTo(sender.attack);   // attack 상태로 전환
             }
             else
             {

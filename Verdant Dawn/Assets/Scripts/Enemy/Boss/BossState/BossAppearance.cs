@@ -15,11 +15,6 @@ public class BossAppearance : BossBase
     float walkTime = 5.0f;
 
     /// <summary>
-    /// 포효하는 애니메이션 시간
-    /// </summary>
-    float roarAnimTime = 2.5f;
-
-    /// <summary>
     /// 행동 사이사이의 쉬는 시간
     /// </summary>
     float idleTime = 0.5f;

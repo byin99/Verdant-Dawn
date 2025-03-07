@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : RecycleObject
 {
@@ -17,10 +18,10 @@ public class EnemyController : RecycleObject
     public bool isHit;
 
     /// <summary>
-    /// Dissolve를 위한 skinnedMeshRenderer들
+    /// Dissolve용 Material
     /// </summary>
     [HideInInspector]
-    public SkinnedMeshRenderer[] skinnedMeshRenderers;
+    public Material[] materials;
 
     /// <summary>
     /// StateMachine
@@ -46,6 +47,11 @@ public class EnemyController : RecycleObject
     Player player;
     PlayerStatus playerStatus;
     EnemyStatus status;
+    NavMeshAgent agent;
+    Collider enemyCollider;
+
+    // 쉐이터 프로퍼티용 ID들
+    readonly int Fade_ID = Shader.PropertyToID("_Fade");
 
     protected virtual void Awake()
     {
@@ -56,7 +62,7 @@ public class EnemyController : RecycleObject
         attack = new EnemyAttack();
         comeBack = new EnemyComeBack();
         hit = new EnemyHit();
-        die = new EnemyDie();
+        die = new EnemyDeath();
 
         // 컴포넌트들 찾기
         rigid = GetComponent<Rigidbody>();
@@ -68,6 +74,10 @@ public class EnemyController : RecycleObject
         status = GetComponent<EnemyStatus>();
         status.onKnockBack += Hit;
         status.onDie += Die;
+
+        agent = GetComponent<NavMeshAgent>();
+
+        enemyCollider = GetComponent<Collider>();
     }
 
     protected override void OnReset()
@@ -76,7 +86,15 @@ public class EnemyController : RecycleObject
 
         // StateMachine 만들기
         enemyStateMachine = new StateMachine<EnemyController>(this, idle);
-        status.HP = status.maxHP;
+        status.HP = status.MaxHP;
+
+        for (int i = 0; i < materials.Length; i++)
+        {
+            materials[i].SetFloat(Fade_ID, 1);
+        }
+
+        agent.enabled = true;
+        enemyCollider.enabled = true;
     }
 
     private void Update()
@@ -125,6 +143,7 @@ public class EnemyController : RecycleObject
     /// </summary>
     void Die()
     {
+        enemyCollider.enabled = false;
         enemyStateMachine.TransitionTo(die);
     }
 

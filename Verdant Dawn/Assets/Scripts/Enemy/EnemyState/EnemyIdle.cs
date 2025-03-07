@@ -19,11 +19,6 @@ public class EnemyIdle : EnemyBase
     {
         base.Enter(sender);
 
-        for (int i = 0; i < materials.Length; i++)
-        {
-            materials[i].SetFloat(Fade_ID, 1);
-        }
-
         animator.SetTrigger(Idle_Hash); // Idle 애니메이션 주기
         timeElapsed = 0.0f;             // 쉬는 시간 초기화
     }

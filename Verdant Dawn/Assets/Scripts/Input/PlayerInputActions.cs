@@ -46,7 +46,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Attack"",
+                    ""name"": ""attack"",
                     ""type"": ""Button"",
                     ""id"": ""8ff64710-62e6-47da-a8e5-2bc482adc517"",
                     ""expectedControlType"": ""Button"",
@@ -121,7 +121,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KM"",
-                    ""action"": ""Attack"",
+                    ""action"": ""attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -243,7 +243,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Roll = m_Player.FindAction("Roll", throwIfNotFound: true);
-        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        m_Player_Attack = m_Player.FindAction("attack", throwIfNotFound: true);
         m_Player_Skill1 = m_Player.FindAction("Skill1", throwIfNotFound: true);
         m_Player_Skill2 = m_Player.FindAction("Skill2", throwIfNotFound: true);
         m_Player_Skill3 = m_Player.FindAction("Skill3", throwIfNotFound: true);

@@ -9922,7 +9922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 0.5
-  knockBackPower: 0
+  minimumAttackRatio: 0.8
+  maximumAttackRatio: 1.2
   enemyStatus: {fileID: 5206240953431636903, guid: cda3467ebbd26ab4c975045bad94f83f,
     type: 3}
 --- !u!1 &6134516625139392691

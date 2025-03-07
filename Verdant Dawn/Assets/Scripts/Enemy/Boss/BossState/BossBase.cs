@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class BossBase : IState<BossController>
 {
@@ -10,23 +11,38 @@ public class BossBase : IState<BossController>
     /// </summary>
     protected float playerDistance;
 
+    /// <summary>
+    /// 포효 애니메이션 시간
+    /// </summary>
+    protected readonly float roarAnimTime = 2.5f;
+
     // 컴포넌트들
     protected Rigidbody rigid;
     protected Animator animator;
     protected NavMeshAgent agent;
     protected Player player;
+    protected Material[] materials;
+    protected BossStatus bossStatus;
+    protected BossEvocationUI bossEvocationUI;
+    protected BossHPUI bossHPUI;
+    protected BossEffect bossEffect;
+    protected Volume volume;
 
     // 애니메이터 해시값들
-    protected int Idle_Hash = Animator.StringToHash("Idle");
-    protected int Walk_Hash = Animator.StringToHash("Walk");
-    protected int Roar_Hash = Animator.StringToHash("Roar");
-    protected int Equip_Hash = Animator.StringToHash("Equip");
-    protected int Fly_Hash = Animator.StringToHash("Fly");
-    protected int TwoHit_Hash = Animator.StringToHash("2Hit");
-    protected int TwoHitF_Hash = Animator.StringToHash("2Hit_F");
-    protected int ThreeHit_Hash = Animator.StringToHash("3Hit");
-    protected int ThreeHitF_Hash = Animator.StringToHash("3Hit_F");
-    protected int Death_Hash = Animator.StringToHash("Death");
+    protected readonly int Idle_Hash = Animator.StringToHash("Idle");
+    protected readonly int Walk_Hash = Animator.StringToHash("Walk");
+    protected readonly int Roar_Hash = Animator.StringToHash("Roar");
+    protected readonly int Equip_Hash = Animator.StringToHash("Equip");
+    protected readonly int Fly_Hash = Animator.StringToHash("Fly");
+    protected readonly int TwoHit_Hash = Animator.StringToHash("2Hit");
+    protected readonly int TwoHitF_Hash = Animator.StringToHash("2Hit_F");
+    protected readonly int ThreeHit_Hash = Animator.StringToHash("3Hit");
+    protected readonly int ThreeHitF_Hash = Animator.StringToHash("3Hit_F");
+    protected readonly int Hit_Hash = Animator.StringToHash("Hit");
+    protected readonly int Death_Hash = Animator.StringToHash("Death");
+
+    // 쉐이터 프로퍼티용 ID들
+    protected readonly int Fade_ID = Shader.PropertyToID("_Fade");
 
     public virtual void Enter(BossController sender)
     {
@@ -49,6 +65,26 @@ public class BossBase : IState<BossController>
         {
             player = GameManager.Instance.Player;
         }
+
+        if (bossStatus == null)
+        {
+            bossStatus = sender.GetComponent<BossStatus>();
+        }
+
+        if (bossEvocationUI == null)
+        {
+            bossEvocationUI = UIManager.Instance.BossEvocationUI;
+        }
+
+        if (bossHPUI == null)
+        {
+            bossHPUI = UIManager.Instance.BossHPUI;
+        }
+
+        if (volume == null)
+        {
+            volume = GameManager.Instance.Volume;
+        }
     }
 
     public virtual void UpdateState(BossController sender)
@@ -59,5 +95,4 @@ public class BossBase : IState<BossController>
     public virtual void Exit(BossController sender)
     {
     }
-
 }

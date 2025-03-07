@@ -10,6 +10,11 @@ public class BossChase : BossBase
     float attackDistance = 49.0f;
 
     /// <summary>
+    /// 플레이어를 공격하는 거리(재곱, Berserk 상태)
+    /// </summary>
+    float attackDistance_B = 196.0f;
+
+    /// <summary>
     /// 플레이어에게 날아가는 거리(제곱)
     /// </summary>
     float flyDistance = 400.0f;
@@ -28,14 +33,32 @@ public class BossChase : BossBase
         // 추적 시작
         agent.SetDestination(player.transform.position);
 
-        if (playerDistance < attackDistance)
+        // 광폭화 상태일 때
+        if (sender.isBerserk)
         {
-            sender.bossStateMachine.TransitionTo(sender.attack);
+            if (playerDistance < attackDistance_B)
+            {
+                sender.bossStateMachine.TransitionTo(sender.attack);
+            }
+
+            else if (playerDistance > flyDistance)
+            {
+                sender.bossStateMachine.TransitionTo(sender.fly);
+            }
         }
 
-        else if (playerDistance > flyDistance)
+        // 광폭화 상태가 아닐 때
+        else
         {
-            sender.bossStateMachine.TransitionTo(sender.fly);
+            if (playerDistance < attackDistance)
+            {
+                sender.bossStateMachine.TransitionTo(sender.attack);
+            }
+
+            else if (playerDistance > flyDistance)
+            {
+                sender.bossStateMachine.TransitionTo(sender.fly);
+            }
         }
     }
 

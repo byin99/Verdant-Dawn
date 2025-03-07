@@ -54,20 +54,22 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     public event Action<Transform> onAttack;
 
-    [Header("공격용 변수들(확인용)")]
     /// <summary>
     /// 애니메이션 시간들
     /// </summary>
+    [HideInInspector]
     public float[] attackAnimTime;
 
     /// <summary>
     /// 공격 총 개수
     /// </summary>
+    [HideInInspector]
     public int attackCount;
 
     /// <summary>
     /// 공격 번호
     /// </summary>
+    [HideInInspector]
     public int attackIndex = 0;
 
     /// <summary>
@@ -137,6 +139,7 @@ public class PlayerAttack : MonoBehaviour
     /// <summary>
     /// 차징 스킬 중에 회전이 가능한지 판단하는 변수
     /// </summary>
+    [HideInInspector]
     public bool canChargeRotate = false;
 
     /// <summary>
@@ -223,7 +226,7 @@ public class PlayerAttack : MonoBehaviour
     /// <summary>
     /// Intensity 조절용(Hunter)
     /// </summary>
-    public Volume volume;
+    Volume volume;
 
     /// <summary>
     /// Intensity 조절용(Hunter)
@@ -234,6 +237,7 @@ public class PlayerAttack : MonoBehaviour
     /// <summary>
     /// 콤보 스킬 애니메이션 시간들
     /// </summary>
+    [HideInInspector]
     public float[] comboAnimTime;
 
     /// <summary>
@@ -250,16 +254,19 @@ public class PlayerAttack : MonoBehaviour
     /// <summary>
     /// 콤보 스킬 개수
     /// </summary>
+    [HideInInspector]
     public int comboCount;
 
     /// <summary>
     /// 콤보 스킬 현재 번호
     /// </summary>
+    [HideInInspector]
     public int comboIndex;
 
     /// <summary>
     /// 콤보 스킬 전용 변수(움직임 제한을 풀기 위한 변수)
     /// </summary>
+    [HideInInspector]
     public bool isCombo = false;
 
     /// <summary>
@@ -372,6 +379,7 @@ public class PlayerAttack : MonoBehaviour
         player = GetComponent<Player>();
         skillBarUI = UIManager.Instance.SkillBarUI;
         attackTransform = transform.GetChild(2);
+        volume = GameManager.Instance.Volume;
         volume.profile.TryGet<Vignette>(out vignette);
     }
 

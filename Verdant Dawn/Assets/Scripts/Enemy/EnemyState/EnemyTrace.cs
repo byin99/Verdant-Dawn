@@ -32,7 +32,7 @@ public class EnemyTrace : EnemyBase
         float playerDistance = (sender.transform.position - player.transform.position).sqrMagnitude;
         if (playerDistance < attackDistance)
         {
-            sender.enemyStateMachine.TransitionTo(sender.attack);   // Attack 상태로 전환
+            sender.enemyStateMachine.TransitionTo(sender.attack);   // attack 상태로 전환
         }
 
         // 순찰 지역과 너무 멀어지면

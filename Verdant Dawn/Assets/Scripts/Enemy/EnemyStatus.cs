@@ -36,7 +36,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     /// <summary>
     /// 적 최대 체력
     /// </summary>
-    public float maxHP;
+    float maxHP;
 
     [SerializeField]
     /// <summary>
@@ -56,7 +56,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     public float expPoint;
 
     /// <summary>
-    /// 적의 HP를 확인하고 설정하기 위한 프로퍼티(설정은 private)
+    /// 적의 HP를 확인하고 설정하기 위한 프로퍼티
     /// </summary>
     public float HP
     {

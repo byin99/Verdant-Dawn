@@ -1150,7 +1150,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -1234,7 +1234,8 @@ MonoBehaviour:
   rotationSpeed: 1000
   stopThreshold: 1
   graphicRaycaster: {fileID: 0}
-  eventSystem: {fileID: 0}
+  eventSystem: {fileID: 207346941839768682, guid: d24805e2d69d2ed4489cff751d75b1a1,
+    type: 3}
   attackAnimTime: []
   attackCount: 0
   attackIndex: 0
@@ -1244,8 +1245,9 @@ MonoBehaviour:
   canChargeRotate: 0
   isUseSkill: 0
   isCharge: 0
-  virtualCamera: {fileID: 0}
-  volume: {fileID: 0}
+  virtualCamera: {fileID: 7339731712621528142, guid: 0919e8946b9cf0d4484b3404e14ad513,
+    type: 3}
+  volume: {fileID: 4960350720887593499, guid: 97de45862bcdcb141a27d8388fecd2d0, type: 3}
   vignette: {fileID: 0}
   comboAnimTime: []
   returnTime: 0

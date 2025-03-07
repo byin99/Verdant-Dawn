@@ -214,6 +214,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: DemonLord
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 6930
+        width: 1000
+        height: 1100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f635c5c878a305458c31cf48efb09e4
+      internalID: -1017143007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -227,6 +248,7 @@ TextureImporter:
     nameFileIdTable:
       Assassin: 364875868
       Berserker: -189923429
+      DemonLord: -1017143007
       Fighter: -1956920194
       Hunter: -1416628225
       Magician: 267573500

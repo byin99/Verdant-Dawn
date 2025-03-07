@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BossEffect : RecycleObject
 {
+    public float disableTime;
+
     protected override void OnReset()
     {
-        DisableTimer(1.0f);
+        DisableTimer(disableTime);
     }
 }

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -250}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 250, y: -250}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1778751123694767029
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB9C8\uB098"
+  m_text: "\uCD5C\uB300 \uB9C8\uB098"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0545ff380cbcf4541af4b0a6cb4899dd, type: 2}
   m_sharedMaterial: {fileID: 2864186148890364344, guid: 0545ff380cbcf4541af4b0a6cb4899dd,
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1237,8 +1237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -150}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 250, y: -150}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &914720069868423838
 CanvasRenderer:
@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uCCB4\uB825"
+  m_text: "\uCD5C\uB300 \uCCB4\uB825"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0545ff380cbcf4541af4b0a6cb4899dd, type: 2}
   m_sharedMaterial: {fileID: 2864186148890364344, guid: 0545ff380cbcf4541af4b0a6cb4899dd,
@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

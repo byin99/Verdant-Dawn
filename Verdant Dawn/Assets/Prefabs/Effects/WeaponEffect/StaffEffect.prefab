@@ -143,5 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf84ade138898a24690cb341949d1580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimumAttackRatio: 0.8
+  maximumAttackRatio: 1.2
   attackDamageRatio: 1
   knockBackPower: 3

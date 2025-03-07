@@ -235,15 +235,33 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
             // 살아있을 때만 처리
             if (IsAlive)
             {
-                // 경험치가 다 찼다면
-                if (value > maxExperiencePoint - 0.01f)
+                if (level == 50)
                 {
-                    value -= maxExperiencePoint;
-                    LevelUp();
+                    experiencePoint = 0;
+                    onExpChange?.Invoke(0);
                 }
 
-                experiencePoint = value;
-                onExpChange?.Invoke(experiencePoint / maxExperiencePoint * 100.0f);
+                else
+                {
+                    bool isLevelUp = false;
+
+                    // 경험치가 다 찼다면
+                    while (value > maxExperiencePoint - 0.01f)
+                    {
+                        value -= maxExperiencePoint;
+                        isLevelUp = true;
+                        LevelUp();
+                    }
+
+                    if (isLevelUp)
+                    {
+                        onLevelUp?.Invoke();
+                        onStatus?.Invoke();
+                    }
+
+                    experiencePoint = value;
+                    onExpChange?.Invoke(experiencePoint / maxExperiencePoint * 100.0f);
+                }
             }
         }
     }
@@ -424,6 +442,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
     {
         if (IsAlive)
         {
+            animator.SetTrigger(Hit_Hash);
             float realDamage = damage - DefensePower;
 
             if (realDamage < 0)
@@ -432,10 +451,8 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
             }
 
             HP -= realDamage;
-
             hitPoint = damagePoint;
             hitPoint.y = 0;
-            transform.LookAt(hitPoint);
             onHit?.Invoke(realDamage, damagePoint);
         }
     }
@@ -450,10 +467,12 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         {
             isHit = true;
             timeElapsed = 0.0f;
-            animator.SetTrigger(Hit_Hash);
+
+            transform.LookAt(hitPoint);
             agent.enabled = false;
-            knockBackPower = hitPower;
             rigid.isKinematic = false;
+
+            knockBackPower = hitPower;
             onKnockBack?.Invoke(hitPower);
         }
     }
@@ -487,13 +506,9 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
         baseAttackPower *= 1.2f;
         baseDefensePower *= 1.2f;
         maxHP *= 1.2f;
-        maxMP *= 1.1f;
         HP = maxHP;
         MP = maxMP;
         maxExperiencePoint *= 1.2f;
-
-        onLevelUp?.Invoke();
-        onStatus?.Invoke();
     }
 
     IEnumerator StartIdentitySkill()

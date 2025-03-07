@@ -4962,10 +4962,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 3
   m_Height: 10
   m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 4}
+  m_Center: {x: 0, y: 0, z: 2.5}
 --- !u!114 &4759048932703680180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4980,5 +4980,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTime: 0.5
   knockBackPower: 0
-  enemyStatus: {fileID: 50295485415525970, guid: 0acde0c4460b5344781dab2b45720b52,
+  minimumAttackRatio: 0.8
+  maximumAttackRatio: 1.2
+  isKnockBack: 0
+  isAnimation: 0
+  bossStatus: {fileID: 6428577650657781629, guid: 0acde0c4460b5344781dab2b45720b52,
     type: 3}

@@ -16,9 +16,12 @@ public class MummyController : EnemyController
         // 미라 공격 트랜스폼 찾기
         attackTransform = transform.GetChild(2);
 
-        // SkinnedMeshRenderer 찾기 
-        skinnedMeshRenderers = new SkinnedMeshRenderer[1];
+        // Material 찾기 
+        materials = new Material[1];
+        SkinnedMeshRenderer[] skinnedMeshRenderers = new SkinnedMeshRenderer[1];
+
         skinnedMeshRenderers[0] = transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
+        materials[0] = skinnedMeshRenderers[0].material;
     }
 
     /// <summary>

@@ -30,6 +30,11 @@ public class BossFly : BossBase
     /// </summary>
     float landingRatio = 40.0f;
 
+    /// <summary>
+    /// 보스 빨간장판
+    /// </summary>
+    BossEffect bossRedFloorboard;
+
     public override void Enter(BossController sender)
     {
         base.Enter(sender);
@@ -75,6 +80,17 @@ public class BossFly : BossBase
 
         // 플레이어 위로 이동하기
         rigid.transform.position = new Vector3(player.transform.position.x, rigid.transform.position.y, player.transform.position.z);
+        
+        if (sender.isBerserk)
+        {
+            bossRedFloorboard = Factory.Instance.GetBossRedFloorboard_B(player.transform.position);
+        }
+        
+        else
+        {
+            bossRedFloorboard = Factory.Instance.GetBossRedFloorboard(player.transform.position);
+        
+        }
         timeElapsed = 0.0f;
 
         // 공중에서 플레이어에게 내리꼿기
@@ -84,6 +100,21 @@ public class BossFly : BossBase
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+
+        // 이펙트 및 데미지 주기
+        if (sender.isBerserk)
+        {
+            Factory.Instance.GetBossAttack3_B(bossRedFloorboard.transform.position);
+        }
+
+        else
+        {
+            Factory.Instance.GetBossAttack3(bossRedFloorboard.transform.position);
+
+        }
+
+        // 빨간 장판 없애기
+        bossRedFloorboard.gameObject.SetActive(false);
 
         // 공중 공격 끝
         sender.bossStateMachine.TransitionTo(sender.idle);

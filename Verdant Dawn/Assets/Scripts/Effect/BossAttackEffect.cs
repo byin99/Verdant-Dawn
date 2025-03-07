@@ -7,17 +7,44 @@ public class BossAttackEffect : RecycleObject
     /// <summary>
     /// 공격이 비활성화 되는 시간
     /// </summary>
-    public float disableTime;
+    [SerializeField]
+    float disableTime;
 
     /// <summary>
     /// 넉백되는 힘의 양
     /// </summary>
-    public float knockBackPower;
+    [SerializeField]
+    float knockBackPower;
 
     /// <summary>
-    /// 이 이펙트의 모체
+    /// 최소 공격 계수
     /// </summary>
-    public EnemyStatus enemyStatus;
+    [SerializeField]
+    float minimumAttackRatio;
+
+    /// <summary>
+    /// 최대 공격 계수
+    /// </summary>
+    [SerializeField]
+    float maximumAttackRatio;
+
+    /// <summary>
+    /// 넉백이 발생하는지 여부를 알려주는 변수
+    /// </summary>
+    [SerializeField]
+    bool isKnockBack;
+
+    /// <summary>
+    /// 애니메이션으로 콜라이더를 처리하는지 여부
+    /// </summary>
+    [SerializeField]
+    bool isAnimation;
+
+    /// <summary>
+    /// 이 이펙트 모체의 Status
+    /// </summary>
+    [SerializeField]
+    BossStatus bossStatus;
 
     /// <summary>
     /// 이 이펙트가 가지는 콜라이더
@@ -36,7 +63,14 @@ public class BossAttackEffect : RecycleObject
         DisableTimer(disableTime);
 
         // 콜라이더 활성화 시키기
-        colliderComponent.enabled = true;
+        if (!isAnimation)
+            colliderComponent.enabled = true;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        colliderComponent.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,11 +83,15 @@ public class BossAttackEffect : RecycleObject
             if (damageable != null)
             {
                 Vector3 collisionPoint = other.ClosestPoint(transform.position);
-                damageable.TakeDamage(enemyStatus.AttackPower, collisionPoint);
-                damageable.KnockbackOnHit(knockBackPower);
+                float attackRatio = Random.Range(minimumAttackRatio, maximumAttackRatio);
+                damageable.TakeDamage(bossStatus.AttackPower * attackRatio, collisionPoint);
+
+                if (isKnockBack)
+                    damageable.KnockbackOnHit(knockBackPower);
 
                 // 콜라이더 끄기(중복 충돌 방지)
-                colliderComponent.enabled = false;
+                if (!isAnimation)
+                    colliderComponent.enabled = false;
             }
         }
     }

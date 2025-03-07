@@ -5,9 +5,14 @@ using UnityEngine;
 public class WeaponEffect : RecycleObject
 {
     /// <summary>
-    /// 공격력 계수
+    /// 최소 공격 계수
     /// </summary>
-    public float attackDamageRatio;
+    public float minimumAttackRatio;
+
+    /// <summary>
+    /// 최대 공격 계수
+    /// </summary>
+    public float maximumAttackRatio;
 
     /// <summary>
     /// 무기 기본공격 마다 미는힘
@@ -16,13 +21,14 @@ public class WeaponEffect : RecycleObject
 
     // 컴포넌트들
     PlayerStatus status;
-    Collider colliderComponent;
+
+    // 이미 맞은 적을 추적하는 HashSet
+    HashSet<IDamageable> damagedEnemies = new HashSet<IDamageable>();
 
     private void Awake()
     {
         // 컴포넌트들 찾기
         status = GameManager.Instance.PlayerStatus;
-        colliderComponent = GetComponent<Collider>();
     }
 
     
@@ -31,8 +37,7 @@ public class WeaponEffect : RecycleObject
         // 1초 뒤면 사라지게 만들기
         DisableTimer(1.0f);
 
-        // 콜라이더 활성화 시키기
-        colliderComponent.enabled = true;
+        damagedEnemies.Clear();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,15 +47,18 @@ public class WeaponEffect : RecycleObject
         {
             // 타겟에 데미지 처리
             IDamageable damageable = other.gameObject.GetComponent<IDamageable>();
-            if (damageable != null)
-            {
-                Vector3 collisionPoint = other.ClosestPoint(transform.position);
-                damageable.TakeDamage(status.AttackPower * attackDamageRatio, collisionPoint);
-                damageable.KnockbackOnHit(knockBackPower);
 
-                // 콜라이더 끄기(중복 충돌 방지)
-                colliderComponent.enabled = false;
-            }
+            // 이미 맞은 적이면 무시
+            if (damageable == null || damagedEnemies.Contains(damageable))
+                return;
+
+            // 맞은 적을 HashSet에 추가
+            damagedEnemies.Add(damageable);
+
+            Vector3 collisionPoint = other.ClosestPoint(transform.position);
+            float attackRatio = Random.Range(minimumAttackRatio, maximumAttackRatio);
+            damageable.TakeDamage(status.AttackPower * attackRatio, collisionPoint);
+            damageable.KnockbackOnHit(knockBackPower);
         }
     }
 }

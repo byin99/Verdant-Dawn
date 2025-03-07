@@ -4969,6 +4969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillDamageRatio: 6
+  minimumSkillRatio: 5.8
+  maximumSkillRatio: 6.2
   knockBackPower: 20
   skillDelayTime: 0
   isDamage: 1

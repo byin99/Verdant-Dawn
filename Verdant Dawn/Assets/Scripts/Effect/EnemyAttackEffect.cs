@@ -7,17 +7,26 @@ public class EnemyAttackEffect : RecycleObject
     /// <summary>
     /// 공격이 비활성화 되는 시간
     /// </summary>
-    public float disableTime;
+    [SerializeField]
+    float disableTime;
 
     /// <summary>
-    /// 넉백되는 힘의 양
+    /// 최소 공격 계수
     /// </summary>
-    public float knockBackPower;
+    [SerializeField]
+    float minimumAttackRatio;
+
+    /// <summary>
+    /// 최대 공격 계수
+    /// </summary>
+    [SerializeField]
+    float maximumAttackRatio;
 
     /// <summary>
     /// 이 이펙트의 모체
     /// </summary>
-    public EnemyStatus enemyStatus;
+    [SerializeField]
+    EnemyStatus enemyStatus;
 
     /// <summary>
     /// 이 이펙트가 가지는 콜라이더
@@ -49,8 +58,8 @@ public class EnemyAttackEffect : RecycleObject
             if (damageable != null)
             {
                 Vector3 collisionPoint = other.ClosestPoint(transform.position);
-                damageable.TakeDamage(enemyStatus.AttackPower, collisionPoint);
-                damageable.KnockbackOnHit(knockBackPower);
+                float attackRatio = Random.Range(minimumAttackRatio, maximumAttackRatio);
+                damageable.TakeDamage(enemyStatus.AttackPower * attackRatio, collisionPoint);
 
                 // 콜라이더 끄기(중복 충돌 방지)
                 colliderComponent.enabled = false;

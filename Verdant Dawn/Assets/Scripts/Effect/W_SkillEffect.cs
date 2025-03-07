@@ -5,10 +5,16 @@ using UnityEngine;
 public class W_SkillEffect : RecycleObject
 {
     /// <summary>
-    /// 스킬 계수
+    /// 최소 스킬 계수
     /// </summary>
     [SerializeField]
-    float skillDamageRatio;
+    float minimumSkillRatio;
+
+    /// <summary>
+    /// 최대 스킬 계수
+    /// </summary>
+    [SerializeField]
+    float maximumSkillRatio;
 
     /// <summary>
     /// 적을 미는 힘
@@ -47,13 +53,14 @@ public class W_SkillEffect : RecycleObject
 
     // 컴포넌트들
     PlayerStatus status;
-    Collider colliderComponent;
+
+    // 이미 맞은 적을 추적하는 HashSet
+    HashSet<IDamageable> damagedEnemies = new HashSet<IDamageable>();
 
     private void Awake()
     {
         if (isDamage)
         {
-            colliderComponent = GetComponent<Collider>();
             status = GameManager.Instance.PlayerStatus;
         }
     }
@@ -65,10 +72,7 @@ public class W_SkillEffect : RecycleObject
     {
         DisableTimer(3.0f);
 
-        if (isDamage)
-        {
-            colliderComponent.enabled = true;
-        }
+        damagedEnemies.Clear();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -86,18 +90,18 @@ public class W_SkillEffect : RecycleObject
             {
                 // 타겟에 데미지 처리
                 IDamageable damageable = other.gameObject.GetComponent<IDamageable>();
-                if (damageable != null)
-                {
-                    Vector3 collisionPoint = other.ClosestPoint(transform.position);
-                    damageable.TakeDamage(status.AttackPower * skillDamageRatio, collisionPoint);
-                    damageable.KnockbackOnHit(knockBackPower);
 
-                    // 콜라이더 끄기(중복 충돌 방지)
-                    if (!isAnimation)
-                    {
-                        colliderComponent.enabled = false;
-                    }
-                }
+                // 이미 맞은 적이면 무시
+                if (damageable == null || damagedEnemies.Contains(damageable))
+                    return;
+
+                // 맞은 적을 HashSet에 추가
+                damagedEnemies.Add(damageable); 
+
+                Vector3 collisionPoint = other.ClosestPoint(transform.position);
+                float skillRatio = Random.Range(minimumSkillRatio, maximumSkillRatio);
+                damageable.TakeDamage(status.AttackPower * skillRatio, collisionPoint);
+                damageable.KnockbackOnHit(knockBackPower);
             }
 
         }
@@ -123,7 +127,8 @@ public class W_SkillEffect : RecycleObject
             if (damageable != null)
             {
                 Vector3 collisionPoint = other.ClosestPoint(transform.position);
-                damageable.TakeDamage(status.AttackPower * skillDamageRatio, collisionPoint);
+                float skillRatio = Random.Range(minimumSkillRatio, maximumSkillRatio);
+                damageable.TakeDamage(status.AttackPower * skillRatio, collisionPoint);
                 damageable.KnockbackOnHit(knockBackPower);
             }
             yield return new WaitForSeconds(skillDelayTime);

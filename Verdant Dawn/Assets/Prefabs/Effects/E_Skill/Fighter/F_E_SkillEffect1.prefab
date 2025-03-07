@@ -124,7 +124,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTime: 1
   skillDamageRatio: 0.5
+  minimumSkillRatio: 0.3
+  maximumSkillRatio: 0.7
   knockBackPower: 2
   skillDelayTime: 0.2
   isDamage: 1
   isContinuous: 1
+  isAnimation: 0

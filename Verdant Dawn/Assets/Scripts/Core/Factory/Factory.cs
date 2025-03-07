@@ -35,6 +35,11 @@ public class Factory : Singleton<Factory>
     DemonLordPool demonLord;
 
     /// <summary>
+    /// EvilWatcherPool 선언
+    /// </summary>
+    EvilWatcherPool evilWatcher;
+
+    /// <summary>
     /// GhoulAttackPool 선언
     /// </summary>
     GhoulAttackPool ghoulAttack;
@@ -78,6 +83,81 @@ public class Factory : Singleton<Factory>
     /// BossAttack1Pool 선언
     /// </summary>
     BossAttack1Pool bossAttack1;
+
+    /// <summary>
+    /// BossAttack2Pool 선언
+    /// </summary>
+    BossAttack2Pool bossAttack2;
+
+    /// <summary>
+    /// BossAttack3Pool 선언
+    /// </summary>
+    BossAttack3Pool bossAttack3;
+
+    /// <summary>
+    /// BossAttack4Pool 선언
+    /// </summary>
+    BossAttack4Pool bossAttack4;
+
+    /// <summary>
+    /// BossRedFloorboardPool 선언
+    /// </summary>
+    BossRedFloorboardPool bossRedFloorboard;
+
+    /// <summary>
+    /// BossStaggeredEffectPool 선언
+    /// </summary>
+    BossStaggeredEffectPool bossStaggeredEffect;
+
+    /// <summary>
+    /// BossEvocationPool 선언
+    /// </summary>
+    BossEvocationPool bossEvocation;
+
+    /// <summary>
+    /// BossEvocationAttack1Pool 선언
+    /// </summary>
+    BossEvocationAttack1Pool bossEvocationAttack1;
+
+    /// <summary>
+    /// BossEvocationAttack2Pool 선언
+    /// </summary>
+    BossEvocationAttack2Pool bossEvocationAttack2;
+
+    /// <summary>
+    /// BossAttack1_B_Pool 선언
+    /// </summary>
+    BossAttack1_B_Pool bossAttack1_B;
+
+    /// <summary>
+    /// BossAttack2_B_Pool 선언
+    /// </summary>
+    BossAttack2_B_Pool bossAttack2_B;
+
+    /// <summary>
+    /// BossAttack3_B_Pool 선언
+    /// </summary>
+    BossAttack3_B_Pool bossAttack3_B;
+
+    /// <summary>
+    /// BossAttack4_B_Pool 선언
+    /// </summary>
+    BossAttack4_B_Pool bossAttack4_B;
+
+    /// <summary>
+    /// BossRedFloorboard_B_Pool 선언
+    /// </summary>
+    BossRedFloorboard_B_Pool bossRedFloorboard_B;
+
+    /// <summary>
+    /// BossStaggeredEffect_B_Pool 선언
+    /// </summary>
+    BossStaggeredEffect_B_Pool bossStaggeredEffect_B;
+
+    /// <summary>
+    /// BossEvocation_B_Pool 선언
+    /// </summary>
+    BossEvocation_B_Pool bossEvocation_B;
 
     /// <summary>
     /// FistEffectPool 선언
@@ -182,138 +262,142 @@ public class Factory : Singleton<Factory>
     /// <summary>
     /// F_E_SkillEffectPool1 선언
     /// </summary>
-    F_E_SkillEffectPool1 f_E_SkillEffectPool1;
+    F_E_SkillEffectPool1 f_E_SkillEffect1;
 
     /// <summary>
     /// F_E_SkillEffectPool2 선언
     /// </summary>
-    F_E_SkillEffectPool2 f_E_SkillEffectPool2;
+    F_E_SkillEffectPool2 f_E_SkillEffect2;
 
     /// <summary>
     /// F_E_SkillEffectPool3 선언
     /// </summary>
-    F_E_SkillEffectPool3 f_E_SkillEffectPool3;
+    F_E_SkillEffectPool3 f_E_SkillEffect3;
 
     /// <summary>
     /// B_E_SkillEffectPool1 선언
     /// </summary>
-    B_E_SkillEffectPool1 b_E_SkillEffectPool1;
+    B_E_SkillEffectPool1 b_E_SkillEffect1;
 
     /// <summary>
     /// B_E_SkillEffectPool2 선언
     /// </summary>
-    B_E_SkillEffectPool2 b_E_SkillEffectPool2;
+    B_E_SkillEffectPool2 b_E_SkillEffect2;
 
     /// <summary>
     /// H_E_SkillEffectPool1 선언
     /// </summary>
-    H_E_SkillEffectPool1 h_E_SkillEffectPool1;
+    H_E_SkillEffectPool1 h_E_SkillEffect1;
 
     /// <summary>
     /// H_E_SkillEffectPool2 선언
     /// </summary>
-    H_E_SkillEffectPool2 h_E_SkillEffectPool2;
+    H_E_SkillEffectPool2 h_E_SkillEffect2;
 
     /// <summary>
     /// M_E_SkillEffectPool1 선언
     /// </summary>
-    M_E_SkillEffectPool1 m_E_SkillEffectPool1;
+    M_E_SkillEffectPool1 m_E_SkillEffect1;
 
     /// <summary>
     /// M_E_SkillEffectPool2 선언
     /// </summary>
-    M_E_SkillEffectPool2 m_E_SkillEffectPool2;
+    M_E_SkillEffectPool2 m_E_SkillEffect2;
 
     /// <summary>
     /// M_E_SkillEffectPool3 선언
     /// </summary>
-    M_E_SkillEffectPool3 m_E_SkillEffectPool3;
+    M_E_SkillEffectPool3 m_E_SkillEffect3;
 
     /// <summary>
     /// A_E_SkillEffectPool1 선언
     /// </summary>
-    A_E_SkillEffectPool1 a_E_SkillEffectPool1;
+    A_E_SkillEffectPool1 a_E_SkillEffect1;
 
     /// <summary>
     /// A_E_SkillEffectPool2 선언
     /// </summary>
-    A_E_SkillEffectPool2 a_E_SkillEffectPool2;
+    A_E_SkillEffectPool2 a_E_SkillEffect2;
 
     /// <summary>
     /// A_E_SkillEffectPool3 선언
     /// </summary>
-    A_E_SkillEffectPool3 a_E_SkillEffectPool3;
+    A_E_SkillEffectPool3 a_E_SkillEffect3;
 
     /// <summary>
     /// F_R_SkillEffectPool1 선언
     /// </summary>
-    F_R_SkillEffectPool1 f_R_SkillEffectPool1;
+    F_R_SkillEffectPool1 f_R_SkillEffect1;
 
     /// <summary>
     /// F_R_SkillEffectPool2 선언
     /// </summary>
-    F_R_SkillEffectPool2 f_R_SkillEffectPool2;
+    F_R_SkillEffectPool2 f_R_SkillEffect2;
 
     /// <summary>
     /// B_R_SkillEffectPool1 선언
     /// </summary>
-    B_R_SkillEffectPool1 b_R_SkillEffectPool1;
+    B_R_SkillEffectPool1 b_R_SkillEffect1;
 
     /// <summary>
     /// B_R_SkillEffectPool2 선언
     /// </summary>
-    B_R_SkillEffectPool2 b_R_SkillEffectPool2;
+    B_R_SkillEffectPool2 b_R_SkillEffect2;
 
     /// <summary>
     /// H_R_SkillEffectPool1 선언
     /// </summary>
-    H_R_SkillEffectPool1 h_R_SkillEffectPool1;
+    H_R_SkillEffectPool1 h_R_SkillEffect2;
 
     /// <summary>
     /// M_R_SkillEffectPool1 선언
     /// </summary>
-    M_R_SkillEffectPool1 m_R_SkillEffectPool1;
+    M_R_SkillEffectPool1 m_R_SkillEffect1;
 
     /// <summary>
     /// M_R_SkillEffectPool2 선언
     /// </summary>
-    M_R_SkillEffectPool2 m_R_SkillEffectPool2;
-
+    M_R_SkillEffectPool2 m_R_SkillEffect2;
 
     /// <summary>
     /// A_R_SkillEffectPool1 선언
     /// </summary>
-    A_R_SkillEffectPool1 a_R_SkillEffectPool1;
+    A_R_SkillEffectPool1 a_R_SkillEffect1;
 
     /// <summary>
     /// A_R_SkillEffectPool2 선언
     /// </summary>
-    A_R_SkillEffectPool2 a_R_SkillEffectPool2;
+    A_R_SkillEffectPool2 a_R_SkillEffect2;
 
     /// <summary>
-    /// LevelUpEffectPool
+    /// LevelUpEffectPool 선언
     /// </summary>
-    LevelUpEffectPool levelUpEffectPool;
+    LevelUpEffectPool levelUpEffect;
 
     /// <summary>
-    /// DamageText_E_Pool
+    /// DamageText_E_Pool 선언
     /// </summary>
-    DamageText_E_Pool damageText_E_Pool;
+    DamageText_E_Pool damageText_E;
 
     /// <summary>
-    /// DamageText_P_Pool
+    /// DamageText_P_Pool 선언
     /// </summary>
-    DamageText_P_Pool damageText_P_Pool;
+    DamageText_P_Pool damageText_P;
 
     /// <summary>
-    /// HitEnemyEffectPool
+    /// HitEnemyEffectPool 선언
     /// </summary>
-    HitEnemyEffectPool hitEnemyEffectPool;
+    HitEnemyEffectPool hitEnemyEffect;
 
     /// <summary>
-    /// HitPlayerEffectPool
+    /// HitPlayerEffectPool 선언
     /// </summary>
-    HitPlayerEffectPool hitPlayerEffectPool;
+    HitPlayerEffectPool hitPlayerEffect;
+
+    /// <summary>
+    /// SafetyZoneEffectPool 선언
+    /// </summary>
+    SafetyZoneEffectPool safetyZoneEffect;
 
     /// <summary>
     /// 초기화 함수
@@ -349,6 +433,11 @@ public class Factory : Singleton<Factory>
         demonLord = GetComponentInChildren<DemonLordPool>();
         if (demonLord != null)
             demonLord.Initialize();
+
+        // EvilWatcherPool 초기화 및 생성
+        evilWatcher = GetComponentInChildren<EvilWatcherPool>();
+        if (evilWatcher != null)
+            evilWatcher.Initialize();
 
         // GhoulAttackPool 초기화 및 생성
         ghoulAttack = GetComponentInChildren<GhoulAttackPool>();
@@ -394,6 +483,81 @@ public class Factory : Singleton<Factory>
         bossAttack1 = GetComponentInChildren<BossAttack1Pool>();
         if (bossAttack1 != null)
             bossAttack1.Initialize();
+
+        // BossAttack2Pool 초기화 및 생성
+        bossAttack2 = GetComponentInChildren<BossAttack2Pool>();
+        if (bossAttack2 != null)
+            bossAttack2.Initialize();
+
+        // BossAttack3Pool 초기화 및 생성
+        bossAttack3 = GetComponentInChildren<BossAttack3Pool>();
+        if (bossAttack3 != null)
+            bossAttack3.Initialize();
+
+        // BossAttack4Pool 초기화 및 생성
+        bossAttack4 = GetComponentInChildren<BossAttack4Pool>();
+        if (bossAttack4 != null)
+            bossAttack4.Initialize();
+
+        // BossRedFloorboardPool 초기화 및 생성
+        bossRedFloorboard = GetComponentInChildren<BossRedFloorboardPool>();
+        if (bossRedFloorboard != null)
+            bossRedFloorboard.Initialize();
+
+        // BossStaggeredEffectPool 초기화 및 생성
+        bossStaggeredEffect = GetComponentInChildren<BossStaggeredEffectPool>();
+        if (bossStaggeredEffect != null)
+            bossStaggeredEffect.Initialize();
+
+        // BossEvocationPool 초기화 및 생성
+        bossEvocation = GetComponentInChildren<BossEvocationPool>();
+        if (bossEvocation != null)
+            bossEvocation.Initialize();
+
+        // BossEvocationAttack1Pool 초기화 및 생성
+        bossEvocationAttack1 = GetComponentInChildren<BossEvocationAttack1Pool>();
+        if (bossEvocationAttack1 != null)
+            bossEvocationAttack1.Initialize();
+
+        // BossEvocationAttack2Pool 초기화 및 생성
+        bossEvocationAttack2 = GetComponentInChildren<BossEvocationAttack2Pool>();
+        if (bossEvocationAttack2 != null)
+            bossEvocationAttack2.Initialize();
+
+        // BossAttack1_B_Pool 초기화 및 생성
+        bossAttack1_B = GetComponentInChildren<BossAttack1_B_Pool>();
+        if (bossAttack1_B != null)
+            bossAttack1_B.Initialize();
+
+        // BossAttack2_B_Pool 초기화 및 생성
+        bossAttack2_B = GetComponentInChildren<BossAttack2_B_Pool>();
+        if (bossAttack2_B != null)
+            bossAttack2_B.Initialize();
+
+        // BossAttack3_B_Pool 초기화 및 생성
+        bossAttack3_B = GetComponentInChildren<BossAttack3_B_Pool>();
+        if (bossAttack3_B != null)
+            bossAttack3_B.Initialize();
+
+        // BossAttack4_B_Pool 초기화 및 생성
+        bossAttack4_B = GetComponentInChildren<BossAttack4_B_Pool>();
+        if (bossAttack4_B != null)
+            bossAttack4_B.Initialize();
+
+        // BossRedFloorboard_B_Pool 초기화 및 생성
+        bossRedFloorboard_B = GetComponentInChildren<BossRedFloorboard_B_Pool>();
+        if (bossRedFloorboard_B != null)
+            bossRedFloorboard_B.Initialize();
+
+        // BossStaggeredEffect_B_Pool 초기화 및 생성
+        bossStaggeredEffect_B = GetComponentInChildren<BossStaggeredEffect_B_Pool>();
+        if (bossStaggeredEffect_B != null)
+            bossStaggeredEffect_B.Initialize();
+
+        // BossEvocation_B_Pool 초기화 및 생성
+        bossEvocation_B = GetComponentInChildren<BossEvocation_B_Pool>();
+        if (bossEvocation_B != null)
+            bossEvocation_B.Initialize();
 
         // FistEffectPool 초기화 및 생성
         fistEffect = GetComponentInChildren<FistEffectPool>();
@@ -496,139 +660,144 @@ public class Factory : Singleton<Factory>
             a_W_Skill_Fail.Initialize();
 
         // F_E_SkillEffectPool1 초기화 및 생성
-        f_E_SkillEffectPool1 = GetComponentInChildren<F_E_SkillEffectPool1>();
-        if (f_E_SkillEffectPool1 != null)
-            f_E_SkillEffectPool1 .Initialize();
+        f_E_SkillEffect1 = GetComponentInChildren<F_E_SkillEffectPool1>();
+        if (f_E_SkillEffect1 != null)
+            f_E_SkillEffect1 .Initialize();
 
         // F_E_SkillEffectPool2 초기화 및 생성
-        f_E_SkillEffectPool2 = GetComponentInChildren<F_E_SkillEffectPool2>();
-        if (f_E_SkillEffectPool2 != null)
-            f_E_SkillEffectPool2.Initialize();
+        f_E_SkillEffect2 = GetComponentInChildren<F_E_SkillEffectPool2>();
+        if (f_E_SkillEffect2 != null)
+            f_E_SkillEffect2.Initialize();
 
         // F_E_SkillEffectPool3 초기화 및 생성
-        f_E_SkillEffectPool3 = GetComponentInChildren<F_E_SkillEffectPool3>();
-        if (f_E_SkillEffectPool3 != null)
-            f_E_SkillEffectPool3.Initialize();
+        f_E_SkillEffect3 = GetComponentInChildren<F_E_SkillEffectPool3>();
+        if (f_E_SkillEffect3 != null)
+            f_E_SkillEffect3.Initialize();
 
         // B_E_SkillEffectPool1 초기화 및 생성
-        b_E_SkillEffectPool1 = GetComponentInChildren<B_E_SkillEffectPool1>();
-        if (b_E_SkillEffectPool1 != null)
-            b_E_SkillEffectPool1.Initialize();
+        b_E_SkillEffect1 = GetComponentInChildren<B_E_SkillEffectPool1>();
+        if (b_E_SkillEffect1 != null)
+            b_E_SkillEffect1.Initialize();
 
         // B_E_SkillEffectPool2 초기화 및 생성
-        b_E_SkillEffectPool2 = GetComponentInChildren<B_E_SkillEffectPool2>();
-        if (b_E_SkillEffectPool2 != null)
-            b_E_SkillEffectPool2.Initialize();
+        b_E_SkillEffect2 = GetComponentInChildren<B_E_SkillEffectPool2>();
+        if (b_E_SkillEffect2 != null)
+            b_E_SkillEffect2.Initialize();
 
         // H_E_SkillEffectPool1 초기화 및 생성
-        h_E_SkillEffectPool1 = GetComponentInChildren<H_E_SkillEffectPool1>();
-        if (h_E_SkillEffectPool1 != null)
-            h_E_SkillEffectPool1.Initialize();
+        h_E_SkillEffect1 = GetComponentInChildren<H_E_SkillEffectPool1>();
+        if (h_E_SkillEffect1 != null)
+            h_E_SkillEffect1.Initialize();
 
         // H_E_SkillEffectPool2 초기화 및 생성
-        h_E_SkillEffectPool2 = GetComponentInChildren<H_E_SkillEffectPool2>();
-        if (h_E_SkillEffectPool2 != null)
-            h_E_SkillEffectPool2.Initialize();
+        h_E_SkillEffect2 = GetComponentInChildren<H_E_SkillEffectPool2>();
+        if (h_E_SkillEffect2 != null)
+            h_E_SkillEffect2.Initialize();
 
         // M_E_SkillEffectPool1 초기화 및 생성
-        m_E_SkillEffectPool1 = GetComponentInChildren<M_E_SkillEffectPool1>();
-        if (m_E_SkillEffectPool1 != null)
-            m_E_SkillEffectPool1.Initialize();
+        m_E_SkillEffect1 = GetComponentInChildren<M_E_SkillEffectPool1>();
+        if (m_E_SkillEffect1 != null)
+            m_E_SkillEffect1.Initialize();
 
         // M_E_SkillEffectPool2 초기화 및 생성
-        m_E_SkillEffectPool2 = GetComponentInChildren<M_E_SkillEffectPool2>();
-        if (m_E_SkillEffectPool2 != null)
-            m_E_SkillEffectPool2.Initialize();
+        m_E_SkillEffect2 = GetComponentInChildren<M_E_SkillEffectPool2>();
+        if (m_E_SkillEffect2 != null)
+            m_E_SkillEffect2.Initialize();
 
         // M_E_SkillEffectPoole3 초기화 및 생성
-        m_E_SkillEffectPool3 = GetComponentInChildren<M_E_SkillEffectPool3>();
-        if (m_E_SkillEffectPool3 != null)
-            m_E_SkillEffectPool3.Initialize();
+        m_E_SkillEffect3 = GetComponentInChildren<M_E_SkillEffectPool3>();
+        if (m_E_SkillEffect3 != null)
+            m_E_SkillEffect3.Initialize();
 
         // A_E_SkillEffectPool1 초기화 및 생성
-        a_E_SkillEffectPool1 = GetComponentInChildren<A_E_SkillEffectPool1>();
-        if (a_E_SkillEffectPool1 != null)
-            a_E_SkillEffectPool1.Initialize();
+        a_E_SkillEffect1 = GetComponentInChildren<A_E_SkillEffectPool1>();
+        if (a_E_SkillEffect1 != null)
+            a_E_SkillEffect1.Initialize();
 
         // A_E_SkillEffectPool2 초기화 및 생성
-        a_E_SkillEffectPool2 = GetComponentInChildren<A_E_SkillEffectPool2>();
-        if (a_E_SkillEffectPool2 != null)
-            a_E_SkillEffectPool2.Initialize();
+        a_E_SkillEffect2 = GetComponentInChildren<A_E_SkillEffectPool2>();
+        if (a_E_SkillEffect2 != null)
+            a_E_SkillEffect2.Initialize();
 
         // A_E_SkillEffectPool3 초기화 및 생성
-        a_E_SkillEffectPool3 = GetComponentInChildren<A_E_SkillEffectPool3>();
-        if (a_E_SkillEffectPool3 != null)
-            a_E_SkillEffectPool3.Initialize();
+        a_E_SkillEffect3 = GetComponentInChildren<A_E_SkillEffectPool3>();
+        if (a_E_SkillEffect3 != null)
+            a_E_SkillEffect3.Initialize();
 
         // F_R_SkillEffectPool1 초기화 및 생성
-        f_R_SkillEffectPool1 = GetComponentInChildren<F_R_SkillEffectPool1>();
-        if (f_R_SkillEffectPool1 != null)
-            f_R_SkillEffectPool1.Initialize();
+        f_R_SkillEffect1 = GetComponentInChildren<F_R_SkillEffectPool1>();
+        if (f_R_SkillEffect1 != null)
+            f_R_SkillEffect1.Initialize();
 
         // F_R_SkillEffectPool2 초기화 및 생성
-        f_R_SkillEffectPool2 = GetComponentInChildren<F_R_SkillEffectPool2>();
-        if (f_R_SkillEffectPool2 != null)
-            f_R_SkillEffectPool2.Initialize();
+        f_R_SkillEffect2 = GetComponentInChildren<F_R_SkillEffectPool2>();
+        if (f_R_SkillEffect2 != null)
+            f_R_SkillEffect2.Initialize();
 
         // B_R_SkillEffectPool1 초기화 및 생성
-        b_R_SkillEffectPool1 = GetComponentInChildren<B_R_SkillEffectPool1>();
-        if (b_R_SkillEffectPool1 != null)
-            b_R_SkillEffectPool1.Initialize();
+        b_R_SkillEffect1 = GetComponentInChildren<B_R_SkillEffectPool1>();
+        if (b_R_SkillEffect1 != null)
+            b_R_SkillEffect1.Initialize();
 
         // B_R_SkillEffectPool2 초기화 및 생성
-        b_R_SkillEffectPool2 = GetComponentInChildren<B_R_SkillEffectPool2>();
-        if (b_R_SkillEffectPool2 != null)
-            b_R_SkillEffectPool2.Initialize();
+        b_R_SkillEffect2 = GetComponentInChildren<B_R_SkillEffectPool2>();
+        if (b_R_SkillEffect2 != null)
+            b_R_SkillEffect2.Initialize();
 
         // H_R_SkillEffectPool1 초기화 및 생성
-        h_R_SkillEffectPool1 = GetComponentInChildren<H_R_SkillEffectPool1>();
-        if (h_R_SkillEffectPool1 != null)
-            h_R_SkillEffectPool1.Initialize();
+        h_R_SkillEffect2 = GetComponentInChildren<H_R_SkillEffectPool1>();
+        if (h_R_SkillEffect2 != null)
+            h_R_SkillEffect2.Initialize();
 
         // M_R_SkillEffectPool1 초기화 및 생성
-        m_R_SkillEffectPool1 = GetComponentInChildren<M_R_SkillEffectPool1>();
-        if (m_R_SkillEffectPool1 != null)
-            m_R_SkillEffectPool1.Initialize();
+        m_R_SkillEffect1 = GetComponentInChildren<M_R_SkillEffectPool1>();
+        if (m_R_SkillEffect1 != null)
+            m_R_SkillEffect1.Initialize();
 
         // M_R_SkillEffectPool2 초기화 및 생성
-        m_R_SkillEffectPool2 = GetComponentInChildren<M_R_SkillEffectPool2>();
-        if (m_R_SkillEffectPool2 != null)
-            m_R_SkillEffectPool2.Initialize();
+        m_R_SkillEffect2 = GetComponentInChildren<M_R_SkillEffectPool2>();
+        if (m_R_SkillEffect2 != null)
+            m_R_SkillEffect2.Initialize();
 
         // A_R_SkillEffectPool1 초기화 및 생성
-        a_R_SkillEffectPool1 = GetComponentInChildren<A_R_SkillEffectPool1>();
-        if (a_R_SkillEffectPool1 != null)
-            a_R_SkillEffectPool1.Initialize();
+        a_R_SkillEffect1 = GetComponentInChildren<A_R_SkillEffectPool1>();
+        if (a_R_SkillEffect1 != null)
+            a_R_SkillEffect1.Initialize();
 
         // A_R_SkillEffectPool2 초기화 및 생성
-        a_R_SkillEffectPool2 = GetComponentInChildren<A_R_SkillEffectPool2>();
-        if (a_R_SkillEffectPool2 != null)
-            a_R_SkillEffectPool2.Initialize();
+        a_R_SkillEffect2 = GetComponentInChildren<A_R_SkillEffectPool2>();
+        if (a_R_SkillEffect2 != null)
+            a_R_SkillEffect2.Initialize();
 
         // LevelUpEffectPool 초기화 및 생성
-        levelUpEffectPool = GetComponentInChildren<LevelUpEffectPool>();
-        if (levelUpEffectPool != null)
-            levelUpEffectPool.Initialize();
+        levelUpEffect = GetComponentInChildren<LevelUpEffectPool>();
+        if (levelUpEffect != null)
+            levelUpEffect.Initialize();
 
         // DamageText_E_Pool 초기화 및 생성
-        damageText_E_Pool = GetComponentInChildren<DamageText_E_Pool>();
-        if (damageText_E_Pool != null)
-            damageText_E_Pool.Initialize();
+        damageText_E = GetComponentInChildren<DamageText_E_Pool>();
+        if (damageText_E != null)
+            damageText_E.Initialize();
 
         // DamageText_P_Pool 초기화 및 생성
-        damageText_P_Pool = GetComponentInChildren<DamageText_P_Pool>();
-        if (damageText_P_Pool != null)
-            damageText_P_Pool.Initialize();
+        damageText_P = GetComponentInChildren<DamageText_P_Pool>();
+        if (damageText_P != null)
+            damageText_P.Initialize();
 
         // HitEnemyEffectPool 초기화 및 생성
-        hitEnemyEffectPool = GetComponentInChildren<HitEnemyEffectPool>();
-        if (hitEnemyEffectPool != null)
-            hitEnemyEffectPool.Initialize();
+        hitEnemyEffect = GetComponentInChildren<HitEnemyEffectPool>();
+        if (hitEnemyEffect != null)
+            hitEnemyEffect.Initialize();
 
         // HitPlayerEffectPool 초기화 및 생성
-        hitPlayerEffectPool = GetComponentInChildren<HitPlayerEffectPool>();
-        if (hitPlayerEffectPool != null)
-            hitPlayerEffectPool.Initialize();
+        hitPlayerEffect = GetComponentInChildren<HitPlayerEffectPool>();
+        if (hitPlayerEffect != null)
+            hitPlayerEffect.Initialize();
+
+        // SafetyZoneEffectPool 초기화 및 생성
+        safetyZoneEffect = GetComponentInChildren<SafetyZoneEffectPool>();
+        if (safetyZoneEffect != null)
+            safetyZoneEffect.Initialize();
     }
 
     /// <summary>
@@ -695,6 +864,17 @@ public class Factory : Singleton<Factory>
     public BossController GetDemonLord(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return demonLord.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// EvilWatcher 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 EvilWathcer</returns>
+    public BossEvocationController GetEvilWatcher(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return evilWatcher.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -794,6 +974,171 @@ public class Factory : Singleton<Factory>
     public BossAttackEffect GetBossAttack1(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return bossAttack1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack2</returns>
+    public BossAttackEffect GetBossAttack2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack3 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack3</returns>
+    public BossAttackEffect GetBossAttack3(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack3.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack4 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환 된 BossAttack4</returns>
+    public BossAttackEffect GetBossAttack4(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack4.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossRedFloorboard 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossRedFloorboard</returns>
+    public BossEffect GetBossRedFloorboard(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossRedFloorboard.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossStaggeredEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossStaggeredEffect</returns>
+    public BossEffect GetBossStaggeredEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossStaggeredEffect.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossEvocation 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossEvocation</returns>
+    public BossEffect GetBossEvocation(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossEvocation.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossEvocationAttack1 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossEvocationAttack1</returns>
+    public BossEvocationAttackEffect GetBossEvocationAttack1(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossEvocationAttack1.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossEvocationAttack2 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossEvocationAttack2</returns>
+    public BossEvocationAttackEffect GetBossEvocationAttack2(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossEvocationAttack2.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack1_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack1_B</returns>
+    public BossAttackEffect GetBossAttack1_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack1_B.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack2_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack2_B</returns>
+    public BossAttackEffect GetBossAttack2_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack2_B.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack3_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack3_B</returns>
+    public BossAttackEffect GetBossAttack3_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack3_B.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossAttack4_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossAttack4_B</returns>
+    public BossAttackEffect GetBossAttack4_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossAttack4_B.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossRedFloorboard_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossRedFloorboard_B</returns>
+    public BossEffect GetBossRedFloorboard_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossRedFloorboard_B.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossStaggeredEffect_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossStaggeredEffect_B</returns>
+    public BossEffect GetBossStaggeredEffect_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossStaggeredEffect_B.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// BossEvocation_B 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 BossEvocation_B</returns>
+    public BossEffect GetBossEvocation_B(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return bossEvocation_B.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1024,7 +1369,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetFighterESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return f_E_SkillEffectPool1.GetObject(position, eulerAngle);
+        return f_E_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1035,7 +1380,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetFighterESkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return f_E_SkillEffectPool2.GetObject(position, eulerAngle);
+        return f_E_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1046,7 +1391,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetFighterESkill3(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return f_E_SkillEffectPool3.GetObject(position, eulerAngle);
+        return f_E_SkillEffect3.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1057,7 +1402,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetBerserkerESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return b_E_SkillEffectPool1.GetObject(position, eulerAngle);
+        return b_E_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1068,7 +1413,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetBerserkerESkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return b_E_SkillEffectPool2.GetObject(position, eulerAngle);
+        return b_E_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1079,7 +1424,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetHunterESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return h_E_SkillEffectPool1.GetObject(position, eulerAngle);
+        return h_E_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1090,7 +1435,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetHunterESkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return h_E_SkillEffectPool2.GetObject(position, eulerAngle);
+        return h_E_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1101,7 +1446,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetMagicianESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return m_E_SkillEffectPool1.GetObject(position, eulerAngle);
+        return m_E_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1112,7 +1457,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetMagicianESkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return m_E_SkillEffectPool2.GetObject(position, eulerAngle);
+        return m_E_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1123,7 +1468,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetMagicianESkill3(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return m_E_SkillEffectPool3.GetObject(position, eulerAngle);
+        return m_E_SkillEffect3.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1134,7 +1479,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetAssassinESkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return a_E_SkillEffectPool1.GetObject(position, eulerAngle);
+        return a_E_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1145,7 +1490,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetAssassinESkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return a_E_SkillEffectPool2.GetObject(position, eulerAngle);
+        return a_E_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1156,7 +1501,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public E_SkillEffect GetAssassinESkill3(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return a_E_SkillEffectPool3.GetObject(position, eulerAngle);
+        return a_E_SkillEffect3.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1167,7 +1512,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetFighterRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return f_R_SkillEffectPool1.GetObject(position, eulerAngle);
+        return f_R_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1178,7 +1523,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetFighterRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return f_R_SkillEffectPool2.GetObject(position, eulerAngle);
+        return f_R_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1189,7 +1534,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetBerserkerRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return b_R_SkillEffectPool1.GetObject(position, eulerAngle);
+        return b_R_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1200,7 +1545,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetBerserkerRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return b_R_SkillEffectPool2.GetObject(position, eulerAngle);
+        return b_R_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1211,7 +1556,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetHunterRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return h_R_SkillEffectPool1.GetObject(position, eulerAngle);
+        return h_R_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1222,7 +1567,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetMagicianRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return m_R_SkillEffectPool1.GetObject(position, eulerAngle);
+        return m_R_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1233,7 +1578,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetMagicianRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return m_R_SkillEffectPool2.GetObject(position, eulerAngle);
+        return m_R_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1244,7 +1589,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetAssassinRSkill1(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return a_R_SkillEffectPool1.GetObject(position, eulerAngle);
+        return a_R_SkillEffect1.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1255,7 +1600,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public R_SkillEffect GetAssassinRSkill2(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return a_R_SkillEffectPool2.GetObject(position, eulerAngle);
+        return a_R_SkillEffect2.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1266,7 +1611,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 이펙트</returns>
     public LevelUpEffect GetLevelUpEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return levelUpEffectPool.GetObject(position, eulerAngle);
+        return levelUpEffect.GetObject(position, eulerAngle);
     }
 
     /// <summary>
@@ -1277,7 +1622,7 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 데미지 텍스트</returns>
     public DamageText MakeDamageText_E(int damage, Vector3? position = null)
     {
-        DamageText damageText = damageText_E_Pool.GetObject(position);
+        DamageText damageText = damageText_E.GetObject(position);
         damageText.SetDamage(damage);
         return damageText;
     }
@@ -1290,8 +1635,19 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 데미지 텍스트</returns>
     public DamageText MakeDamageText_P(int damage, Vector3? position = null)
     {
-        DamageText damageText = damageText_P_Pool.GetObject(position);
+        DamageText damageText = damageText_P.GetObject(position);
         damageText.SetDamage(damage);
         return damageText;
+    }
+
+    /// <summary>
+    /// SafetyZoneEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 SafetyZoneEffect</returns>
+    public SafetyZoneEffect GetSafetyZoneEffect(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return safetyZoneEffect.GetObject(position, eulerAngle);
     }
 }

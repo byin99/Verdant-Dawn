@@ -11,7 +11,6 @@ public class EnemyBase : IState<EnemyController>
     protected Animator animator;
     protected Rigidbody rigid;
     protected Player player;
-    protected Material[] materials;
     protected EnemyStatus enemyStatus;
 
     /// <summary>
@@ -38,7 +37,7 @@ public class EnemyBase : IState<EnemyController>
     protected readonly int Idle_Hash = Animator.StringToHash("Idle");
     protected readonly int Walk_Hash = Animator.StringToHash("Walk");
     protected readonly int Run_Hash = Animator.StringToHash("Run");
-    protected readonly int Attack_Hash = Animator.StringToHash("Attack");
+    protected readonly int Attack_Hash = Animator.StringToHash("attack");
     protected readonly int Hit_Hash = Animator.StringToHash("Hit");
     protected readonly int Death_Hash = Animator.StringToHash("Death");
 
@@ -67,16 +66,6 @@ public class EnemyBase : IState<EnemyController>
             player = GameManager.Instance.Player;           // Player 찾기
         }
 
-        if (materials == null)
-        {
-            // material 찾기
-            materials = new Material[sender.skinnedMeshRenderers.Length];
-            for (int i = 0; i < materials.Length; i++)
-            {
-                materials[i] = sender.skinnedMeshRenderers[i].material;
-            }
-        }
-
         if (enemyStatus == null)
         {
             enemyStatus = sender.GetComponent<EnemyStatus>();
@@ -89,7 +78,7 @@ public class EnemyBase : IState<EnemyController>
 
         if (playerDistance < attackDistance)    // 공격할 수 있는 거리가 되면
         {
-            sender.enemyStateMachine.TransitionTo(sender.attack);   // Attack 상태로 전환
+            sender.enemyStateMachine.TransitionTo(sender.attack);   // attack 상태로 전환
         }
 
         else if (playerDistance < detectDistance)   // 플레이어를 감지했으면

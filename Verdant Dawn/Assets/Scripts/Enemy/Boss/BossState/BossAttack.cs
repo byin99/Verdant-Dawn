@@ -7,7 +7,7 @@ public class BossAttack : BossBase
     /// <summary>
     /// 공격 애니메이션 시간
     /// </summary>
-    float attackAnimTime;
+    float attackAnimTime = 3.5f;
 
     /// <summary>
     /// 공격 시간 누적용 변수
@@ -53,9 +53,8 @@ public class BossAttack : BossBase
     /// <summary>
     /// 랜덤으로 공격하는 함수(4개)
     /// </summary>
-    void RandomAttack(BossController sender)
+    void RandomAttack()
     {
-        sender.isAttack = true;
         int randomNumber = Random.Range(0, 4);
         timeElapsed = 0.0f;
 
@@ -97,6 +96,6 @@ public class BossAttack : BossBase
             yield return null;
         }
 
-        RandomAttack(sender);
+        RandomAttack();
     }
 }

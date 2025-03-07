@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -33,6 +35,12 @@ public class GameManager : Singleton<GameManager>
     /// PlayerStatus
     /// </summary>
     PlayerStatus playerStatus;
+
+    /// <summary>
+    /// Intensity 조절을 위한 컴포넌트
+    /// </summary>
+    [SerializeField]
+    Volume volume;
 
     /// <summary>
     /// Player를 공유받을 프로퍼티(읽기 전용)
@@ -122,6 +130,14 @@ public class GameManager : Singleton<GameManager>
             }
             return playerStatus;
         }
+    }
+
+    /// <summary>
+    /// Volume를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public Volume Volume
+    {
+        get => volume;
     }
 
     protected override void OnInitialize()
