@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class EnemyController : RecycleObject
 {
@@ -143,6 +145,7 @@ public class EnemyController : RecycleObject
     /// </summary>
     void Die()
     {
+        DropItems();
         enemyCollider.enabled = false;
         enemyStateMachine.TransitionTo(die);
     }
@@ -153,5 +156,35 @@ public class EnemyController : RecycleObject
     void PlayerDie()
     {
         player = null;
+    }
+
+    // 아이템 드랍용--------------------------------------------------------------------------------------------------------------------------------------------
+    [Serializable]
+    public struct ItemDropInfo
+    {
+        public ItemCode code;       // 어떤 종류의 아이템인지
+        [Range(0f, 1f)]
+        public float dropRatio;     // 드랍될 확률은 얼마인지
+        public uint dropCount;      // 최대 몇개를 드랍할 것인지
+    }
+
+    /// <summary>
+    /// 아이템 드랍 정보창
+    /// </summary>
+    public ItemDropInfo[] dropItems;
+
+    /// <summary>
+    /// 아이템을 드랍하는 함수
+    /// </summary>
+    public void DropItems()
+    {
+        foreach (var item in dropItems)
+        {
+            if (item.dropRatio > Random.value)
+            {
+                uint count = (uint)Random.Range(0, (int)item.dropCount) + 1;
+                Factory.Instance.MakeItems(item.code, count, transform.position, true);
+            }
+        }
     }
 }

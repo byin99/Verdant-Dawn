@@ -62,44 +62,44 @@ public class CharacterInfoUI : MonoBehaviour
         PlayerClass playerClass = GameManager.Instance.PlayerClass;
         playerClass.onChangeClass += ChangeClassUI;
 
-        Transform child = transform.GetChild(3);
+        Transform child = transform.GetChild(0);
         child = child.GetChild(1);
         character_Class_Image = child.GetComponent<Image>();
 
-        child = transform.GetChild(3);
+        child = transform.GetChild(0);
         child = child.GetChild(0);
         child = child.GetChild(1);
         child = child.GetChild(0);
         character_Class_Color = child.GetComponent<Image>();
 
-        child = transform.GetChild(1);
+        child = transform.GetChild(2);
         child = child.GetChild(0);
         child = child.GetChild(0);
         w_Skill_Image = child.GetComponent<Image>();
 
-        child = transform.GetChild(1);
+        child = transform.GetChild(2);
         child = child.GetChild(1);
         child = child.GetChild(0);
         e_Skill_Image = child.GetComponent<Image>();
 
-        child = transform.GetChild(1);
+        child = transform.GetChild(2);
         child = child.GetChild(2);
         child = child.GetChild(0);
         r_Skill_Image = child.GetComponent<Image>();
 
-        child = transform.GetChild(1);
+        child = transform.GetChild(2);
         child = child.GetChild(0);
         child = child.GetChild(0);
         child = child.GetChild(0);
         w_Glow = child.GetComponent<Image>();
 
-        child = transform.GetChild(1);
+        child = transform.GetChild(2);
         child = child.GetChild(1);
         child = child.GetChild(0);
         child = child.GetChild(0);
         e_Glow = child.GetComponent<Image>();
 
-        child = transform.GetChild(1);
+        child = transform.GetChild(2);
         child = child.GetChild(2);
         child = child.GetChild(0);
         child = child.GetChild(0);

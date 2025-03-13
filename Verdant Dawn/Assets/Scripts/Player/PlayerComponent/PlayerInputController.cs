@@ -56,6 +56,11 @@ public class PlayerInputController : MonoBehaviour
     /// </summary>
     public event Action offUltimateSkill;
 
+    /// <summary>
+    /// G키를 누르면 실행되는 델리게이트
+    /// </summary>
+    public event Action onInteraction;
+
     // 인풋 액션
     PlayerInputActions inputActions;
 
@@ -82,10 +87,14 @@ public class PlayerInputController : MonoBehaviour
 
         inputActions.Player.Skill4.performed += OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 넣기
         inputActions.Player.Skill4.canceled += OffUltimateSkill;    // Skill4의 canceled에 OffUltimateSkill함수 넣기
+
+        inputActions.Player.Interaction.performed += OnInteraction; // Interaction의 performed에 OnInteraction함수 넣기
     }
 
     private void OnDisable()
     {
+        inputActions.Player.Interaction.performed -= OnInteraction; // Interaction의 performed에 OnInteraction함수 넣기
+
         inputActions.Player.Skill4.canceled -= OffUltimateSkill;    // Skill4의 canceled에 OffUltimateSkill함수 빼기
         inputActions.Player.Skill4.performed -= OnUltimateSkill;    // Skill4의 performed에 OnUltimateSkill함수 빼기
 
@@ -186,5 +195,13 @@ public class PlayerInputController : MonoBehaviour
     private void OffUltimateSkill(InputAction.CallbackContext _)
     {
         offUltimateSkill?.Invoke();
+    }
+
+    /// <summary>
+    /// G키 (상호 작용)
+    /// </summary>
+    private void OnInteraction(InputAction.CallbackContext _)
+    {
+        onInteraction?.Invoke();
     }
 }

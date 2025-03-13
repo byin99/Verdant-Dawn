@@ -4600,7 +4600,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
   isHit: 0
-  skinnedMeshRenderers: []
+  materials: []
+  dropItems:
+  - code: 0
+    dropRatio: 0.1
+    dropCount: 1
+  - code: 1
+    dropRatio: 0.1
+    dropCount: 1
+  - code: 2
+    dropRatio: 0.05
+    dropCount: 1
 --- !u!114 &7197685057397755589
 MonoBehaviour:
   m_ObjectHideFlags: 0

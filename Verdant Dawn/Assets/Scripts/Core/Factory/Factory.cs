@@ -400,6 +400,36 @@ public class Factory : Singleton<Factory>
     SafetyZoneEffectPool safetyZoneEffect;
 
     /// <summary>
+    /// ItemPool 선언
+    /// </summary>
+    ItemPool item;
+
+    /// <summary>
+    /// HealingPotionPool 선언
+    /// </summary>
+    HealingPotionPool healingPotion;
+
+    /// <summary>
+    /// ManaPotionPool 선언
+    /// </summary>
+    ManaPotionPool manaPotion;
+    
+    /// <summary>
+    /// IdentityPotionPool 선언
+    /// </summary>
+    IdentityPotionPool identityPotion;
+
+    /// <summary>
+    /// ItemDataManager
+    /// </summary>
+    ItemDataManager itemDataManager;
+
+    /// <summary>
+    /// 생성 할 때 노이즈 반지름
+    /// </summary>
+    public float spawnNoise = 0.5f;
+
+    /// <summary>
     /// 초기화 함수
     /// </summary>
     protected override void OnInitialize()
@@ -798,6 +828,29 @@ public class Factory : Singleton<Factory>
         safetyZoneEffect = GetComponentInChildren<SafetyZoneEffectPool>();
         if (safetyZoneEffect != null)
             safetyZoneEffect.Initialize();
+
+        // ItemPool 초기화 및 생성
+        item = GetComponentInChildren<ItemPool>();
+        if (item != null)
+            item.Initialize();
+
+        // HealingPotionPool 초기화 및 생성
+        healingPotion = GetComponentInChildren<HealingPotionPool>();
+        if (healingPotion != null)
+            healingPotion.Initialize();
+
+        // ManaPotionPool 초기화 및 생성
+        manaPotion = GetComponentInChildren<ManaPotionPool>();
+        if (manaPotion != null)
+            manaPotion.Initialize();
+
+        // IdentityPotionPool 초기화 및 생성
+        identityPotion = GetComponentInChildren<IdentityPotionPool>();
+        if (identityPotion != null)
+            identityPotion.Initialize();
+
+        // MakeItems에서 ItemData를 적용시키기 위한 컴포넌트
+        itemDataManager = GameManager.Instance.ItemDataManager;
     }
 
     /// <summary>
@@ -1649,5 +1702,84 @@ public class Factory : Singleton<Factory>
     public SafetyZoneEffect GetSafetyZoneEffect(Vector3? position = null, Vector3? eulerAngle = null)
     {
         return safetyZoneEffect.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// 아이템을 하나 생성하는 함수
+    /// </summary>
+    /// <param name="code">생성할 아이템의 종류</param>
+    /// <param name="position">생성할 위치</param>
+    /// <param name="useNoise">노이즈 적용 여부(true면 노이즈 적용, false면 적용하지 않음)</param>
+    /// <returns>아이템의 게임 오브젝트</returns>
+    public GameObject MakeItem(ItemCode code, Vector3? position = null, bool useNoise = false)
+    {
+        ItemData data = itemDataManager[code];  // 아이템 데이터 매니저에서 ItemData가져오고
+        ItemObject obj = item.GetObject();  // 풀에서 아이템 오브젝트 하나 꺼낸 후
+        obj.ItemData = data;                    // 아이템 데이터 설정
+
+        obj.transform.position = position.GetValueOrDefault();  // position이 null이면 (0, 0, 0), null이 아니면 설정된 값
+        if (useNoise)
+        {
+            Vector3 noise = Vector3.zero;
+
+            Vector2 rand = Random.insideUnitCircle * spawnNoise;    // 반지름이 spawnNoise인 원 안에 랜덤한 지점 구하기
+            noise.x = rand.x;
+            noise.z = rand.y;                   // xz평면상의 위치를 구하는거라 변환
+
+            obj.transform.position += noise;    // 노이즈 추가 적용
+        }
+
+        return obj.gameObject;  // 게임오브젝트 리턴
+    }
+
+    /// <summary>
+    /// 아이템을 여러개 생성하는 함수
+    /// </summary>
+    /// <param name="code">생성할 아이템의 종류</param>
+    /// <param name="count">생성할 아이템의 개수</param>
+    /// <param name="position">생성할 위치</param>
+    /// <param name="useNoise">노이즈 적용 여부(true면 노이즈 적용, false면 적용하지 않음)</param>
+    /// <returns>생성된 아이템의 게임 오브젝트 배열</returns>
+    public GameObject[] MakeItems(ItemCode code, uint count, Vector3? position = null, bool useNoise = false)
+    {
+        GameObject[] items = new GameObject[count];
+        for (int i = 0; i < count; i++) // count만큼 반복해서 MakeItem 호출
+        {
+            items[i] = MakeItem(code, position, useNoise);
+        }
+        return items;
+    }
+
+    /// <summary>
+    /// HealingPotionEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 HealingPotionEffect</returns>
+    public PotionEffect GetHealingPotion(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return healingPotion.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// ManaPotionEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 ManaPotionEffect</returns>
+    public PotionEffect GetManaPotion(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return manaPotion.GetObject(position, eulerAngle);
+    }
+
+    /// <summary>
+    /// IdentityPotionEffect 소환 함수
+    /// </summary>
+    /// <param name="position">소환 위치</param>
+    /// <param name="eulerAngle">소환 각도</param>
+    /// <returns>소환된 IdentityPotionEffect</returns>
+    public PotionEffect GetIdentityPotion(Vector3? position = null, Vector3? eulerAngle = null)
+    {
+        return identityPotion.GetObject(position, eulerAngle);
     }
 }

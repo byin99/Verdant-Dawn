@@ -37,6 +37,16 @@ public class GameManager : Singleton<GameManager>
     PlayerStatus playerStatus;
 
     /// <summary>
+    /// PlayerInventory
+    /// </summary>
+    PlayerInventory playerInventory;
+
+    /// <summary>
+    /// ItemDataManager
+    /// </summary>
+    ItemDataManager itemDataManager;
+
+    /// <summary>
     /// Intensity 조절을 위한 컴포넌트
     /// </summary>
     [SerializeField]
@@ -133,6 +143,36 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// PlayerInventory를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerInventory PlayerInventory
+    {
+        get
+        {
+            if (playerInventory == null)
+            {
+                playerInventory = FindAnyObjectByType<PlayerInventory>();
+            }
+            return playerInventory;
+        }
+    }
+
+    /// <summary>
+    /// ItemDataManager를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public ItemDataManager ItemDataManager
+    {
+        get
+        {
+            if (itemDataManager == null)
+            {
+                itemDataManager = GetComponent<ItemDataManager>();
+            }
+            return itemDataManager;
+        }
+    }
+
+    /// <summary>
     /// Volume를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Volume Volume
@@ -140,13 +180,25 @@ public class GameManager : Singleton<GameManager>
         get => volume;
     }
 
+    protected override void OnPreInitialize()
+    {
+        base.OnPreInitialize();
+        itemDataManager = GetComponent<ItemDataManager>();
+    }
+
     protected override void OnInitialize()
     {
+        base.OnInitialize();
+
         player = FindAnyObjectByType<Player>();                                 // Player 찾기
         playerMovement = FindAnyObjectByType<PlayerMovement>();                 // PlayerMovement 찾기
         playerInputController = FindAnyObjectByType<PlayerInputController>();   // PlayerInputController 찾기
         playerClass = FindAnyObjectByType<PlayerClass>();                       // PlayerClass 찾기
         playerAttack = FindAnyObjectByType<PlayerAttack>();                     // PlayerAttack 찾기
         playerStatus = FindAnyObjectByType<PlayerStatus>();                     // PlayerStatus 찾기
+        playerInventory = FindAnyObjectByType<PlayerInventory>();               // PlayerInventory 찾기
+
+        // 플레이어 초기화
+        playerInventory?.Initialize();
     }
 }

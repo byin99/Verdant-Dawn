@@ -20,6 +20,11 @@ public class UIManager : Singleton<UIManager>
     BossEvocationUI bossEvocationUI;
 
     /// <summary>
+    /// InventoryUI
+    /// </summary>
+    InventoryUI inventoryUI;
+
+    /// <summary>
     /// SKillBarUI를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public SkillBarUI SkillBarUI
@@ -64,9 +69,25 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    /// <summary>
+    /// InventoryUI를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public InventoryUI InventoryUI
+    {
+        get
+        {
+            if (inventoryUI == null)
+            {
+                inventoryUI = FindAnyObjectByType<InventoryUI>();
+            }
+            return inventoryUI;
+        }
+    }
+
     protected override void OnInitialize()
     {
-        skillBarUI = FindAnyObjectByType<SkillBarUI>(); // SkillBarUI 찾기
-        bossHPUI = FindAnyObjectByType<BossHPUI>();     // BossHPUI 찾기
+        skillBarUI = FindAnyObjectByType<SkillBarUI>();     // SkillBarUI 찾기
+        bossHPUI = FindAnyObjectByType<BossHPUI>();         // BossHPUI 찾기
+        inventoryUI = FindAnyObjectByType<InventoryUI>();   // inventoryUI 찾기
     }
 }

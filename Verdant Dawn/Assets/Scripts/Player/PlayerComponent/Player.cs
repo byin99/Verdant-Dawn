@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerInputController), typeof(PlayerMovement), typeof(PlayerAttack))]
@@ -10,7 +11,7 @@ public class Player : MonoBehaviour
     /// <summary>
     /// 공격이 가능함을 알리는 프로퍼티(true면 공격 가능함)
     /// </summary>
-    public bool CanAttack => (status.IsAlive && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate);
+    public bool CanAttack => (status.IsAlive && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !inventoryUI.onPointer);
 
     /// <summary>
     /// 움직일 수 있음을 알리는 프로퍼티(true면 움직일 수 있음)
@@ -48,6 +49,10 @@ public class Player : MonoBehaviour
     PlayerAttack attack;
     PlayerClass playerClass;
     PlayerStatus status;
+    PlayerInventory inventory;
+
+    // UI 컴포넌트들
+    InventoryUI inventoryUI;
 
     private void Awake()
     {
@@ -56,6 +61,8 @@ public class Player : MonoBehaviour
         attack = GetComponent<PlayerAttack>();
         playerClass = GetComponent<PlayerClass>();
         status = GetComponent<PlayerStatus>();
+        inventory = GetComponent<PlayerInventory>();
+        inventoryUI = UIManager.Instance.InventoryUI;
 
         inputcontroller.onMove += movement.SetDestination;
         inputcontroller.onRoll += movement.Roll;
@@ -67,6 +74,7 @@ public class Player : MonoBehaviour
         inputcontroller.offComboSkill += attack.FinishCombo;
         inputcontroller.onUltimateSkill += attack.StartUltimateSkill;
         inputcontroller.offUltimateSkill += attack.FinishUltimateSkill;
+        inputcontroller.onInteraction += inventory.GetPickUpItems;
 
         movement.onRoll += attack.CancelCombo;
 

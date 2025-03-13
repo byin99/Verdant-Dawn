@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
+public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable, IUsablePotion
 {
     /// <summary>
     /// 플레이어 HP의 변화를 알리는 델리게이트
@@ -327,6 +327,43 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
     /// </summary>
     public bool IsAlive => hp > 0.0f;
 
+    // 포션 -------------------------------------------------------------------------------------------------------------------------------
+
+    /// <summary>
+    /// 버프가 시작되면 실행되는 델리게이트
+    /// </summary>
+    public event Action<ItemData> onBuff;
+
+    /// <summary>
+    /// 버프가 끝나면 실행되는 델리게이트
+    /// </summary>
+    public event Action offBuff;
+
+    /// <summary>
+    /// 버프시간이 업데이트되면 실행되는 델리게이트
+    /// </summary>
+    public event Action<float> onUpdateBuffTime;
+
+    /// <summary>
+    /// 체력 회복이 가능한지 알려주는 프로퍼티
+    /// </summary>
+    public bool CanHeal => MaxHP > HP;
+
+    /// <summary>
+    /// 마나 버프가 활성화 되어있으면 true, 아니면 false
+    /// </summary>
+    bool isManaBuff = false;
+
+    /// <summary>
+    /// 현재 마나 증가율
+    /// </summary>
+    float currentManaRatio;
+
+    /// <summary>
+    /// 마나 코루틴 저장용 코루틴 변수
+    /// </summary>
+    IEnumerator manaCoroutine;
+
     // 컴포넌트들
     Animator animator;
     Rigidbody rigid;
@@ -558,5 +595,86 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable
     {
         baseAttackPower *= 0.5f;
         baseDefensePower *= 0.5f;
+    }
+
+    /// <summary>
+    /// 체력을 즉시 비율만큼 회복하는 함수
+    /// </summary>
+    /// <param name="healRatio">회복시키는 비율</param>
+    public void HealthHeal(float healRatio)
+    {
+        HP += maxHP * healRatio;
+    }
+
+    /// <summary>
+    /// 최대 마나량을 증가시키는 함수
+    /// </summary>
+    /// <param name="manaRatio">증가시킬 비율</param>
+    /// <param name="buffTime">버프 시간</param>
+    public void BoostMaxMana(ItemData itemData, float manaRatio, float buffTime)
+    {
+        // 버프가 활성화 되어있지 않다면
+        if (!isManaBuff)
+        {
+            // 버프 활성화
+            isManaBuff = true;
+            currentManaRatio = manaRatio;
+
+            // 마나 마꾸기
+            maxMP *= (1 + manaRatio);
+            MP = mp;
+
+            // 코루틴 시작 
+            manaCoroutine = ManaBuff(itemData, manaRatio, buffTime);
+            StartCoroutine(manaCoroutine);
+        }
+
+        // 버프가 활성화 되어있다면
+        else
+        {
+            // 취소하고 새로 버프 활성화
+            StopCoroutine(manaCoroutine);
+            RestoreMaxMana(currentManaRatio);
+            BoostMaxMana(itemData, manaRatio, buffTime);
+        }
+    }
+
+    /// <summary>
+    /// 최대 마나량을 복구시키는 함수
+    /// </summary>
+    /// <param name="manaRatio">복구시킬 비율</param>
+    public void RestoreMaxMana(float manaRatio)
+    {
+        maxMP /= (1 + manaRatio);
+        offBuff?.Invoke();
+        isManaBuff = false;
+    }
+
+    /// <summary>
+    /// 아이덴티티 게이지를 최대로 채워주는 함수
+    /// </summary>
+    public void FillIdentityGauge()
+    {
+        IdentityGauge += 100.0f;
+    }
+
+    /// <summary>
+    /// 마나 버프 코루틴
+    /// </summary>
+    /// <param name="manaRatio">증가율</param>
+    /// <param name="buffTime">버프 시간</param>
+    IEnumerator ManaBuff(ItemData itemData, float manaRatio, float buffTime)
+    {
+        float timeElapsed = 0.0f;
+        onBuff?.Invoke(itemData);
+
+        while (timeElapsed < buffTime)
+        {
+            timeElapsed += Time.deltaTime;
+            onUpdateBuffTime?.Invoke(buffTime - timeElapsed);
+            yield return null;
+        }
+
+        RestoreMaxMana(manaRatio);
     }
 }

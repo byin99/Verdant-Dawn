@@ -1034,6 +1034,7 @@ GameObject:
   - component: {fileID: 8482966148001851584}
   - component: {fileID: 842133162798683876}
   - component: {fileID: 2409428938717867747}
+  - component: {fileID: 4101798320971353176}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1245,9 +1246,7 @@ MonoBehaviour:
   canChargeRotate: 0
   isUseSkill: 0
   isCharge: 0
-  virtualCamera: {fileID: 7339731712621528142, guid: 0919e8946b9cf0d4484b3404e14ad513,
-    type: 3}
-  volume: {fileID: 4960350720887593499, guid: 97de45862bcdcb141a27d8388fecd2d0, type: 3}
+  virtualCamera: {fileID: 0}
   vignette: {fileID: 0}
   comboAnimTime: []
   returnTime: 0
@@ -1275,6 +1274,19 @@ MonoBehaviour:
   isHit: 0
   manaDelayTime: 2
   isIdentity: 0
+--- !u!114 &4101798320971353176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023892770028222809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce11f80b5c39e347946e8710c3f3995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPickUpRange: 2
 --- !u!1 &4061248511908197567
 GameObject:
   m_ObjectHideFlags: 0

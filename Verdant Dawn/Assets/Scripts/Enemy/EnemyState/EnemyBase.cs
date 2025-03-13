@@ -37,7 +37,7 @@ public class EnemyBase : IState<EnemyController>
     protected readonly int Idle_Hash = Animator.StringToHash("Idle");
     protected readonly int Walk_Hash = Animator.StringToHash("Walk");
     protected readonly int Run_Hash = Animator.StringToHash("Run");
-    protected readonly int Attack_Hash = Animator.StringToHash("attack");
+    protected readonly int Attack_Hash = Animator.StringToHash("Attack");
     protected readonly int Hit_Hash = Animator.StringToHash("Hit");
     protected readonly int Death_Hash = Animator.StringToHash("Death");
 
