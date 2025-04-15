@@ -569,18 +569,42 @@ public class PlayerAttack : MonoBehaviour
         // 기본 공격
         if (attackElapsedTime < attackCoolTime)
         {
-            rigid.MovePosition(rigid.position + animator.deltaPosition);
+            Vector3 newPosition = transform.position + animator.deltaPosition;
+
+            if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
+            {
+                newPosition.y = hit.point.y;
+            }
+
+            transform.position = newPosition;
+            rigid.MovePosition(newPosition);
         }
         attackElapsedTime += Time.deltaTime;
 
         if (isUseSkill)
         {
-            rigid.MovePosition(rigid.position + animator.deltaPosition);
+            Vector3 newPosition = transform.position + animator.deltaPosition;
+
+            if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
+            {
+                newPosition.y = hit.point.y;
+            }
+
+            transform.position = newPosition;
+            rigid.MovePosition(newPosition);
         }
 
         else if (isCombo)
         {
-            rigid.MovePosition(rigid.position + animator.deltaPosition);
+            Vector3 newPosition = transform.position + animator.deltaPosition;
+
+            if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
+            {
+                newPosition.y = hit.point.y;
+            }
+
+            transform.position = newPosition;
+            rigid.MovePosition(newPosition);
         }
 
         // W스킬

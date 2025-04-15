@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(PlayerInputController), typeof(PlayerMovement), typeof(PlayerAttack))]
 [RequireComponent(typeof(PlayerClass), typeof(PlayerStatus))]
@@ -11,32 +12,32 @@ public class Player : MonoBehaviour
     /// <summary>
     /// 공격이 가능함을 알리는 프로퍼티(true면 공격 가능함)
     /// </summary>
-    public bool CanAttack => (status.IsAlive && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !inventoryUI.onPointer);
+    public bool CanAttack => (status.IsAlive && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !inventoryUI.onPointer && !portalUI.isPortal);
 
     /// <summary>
     /// 움직일 수 있음을 알리는 프로퍼티(true면 움직일 수 있음)
     /// </summary>
-    public bool CanMove => (status.IsAlive && !movement.isRoll && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit);
+    public bool CanMove => (status.IsAlive && !movement.isRoll && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !portalUI.isPortal);
 
     /// <summary>
     /// Class를 바꿀 수 있음을 알리는 프로퍼티(true면 바꿀 수 있음)
     /// </summary>
-    public bool CanChange => (status.IsAlive && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !status.isIdentity);
+    public bool CanChange => (status.IsAlive && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !status.isIdentity && !portalUI.isPortal);
 
     /// <summary>
     /// 스킬을 사용할 수 있음을 알리는 프로퍼티(true면 사용할 수 있음)
     /// </summary>
-    public bool CanUseSkill => (status.IsAlive && !attack.isAttack && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isUltimate && !status.isHit);
+    public bool CanUseSkill => (status.IsAlive && !attack.isAttack && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isUltimate && !status.isHit && !portalUI.isPortal);
 
     /// <summary>
     /// 구르기를 사용할 수 있음을 알리는 프로퍼티(true면 사용할 수 있음)
     /// </summary>
-    public bool CanRoll => (status.IsAlive && !attack.isUseSkill && !attack.isUltimate && !status.isHit);
+    public bool CanRoll => (status.IsAlive && !attack.isUseSkill && !attack.isUltimate && !status.isHit && !portalUI.isPortal);
 
     /// <summary>
     /// 넉백을 당할 수 있음을 알리는 프로퍼티(true면 당할 수 있음)
     /// </summary>
-    public bool CanKnockBack => (status.IsAlive && !movement.isRoll && !attack.isUltimate);
+    public bool CanKnockBack => (status.IsAlive && !movement.isRoll && !attack.isUltimate && !portalUI.isPortal);
 
     /// <summary>
     /// 플레이어의 마나를 보여주는 프로퍼티
@@ -50,9 +51,14 @@ public class Player : MonoBehaviour
     PlayerClass playerClass;
     PlayerStatus status;
     PlayerInventory inventory;
+    PlayerQuest quest;
 
     // UI 컴포넌트들
     InventoryUI inventoryUI;
+    PortalUI portalUI;
+
+    // 컴포넌트들
+    NavMeshAgent agent;
 
     private void Awake()
     {
@@ -62,7 +68,9 @@ public class Player : MonoBehaviour
         playerClass = GetComponent<PlayerClass>();
         status = GetComponent<PlayerStatus>();
         inventory = GetComponent<PlayerInventory>();
+        quest = GetComponent<PlayerQuest>();
         inventoryUI = UIManager.Instance.InventoryUI;
+        portalUI = UIManager.Instance.PortalUI;
 
         inputcontroller.onMove += movement.SetDestination;
         inputcontroller.onRoll += movement.Roll;
@@ -75,6 +83,7 @@ public class Player : MonoBehaviour
         inputcontroller.onUltimateSkill += attack.StartUltimateSkill;
         inputcontroller.offUltimateSkill += attack.FinishUltimateSkill;
         inputcontroller.onInteraction += inventory.GetPickUpItems;
+        inputcontroller.onInteraction += quest.InteractionToNPC;
 
         movement.onRoll += attack.CancelCombo;
 
@@ -90,5 +99,11 @@ public class Player : MonoBehaviour
     public void ManaChange(float mana)
     {
         status.ManaChange(mana);
+    }
+
+    public void GetReward(float exp, ItemCode itemType, uint itemCount)
+    {
+        status.ExperiencePoint += exp;
+        inventory.Inventory.AddItem(itemType, itemCount);
     }
 }

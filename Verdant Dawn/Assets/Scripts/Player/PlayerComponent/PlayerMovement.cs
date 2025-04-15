@@ -53,11 +53,6 @@ public class PlayerMovement : MonoBehaviour
     float rollRemainTime = 0.0f;
 
     /// <summary>
-    /// 구르는 방향
-    /// </summary>
-    Vector3 rollDirection = Vector3.zero;
-
-    /// <summary>
     /// 다음 구르기까지 남은 시간을 알려주는 프로퍼티 (UI용)
     /// </summary>
     public float RollRemainTime => rollRemainTime;
@@ -137,8 +132,15 @@ public class PlayerMovement : MonoBehaviour
         if (rollRemainTime > rollCoolTime - rollAnimTime && rollRemainTime < rollCoolTime)
         {
             // 구르기
-            rollDirection = animator.deltaPosition; 
-            transform.position += rollDirection * rollPower;
+            Vector3 newPosition = transform.position + (animator.deltaPosition * rollPower);
+
+            // 지형의 높이를 Raycast로 확인
+            if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
+            {
+                newPosition.y = hit.point.y; // 땅 높이 적용
+            }
+
+            transform.position = newPosition;
         }
         rollRemainTime -= Time.deltaTime;
     }

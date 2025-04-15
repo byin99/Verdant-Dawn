@@ -25,8 +25,13 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     /// </summary>
     public event Action onDie;
 
-
     [Header("Enemy 능력치")]
+    [SerializeField]
+    /// <summary>
+    /// 적의 종류
+    /// </summary>
+    EnemyType enemyType;
+
     /// <summary>
     /// 적 현재 체력
     /// </summary>
@@ -99,10 +104,12 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
 
     // 컴포넌트들
     PlayerStatus playerStatus;
+    PlayerQuest playerQuest;
 
     private void Awake()
     {
         playerStatus = GameManager.Instance.PlayerStatus;
+        playerQuest = GameManager.Instance.PlayerQuest;
     }
 
     private void OnEnable()
@@ -139,6 +146,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     public void Die()
     {
         playerStatus.ExperiencePoint += expPoint;
+        playerQuest.onEnemyKill?.Invoke(enemyType);
         onDie?.Invoke();
     }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5355671867731103956}
   - component: {fileID: 8950468914088575386}
   - component: {fileID: 410162398679407277}
+  - component: {fileID: 5001682936504844067}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -75,3 +76,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a458f92a87e176489388879a8f9555f, type: 2}
   - {fileID: 11400000, guid: 61d8bf1a283267b4686d4e0d893e366a, type: 2}
   - {fileID: 11400000, guid: d456149f1d52e5147b35befaa5c7b0a4, type: 2}
+--- !u!114 &5001682936504844067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591173358823462982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5e24470b9aa134c962dd88c13f4ede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questDatas:
+  - {fileID: 11400000, guid: 8504ead49eeda534188b466cecc6d6b9, type: 2}
+  - {fileID: 11400000, guid: 9651ffa575090fb4fb0df30d0ee1da50, type: 2}
+  - {fileID: 11400000, guid: d278534e3cdb1cf498c61b8be1143275, type: 2}
+  - {fileID: 11400000, guid: b1b448bef9a676849938dbe06a186690, type: 2}
+  - {fileID: 11400000, guid: fd08f4af2ac1b2f44802fccfc707a14f, type: 2}
+  currentQuestCount: 0

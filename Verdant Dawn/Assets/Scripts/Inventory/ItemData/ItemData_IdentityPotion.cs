@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 아이덴티티 포션 아이템용 ItemData(플레이어의 아이덴티티 게이지를 채워줌)
 /// </summary>
-[CreateAssetMenu(fileName = "New Item Data - HealingPotion", menuName = "Scriptable Object/Item Data - IdentityPotion", order = 3)]
+[CreateAssetMenu(fileName = "New Item Data - HealingPotion", menuName = "Scriptable Object/Item Data/IdentityPotion", order = 2)]
 public class ItemData_IdentityPotion : ItemData, IUsable
 {
     /// <summary>

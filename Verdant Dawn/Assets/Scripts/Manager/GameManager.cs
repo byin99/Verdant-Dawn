@@ -42,9 +42,24 @@ public class GameManager : Singleton<GameManager>
     PlayerInventory playerInventory;
 
     /// <summary>
+    /// PlayerQuest
+    /// </summary>
+    PlayerQuest playerQuest;
+
+    /// <summary>
+    /// NPC
+    /// </summary>
+    NPC npc;
+
+    /// <summary>
     /// ItemDataManager
     /// </summary>
     ItemDataManager itemDataManager;
+
+    /// <summary>
+    /// QuestManager
+    /// </summary>
+    QuestManager questManager;
 
     /// <summary>
     /// Intensity 조절을 위한 컴포넌트
@@ -158,6 +173,36 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// PlayerQuest를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerQuest PlayerQuest
+    {
+        get
+        {
+            if (playerQuest == null)
+            {
+                playerQuest = FindAnyObjectByType<PlayerQuest>();
+            }
+            return playerQuest;
+        }
+    }
+
+    /// <summary>
+    /// NPC를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public NPC NPC
+    {
+        get
+        {
+            if (npc == null)
+            {
+                npc = FindAnyObjectByType<NPC>();
+            }
+            return npc;
+        }
+    }
+
+    /// <summary>
     /// ItemDataManager를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public ItemDataManager ItemDataManager
@@ -173,6 +218,21 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// QuestManager를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public QuestManager QuestManager
+    {
+        get
+        {
+            if (questManager == null)
+            {
+                questManager = GetComponent<QuestManager>();
+            }
+            return questManager;
+        }
+    }
+
+    /// <summary>
     /// Volume를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Volume Volume
@@ -184,6 +244,7 @@ public class GameManager : Singleton<GameManager>
     {
         base.OnPreInitialize();
         itemDataManager = GetComponent<ItemDataManager>();
+        questManager = GetComponent<QuestManager>();
     }
 
     protected override void OnInitialize()
@@ -197,6 +258,8 @@ public class GameManager : Singleton<GameManager>
         playerAttack = FindAnyObjectByType<PlayerAttack>();                     // PlayerAttack 찾기
         playerStatus = FindAnyObjectByType<PlayerStatus>();                     // PlayerStatus 찾기
         playerInventory = FindAnyObjectByType<PlayerInventory>();               // PlayerInventory 찾기
+        playerQuest = FindAnyObjectByType<PlayerQuest>();                       // PlayerQuest 찾기
+        npc = FindAnyObjectByType<NPC>();                                       // NPC 찾기
 
         // 플레이어 초기화
         playerInventory?.Initialize();

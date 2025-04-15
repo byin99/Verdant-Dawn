@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 마나포션 아이템용 ItemData(일정 시간동안 최대 MP양을 늘려줌)
 /// </summary>
-[CreateAssetMenu(fileName = "New Item Data - HealingPotion", menuName = "Scriptable Object/Item Data - ManaPotion", order = 2)]
+[CreateAssetMenu(fileName = "New Item Data - HealingPotion", menuName = "Scriptable Object/Item Data/ManaPotion", order = 1)]
 public class ItemData_ManaPotion : ItemData, IUsable
 {
     [Header("마나 포션 데이터")]

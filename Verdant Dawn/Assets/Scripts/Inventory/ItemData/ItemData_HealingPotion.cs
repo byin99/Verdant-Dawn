@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 힐링포션 아이템용 ItemData(최대 HP에 비례한 즉시회복)
 /// </summary>
-[CreateAssetMenu(fileName = "New Item Data - HealingPotion", menuName = "Scriptable Object/Item Data - HealingPotion", order = 1)]
+[CreateAssetMenu(fileName = "New Item Data - HealingPotion", menuName = "Scriptable Object/Item Data/HealingPotion", order = 0)]
 public class ItemData_HealingPotion : ItemData, IUsable
 {
     [Header("힐링 포션 데이터")]
