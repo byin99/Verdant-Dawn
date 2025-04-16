@@ -40,6 +40,11 @@ public class EnemyController : RecycleObject
     public IState<EnemyController> die;
 
     /// <summary>
+    /// 원래 들어있는 Pool의 Transform
+    /// </summary>
+    Transform pool;
+
+    /// <summary>
     /// 맞았을 때 넉백되는 양
     /// </summary>
     float knockBackPower;
@@ -80,6 +85,8 @@ public class EnemyController : RecycleObject
         agent = GetComponent<NavMeshAgent>();
 
         enemyCollider = GetComponent<Collider>();
+
+        pool = transform.parent;
     }
 
     protected override void OnReset()
@@ -156,6 +163,15 @@ public class EnemyController : RecycleObject
     void PlayerDie()
     {
         player = null;
+    }
+
+    /// <summary>
+    /// Pool을 부모로 다시 돌리는 함수
+    /// </summary>
+    public void ReturnToPool()
+    {
+        transform.SetParent(pool);          // 부모를 풀로 재설정
+        gameObject.SetActive(false);        // 오브젝트 비활성화
     }
 
     // 아이템 드랍용--------------------------------------------------------------------------------------------------------------------------------------------

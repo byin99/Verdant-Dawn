@@ -12,12 +12,6 @@ public class PortalUI : MonoBehaviour
     public float fadeTime = 1.0f;
 
     /// <summary>
-    /// 포탈을 타는지 여부(true면 포탈을 타고있다, false면 포탈을 타고 있지 않다)
-    /// </summary>
-    [HideInInspector]
-    public bool isPortal = false;
-
-    /// <summary>
     /// 포탈 Text
     /// </summary>
     TextMeshProUGUI portalText;
@@ -27,36 +21,28 @@ public class PortalUI : MonoBehaviour
     /// </summary>
     Image portalPanel;
 
+    // 컴포넌트들
+    PlayerPortal player;
+
     private void Awake()
     {
         portalText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         portalPanel = transform.GetChild(1).GetComponent<Image>();
+        player = GameManager.Instance.PlayerPortal;
+    }
+
+    private void Start()
+    {
+        player.onPortal += OnPortalUI;
     }
 
     /// <summary>
-    /// 존끼리 이동할 때 호출되는 함수
+    /// 포탈을 타는 함수
     /// </summary>
-    /// <param name="enemyType">이동하는 존</param>
-    public void MoveToZone(EnemyType enemyType)
+    /// <param name="mapInfo">맵 정보</param>
+    void OnPortalUI(MapInfo mapInfo)
     {
-        switch (enemyType)
-        {
-            case EnemyType.Ghoul:
-                portalText.text = "구울들의 땅";
-                break;
-
-            case EnemyType.Skeleton:
-                portalText.text = "해골들의 땅";
-                break;
-
-            case EnemyType.Mummy:
-                portalText.text = "미라들의 땅";
-                break;
-
-            case EnemyType.Undead:
-                portalText.text = "언데드들의 땅";
-                break;
-        }
+        portalText.text = mapInfo.mapName;
 
         StartCoroutine(FadeInOut());
     }
@@ -66,8 +52,6 @@ public class PortalUI : MonoBehaviour
     /// </summary>
     IEnumerator FadeInOut()
     {
-        isPortal = true;
-
         // 화면 Fade Out
         float timeElapsed = 0.0f;
         while (timeElapsed < fadeTime)
@@ -91,7 +75,6 @@ public class PortalUI : MonoBehaviour
         portalPanel.color = new Color(0, 0, 0, 0);
 
         yield return new WaitForSeconds(fadeTime);
-        isPortal = false;
 
         // 글자 Fade Out
         timeElapsed = 1.0f;

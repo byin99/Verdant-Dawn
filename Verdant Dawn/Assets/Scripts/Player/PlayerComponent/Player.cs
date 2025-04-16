@@ -12,32 +12,32 @@ public class Player : MonoBehaviour
     /// <summary>
     /// 공격이 가능함을 알리는 프로퍼티(true면 공격 가능함)
     /// </summary>
-    public bool CanAttack => (status.IsAlive && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !inventoryUI.onPointer && !portalUI.isPortal);
+    public bool CanAttack => (status.IsAlive && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !inventoryUI.onPointer && !portal.isPortal);
 
     /// <summary>
     /// 움직일 수 있음을 알리는 프로퍼티(true면 움직일 수 있음)
     /// </summary>
-    public bool CanMove => (status.IsAlive && !movement.isRoll && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !portalUI.isPortal);
+    public bool CanMove => (status.IsAlive && !movement.isRoll && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !portal.isPortal);
 
     /// <summary>
     /// Class를 바꿀 수 있음을 알리는 프로퍼티(true면 바꿀 수 있음)
     /// </summary>
-    public bool CanChange => (status.IsAlive && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !status.isIdentity && !portalUI.isPortal);
+    public bool CanChange => (status.IsAlive && !attack.isAttack && !attack.isUseSkill && !attack.isCombo && !attack.isUltimate && !status.isHit && !status.isIdentity && !portal.isPortal);
 
     /// <summary>
     /// 스킬을 사용할 수 있음을 알리는 프로퍼티(true면 사용할 수 있음)
     /// </summary>
-    public bool CanUseSkill => (status.IsAlive && !attack.isAttack && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isUltimate && !status.isHit && !portalUI.isPortal);
+    public bool CanUseSkill => (status.IsAlive && !attack.isAttack && !movement.isRoll && !playerClass.isChange && !attack.isUseSkill && !attack.isUltimate && !status.isHit && !portal.isPortal);
 
     /// <summary>
     /// 구르기를 사용할 수 있음을 알리는 프로퍼티(true면 사용할 수 있음)
     /// </summary>
-    public bool CanRoll => (status.IsAlive && !attack.isUseSkill && !attack.isUltimate && !status.isHit && !portalUI.isPortal);
+    public bool CanRoll => (status.IsAlive && !attack.isUseSkill && !attack.isUltimate && !status.isHit && !portal.isPortal);
 
     /// <summary>
     /// 넉백을 당할 수 있음을 알리는 프로퍼티(true면 당할 수 있음)
     /// </summary>
-    public bool CanKnockBack => (status.IsAlive && !movement.isRoll && !attack.isUltimate && !portalUI.isPortal);
+    public bool CanKnockBack => (status.IsAlive && !movement.isRoll && !attack.isUltimate && !portal.isPortal);
 
     /// <summary>
     /// 플레이어의 마나를 보여주는 프로퍼티
@@ -52,13 +52,10 @@ public class Player : MonoBehaviour
     PlayerStatus status;
     PlayerInventory inventory;
     PlayerQuest quest;
+    PlayerPortal portal;
 
     // UI 컴포넌트들
     InventoryUI inventoryUI;
-    PortalUI portalUI;
-
-    // 컴포넌트들
-    NavMeshAgent agent;
 
     private void Awake()
     {
@@ -69,8 +66,8 @@ public class Player : MonoBehaviour
         status = GetComponent<PlayerStatus>();
         inventory = GetComponent<PlayerInventory>();
         quest = GetComponent<PlayerQuest>();
+        portal = GetComponent<PlayerPortal>();
         inventoryUI = UIManager.Instance.InventoryUI;
-        portalUI = UIManager.Instance.PortalUI;
 
         inputcontroller.onMove += movement.SetDestination;
         inputcontroller.onRoll += movement.Roll;
@@ -101,9 +98,16 @@ public class Player : MonoBehaviour
         status.ManaChange(mana);
     }
 
+    /// <summary>
+    /// 퀘스트 보상을 받는 함수
+    /// </summary>
+    /// <param name="exp">보상 경험치</param>
+    /// <param name="itemType">보상 아이템 종류</param>
+    /// <param name="itemCount">보상 아이템 개수</param>
     public void GetReward(float exp, ItemCode itemType, uint itemCount)
     {
         status.ExperiencePoint += exp;
-        inventory.Inventory.AddItem(itemType, itemCount);
+        for (int i = 0; i < itemCount; i++)
+            inventory.Inventory.AddItem(itemType);
     }
 }

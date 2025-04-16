@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Factory : Singleton<Factory>
 {
@@ -927,7 +928,10 @@ public class Factory : Singleton<Factory>
     /// <returns>소환된 EvilWathcer</returns>
     public BossEvocationController GetEvilWatcher(Vector3? position = null, Vector3? eulerAngle = null)
     {
-        return evilWatcher.GetObject(position, eulerAngle);
+        BossEvocationController bossEvocationController = evilWatcher.GetObject(position, eulerAngle);
+        NavMeshAgent agent = bossEvocationController.GetComponent<NavMeshAgent>();
+        agent.enabled = true;
+        return bossEvocationController;
     }
 
     /// <summary>

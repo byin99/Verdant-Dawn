@@ -1,22 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IInitializable
 { 
     /// <summary>
     /// VFX를 실행하는 델리게이트
     /// </summary>
-    public Action onArrive;
+    public event Action onArrive;
 
     /// <summary>
     /// 구르기를 하면 실행하는 델리게이트(UI 용)
     /// </summary>
-    public Action onRoll;
+    public event Action onRoll;
+
+    /// <summary>
+    /// 플레이어가 움직이면 실행되는 델리게이트
+    /// </summary>
+    public event Action<Vector3> onMove;
 
     [Header("구르기용 변수들")]
     /// <summary>
@@ -80,6 +86,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool(Move_Hash, false);             // 이동이 끝나면 Idle 애니메이션 주기
             onArrive?.Invoke();                             // VFX 제거
         }
+
+        onMove?.Invoke(transform.position);                 // 플레이어가 움직일 때마다 위치를 알려주기
     }
 
     /// <summary>
@@ -165,5 +173,13 @@ public class PlayerMovement : MonoBehaviour
 
         // 공격모션이 씹히지 않기 위해 한프레임 뒤에 공격이 가능함
         yield return null;
+    }
+
+    /// <summary>
+    /// 초기화 함수
+    /// </summary>
+    public void Initialize()
+    {
+        agent.enabled = true; // NavMeshAgent 활성화
     }
 }

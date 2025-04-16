@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/MainScene.unity
+    guid: 485e3764b6faf65438a07523794962d9
+  - enabled: 1
+    path: Assets/Scenes/Seemless/Seemless_0_0.unity
+    guid: 96277e06947ed28409679ea77e1b74eb
+  - enabled: 1
+    path: Assets/Scenes/Seemless/Seemless_0_1.unity
+    guid: bd3de1b5ade3b0b44bb5074ceaf553f4
+  - enabled: 1
+    path: Assets/Scenes/Seemless/Seemless_0_2.unity
+    guid: 7cac3660d8a31eb4f8909543161c560b
+  - enabled: 1
+    path: Assets/Scenes/Seemless/Seemless_0_3.unity
+    guid: b2bb18122ec906d4abbe936ef3b57724
+  - enabled: 1
+    path: Assets/Scenes/Seemless/Seemless_0_4.unity
+    guid: 3b57f7dc61c41f34cbfd11ea19672242
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 48245318b9a772e479695bda8f5b75de,
       type: 2}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1294097593611079963}
   - component: {fileID: 4239912504795341036}
   - component: {fileID: 4192574586655531656}
+  - component: {fileID: 6819031938155086325}
   m_Layer: 0
   m_Name: GameManager_V
   m_TagString: Untagged
@@ -95,3 +96,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b1b448bef9a676849938dbe06a186690, type: 2}
   - {fileID: 11400000, guid: fd08f4af2ac1b2f44802fccfc707a14f, type: 2}
   currentQuestCount: 0
+--- !u!114 &6819031938155086325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574314336298392693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953306dacc57b3c438bdb020a558677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

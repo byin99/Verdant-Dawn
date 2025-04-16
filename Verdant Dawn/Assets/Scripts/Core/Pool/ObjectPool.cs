@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ObjectPool<T> : MonoBehaviour where T : RecycleObject  // T는 반드시 RecycleObject를 상속받은 오브젝트다
 {
@@ -94,6 +95,7 @@ public class ObjectPool<T> : MonoBehaviour where T : RecycleObject  // T는 반�
             T comp = readyQueue.Dequeue();          // 큐에서 하나 꺼내고
             comp.transform.position = position.GetValueOrDefault();                      // 위치와 회전 적용
             comp.transform.rotation = Quaternion.Euler(eulerAngle.GetValueOrDefault());
+
             comp.gameObject.SetActive(true);        // 활성화 시키기
             return comp;    // 리턴
         }

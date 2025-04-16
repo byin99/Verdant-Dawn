@@ -47,6 +47,11 @@ public class GameManager : Singleton<GameManager>
     PlayerQuest playerQuest;
 
     /// <summary>
+    /// PlayerPortal
+    /// </summary>
+    PlayerPortal playerPortal;
+
+    /// <summary>
     /// NPC
     /// </summary>
     NPC npc;
@@ -60,6 +65,11 @@ public class GameManager : Singleton<GameManager>
     /// QuestManager
     /// </summary>
     QuestManager questManager;
+
+    /// <summary>
+    /// SubmapManager
+    /// </summary>
+    SubmapManager submapManager;
 
     /// <summary>
     /// Intensity 조절을 위한 컴포넌트
@@ -188,6 +198,21 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// PlayerPortal을 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public PlayerPortal PlayerPortal
+    {
+        get
+        {
+            if (playerPortal == null)
+            {
+                playerPortal = FindAnyObjectByType<PlayerPortal>();
+            }
+            return playerPortal;
+        }
+    }
+
+    /// <summary>
     /// NPC를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public NPC NPC
@@ -233,6 +258,21 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// SubmapManager를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public SubmapManager SubmapManager
+    {
+        get
+        {
+            if (submapManager == null)
+            {
+                submapManager = FindAnyObjectByType<SubmapManager>();
+            }
+            return submapManager;
+        }
+    }
+
+    /// <summary>
     /// Volume를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Volume Volume
@@ -245,6 +285,8 @@ public class GameManager : Singleton<GameManager>
         base.OnPreInitialize();
         itemDataManager = GetComponent<ItemDataManager>();
         questManager = GetComponent<QuestManager>();
+        submapManager = GetComponent<SubmapManager>();
+        submapManager.PreInitialize();
     }
 
     protected override void OnInitialize()
@@ -259,9 +301,12 @@ public class GameManager : Singleton<GameManager>
         playerStatus = FindAnyObjectByType<PlayerStatus>();                     // PlayerStatus 찾기
         playerInventory = FindAnyObjectByType<PlayerInventory>();               // PlayerInventory 찾기
         playerQuest = FindAnyObjectByType<PlayerQuest>();                       // PlayerQuest 찾기
+        playerPortal = FindAnyObjectByType<PlayerPortal>();                     // PlayerPortal 찾기
         npc = FindAnyObjectByType<NPC>();                                       // NPC 찾기
 
         // 플레이어 초기화
         playerInventory?.Initialize();
+        playerMovement.Initialize();
+        submapManager.Initialize();
     }
 }
