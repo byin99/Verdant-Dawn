@@ -69,7 +69,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 3
-  skillDamageRatio: 2
   minimumSkillRatio: 1.8
   maximumSkillRatio: 2.2
   knockBackPower: 15
@@ -88,7 +87,7 @@ GameObject:
   - component: {fileID: 7729564690983396722}
   - component: {fileID: 6812004954800021802}
   - component: {fileID: 9221028528353237550}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4988,7 +4987,7 @@ GameObject:
   - component: {fileID: 6838748420868689206}
   - component: {fileID: 5937761888312645965}
   - component: {fileID: 5703788808086373532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

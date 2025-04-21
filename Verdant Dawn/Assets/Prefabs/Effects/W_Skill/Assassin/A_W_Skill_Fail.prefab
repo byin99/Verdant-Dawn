@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 0.2
   minimumSkillRatio: 0.1
   maximumSkillRatio: 0.3
   knockBackPower: 10
@@ -99,7 +98,7 @@ GameObject:
   - component: {fileID: 926988276436409051}
   - component: {fileID: 4195674269138236518}
   - component: {fileID: 4870449580668567037}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

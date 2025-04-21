@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8933522741612989812}
   - component: {fileID: 3435632699036527276}
   - component: {fileID: 460799004129961749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_FlameRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4918,7 +4918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1024764904072654114}
   - component: {fileID: -8571420620713192654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: F_R_SkillEffect1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4958,11 +4958,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 5
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
   skillDelayTime: 0
   isDamage: 0
   isContinuous: 0
+  isAnimation: 0
 --- !u!1 &5437151989413185970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,7 +4976,7 @@ GameObject:
   - component: {fileID: 4566516903401672132}
   - component: {fileID: 1058151191906374425}
   - component: {fileID: 6563950402715077718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9874,7 +9876,7 @@ GameObject:
   - component: {fileID: 8312980049843407332}
   - component: {fileID: 6434843305233776081}
   - component: {fileID: 1088731454121314067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_FieldSlash_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14765,7 +14767,7 @@ GameObject:
   - component: {fileID: 4978962049615828646}
   - component: {fileID: 3352605680168735391}
   - component: {fileID: 7921155320823481974}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_FieldSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19657,7 +19659,7 @@ GameObject:
   - component: {fileID: 9222458418900642244}
   - component: {fileID: 2303406617485944116}
   - component: {fileID: 4748222811576086156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_FlameRing_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

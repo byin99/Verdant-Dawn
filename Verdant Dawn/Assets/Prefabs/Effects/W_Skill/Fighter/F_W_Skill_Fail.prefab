@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8277845362148940413}
   - component: {fileID: 2559242755626955221}
   - component: {fileID: 8914237085341091103}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4909,7 +4909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3452055835099494313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_Set_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5025,7 +5025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 1.2
   minimumSkillRatio: 1
   maximumSkillRatio: 1.4
   knockBackPower: 10
@@ -5042,7 +5041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4025504637902921491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_Set_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5077,7 +5076,7 @@ GameObject:
   - component: {fileID: 1915717133537088593}
   - component: {fileID: 7237351147756692712}
   - component: {fileID: 2385097672429052124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,7 +9974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 890171385863441601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_Set_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10010,7 +10009,7 @@ GameObject:
   - component: {fileID: 6687046010345572918}
   - component: {fileID: 8850578593100665434}
   - component: {fileID: 4561849031445777059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14910,7 +14909,7 @@ GameObject:
   - component: {fileID: 1334557105619685500}
   - component: {fileID: 5753995457438245517}
   - component: {fileID: 6307355388194516083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19810,7 +19809,7 @@ GameObject:
   - component: {fileID: 5667123911663766116}
   - component: {fileID: 2830036727787150078}
   - component: {fileID: 437114939520982900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24710,7 +24709,7 @@ GameObject:
   - component: {fileID: 513470909995269218}
   - component: {fileID: 5557334520218581404}
   - component: {fileID: 5889244715336817188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

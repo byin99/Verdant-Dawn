@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2644106498768356773}
   - component: {fileID: 5179977750306175231}
   - component: {fileID: 2157384490301727029}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_48_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 3390580400683792950}
   - component: {fileID: 659710506075218982}
   - component: {fileID: 31362898242473810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_48_Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9811,7 +9811,7 @@ GameObject:
   - component: {fileID: 7758833710983493871}
   - component: {fileID: 4175815667209700489}
   - component: {fileID: 2268319995368135236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_48_Ring_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14711,7 +14711,7 @@ GameObject:
   - component: {fileID: 4672333620605028002}
   - component: {fileID: 298196841459681039}
   - component: {fileID: 8340775078271256690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_48_Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19710,7 +19710,7 @@ GameObject:
   - component: {fileID: 45064389108631804}
   - component: {fileID: -5406497414357032273}
   - component: {fileID: 7951360315281310328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: B_R_SkillEffect1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19761,8 +19761,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 5
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
   skillDelayTime: 0
   isDamage: 0
   isContinuous: 0
+  isAnimation: 0

@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 1.5
-  skillDamageRatio: 1.4
   minimumSkillRatio: 1.2
   maximumSkillRatio: 1.6
   knockBackPower: 1
@@ -86,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9051807915026849748}
   - component: {fileID: 6478594294366777880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_11_MakeSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

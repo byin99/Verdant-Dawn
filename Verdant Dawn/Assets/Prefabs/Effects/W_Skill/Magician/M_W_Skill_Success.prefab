@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 871824575763926810}
   - component: {fileID: 6371472856596160028}
   - component: {fileID: 9193044313758200943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Particle_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4921,7 +4921,7 @@ GameObject:
   - component: {fileID: 3838990723138177920}
   - component: {fileID: 2721057707907346381}
   - component: {fileID: 1067081316969358687}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Particle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9831,7 +9831,7 @@ GameObject:
   - component: {fileID: 4709683510626645115}
   - component: {fileID: 7550170357854820527}
   - component: {fileID: 4405495289018189036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Ring_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14804,7 +14804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 10
   minimumSkillRatio: 9.8
   maximumSkillRatio: 10.2
   knockBackPower: 20
@@ -14823,7 +14822,7 @@ GameObject:
   - component: {fileID: 6332454975579476156}
   - component: {fileID: 3735195906236962289}
   - component: {fileID: 6463540571456021597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19733,7 +19732,7 @@ GameObject:
   - component: {fileID: 8490440734315875384}
   - component: {fileID: 4917623637393827201}
   - component: {fileID: 7510739822878836064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24633,7 +24632,7 @@ GameObject:
   - component: {fileID: 2638382959481123395}
   - component: {fileID: 226503292027733196}
   - component: {fileID: 778332039104497965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Particle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29542,7 +29541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2223645481902474934}
   - component: {fileID: 7510241321544420523}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

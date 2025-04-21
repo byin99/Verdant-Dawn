@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 4
-  skillDamageRatio: 0.7
   minimumSkillRatio: 0.4
   maximumSkillRatio: 1
   knockBackPower: 1
@@ -86,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5836869789044499151}
   - component: {fileID: 4981277811707234124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M_R_Skill2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

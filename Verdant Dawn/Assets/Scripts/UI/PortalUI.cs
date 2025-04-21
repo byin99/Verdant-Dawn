@@ -22,18 +22,19 @@ public class PortalUI : MonoBehaviour
     Image portalPanel;
 
     // 컴포넌트들
-    PlayerPortal player;
+    PlayerPortal playerPortal;
+
 
     private void Awake()
     {
         portalText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         portalPanel = transform.GetChild(1).GetComponent<Image>();
-        player = GameManager.Instance.PlayerPortal;
+        playerPortal = GameManager.Instance.PlayerPortal;
     }
 
     private void Start()
     {
-        player.onPortal += OnPortalUI;
+        playerPortal.onLocalPortal += OnPortalUI;
     }
 
     /// <summary>

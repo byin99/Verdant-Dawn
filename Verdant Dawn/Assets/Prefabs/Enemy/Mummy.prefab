@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7526549443263558282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541826940702070896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4639066210686641037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354037092936921887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3321467622889184915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2965052799513994941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5963746499288924501}
   - component: {fileID: 8505853354849313545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SK_Mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2554119493419578125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 274698321109602017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211749543498454379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger2Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8099036572796970376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7426690667189524374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5167022570214044633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7283181208873735637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3742008491168603239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger3Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6613569239784645122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7384579167830775471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523513029823236746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7234154837804032820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5583276556840801403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633353353645990442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3698426243522042542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1851954334503978837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2544994182236571040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410949547905665746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8107326225762562167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1095,7 +1095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2868920149661348118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2939805292674754111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581745823423398085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger2Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1193,7 +1193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2534922057270112870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1282847518813890921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,7 +1257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3517981874311925660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,7 +1288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8385432264212338125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480458724886258276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 963801636920204796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4963480384558178896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1416,7 +1416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2661116525425245480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger4Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9167936906330248351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1526,7 +1526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 356181397940892835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4401758402349557639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger3Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7382439132976098824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,7 +1704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7746307269600377633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3897147043654858306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4026836902080900653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1801,7 +1801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193937341823851674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1833,7 +1833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 347897466722871573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4621620338861424789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1898,7 +1898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4497879958114868074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2094,7 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ae3fd38467abb418b1d6bc19f369eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 2
   maxHP: 100
   attackPower: 15
   defencePower: 5
@@ -2140,7 +2140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5819488408203109731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2174,7 +2174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5258411368215391651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2205,7 +2205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5267351442560791608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ HeadNub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2236,7 +2236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 451109226598398179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2268,7 +2268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7548214827857602292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2331,7 +2331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4015582039002846724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2363,7 +2363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4031039274475559406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Queue de cheval 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2395,7 +2395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5084249797874496837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger4Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2426,7 +2426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4541789294616961247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2458,7 +2458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2738496442683353542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Queue de cheval 1Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2489,7 +2489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7504746516472231124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2521,7 +2521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2094089596576662710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger1Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2553,7 +2553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3165388508450675587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2585,7 +2585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 115791141915395906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2617,7 +2617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5491997645734465526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2653,7 +2653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4738644070647979350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2207601448643458142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2717,7 +2717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 898899139856031395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger1Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2748,7 +2748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5966777130582644086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2780,7 +2780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4909548239671364592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2812,7 +2812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6899383165167515594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MUMMY_ R Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}

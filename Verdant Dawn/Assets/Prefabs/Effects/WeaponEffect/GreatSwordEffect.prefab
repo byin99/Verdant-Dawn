@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 198987174396208771}
   - component: {fileID: 5878970163025098963}
   - component: {fileID: 135881334466386779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_36_Slash_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,7 +4920,7 @@ GameObject:
   - component: {fileID: 2389541965015260505}
   - component: {fileID: 7741808577750617276}
   - component: {fileID: 6411276846841746753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Effect_36_Slash '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9896,7 +9896,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumAttackRatio: 0.8
   maximumAttackRatio: 1.2
-  attackDamageRatio: 1
   knockBackPower: 12
 --- !u!1 &8317456471161690505
 GameObject:
@@ -9909,7 +9908,7 @@ GameObject:
   - component: {fileID: 3085451142460496949}
   - component: {fileID: 7568397396372706412}
   - component: {fileID: 2194458236193562668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_36_Slash_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

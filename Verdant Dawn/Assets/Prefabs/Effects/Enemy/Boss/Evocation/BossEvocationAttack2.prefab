@@ -73,10 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 1.5
-  knockBackPower: 0
   minimumAttackRatio: 0.8
   maximumAttackRatio: 1.2
-  isKnockBack: 0
   enemyStatus: {fileID: 703036694419145877, guid: 232df2c343b37274fb71a87db7c3827f,
     type: 3}
 --- !u!1 &2418880689566186598
@@ -91,7 +89,7 @@ GameObject:
   - component: {fileID: 3426365528270404368}
   - component: {fileID: 2773377336801323949}
   - component: {fileID: 2614196502899227069}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExplosionFog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4724,7 +4722,7 @@ GameObject:
   - component: {fileID: 3769344966860146394}
   - component: {fileID: 1942399065177768633}
   - component: {fileID: 6648143006492688979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4884,7 +4882,7 @@ GameObject:
   - component: {fileID: 6111856502979928299}
   - component: {fileID: 4619523135864985095}
   - component: {fileID: 4723881784774834518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9589,7 +9587,7 @@ GameObject:
   - component: {fileID: 9105987247817020869}
   - component: {fileID: 5255733714338282715}
   - component: {fileID: 2036540596503851089}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}

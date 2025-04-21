@@ -569,41 +569,38 @@ public class PlayerAttack : MonoBehaviour
         // 기본 공격
         if (attackElapsedTime < attackCoolTime)
         {
-            Vector3 newPosition = transform.position + animator.deltaPosition;
+            Vector3 newPosition = transform.position + animator.deltaPosition * 2.0f;
 
             if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
             {
                 newPosition.y = hit.point.y;
             }
 
-            transform.position = newPosition;
             rigid.MovePosition(newPosition);
         }
         attackElapsedTime += Time.deltaTime;
 
         if (isUseSkill)
         {
-            Vector3 newPosition = transform.position + animator.deltaPosition;
+            Vector3 newPosition = transform.position + animator.deltaPosition * 2.0f;
 
             if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
             {
                 newPosition.y = hit.point.y;
             }
 
-            transform.position = newPosition;
             rigid.MovePosition(newPosition);
         }
 
         else if (isCombo)
         {
-            Vector3 newPosition = transform.position + animator.deltaPosition;
+            Vector3 newPosition = transform.position + animator.deltaPosition * 2.0f;
 
             if (Physics.Raycast(newPosition + Vector3.up, Vector3.down, out RaycastHit hit, 2f, LayerMask.GetMask("Ground")))
             {
                 newPosition.y = hit.point.y;
             }
 
-            transform.position = newPosition;
             rigid.MovePosition(newPosition);
         }
 
@@ -945,12 +942,5 @@ public class PlayerAttack : MonoBehaviour
         isCharge = false;
         agent.enabled = true;
         agent.ResetPath();
-    }
-
-    public void test1()
-    {
-        chargeRemainTime = 0.0f;
-        comboRemainTime = 0.0f;
-        ultimateRemainTime = 0.0f;
     }
 }

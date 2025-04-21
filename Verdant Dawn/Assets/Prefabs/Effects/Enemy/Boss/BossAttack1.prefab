@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6356898313596011632}
   - component: {fileID: 6150721009414507619}
   - component: {fileID: 1685571624282047726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_36_Slash_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5961824673771733266}
   - component: {fileID: 6600235995189465755}
   - component: {fileID: 3474340779720068045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_Slash_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 2667799719353505724}
   - component: {fileID: 3215392137313806424}
   - component: {fileID: 7227811680126057839}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9881,7 +9881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 2
   minimumSkillRatio: 1.8
   maximumSkillRatio: 2.2
   knockBackPower: 10

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7045923769543893646}
   - component: {fileID: 1333776357073632989}
   - component: {fileID: 1543121393788659146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9937,7 +9937,7 @@ GameObject:
   - component: {fileID: 8755575289963614464}
   - component: {fileID: 1615831082800595785}
   - component: {fileID: 7087566067513354899}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}

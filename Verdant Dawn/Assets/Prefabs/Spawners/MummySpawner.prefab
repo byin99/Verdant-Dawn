@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6718c274a8fa22a4a85ba064fe612c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyKind: 2
-  spawnCount: 50
-  respawnTime: 10
-  spawnRange: 20
+  enemyType: 2
+  spawnCoolTime: 10
+  capacity: 20
+  mapInfo: {fileID: 91494592993116105, guid: 4218b6fa8044dd54a8fe16b346501916, type: 3}

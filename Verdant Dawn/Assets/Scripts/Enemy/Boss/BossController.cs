@@ -3,9 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Cinemachine;
 
 public class BossController : RecycleObject
 {
+    /// <summary>
+    /// 보스가 죽으면 실행되는 델리게이트
+    /// </summary>
+    public Action onDie;
+
     /// <summary>
     /// 광폭화 됐을 때 화면 색깔
     /// </summary>
@@ -20,6 +26,11 @@ public class BossController : RecycleObject
     /// 광폭화 이동 속도
     /// </summary>
     public float berserkMoveSpeed;
+
+    /// <summary>
+    /// 보스 Appearance용 카메라
+    /// </summary>
+    public CinemachineVirtualCamera virtualCamera;
 
     /// <summary>
     /// 공격중 여부(true면 공격중, false면 공격중이 아님)
@@ -86,6 +97,21 @@ public class BossController : RecycleObject
     [HideInInspector]
     public Transform attackTransform;
 
+    /// <summary>
+    /// 풀의 Transform
+    /// </summary>
+    Transform pool;
+
+    /// <summary>
+    /// 보스 패턴 Transform
+    /// </summary>
+    Transform bossPatternTransform;
+
+    /// <summary>
+    /// 보스 패턴 Transform을 알려주는 프로퍼티(읽기 전용)
+    /// </summary>
+    public Transform BossPatternTransform => bossPatternTransform;
+
     // 컴포넌트들
     Animator animator;
     NavMeshAgent agent;
@@ -111,6 +137,8 @@ public class BossController : RecycleObject
         attackTransform = transform.GetChild(4);
 
         skinnedMeshRenderer = transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
+
+        pool = transform.parent;
     }
 
     protected override void OnReset()
@@ -134,18 +162,6 @@ public class BossController : RecycleObject
     }
 
     /// <summary>
-    /// 죽으면 실행되는 함수
-    /// </summary>
-    void Die()
-    {
-        if (isFirstEvocation && isSecondEvocation && isLastEvocation && isBerserk)
-        {
-            ChangeMaterial();
-            bossStateMachine.TransitionTo(death);
-        }
-    }
-
-    /// <summary>
     /// Material을 바꾸는 함수
     /// </summary>
     public void ChangeMaterial()
@@ -154,6 +170,23 @@ public class BossController : RecycleObject
         newMaterials[0] = materials[0];
         newMaterials[1] = materials[1];
         skinnedMeshRenderer.materials = newMaterials;
+    }
+
+    /// <summary>
+    /// Pool을 부모로 다시 돌리는 함수
+    /// </summary>
+    public void ReturnToPool()
+    {
+        transform.SetParent(pool);          // 부모를 풀로 재설정
+    }
+
+    /// <summary>
+    /// 보스 패턴 Transform을 설정하는 함수
+    /// </summary>
+    /// <param name="patternTransform">설정 위치</param>
+    public void SetBossPatternTransform(Transform patternTransform)
+    {
+        bossPatternTransform = patternTransform;
     }
 
     /// <summary>

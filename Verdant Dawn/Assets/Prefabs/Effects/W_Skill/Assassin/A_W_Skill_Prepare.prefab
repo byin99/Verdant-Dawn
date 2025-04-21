@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6617551235348078892}
   - component: {fileID: 7068212679444898249}
   - component: {fileID: 5375176364552059346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_33_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4910,7 +4910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4499290801427399484}
   - component: {fileID: 3963876371529270055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: A_W_Skill_Prepare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,8 +4945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
   skillDelayTime: 0
   isDamage: 0
   isContinuous: 0
+  isAnimation: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3358974204993025418}
   - component: {fileID: 118257540923807644}
   - component: {fileID: 2006215040908592230}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4968,7 +4968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 6
   minimumSkillRatio: 5.8
   maximumSkillRatio: 6.2
   knockBackPower: 20
@@ -4987,7 +4986,7 @@ GameObject:
   - component: {fileID: 2566566116250493545}
   - component: {fileID: 123822635991123831}
   - component: {fileID: 6384675000357565445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodExplode
   m_TagString: Untagged
   m_Icon: {fileID: 0}

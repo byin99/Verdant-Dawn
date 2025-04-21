@@ -25,9 +25,9 @@ public class UIManager : Singleton<UIManager>
     InventoryUI inventoryUI;
 
     /// <summary>
-    /// PortalUI
+    /// DungeonResultUI
     /// </summary>
-    PortalUI portalUI;
+    DungeonResultUI dungeonResultUI;
 
     /// <summary>
     /// SKillBarUI를 공유받을 프로퍼티(읽기 전용)
@@ -90,25 +90,25 @@ public class UIManager : Singleton<UIManager>
     }
 
     /// <summary>
-    /// PortalUI를 공유받을 프로퍼티(읽기 전용)
+    /// DungeonResultUI를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
-    public PortalUI PortalUI
+    public DungeonResultUI DungeonResultUI
     {
         get
         {
-            if (portalUI == null)
+            if (dungeonResultUI == null)
             {
-                portalUI = FindAnyObjectByType<PortalUI>();
+                dungeonResultUI = FindAnyObjectByType<DungeonResultUI>();
             }
-            return portalUI;
+            return dungeonResultUI;
         }
     }
 
     protected override void OnInitialize()
     {
-        skillBarUI = FindAnyObjectByType<SkillBarUI>();         // SkillBarUI 찾기
-        bossHPUI = FindAnyObjectByType<BossHPUI>();             // BossHPUI 찾기
-        inventoryUI = FindAnyObjectByType<InventoryUI>();       // inventoryUI 찾기
-        portalUI = FindAnyObjectByType<PortalUI>();             // portalUI 찾기
+        skillBarUI = FindAnyObjectByType<SkillBarUI>();             // SkillBarUI 찾기
+        bossHPUI = FindAnyObjectByType<BossHPUI>();                 // BossHPUI 찾기
+        inventoryUI = FindAnyObjectByType<InventoryUI>();           // inventoryUI 찾기
+        dungeonResultUI = FindAnyObjectByType<DungeonResultUI>();   // DungeonResultUI 찾기
     }
 }

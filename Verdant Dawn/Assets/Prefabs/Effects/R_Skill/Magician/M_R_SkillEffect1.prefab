@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7879953690952643284}
   - component: {fileID: 2292150212273607775}
   - component: {fileID: 8235173326484106765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_ExplosionCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 6186704647546138765}
   - component: {fileID: 324931588629081019}
   - component: {fileID: 7304850057738724565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_ParticleCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9811,7 +9811,7 @@ GameObject:
   - component: {fileID: 1178706965671388349}
   - component: {fileID: 4163775965035434235}
   - component: {fileID: 3816231352765323997}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_26_ExplosionCenter_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14770,7 +14770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 10
-  skillDamageRatio: 1
   minimumSkillRatio: 0.8
   maximumSkillRatio: 1.2
   knockBackPower: -20

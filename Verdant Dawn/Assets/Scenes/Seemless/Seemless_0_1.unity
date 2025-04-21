@@ -308,11 +308,6 @@ PrefabInstance:
       propertyPath: mapInfo
       value: 
       objectReference: {fileID: 8833523556881254204}
-    - target: {fileID: 8661225256162129323, guid: 237c553f628c3994384640689865fc87,
-        type: 3}
-      propertyPath: spawnRange
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -376,18 +371,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5051379615783915296, guid: 97d350062a455a844ba154b703fa74ed,
+    - target: {fileID: 3367629936654942144, guid: 97d350062a455a844ba154b703fa74ed,
         type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 4482293450639885880, guid: f1bf5398b9e59b34f92dc084cdf134b8,
+      propertyPath: mapSizeX
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367629936654942144, guid: 97d350062a455a844ba154b703fa74ed,
         type: 3}
-    - target: {fileID: 5192864128713436635, guid: 97d350062a455a844ba154b703fa74ed,
-        type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 5031129469071398825, guid: 72f857b561894254290257766376311f,
-        type: 3}
+      propertyPath: mapSizeZ
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5849174174686223655, guid: 97d350062a455a844ba154b703fa74ed,
         type: 3}
       propertyPath: m_Name

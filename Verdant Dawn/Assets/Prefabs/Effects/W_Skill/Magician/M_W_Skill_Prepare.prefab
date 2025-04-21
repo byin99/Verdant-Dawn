@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3884912590717997774}
   - component: {fileID: 9185884551477515556}
   - component: {fileID: 6690185475152793417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_39_Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4853,7 +4853,7 @@ GameObject:
   - component: {fileID: 1669165007684176954}
   - component: {fileID: 3108410270643932484}
   - component: {fileID: 5368338631427885116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_39_Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9755,7 +9755,7 @@ GameObject:
   - component: {fileID: 4218217168366515849}
   - component: {fileID: -4174620447847918795}
   - component: {fileID: 7111244230996208078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M_W_Skill_Prepare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9805,11 +9805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
   skillDelayTime: 0
   isDamage: 0
   isContinuous: 0
+  isAnimation: 0
 --- !u!1 &6450080120551943595
 GameObject:
   m_ObjectHideFlags: 0
@@ -9820,7 +9822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6726416946269847276}
   - component: {fileID: 6204248575440402344}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_39_ForceField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10348,7 +10350,7 @@ GameObject:
   - component: {fileID: 5066978792492315872}
   - component: {fileID: 5386286155075661024}
   - component: {fileID: 2975381473147214418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_39_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10431,7 +10433,7 @@ GameObject:
   - component: {fileID: 4643903765219669278}
   - component: {fileID: 2670844003111081195}
   - component: {fileID: 352485067396906570}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_39_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

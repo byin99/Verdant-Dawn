@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9137478714772861582}
   - component: {fileID: 1873592017074061254}
   - component: {fileID: 5706608570590693352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_38_Ring_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,7 +4920,7 @@ GameObject:
   - component: {fileID: 3072355796606782634}
   - component: {fileID: 8445427767815711591}
   - component: {fileID: 3452759056062335514}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_38_Ring_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9820,7 +9820,7 @@ GameObject:
   - component: {fileID: 1564993384642344219}
   - component: {fileID: 5985886334118776377}
   - component: {fileID: 2979061994550374533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_38_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14728,7 +14728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6635543009612935774}
   - component: {fileID: -7255746874193936782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M_E_SkillEffect2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14767,11 +14767,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 3
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
   skillDelayTime: 0
   isDamage: 0
   isContinuous: 0
+  isAnimation: 0
 --- !u!1 &8018038668145631864
 GameObject:
   m_ObjectHideFlags: 0
@@ -14783,7 +14785,7 @@ GameObject:
   - component: {fileID: 7341687824205541516}
   - component: {fileID: 6651051539787094193}
   - component: {fileID: 653644702053607258}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_38_Ring_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

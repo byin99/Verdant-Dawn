@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 1015223273655704041}
   - component: {fileID: 5796682699283690818}
   - component: {fileID: 6213793139705553551}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 303520040400138249}
   - component: {fileID: 6862525207141746922}
   - component: {fileID: 2169369396273672914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 7560881414477980784}
   - component: {fileID: 7802938036030748016}
   - component: {fileID: 6105732981364336271}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ParticlesLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5149,7 +5149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4866299626966553222}
   - component: {fileID: 4814907001683798298}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CamShake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5195,7 +5195,7 @@ GameObject:
   - component: {fileID: 5228409222894019137}
   - component: {fileID: 6008706089048981280}
   - component: {fileID: 977718833753558656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ParticlesRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9904,7 +9904,7 @@ GameObject:
   - component: {fileID: 2404038311172308581}
   - component: {fileID: 228604146914209983}
   - component: {fileID: 7816874292475260924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14582,7 +14582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1127264922753903168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}

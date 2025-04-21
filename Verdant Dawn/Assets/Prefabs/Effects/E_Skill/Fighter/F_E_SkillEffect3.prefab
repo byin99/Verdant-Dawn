@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5801645258637340043}
   - component: {fileID: 9109831636771231700}
   - component: {fileID: 6754844247002234116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_21_Flame_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 9058280034942079666}
   - component: {fileID: 1836787639997147919}
   - component: {fileID: 3419698245655383025}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_21_Flame_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9845,7 +9845,7 @@ GameObject:
   - component: {fileID: 3999234032382889573}
   - component: {fileID: 5129624358744260349}
   - component: {fileID: 1189937089142768617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_21_ParticleScatter_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14754,7 +14754,7 @@ GameObject:
   - component: {fileID: 221099827027201252}
   - component: {fileID: 5739395625612250650}
   - component: {fileID: 4403104528437952278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_21_Decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14837,7 +14837,7 @@ GameObject:
   - component: {fileID: 8359319541333362407}
   - component: {fileID: 7742399722484212989}
   - component: {fileID: 2991504218647282133}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_21_ParticleScatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19807,7 +19807,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 3
-  skillDamageRatio: 2
   minimumSkillRatio: 1.8
   maximumSkillRatio: 2.2
   knockBackPower: 3

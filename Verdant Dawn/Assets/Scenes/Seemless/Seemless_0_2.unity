@@ -248,23 +248,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5212144090534322920, guid: f1bf5398b9e59b34f92dc084cdf134b8,
+    - target: {fileID: 4482293450639885880, guid: f1bf5398b9e59b34f92dc084cdf134b8,
         type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 3367629936654942144, guid: 97d350062a455a844ba154b703fa74ed,
+      propertyPath: mapSizeX
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482293450639885880, guid: f1bf5398b9e59b34f92dc084cdf134b8,
         type: 3}
+      propertyPath: mapSizeZ
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6046622156444493333, guid: f1bf5398b9e59b34f92dc084cdf134b8,
         type: 3}
       propertyPath: m_Name
       value: SkeletonMap
       objectReference: {fileID: 0}
-    - target: {fileID: 6668083017220984914, guid: f1bf5398b9e59b34f92dc084cdf134b8,
-        type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 91494592993116105, guid: 4218b6fa8044dd54a8fe16b346501916,
-        type: 3}
     - target: {fileID: 7616206049197395917, guid: f1bf5398b9e59b34f92dc084cdf134b8,
         type: 3}
       propertyPath: m_LocalPosition.x

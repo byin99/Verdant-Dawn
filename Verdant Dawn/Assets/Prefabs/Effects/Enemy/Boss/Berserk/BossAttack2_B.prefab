@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1638621555919679223}
   - component: {fileID: 9166618980465275051}
   - component: {fileID: 2546749849467689397}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fog2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4749,7 +4749,7 @@ GameObject:
   - component: {fileID: 3891051274733256498}
   - component: {fileID: 8216183017498881460}
   - component: {fileID: 2053190809199787387}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CraterLight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4970,7 +4970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6023955660608695141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5008,7 +5008,7 @@ GameObject:
   - component: {fileID: 6755165437129934}
   - component: {fileID: 6981166754568682697}
   - component: {fileID: 6089851643537232023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fire2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9773,7 +9773,7 @@ GameObject:
   - component: {fileID: 6499492994422087057}
   - component: {fileID: 1766914929003573000}
   - component: {fileID: 9176777300163013562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fog1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14529,7 +14529,7 @@ GameObject:
   - component: {fileID: 7474231879142203773}
   - component: {fileID: 2295292657117626063}
   - component: {fileID: 1363663197238628186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fire1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19295,7 +19295,7 @@ GameObject:
   - component: {fileID: 1001565921135360758}
   - component: {fileID: 5220268188358887735}
   - component: {fileID: 7532802863524027622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrackMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19421,7 +19421,7 @@ GameObject:
   - component: {fileID: 1119955812269521374}
   - component: {fileID: 2227765895274644895}
   - component: {fileID: 1643295223595141314}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fog3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24192,7 +24192,7 @@ GameObject:
   - component: {fileID: 3506912622174565880}
   - component: {fileID: 501935454788802612}
   - component: {fileID: 7668529047577759114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CraterLight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

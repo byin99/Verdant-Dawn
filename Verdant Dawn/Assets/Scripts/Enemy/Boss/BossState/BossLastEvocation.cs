@@ -93,6 +93,28 @@ public class BossLastEvocation : BossBase
     /// <param name="sender">보스 Controller</param>
     IEnumerator EvocationCoroutine(BossController sender)
     {
+        // 하늘로 날아가기
+        agent.enabled = false;
+        animator.SetTrigger(Fly_Hash);
+        while (timeElapsed < airTime)
+        {
+            rigid.transform.position = new Vector3(rigid.transform.position.x, timeElapsed * flyRatio, rigid.transform.position.z);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // 패턴 위치로 이동하기
+        sender.transform.position = new Vector3(sender.BossPatternTransform.position.x, sender.transform.position.y, sender.BossPatternTransform.position.z);
+
+        // 하늘에서 내려오기
+        timeElapsed = 0.0f;
+        while (timeElapsed < airTime)
+        {
+            rigid.transform.position = new Vector3(rigid.transform.position.x, (airTime - timeElapsed) * flyRatio, rigid.transform.position.z);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
         // Evocation 시작
         animator.SetTrigger(Roar_Hash);
         Factory.Instance.GetBossEvocation_B(sender.transform.position);
@@ -103,6 +125,7 @@ public class BossLastEvocation : BossBase
         // 하늘로 날아가기
         agent.enabled = false;
         animator.SetTrigger(Fly_Hash);
+        timeElapsed = 0.0f;
         while (timeElapsed < airTime)
         {
             rigid.transform.position = new Vector3(rigid.transform.position.x, timeElapsed * flyRatio, rigid.transform.position.z);

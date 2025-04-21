@@ -19,7 +19,7 @@ public class BossDeath : BossBase
     {
         base.Enter(sender);
         sender.ChangeMaterial();
-
+        sender.onDie?.Invoke();
         sender.StartCoroutine(Dissolve(sender));
     }
 

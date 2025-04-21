@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39987836301001733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7132455115638726162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3696810944550437622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Toe02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8133355160833409958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Toe02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 5659234378081237642}
   - component: {fileID: 890805557459341531}
   - component: {fileID: 6006004955884932324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2373808413424633517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8945654315328590097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1705794064629661113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4906007229821846987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5244631331475373379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Neck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1164597063681754593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6916076641347084695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2286514066978458079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3730967361811745444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6635912926202615238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6672265215455823719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4389460048008555785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7726154398166996262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2031158265332542752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6944139012583326828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5048290927124124931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5543672013301600039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 315125196980910859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3309125391239922649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2024232601280952717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5306745926149508282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8031053192471993842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2708111316043142877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6481394015276528537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,7 +1152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6881417787858326998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8500663760703801495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 528125746137155241}
   - component: {fileID: 6133228750537640905}
   - component: {fileID: 1139403935150374281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4077158641269257276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Toe01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5603281094844657050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8720545208309636225}
   - component: {fileID: 2116837684335832134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SK_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2870263366600149169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8981787649028285728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8035541913667276214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2225084349027801240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1666,7 +1666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4304194966944051685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1698,7 +1698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8544564357806056274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 4270787673820828019}
   - component: {fileID: 2505006339340270348}
   - component: {fileID: 4914790840966309702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1812,7 +1812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4246756175494007793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1844,7 +1844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8370422906261937519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2674686654156210195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2503665873535179669}
   - component: {fileID: 2294632329447310425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skeleton_knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2049,7 +2049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4724275737904150445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,7 +2081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3688845970669351989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2113,7 +2113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5321593918176128017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2144,7 +2144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4033246503807562304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ae3fd38467abb418b1d6bc19f369eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   maxHP: 100
   attackPower: 15
   defencePower: 5
@@ -2385,7 +2385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7178313487461519978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2422,7 +2422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8038740445597274369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,7 +2454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 635757610712116153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2486,7 +2486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153444374531827283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2517,7 +2517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460718451315480115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2549,7 +2549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7010925761080110839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2583,7 +2583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7891995782298388933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2615,7 +2615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1772793266332718778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2692,7 +2692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162790503919405067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2724,7 +2724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9144605068597192483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2757,7 +2757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948907633279128377}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ L Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2789,7 +2789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157664466167238839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2821,7 +2821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10257769213855811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2853,7 +2853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2314862609382322400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonKnight_ R Toe01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

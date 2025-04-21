@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2738195342139681607}
   - component: {fileID: 5005681283641422257}
   - component: {fileID: 1500746375376830062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_MarkFront_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,7 +4920,7 @@ GameObject:
   - component: {fileID: 450046581552072770}
   - component: {fileID: 7994171814617518775}
   - component: {fileID: 7093031978214379351}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_MarkFront_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9829,7 +9829,7 @@ GameObject:
   - component: {fileID: 8125477995801456787}
   - component: {fileID: 8611323475255251329}
   - component: {fileID: 2288781041772802680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ChargeParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14680,7 +14680,7 @@ GameObject:
   - component: {fileID: 7583470076126735791}
   - component: {fileID: 5948807018330543742}
   - component: {fileID: 784876545576443433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ChargeSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14763,7 +14763,7 @@ GameObject:
   - component: {fileID: 5744304913939024520}
   - component: {fileID: 7509823847588521064}
   - component: {fileID: 6410011417913063280}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_MarkRing_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19672,7 +19672,7 @@ GameObject:
   - component: {fileID: 7420043728269213232}
   - component: {fileID: 8105878666621794862}
   - component: {fileID: 8714175233490690407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_MarkFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24581,7 +24581,7 @@ GameObject:
   - component: {fileID: 5069720989452667250}
   - component: {fileID: 6210248078642948646}
   - component: {fileID: -6912999116230617868}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: H_W_Skill_Prepare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24617,9 +24617,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
-  isPrepare: 1
+  skillDelayTime: 0
+  isDamage: 0
+  isContinuous: 0
+  isAnimation: 0
 --- !u!114 &-6912999116230617868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24641,7 +24645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4240145185483126597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_Mark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24680,7 +24684,7 @@ GameObject:
   - component: {fileID: 493333696529495703}
   - component: {fileID: 8288686432651536296}
   - component: {fileID: 7724629315521334480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_MarkRng_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29589,7 +29593,7 @@ GameObject:
   - component: {fileID: 5040403174857620154}
   - component: {fileID: 358302672476599470}
   - component: {fileID: 467108788498468072}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ChargeLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34431,7 +34435,7 @@ GameObject:
   - component: {fileID: 7998773986473402383}
   - component: {fileID: 6334089964253002225}
   - component: {fileID: 3682331002858027901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_MarkRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39338,7 +39342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1373565641615584113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_InitCharge
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -138,7 +138,7 @@ public class SubmapManager : MonoBehaviour, IInitializable
         if (player != null)
         {
             // 플레이어 주변 맵 로딩 요청
-            playerSubmap = WorldToGrid(player.transform.position);    // 플레이어 서브맵 그리드 위치 구하고
+            playerSubmap = WorldToGrid(player.transform.position);      // 플레이어 서브맵 그리드 위치 구하고
             RequestAsyncSceneLoad(playerSubmap.x, playerSubmap.y);      // 플레이어가 있는 서브맵을 최우선으로 요청
             RefreshScenes(playerSubmap.x, playerSubmap.y);              // 주변맵 포함해서 전부 요청
 
@@ -150,19 +150,6 @@ public class SubmapManager : MonoBehaviour, IInitializable
                 {
                     RefreshScenes(grid.x, grid.y);  // 씬 갱신
                     playerSubmap = grid;
-                }
-            };
-
-            // 플레이어가 사망했을 때의 처리(모든 서브맵 로딩 해제)
-            PlayerStatus status = GameManager.Instance.PlayerStatus;
-            status.onDie += () =>
-            {
-                for (int z = 0; z < ZCount; z++)
-                {
-                    for (int x = 0; x < XCount; x++)
-                    {
-                        RequestAsyncSceneUnload(x, z);
-                    }
                 }
             };
         }
@@ -237,6 +224,7 @@ public class SubmapManager : MonoBehaviour, IInitializable
                     foreach (EnemyController enemy in enemies)
                     {
                         enemy.ReturnToPool();    // 적을 풀로 되돌리기
+                        enemy.gameObject.SetActive(false); // 적 비활성화
                     }
                 }
             }

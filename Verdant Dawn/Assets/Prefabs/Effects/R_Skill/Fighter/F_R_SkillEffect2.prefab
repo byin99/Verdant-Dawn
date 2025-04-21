@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3523057875520087196}
   - component: {fileID: 5583299391422743832}
   - component: {fileID: 1678813825165848246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_Particle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 489127471523828232}
   - component: {fileID: 2083222686284453990}
   - component: {fileID: 2869180285501028068}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ReleaseSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9809,7 +9809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1302708799187362280}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ReleaseEnegyPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9843,7 +9843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6634991522449639929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ParticleField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9937,7 +9937,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 2
-  skillDamageRatio: 0.9
   minimumSkillRatio: 0.6
   maximumSkillRatio: 1.2
   knockBackPower: 1
@@ -9954,7 +9953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6207636477555620871}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_OuterSpherePart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9989,7 +9988,7 @@ GameObject:
   - component: {fileID: 896406983671047887}
   - component: {fileID: 7881686043089665216}
   - component: {fileID: 8399764760267798472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_InnerSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14907,7 +14906,7 @@ GameObject:
   - component: {fileID: 2662094715879078935}
   - component: {fileID: 7309656263788667233}
   - component: {fileID: 6937083533235124899}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_OuterSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19807,7 +19806,7 @@ GameObject:
   - component: {fileID: 6735895470902023161}
   - component: {fileID: 4692771029808053720}
   - component: {fileID: 7757564560258333066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_Particle_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24707,7 +24706,7 @@ GameObject:
   - component: {fileID: 6427792818722932708}
   - component: {fileID: 4122676202570516226}
   - component: {fileID: 3151946651577791219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_OuterSphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29607,7 +29606,7 @@ GameObject:
   - component: {fileID: 2101059024397304794}
   - component: {fileID: 6647984975394266460}
   - component: {fileID: 884043766458730782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ReleaseSphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5303456673391819603}
   - component: {fileID: 3282301886663832015}
   - component: {fileID: 8422191099335701698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 7896873810465580782}
   - component: {fileID: 8593453726873707301}
   - component: {fileID: 2879816355166649905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9820,7 +9820,7 @@ GameObject:
   - component: {fileID: 2473937346882785075}
   - component: {fileID: 7143677611188949755}
   - component: {fileID: 5732441281113524972}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14727,7 +14727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4480106158894467439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Slashs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14762,7 +14762,7 @@ GameObject:
   - component: {fileID: 1053129630795453700}
   - component: {fileID: 1462378541461975086}
   - component: {fileID: 8626766443747786201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Explosion_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19671,7 +19671,7 @@ GameObject:
   - component: {fileID: 7492551151225762250}
   - component: {fileID: 7564981274660177815}
   - component: {fileID: 6398655664812352158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24571,7 +24571,7 @@ GameObject:
   - component: {fileID: 2591385484667794572}
   - component: {fileID: 3259084326592048161}
   - component: {fileID: 7742545985785912123}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Explosion_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29480,7 +29480,7 @@ GameObject:
   - component: {fileID: 2184237171386416428}
   - component: {fileID: 9090132292773041406}
   - component: {fileID: 4711933120406612648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_Particle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34438,7 +34438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 3
-  skillDamageRatio: 3
   minimumSkillRatio: 2.8
   maximumSkillRatio: 3.2
   knockBackPower: 20
@@ -34455,7 +34454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8664243741013390541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_08_SlashHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

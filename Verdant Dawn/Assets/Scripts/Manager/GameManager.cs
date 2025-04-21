@@ -52,6 +52,11 @@ public class GameManager : Singleton<GameManager>
     PlayerPortal playerPortal;
 
     /// <summary>
+    /// TemporaryGround
+    /// </summary>
+    TemporaryGround temporaryGround;
+
+    /// <summary>
     /// NPC
     /// </summary>
     NPC npc;
@@ -213,6 +218,21 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// TemporaryGround를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public TemporaryGround TemporaryGround
+    {
+        get
+        {
+            if (temporaryGround == null)
+            {
+                temporaryGround = FindAnyObjectByType<TemporaryGround>();
+            }
+            return temporaryGround;
+        }
+    }
+
+    /// <summary>
     /// NPC를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public NPC NPC
@@ -302,6 +322,7 @@ public class GameManager : Singleton<GameManager>
         playerInventory = FindAnyObjectByType<PlayerInventory>();               // PlayerInventory 찾기
         playerQuest = FindAnyObjectByType<PlayerQuest>();                       // PlayerQuest 찾기
         playerPortal = FindAnyObjectByType<PlayerPortal>();                     // PlayerPortal 찾기
+        temporaryGround = FindAnyObjectByType<TemporaryGround>();               // TemporaryGround 찾기
         npc = FindAnyObjectByType<NPC>();                                       // NPC 찾기
 
         // 플레이어 초기화

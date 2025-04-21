@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4912813305223761177}
   - component: {fileID: 5552596745733227323}
   - component: {fileID: 4015874598455340733}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossRoarEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5100,7 +5100,7 @@ GameObject:
   - component: {fileID: 3800345980190553535}
   - component: {fileID: 5658579747742774841}
   - component: {fileID: 998761000506337631}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10000,7 +10000,7 @@ GameObject:
   - component: {fileID: 4607084663868168932}
   - component: {fileID: 4778903827094313206}
   - component: {fileID: 5162198607562483298}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

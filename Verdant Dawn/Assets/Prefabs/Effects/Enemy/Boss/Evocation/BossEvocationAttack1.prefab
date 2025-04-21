@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 855457575278893273}
   - component: {fileID: 1927044093970321753}
   - component: {fileID: 5557990260421511004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4728,10 +4728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 1.5
-  knockBackPower: 0
   minimumAttackRatio: 0.8
   maximumAttackRatio: 1.2
-  isKnockBack: 0
   enemyStatus: {fileID: 703036694419145877, guid: 232df2c343b37274fb71a87db7c3827f,
     type: 3}
 --- !u!1 &3077961945772672322
@@ -4745,7 +4743,7 @@ GameObject:
   - component: {fileID: 4252968938707984172}
   - component: {fileID: 7070766348323449051}
   - component: {fileID: 1634072686147470709}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4863,7 +4861,7 @@ GameObject:
   - component: {fileID: 162900072304243921}
   - component: {fileID: 4866862504656310207}
   - component: {fileID: 2271510574283672328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

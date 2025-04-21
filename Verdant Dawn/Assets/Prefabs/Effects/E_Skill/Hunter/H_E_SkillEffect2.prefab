@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4494005356915636345}
   - component: {fileID: 7086464223276039935}
   - component: {fileID: 341547750464581696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4972,7 +4972,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 3
-  skillDamageRatio: 1.8
   minimumSkillRatio: 1.5
   maximumSkillRatio: 2.1
   knockBackPower: 0
@@ -4991,7 +4990,7 @@ GameObject:
   - component: {fileID: 2339840626517727219}
   - component: {fileID: 7698070729409709894}
   - component: {fileID: 3753627523221941094}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ReleaseSphere_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9891,7 +9890,7 @@ GameObject:
   - component: {fileID: 3830530486493084323}
   - component: {fileID: 2670051526468770958}
   - component: {fileID: 922030603805174442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ReleaseSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14791,7 +14790,7 @@ GameObject:
   - component: {fileID: 148700059850243480}
   - component: {fileID: 1388582012007553491}
   - component: {fileID: 2299734973639290270}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_Particle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19691,7 +19690,7 @@ GameObject:
   - component: {fileID: 6898784525107993438}
   - component: {fileID: 4958731833692390510}
   - component: {fileID: 4584163375786428427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_20_ReleaseSphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

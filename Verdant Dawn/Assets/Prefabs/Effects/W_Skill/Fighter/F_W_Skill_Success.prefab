@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6693620024959110869}
   - component: {fileID: 6515099160842835026}
   - component: {fileID: 7960251413222560448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4909,7 +4909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4742497739751293629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_Set_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4944,7 +4944,7 @@ GameObject:
   - component: {fileID: 5098592915583256753}
   - component: {fileID: 536256789850790585}
   - component: {fileID: 4882698928562335815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9842,7 +9842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4645601487984758701}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_Set_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9958,7 +9958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 12
   minimumSkillRatio: 11.8
   maximumSkillRatio: 12.2
   knockBackPower: 20
@@ -9977,7 +9976,7 @@ GameObject:
   - component: {fileID: 8162261546084238319}
   - component: {fileID: 3008035254410763313}
   - component: {fileID: 3128418260356010156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14877,7 +14876,7 @@ GameObject:
   - component: {fileID: 720832963569521037}
   - component: {fileID: 5840607656665672341}
   - component: {fileID: 736441145663376866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19777,7 +19776,7 @@ GameObject:
   - component: {fileID: 5495950689574343370}
   - component: {fileID: 4595598788916727993}
   - component: {fileID: 2264484367000052653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24675,7 +24674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4967576359987537216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere_Set_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24710,7 +24709,7 @@ GameObject:
   - component: {fileID: 7724067947563752348}
   - component: {fileID: 3793018100440832087}
   - component: {fileID: 6269177781979426557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -118,7 +118,7 @@ public class BossHPUI : MonoBehaviour
     /// <summary>
     /// 보스 UI를 끄는 함수
     /// </summary>
-    void OffBossHPBarUI()
+    public void OffBossHPBarUI()
     {
         canvasGroup.alpha = 0.0f;
         canvasGroup.interactable = false;

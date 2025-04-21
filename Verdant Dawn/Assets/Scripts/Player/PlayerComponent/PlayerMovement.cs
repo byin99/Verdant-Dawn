@@ -5,10 +5,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour, IInitializable
-{ 
+{
     /// <summary>
     /// VFX를 실행하는 델리게이트
     /// </summary>
@@ -65,6 +66,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
 
     // 컴포넌트들
     NavMeshAgent agent;
+    Rigidbody rigid;
     Animator animator;
     Player player;
 
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        rigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         player = GetComponent<Player>();
     }
@@ -110,7 +113,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
     public void Roll()
     {
         // 구르기 쿨타임이 끝났다면
-        if (rollRemainTime < 0.0f && player.CanRoll)                                
+        if (rollRemainTime < 0.0f && player.CanRoll)
         {
             Vector2 screen = Mouse.current.position.ReadValue();
             Ray ray = Camera.main.ScreenPointToRay(screen);
@@ -148,7 +151,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
                 newPosition.y = hit.point.y; // 땅 높이 적용
             }
 
-            transform.position = newPosition;
+            rigid.MovePosition(newPosition); // 구르기
         }
         rollRemainTime -= Time.deltaTime;
     }

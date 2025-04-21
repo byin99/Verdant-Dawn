@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8385200165733719071}
   - component: {fileID: 8394567787724658158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_02_FistsMake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 1
-  skillDamageRatio: 0.5
   minimumSkillRatio: 0.3
   maximumSkillRatio: 0.7
   knockBackPower: 2

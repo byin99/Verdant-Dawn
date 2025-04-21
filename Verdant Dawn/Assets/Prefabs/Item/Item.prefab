@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5916134083495184384}
   - component: {fileID: 8087206429323205587}
   - component: {fileID: 5561567785244784130}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Small Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4884,7 +4884,7 @@ GameObject:
   - component: {fileID: 5427695840716595124}
   - component: {fileID: 2606170646513967061}
   - component: {fileID: 5361262221500586962}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IconRotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9070151929172336754}
   - component: {fileID: 9026185478439592773}
   - component: {fileID: 3443510852567321819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Effect_05_Particle '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4909,7 +4909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5950556373839139550}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_Init
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4948,7 +4948,7 @@ GameObject:
   - component: {fileID: 6913901007111717068}
   - component: {fileID: 5727964112649262170}
   - component: {fileID: 7778759096138515453}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_HolyEffect_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9929,7 +9929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumAttackRatio: 0.8
   maximumAttackRatio: 1.2
-  attackDamageRatio: 1
   knockBackPower: 3
 --- !u!1 &4755544544166649762
 GameObject:
@@ -9942,7 +9941,7 @@ GameObject:
   - component: {fileID: 7427463180048871848}
   - component: {fileID: 6082666568337393828}
   - component: {fileID: 5098015088642434744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_ImpactRing_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14841,7 +14840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6950744537488917781}
   - component: {fileID: 6681274288790636224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_MultiStrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14895,7 +14894,7 @@ GameObject:
   - component: {fileID: 8384112683623837415}
   - component: {fileID: 6216410664815864211}
   - component: {fileID: 7557304676124091069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_ImpactRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19795,7 +19794,7 @@ GameObject:
   - component: {fileID: 5033144166413670166}
   - component: {fileID: 945556486799704325}
   - component: {fileID: 6997137961963895541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_HolyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24695,7 +24694,7 @@ GameObject:
   - component: {fileID: 4384433809966235134}
   - component: {fileID: 3774074381657170462}
   - component: {fileID: 263491559755862443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_05_ImpactRing_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

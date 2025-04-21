@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 
 [RequireComponent(typeof(PlayerInputController), typeof(PlayerMovement), typeof(PlayerAttack))]
 [RequireComponent(typeof(PlayerClass), typeof(PlayerStatus))]
 public class Player : MonoBehaviour
 {
+    /// <summary>
+    /// 플레이어가 부활하는 것을 알리는 델리게이트
+    /// </summary>
+    public Action onRevive;
+
     /// <summary>
     /// 공격이 가능함을 알리는 프로퍼티(true면 공격 가능함)
     /// </summary>
@@ -68,6 +71,9 @@ public class Player : MonoBehaviour
         quest = GetComponent<PlayerQuest>();
         portal = GetComponent<PlayerPortal>();
         inventoryUI = UIManager.Instance.InventoryUI;
+
+        onRevive += status.Revive;
+        onRevive += portal.Revive;
 
         inputcontroller.onMove += movement.SetDestination;
         inputcontroller.onRoll += movement.Roll;

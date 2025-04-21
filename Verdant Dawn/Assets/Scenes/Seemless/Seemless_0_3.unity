@@ -326,23 +326,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 564323114922300420, guid: 4218b6fa8044dd54a8fe16b346501916,
+    - target: {fileID: 91494592993116105, guid: 4218b6fa8044dd54a8fe16b346501916,
         type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 4310623548484735085, guid: 187f2eaae3a568b4fb8ad83b1cd0afb7,
+      propertyPath: mapSizeX
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 91494592993116105, guid: 4218b6fa8044dd54a8fe16b346501916,
         type: 3}
+      propertyPath: mapSizeZ
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4739081421282071948, guid: 4218b6fa8044dd54a8fe16b346501916,
         type: 3}
       propertyPath: m_Name
       value: MummyMap
       objectReference: {fileID: 0}
-    - target: {fileID: 5178583288387063719, guid: 4218b6fa8044dd54a8fe16b346501916,
-        type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 4482293450639885880, guid: f1bf5398b9e59b34f92dc084cdf134b8,
-        type: 3}
     - target: {fileID: 6387857886964293437, guid: 4218b6fa8044dd54a8fe16b346501916,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -52,7 +52,6 @@ public class EnemyController : RecycleObject
     // 컴포넌트들
     Rigidbody rigid;
     Player player;
-    PlayerStatus playerStatus;
     EnemyStatus status;
     NavMeshAgent agent;
     Collider enemyCollider;
@@ -74,16 +73,9 @@ public class EnemyController : RecycleObject
         // 컴포넌트들 찾기
         rigid = GetComponent<Rigidbody>();
         player = GameManager.Instance.Player;
-        playerStatus = GameManager.Instance.PlayerStatus;
-        playerStatus.onDie += PlayerDie;
 
-        // EnemyStatus에서 델리게이트 연결하기
         status = GetComponent<EnemyStatus>();
-        status.onKnockBack += Hit;
-        status.onDie += Die;
-
         agent = GetComponent<NavMeshAgent>();
-
         enemyCollider = GetComponent<Collider>();
 
         pool = transform.parent;
@@ -104,6 +96,8 @@ public class EnemyController : RecycleObject
 
         agent.enabled = true;
         enemyCollider.enabled = true;
+        status.onKnockBack += Hit;
+        status.onDie += Die;
     }
 
     private void Update()
@@ -158,20 +152,11 @@ public class EnemyController : RecycleObject
     }
 
     /// <summary>
-    /// 플레이어가 죽으면 실행되는 함수
-    /// </summary>
-    void PlayerDie()
-    {
-        player = null;
-    }
-
-    /// <summary>
     /// Pool을 부모로 다시 돌리는 함수
     /// </summary>
     public void ReturnToPool()
     {
         transform.SetParent(pool);          // 부모를 풀로 재설정
-        gameObject.SetActive(false);        // 오브젝트 비활성화
     }
 
     // 아이템 드랍용--------------------------------------------------------------------------------------------------------------------------------------------

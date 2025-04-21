@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 0.5
-  skillDamageRatio: 0.8
   minimumSkillRatio: 0.6
   maximumSkillRatio: 1
   knockBackPower: 10
@@ -101,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4232693091573879783}
   - component: {fileID: 7853380825569155567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_48_SpiralVortexWindStorm_Make
   m_TagString: Untagged
   m_Icon: {fileID: 0}

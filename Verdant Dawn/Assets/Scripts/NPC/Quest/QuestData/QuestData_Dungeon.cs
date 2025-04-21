@@ -6,5 +6,5 @@ using UnityEngine;
 public class QuestData_Dungeon : QuestData
 {
     [Header("퀘스트 목표")]
-    public DungeonType dungeonType = DungeonType.DevilCastle;
+    public DungeonType dungeonType = DungeonType.DevilDungeon;
 }

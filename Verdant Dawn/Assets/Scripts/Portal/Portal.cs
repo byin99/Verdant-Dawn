@@ -6,6 +6,11 @@ using UnityEngine;
 public class Portal : MonoBehaviour, IPortal
 {
     /// <summary>
+    /// 이 포탈의 종류
+    /// </summary>
+    public PortalEnum portalType;
+
+    /// <summary>
     /// 연결되어있는 맵의 정보
     /// </summary>
     public MapInfo connectMap;
@@ -15,16 +20,16 @@ public class Portal : MonoBehaviour, IPortal
     /// </summary>
     Transform portalPosition;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         portalPosition = transform.GetChild(0);
     }
 
     /// <summary>
-    /// 플레이어가 포탈에 들어왔을 때 실행하는 함수
+    /// 포탈 포지션을 가져오는 함수
     /// </summary>
     /// <returns>포탈 Transform</returns>
-    public Transform StartMapEvent()
+    public Transform GetPortalPosition()
     {
         return portalPosition;
     }

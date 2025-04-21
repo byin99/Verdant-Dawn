@@ -310,18 +310,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2800953541010359697, guid: 187f2eaae3a568b4fb8ad83b1cd0afb7,
-        type: 3}
-      propertyPath: connectMap
-      value: 
-      objectReference: {fileID: 91494592993116105, guid: 4218b6fa8044dd54a8fe16b346501916,
-        type: 3}
-    - target: {fileID: 4506241622058113668, guid: 187f2eaae3a568b4fb8ad83b1cd0afb7,
-        type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 8692c7f0527451c4b8d89b35b1132978,
-        type: 2}
     - target: {fileID: 9092910223694214541, guid: 187f2eaae3a568b4fb8ad83b1cd0afb7,
         type: 3}
       propertyPath: m_Name

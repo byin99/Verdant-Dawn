@@ -70,7 +70,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumAttackRatio: 0.3
   maximumAttackRatio: 0.7
-  attackDamageRatio: 0.5
   knockBackPower: 4
 --- !u!1 &1983698239658482676
 GameObject:
@@ -83,7 +82,7 @@ GameObject:
   - component: {fileID: 2840657247907043913}
   - component: {fileID: 5267807828974983011}
   - component: {fileID: 3525705550973642690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4992,7 +4991,7 @@ GameObject:
   - component: {fileID: 460738526522721742}
   - component: {fileID: 6883669169588393815}
   - component: {fileID: 6062517845773831075}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashSphere_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9890,7 +9889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923844706151581700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9928,7 +9927,7 @@ GameObject:
   - component: {fileID: 91024042270845848}
   - component: {fileID: 2911565334749429161}
   - component: {fileID: 8413460745492264659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashSphere_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14828,7 +14827,7 @@ GameObject:
   - component: {fileID: 4156668895554872417}
   - component: {fileID: 1439023113841373895}
   - component: {fileID: 1610214812846934737}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19728,7 +19727,7 @@ GameObject:
   - component: {fileID: 8945948579534215808}
   - component: {fileID: 7000491284167040171}
   - component: {fileID: 6535077159585160129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashSphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24628,7 +24627,7 @@ GameObject:
   - component: {fileID: 2181052443066821148}
   - component: {fileID: 8656921611420781933}
   - component: {fileID: 7125161261852098592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashSphere_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29528,7 +29527,7 @@ GameObject:
   - component: {fileID: 7393279502963001775}
   - component: {fileID: 8362493055355455265}
   - component: {fileID: 1597460587271845547}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashParticle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34435,7 +34434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8363810678895720285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34471,7 +34470,7 @@ GameObject:
   - component: {fileID: 8809767500975148537}
   - component: {fileID: 9125105082638954996}
   - component: {fileID: 2505392054629153064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_07_SmashSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

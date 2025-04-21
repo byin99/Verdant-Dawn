@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable, IUsablePotion
 {
@@ -241,27 +242,31 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
                     onExpChange?.Invoke(0);
                 }
 
-                else
+                bool isLevelUp = false;
+
+                // 경험치가 다 찼다면
+                while (value > maxExperiencePoint - 0.01f)
                 {
-                    bool isLevelUp = false;
-
-                    // 경험치가 다 찼다면
-                    while (value > maxExperiencePoint - 0.01f)
+                    if (level == 50)
                     {
-                        value -= maxExperiencePoint;
-                        isLevelUp = true;
-                        LevelUp();
+                        experiencePoint = 0;
+                        onExpChange?.Invoke(0);
+                        break;
                     }
-
-                    if (isLevelUp)
-                    {
-                        onLevelUp?.Invoke();
-                        onStatus?.Invoke();
-                    }
-
-                    experiencePoint = value;
-                    onExpChange?.Invoke(experiencePoint / maxExperiencePoint * 100.0f);
+                    value -= maxExperiencePoint;
+                    isLevelUp = true;
+                    LevelUp();
+                    
                 }
+
+                if (isLevelUp)
+                {
+                    onLevelUp?.Invoke();
+                    onStatus?.Invoke();
+                }
+
+                experiencePoint = value;
+                onExpChange?.Invoke(experiencePoint / maxExperiencePoint * 100.0f);
             }
         }
     }
@@ -373,6 +378,10 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     // 애니메이터용 해시값
     readonly int Hit_Hash = Animator.StringToHash("Hit");
     readonly int Die_Hash = Animator.StringToHash("Die");
+    readonly int Revival_Hash = Animator.StringToHash("Revival");
+
+    // 레이어 마스크
+    int invincibleLayer;
 
     private void Awake()
     {
@@ -384,6 +393,8 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
 
     private void Start()
     {
+        invincibleLayer = LayerMask.NameToLayer("Invincible");
+
         level = 1;
         HP = maxHP;
         MP = maxMP;
@@ -467,6 +478,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     public void Die()
     {
         animator.SetTrigger(Die_Hash);
+        gameObject.layer = invincibleLayer;
         onDie?.Invoke();
     }
 
@@ -479,7 +491,6 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     {
         if (IsAlive)
         {
-            animator.SetTrigger(Hit_Hash);
             float realDamage = damage - DefensePower;
 
             if (realDamage < 0)
@@ -503,6 +514,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
         if (player.CanKnockBack)
         {
             isHit = true;
+            animator.SetTrigger(Hit_Hash);
             timeElapsed = 0.0f;
 
             transform.LookAt(hitPoint);
@@ -656,6 +668,19 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     public void FillIdentityGauge()
     {
         IdentityGauge += 100.0f;
+    }
+
+    /// <summary>
+    /// 부활하는 함수
+    /// </summary>
+    public void Revive()
+    {
+        hp = maxHP;
+        onHealthChange?.Invoke(hp / maxHP);
+        mp = maxMP;
+        onManaChange?.Invoke(mp / maxMP);
+        ExperiencePoint *= 0.5f;
+        animator.SetTrigger(Revival_Hash);
     }
 
     /// <summary>

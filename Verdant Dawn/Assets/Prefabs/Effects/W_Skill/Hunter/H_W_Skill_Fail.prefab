@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8899654301196270775}
   - component: {fileID: 3238572467440148898}
   - component: {fileID: 7581551576487918696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ExplodeParticle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4919,7 +4919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4747359080150711156}
   - component: {fileID: 6819220641159798575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ChargeShotFireSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4969,7 +4969,7 @@ GameObject:
   - component: {fileID: 3998368432544695262}
   - component: {fileID: 4501314336875109233}
   - component: {fileID: 577988362865551159}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ExplodeParticle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9957,7 +9957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 1
   minimumSkillRatio: 0.8
   maximumSkillRatio: 1.2
   knockBackPower: 10
@@ -9976,7 +9975,7 @@ GameObject:
   - component: {fileID: 4507811057743303632}
   - component: {fileID: 2571135086854239294}
   - component: {fileID: 8649313242917885139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_SlashFront_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14885,7 +14884,7 @@ GameObject:
   - component: {fileID: 1674818447796845934}
   - component: {fileID: 2507032067817224833}
   - component: {fileID: 7254769545349367616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_SlashFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19792,7 +19791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262917760400963483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ChargeShotFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19828,7 +19827,7 @@ GameObject:
   - component: {fileID: 8154692511332728289}
   - component: {fileID: 2546731480752318439}
   - component: {fileID: 5424238362639389169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_SlashParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24737,7 +24736,7 @@ GameObject:
   - component: {fileID: 3652701916027805379}
   - component: {fileID: 4855277613117507128}
   - component: {fileID: 9062780235877675046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_SlashFront_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29646,7 +29645,7 @@ GameObject:
   - component: {fileID: 5383940689390266538}
   - component: {fileID: 4966276778343745557}
   - component: {fileID: 3134208381087578519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_04_ExplodeParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

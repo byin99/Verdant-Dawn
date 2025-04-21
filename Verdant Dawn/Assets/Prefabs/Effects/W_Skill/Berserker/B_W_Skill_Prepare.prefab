@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8909983114686949031}
   - component: {fileID: 2345147942473203795}
   - component: {fileID: 2864340769638937920}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4853,7 +4853,7 @@ GameObject:
   - component: {fileID: 175677315976696979}
   - component: {fileID: 854012751509691578}
   - component: {fileID: 2061630831696489309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_Decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4936,7 +4936,7 @@ GameObject:
   - component: {fileID: 8885858300167727671}
   - component: {fileID: 3530405659361977855}
   - component: {fileID: 8874357001482482796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodExplode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9836,7 +9836,7 @@ GameObject:
   - component: {fileID: 2465262618516099474}
   - component: {fileID: 8589216587613087165}
   - component: {fileID: 238396704407411312}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_Decal_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9981,7 +9981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 0.5
   minimumSkillRatio: 0.4
   maximumSkillRatio: 0.6
   knockBackPower: 0
@@ -10000,7 +9999,7 @@ GameObject:
   - component: {fileID: 3907312955796307089}
   - component: {fileID: 8055397866404171736}
   - component: {fileID: 7292900891702157115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodExplode_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14900,7 +14899,7 @@ GameObject:
   - component: {fileID: 7953381460239924149}
   - component: {fileID: 5336227830790305187}
   - component: {fileID: 7526501515449341288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19801,7 +19800,7 @@ GameObject:
   - component: {fileID: 6902177248004425976}
   - component: {fileID: 4904706632686858947}
   - component: {fileID: 3187840538109456611}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_BloodSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

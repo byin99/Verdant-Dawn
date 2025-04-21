@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4208304733344042931}
   - component: {fileID: 8034487974509918279}
   - component: {fileID: 365574127030352957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_23_PoisonSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,7 +4920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 1
-  skillDamageRatio: 0.7
   minimumSkillRatio: 0.5
   maximumSkillRatio: 0.9
   knockBackPower: 2

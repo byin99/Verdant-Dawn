@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100414215989086138}
   - component: {fileID: 2502398909380183929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_47_StarMakePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 3
-  skillDamageRatio: 2.4
   minimumSkillRatio: 2.2
   maximumSkillRatio: 2.6
   knockBackPower: 1

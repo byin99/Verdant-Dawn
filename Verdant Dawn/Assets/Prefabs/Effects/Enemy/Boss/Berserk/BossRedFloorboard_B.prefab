@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2571306802330837149}
   - component: {fileID: 7345821093751397272}
   - component: {fileID: 4000467191750570130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 848610302797486523}
   - component: {fileID: 1534627556266376604}
   - component: {fileID: -7876944261597653037}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossRedFloorboard_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}

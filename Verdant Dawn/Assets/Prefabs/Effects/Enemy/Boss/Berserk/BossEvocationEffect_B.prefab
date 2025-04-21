@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6315345920436426698}
   - component: {fileID: 5620446724020960579}
   - component: {fileID: 1440058182436578811}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CoreWind2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4947,7 +4947,7 @@ GameObject:
   - component: {fileID: 616262958271404122}
   - component: {fileID: 4729038398887580192}
   - component: {fileID: 2716136039739279090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9856,7 +9856,7 @@ GameObject:
   - component: {fileID: 5215621691356594147}
   - component: {fileID: 7571890464820224494}
   - component: {fileID: 6701837117123123133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14764,7 +14764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738634577586553107}
   - component: {fileID: 8067498926272555812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossEvocationEffect_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14817,7 +14817,7 @@ GameObject:
   - component: {fileID: 2176158574006949596}
   - component: {fileID: 6878118446160144276}
   - component: {fileID: 8538019657372477313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "Magic\u0421ircle"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19726,7 +19726,7 @@ GameObject:
   - component: {fileID: 2606692354070462536}
   - component: {fileID: 8184240071370633613}
   - component: {fileID: 6978656347556330538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SubSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24644,7 +24644,7 @@ GameObject:
   - component: {fileID: 1581762023459043858}
   - component: {fileID: 1493848842739757629}
   - component: {fileID: 1890050159962906084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CoreWind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29580,7 +29580,7 @@ GameObject:
   - component: {fileID: 7373746433203322972}
   - component: {fileID: 3864508609276009609}
   - component: {fileID: 2827030747535045735}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crater
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 4873ec5d583afc34ba5bf13eb2f95216, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 59b73a3f673e96c49af0f28cab554227, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1467810549960288341
 GameObject:
@@ -14834,6 +14834,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5378229815415524683}
     m_Modifications:
+    - target: {fileID: 4007079545997100004, guid: 83d1eddde4617dc45a3c0c14e4bbd88d,
+        type: 3}
+      propertyPath: connectMap
+      value: 
+      objectReference: {fileID: 4482293450639885880, guid: f1bf5398b9e59b34f92dc084cdf134b8,
+        type: 3}
     - target: {fileID: 5344155413554546840, guid: 83d1eddde4617dc45a3c0c14e4bbd88d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -14973,6 +14979,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5378229815415524683}
     m_Modifications:
+    - target: {fileID: 4007079545997100004, guid: 83d1eddde4617dc45a3c0c14e4bbd88d,
+        type: 3}
+      propertyPath: connectMap
+      value: 
+      objectReference: {fileID: 4310623548484735085, guid: 187f2eaae3a568b4fb8ad83b1cd0afb7,
+        type: 3}
     - target: {fileID: 5344155413554546840, guid: 83d1eddde4617dc45a3c0c14e4bbd88d,
         type: 3}
       propertyPath: m_LocalScale.x

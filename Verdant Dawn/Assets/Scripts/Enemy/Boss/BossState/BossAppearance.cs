@@ -33,6 +33,7 @@ public class BossAppearance : BossBase
 
     public override void Exit(BossController sender)
     {
+        sender.virtualCamera.Priority = 0;
     }
 
     /// <summary>

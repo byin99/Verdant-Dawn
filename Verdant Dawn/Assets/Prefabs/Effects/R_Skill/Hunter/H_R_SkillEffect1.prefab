@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4480620311236589945}
   - component: {fileID: 5812100223951657463}
   - component: {fileID: 6024324606040488884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShipMark_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 10
-  skillDamageRatio: 0.55
   minimumSkillRatio: 0.4
   maximumSkillRatio: 0.7
   knockBackPower: 1
@@ -194,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4725594271138238916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +228,7 @@ GameObject:
   - component: {fileID: 8144408734368633442}
   - component: {fileID: 691834643628548180}
   - component: {fileID: 2849818290614641331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5136,7 +5135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5532793933936886130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_TargetMarks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5170,7 +5169,7 @@ GameObject:
   - component: {fileID: 1623663037446687406}
   - component: {fileID: 310120402096212285}
   - component: {fileID: 76847453708012204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellTrailParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10079,7 +10078,7 @@ GameObject:
   - component: {fileID: 5439594651933315118}
   - component: {fileID: 6443485088403689752}
   - component: {fileID: 2349923344835307017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14988,7 +14987,7 @@ GameObject:
   - component: {fileID: 8639721496470229229}
   - component: {fileID: 329298514039430414}
   - component: {fileID: 4532626405465886202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19897,7 +19896,7 @@ GameObject:
   - component: {fileID: 5521943289555860407}
   - component: {fileID: 984725673333730172}
   - component: {fileID: 1995273773335129006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Explosion_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24806,7 +24805,7 @@ GameObject:
   - component: {fileID: 1220781559249350689}
   - component: {fileID: 2216156837977301396}
   - component: {fileID: 2227897498465425852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Mark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29704,7 +29703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252700758803191157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Shell_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29739,7 +29738,7 @@ GameObject:
   - component: {fileID: 3115863067607956700}
   - component: {fileID: 9086439399659265675}
   - component: {fileID: 3752208901263457631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34666,7 +34665,7 @@ GameObject:
   - component: {fileID: 1172477540555105132}
   - component: {fileID: 682803058443405562}
   - component: {fileID: 3260559667460006198}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39588,7 +39587,7 @@ GameObject:
   - component: {fileID: 1725257575986067515}
   - component: {fileID: 7467919707638570140}
   - component: {fileID: 6180909830384703645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellTrailParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44496,7 +44495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6113587081141832418}
   - component: {fileID: 9003543676182921946}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellColider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44549,7 +44548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1628667533110015345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShipMarks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44587,7 +44586,7 @@ GameObject:
   - component: {fileID: 8288678933562441471}
   - component: {fileID: 5884111127559600964}
   - component: {fileID: 6971079786934873487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShipMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44670,7 +44669,7 @@ GameObject:
   - component: {fileID: 7839930014000436899}
   - component: {fileID: 2485960073239064550}
   - component: {fileID: 8595247644544133685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49579,7 +49578,7 @@ GameObject:
   - component: {fileID: 6195389049569137678}
   - component: {fileID: 9057771981964941354}
   - component: {fileID: 2842241747297125003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54491,7 +54490,7 @@ GameObject:
   - component: {fileID: 1242813956951217056}
   - component: {fileID: 8776666763350714106}
   - component: {fileID: 5678507054733456126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Explosion_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59400,7 +59399,7 @@ GameObject:
   - component: {fileID: 555165607977712444}
   - component: {fileID: 5061626842773582721}
   - component: {fileID: 1750107224253068945}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellTrailParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64307,7 +64306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7604999001517578130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellExplosion_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64343,7 +64342,7 @@ GameObject:
   - component: {fileID: 8920344349045797283}
   - component: {fileID: 5111210582468881053}
   - component: {fileID: 7224578594598353526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShipMark_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64424,7 +64423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 650795867695628008}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellExplosion_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64461,7 +64460,7 @@ GameObject:
   - component: {fileID: 5021263318241822529}
   - component: {fileID: 1667749000404386671}
   - component: {fileID: 751122515975725361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69370,7 +69369,7 @@ GameObject:
   - component: {fileID: 634786404090492572}
   - component: {fileID: 1029203839958483265}
   - component: {fileID: 8338738061025461675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShipMark_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69453,7 +69452,7 @@ GameObject:
   - component: {fileID: 6028323981289981333}
   - component: {fileID: 571135085587664646}
   - component: {fileID: 274394603476978481}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Explosion_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74352,7 +74351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578690483124994378}
   - component: {fileID: 119053960837390971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellColider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74407,7 +74406,7 @@ GameObject:
   - component: {fileID: 580276605560741721}
   - component: {fileID: 1130763993222808260}
   - component: {fileID: 4090114359740858624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79314,7 +79313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8427271134529984608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_Shell_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79347,7 +79346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8456514399421356711}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79381,7 +79380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5633071929388672471}
   - component: {fileID: 1895579612841914460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShellColider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79436,7 +79435,7 @@ GameObject:
   - component: {fileID: 8677310671449909797}
   - component: {fileID: 2238849602704473180}
   - component: {fileID: 1318905702208817809}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_10_ShipMark_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

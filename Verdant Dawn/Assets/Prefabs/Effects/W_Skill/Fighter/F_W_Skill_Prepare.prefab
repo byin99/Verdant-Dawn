@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5013184535755066925}
   - component: {fileID: 6829051680100784031}
   - component: {fileID: 8048948650703859482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_13_RoarSphere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4910,7 +4910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8946458203140107695}
   - component: {fileID: -7240411711834142482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: F_W_Skill_Prepare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4948,9 +4948,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ddacd0104b6d3498a787ea791bd304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamageRatio: 0
+  minimumSkillRatio: 0
+  maximumSkillRatio: 0
   knockBackPower: 0
-  isPrepare: 1
+  skillDelayTime: 0
+  isDamage: 0
+  isContinuous: 0
+  isAnimation: 0
 --- !u!1 &1832438712239492972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +4966,7 @@ GameObject:
   - component: {fileID: 7963072037422185849}
   - component: {fileID: 533964185388201206}
   - component: {fileID: 161755912694319086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_13_RoarSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9862,7 +9866,7 @@ GameObject:
   - component: {fileID: 909932725698126007}
   - component: {fileID: 6647208968778912962}
   - component: {fileID: 4225993889619822646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_13_RoarSphere_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14762,7 +14766,7 @@ GameObject:
   - component: {fileID: 2731717074300965228}
   - component: {fileID: 8297024827010506522}
   - component: {fileID: 1088632912075875875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_13_RoarSphere_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

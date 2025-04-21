@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3462550092499748683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7334965355620479075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_C_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4092307678948680288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_A_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4028648984640663097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_HAND
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2724706272534820583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3669778973812546736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_B_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5716213144011771725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2841946642577796926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_B_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 759432665277618652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_C_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4506932176816919897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2892265524972916765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_B_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4243037234154823319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5032659512290223550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1835446474108107987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_A_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5137592718870129077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4141363521952277942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_A_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2496748168266051483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8106779019262212346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Toe01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4360403326245031355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,6 +761,7 @@ MonoBehaviour:
   berserkColor: {r: 1, g: 0.43081754, b: 0.43081754, a: 0}
   normalMoveSpeed: 3
   berserkMoveSpeed: 5
+  virtualCamera: {fileID: 0}
   isAttack: 0
   isBerserk: 0
   isFirstEvocation: 0
@@ -795,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7527771231094624813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Ponytail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1418273693277457493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_C_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 166911212030593149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6732920039207529584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,7 +927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5468944275132374068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_C_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5648724062947859110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -990,7 +991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6885639247125581999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1021,7 +1022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964578191753109163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8522139927826030481}
   - component: {fileID: 5805563061710459211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SK_DemonLord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5506946071236946737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2079447627685846059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,7 +1279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3416125865304061973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_C_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1309,7 +1310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6467636572119360422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1341,7 +1342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773323345721616555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,7 +1374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6523191037800907253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8015343946057450815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3559494790675415838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1468,7 +1469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8332869581336330418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,7 +1501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2565885929660773365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1532,7 +1533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7416641924332816814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664152878701833834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1597,7 +1598,7 @@ GameObject:
   - component: {fileID: 3874342211643586764}
   - component: {fileID: 656481118571400147}
   - component: {fileID: 8362186145610441451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SK_LavaWhip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000329011693699368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Neck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7517402920302592424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1775,7 +1776,7 @@ GameObject:
   - component: {fileID: 2842197755365471648}
   - component: {fileID: 776594428470830380}
   - component: {fileID: 633245522238131326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SK_FireSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1876,7 +1877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4202665943967646782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Toe01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +1908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8841884312708539868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_ARM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4609570446721415319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1971,7 +1972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5663428826518848147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,7 +2004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6796121881361847638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2035,7 +2036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263596581618803601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3619631527308371295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2099,7 +2100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3640948257093614252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2131,7 +2132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964136247150505250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attackTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3998834854463664531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_B_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3404260697937512152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2229,7 +2230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4816168423716782623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,7 +2262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7090541566231442603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2293,7 +2294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8010494139127680811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2329,7 +2330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7550975483201770865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FOREARM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2362,7 +2363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4280642367913677716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2394,7 +2395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4134066636919074601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2426,7 +2427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2458763292959194257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2502,7 +2503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1504691592889958665}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695756967879415046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6166620160695448248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2598,7 +2599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4625012218176362597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2630,7 +2631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5566506535516473881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_A_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2662,7 +2663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5568140304606818276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_HAND
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2696,7 +2697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5253194069200082412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_HANDLE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2728,7 +2729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6411872209905566516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FOREARM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8853036392555626868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2792,7 +2793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8470748207651551525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2826,7 +2827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8957238586500370473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2668882970985043264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2890,7 +2891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9032298065700002188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2922,7 +2923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4483359304589037083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2953,7 +2954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6796821622019670247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_B_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,7 +2985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393388400910292528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_ARM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3016,7 +3017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2894614721945260648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3049,7 +3050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3794535753888836249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3081,7 +3082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5716372601911078609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5992809213467009816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3145,7 +3146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3332793120664599356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_A_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3176,7 +3177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7620437393051331739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3208,7 +3209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8528476022359772490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3240,7 +3241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4269863358389634951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3272,7 +3273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2652211722968960143}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ R Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3305,7 +3306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1330159334690429915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_C_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4699304909953656286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_SWORD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3368,7 +3369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6474673373079643266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3400,7 +3401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5289704169397660066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WHIP_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3432,7 +3433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6501594338167181370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_R_FINGER_B_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3464,7 +3465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3399422275875629194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_WING_L_FINGER_A_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3495,7 +3496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3015676106897798045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3527,7 +3528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7001219797414940605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEMON_LORD_ L Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

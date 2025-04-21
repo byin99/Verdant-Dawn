@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6926673613332724788}
   - component: {fileID: 8096907775534028623}
   - component: {fileID: 1759195658455924996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CFXR Hit A (Red)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4955,7 +4955,7 @@ GameObject:
   - component: {fileID: 2380238834727055233}
   - component: {fileID: 8968480431102022633}
   - component: {fileID: 4431315777584021745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5073,7 +5073,7 @@ GameObject:
   - component: {fileID: 5435234821424902676}
   - component: {fileID: 642700967360822123}
   - component: {fileID: 5599483802137320105}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9865,7 +9865,7 @@ GameObject:
   - component: {fileID: 4025714151404173563}
   - component: {fileID: 2912362662339538953}
   - component: {fileID: 9182339630278571144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Impact spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14630,7 +14630,7 @@ GameObject:
   - component: {fileID: 890725079024497109}
   - component: {fileID: 6118168317871378800}
   - component: {fileID: 79930648078345903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Impact 270-360
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19449,7 +19449,7 @@ GameObject:
   - component: {fileID: 2086551493015776288}
   - component: {fileID: 1574765894536992426}
   - component: {fileID: 8022168186771403664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Impact 180-270
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24196,7 +24196,7 @@ GameObject:
   - component: {fileID: 2710675535773831263}
   - component: {fileID: 452251450100517308}
   - component: {fileID: 8044574286106153715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Impact 90-180
   m_TagString: Untagged
   m_Icon: {fileID: 0}

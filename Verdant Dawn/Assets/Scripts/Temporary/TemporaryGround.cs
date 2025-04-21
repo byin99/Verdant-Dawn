@@ -8,4 +8,20 @@ public class TemporaryGround : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    /// <summary>
+    /// 임시 바닥을 만들기 위한 함수
+    /// </summary>
+    public void MakeTemporaryGround()
+    {
+        gameObject.SetActive(true);
+    }
+
+    /// <summary>
+    /// 임시 바닥을 없애는 함수
+    /// </summary>
+    public void RemoveTemporaryGround()
+    {
+        gameObject.SetActive(false);
+    }
 }

@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Seemless/Seemless_0_4.unity
     guid: 3b57f7dc61c41f34cbfd11ea19672242
+  - enabled: 1
+    path: Assets/Scenes/Seemless/DemonDungeon.unity
+    guid: 5b694d1494cd0f34cb025b34b3cdd713
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 48245318b9a772e479695bda8f5b75de,
       type: 2}

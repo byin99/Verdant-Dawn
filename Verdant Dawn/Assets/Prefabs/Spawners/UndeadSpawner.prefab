@@ -47,3 +47,4 @@ MonoBehaviour:
   enemyType: 3
   spawnCoolTime: 10
   capacity: 20
+  mapInfo: {fileID: 4310623548484735085, guid: 187f2eaae3a568b4fb8ad83b1cd0afb7, type: 3}

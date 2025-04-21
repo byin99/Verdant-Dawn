@@ -21,6 +21,6 @@ MonoBehaviour:
   questExpReward: 1000
   questItemCode: 1
   itemCount: 10
-  isQuestClear: 0
   enemyType: 1
   enemyCount: 40
+  currentEnemyCount: 40

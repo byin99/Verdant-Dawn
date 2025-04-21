@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3771012114310167394}
   - component: {fileID: 590273630661583957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect_06_MassiveSlashMake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 0.5
-  skillDamageRatio: 1.5
   minimumSkillRatio: 1.2
   maximumSkillRatio: 1.8
   knockBackPower: 5

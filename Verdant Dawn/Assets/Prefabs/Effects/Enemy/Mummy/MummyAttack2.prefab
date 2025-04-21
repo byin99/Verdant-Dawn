@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1450357619216896103}
   - component: {fileID: 7231982676084288404}
   - component: {fileID: 5502766095641777695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4993,7 +4993,7 @@ GameObject:
   - component: {fileID: 5310898536332787722}
   - component: {fileID: 1108894337659641296}
   - component: {fileID: 587947668121242645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CFXR2 Ground Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
