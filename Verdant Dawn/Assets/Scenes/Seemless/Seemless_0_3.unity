@@ -255,8 +255,18 @@ PrefabInstance:
       objectReference: {fileID: 5309969627391577772}
     - target: {fileID: 4279793172557484001, guid: 1b007197f49845546a0e41a3517ee09d,
         type: 3}
+      propertyPath: capacity
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279793172557484001, guid: 1b007197f49845546a0e41a3517ee09d,
+        type: 3}
       propertyPath: enemyType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279793172557484001, guid: 1b007197f49845546a0e41a3517ee09d,
+        type: 3}
+      propertyPath: spawnCoolTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6522092729155328672, guid: 1b007197f49845546a0e41a3517ee09d,
         type: 3}

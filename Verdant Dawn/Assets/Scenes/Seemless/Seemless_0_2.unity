@@ -388,8 +388,18 @@ PrefabInstance:
       objectReference: {fileID: 7229874422624973076}
     - target: {fileID: 8223267015124414942, guid: 6cbb21c3c3dda5c4bb3bf30181e5d14c,
         type: 3}
+      propertyPath: capacity
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223267015124414942, guid: 6cbb21c3c3dda5c4bb3bf30181e5d14c,
+        type: 3}
       propertyPath: enemyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223267015124414942, guid: 6cbb21c3c3dda5c4bb3bf30181e5d14c,
+        type: 3}
+      propertyPath: spawnCoolTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -784,9 +784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e2fa4c971448e4aa56cb65465c5ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 30000000
-  attackPower: 0
-  defencePower: 0
+  maxHP: 188394000
+  attackPower: 63036
+  defencePower: 31161
 --- !u!1 &2563104855087827136
 GameObject:
   m_ObjectHideFlags: 0

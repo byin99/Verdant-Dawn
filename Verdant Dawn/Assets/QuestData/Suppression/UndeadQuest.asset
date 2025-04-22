@@ -18,9 +18,9 @@ MonoBehaviour:
     \uD1A0\uBC8C\uD558\uC5EC\uC11C \uB9C8\uC744\uC744 \uC9C0\uCF1C\uC8FC\uC138\uC694."
   questDescription: "\uC5B8\uB370\uB4DC 40\uB9C8\uB9AC \uD1A0\uBC8C"
   questProccessComent: "\uC5B8\uB370\uB4DC 40\uB9C8\uB9AC\uB97C \uC7A1\uC544\uC8FC\uC138\uC694."
-  questExpReward: 1000
+  questExpReward: 1679861
   questItemCode: 0
   itemCount: 50
   enemyType: 3
   enemyCount: 40
-  currentEnemyCount: 40
+  currentEnemyCount: 0

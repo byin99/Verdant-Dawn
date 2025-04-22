@@ -4624,10 +4624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 3
-  maxHP: 100
-  attackPower: 15
-  defencePower: 5
-  expPoint: 20
+  maxHP: 84040
+  attackPower: 7070
+  defencePower: 3495
+  expPoint: 27998
 --- !u!1 &7153538425727385872
 GameObject:
   m_ObjectHideFlags: 0

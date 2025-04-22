@@ -338,6 +338,16 @@ PrefabInstance:
       propertyPath: mapInfo
       value: 
       objectReference: {fileID: 337813040798600955}
+    - target: {fileID: 5762605910934697528, guid: 3dcbe1d833f037541921ec801ae43d3c,
+        type: 3}
+      propertyPath: capacity
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762605910934697528, guid: 3dcbe1d833f037541921ec801ae43d3c,
+        type: 3}
+      propertyPath: spawnCoolTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6534090246206053627, guid: 3dcbe1d833f037541921ec801ae43d3c,
         type: 3}
       propertyPath: m_LocalPosition.x

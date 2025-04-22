@@ -1333,7 +1333,7 @@ MonoBehaviour:
   maxHP: 100
   attackPower: 15
   defencePower: 5
-  expPoint: 20
+  expPoint: 40
 --- !u!1 &4114488436695706911
 GameObject:
   m_ObjectHideFlags: 0

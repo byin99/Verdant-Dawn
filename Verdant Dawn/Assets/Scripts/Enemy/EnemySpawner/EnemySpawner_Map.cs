@@ -17,7 +17,7 @@ public class EnemySpawner_Map : MonoBehaviour
     /// <summary>
     /// 스폰되는 간격
     /// </summary>
-    public float spawnCoolTime = 10.0f;
+    public float spawnCoolTime = 3.0f;
 
     /// <summary>
     /// 스포너에서 최대로 유지 가능한 적의 수

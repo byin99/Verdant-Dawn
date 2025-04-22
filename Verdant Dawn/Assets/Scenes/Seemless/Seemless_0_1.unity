@@ -308,6 +308,16 @@ PrefabInstance:
       propertyPath: mapInfo
       value: 
       objectReference: {fileID: 8833523556881254204}
+    - target: {fileID: 8661225256162129323, guid: 237c553f628c3994384640689865fc87,
+        type: 3}
+      propertyPath: capacity
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661225256162129323, guid: 237c553f628c3994384640689865fc87,
+        type: 3}
+      propertyPath: spawnCoolTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

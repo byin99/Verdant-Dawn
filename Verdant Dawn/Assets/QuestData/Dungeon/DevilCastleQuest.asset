@@ -21,7 +21,7 @@ MonoBehaviour:
   questDescription: "\uC545\uB9C8 \uB358\uC804 \uD074\uB9AC\uC5B4"
   questProccessComent: "\uC545\uB9C8 \uB358\uC804\uC5D0 \uB4E4\uC5B4\uAC00 \uC545\uB9C8
     \uAD70\uC8FC\uB97C \uD1A0\uBC8C"
-  questExpReward: 1000
+  questExpReward: 631975
   questItemCode: 1
-  itemCount: 10
+  itemCount: 20
   dungeonType: 0

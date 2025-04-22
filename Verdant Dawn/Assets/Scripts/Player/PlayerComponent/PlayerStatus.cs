@@ -316,7 +316,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
         {
             if (IsAlive && !canIdentity)
             {
-                if (value > 99.99f)
+                if (!isIdentity && value > 99.99f)
                 {
                     canIdentity = true;
                 }
