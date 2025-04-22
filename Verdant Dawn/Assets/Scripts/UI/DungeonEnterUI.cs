@@ -39,6 +39,7 @@ public class DungeonEnterUI : MonoBehaviour
     // 컴포넌트들
     CanvasGroup canvasGroup;
     PlayerPortal player;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -60,24 +61,29 @@ public class DungeonEnterUI : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
 
         player = GameManager.Instance.PlayerPortal;
+
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Start()
     {
         cancelButton.onClick.AddListener(() =>
         {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
             HideDungeonEnterUI();
             player.offDungeonPortal?.Invoke();
         });
 
         acceptButton.onClick.AddListener(() =>
         {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
             HideDungeonEnterUI();
             player.GetPortal(currentPortal);
         });
 
         player.onDungeonPortal += (portal) =>
         {
+            audioManager.PlaySound2D(AudioCode.Interaction, 1.0f);
             currentPortal = portal;
             DungeonMapInfo mapInfo = portal.connectMap as DungeonMapInfo;
             RefreshDungeonEnterUI(mapInfo);

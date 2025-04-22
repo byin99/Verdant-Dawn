@@ -35,6 +35,7 @@ public class GhoulController : EnemyController
     /// </summary>
     protected override void AttackEffect1()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemyScratch], attackTransform.position);
         Factory.Instance.GetGhoulAttack(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 }

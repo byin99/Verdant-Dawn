@@ -105,11 +105,13 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     // 컴포넌트들
     PlayerStatus playerStatus;
     PlayerQuest playerQuest;
+    AudioManager audioManager;
 
     private void Awake()
     {
         playerStatus = GameManager.Instance.PlayerStatus;
         playerQuest = GameManager.Instance.PlayerQuest;
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void OnEnable()
@@ -135,6 +137,7 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
             }
 
             HP -= realDamage;
+            AudioSource.PlayClipAtPoint(audioManager[AudioCode.PlayerToEnemy], damagePoint);
             onHit?.Invoke(realDamage, damagePoint);
             playerStatus.IdentityGauge += 1;
         }
@@ -145,6 +148,27 @@ public class EnemyStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     /// </summary>
     public void Die()
     {
+        switch (enemyType)
+        {
+            case EnemyType.Ghoul:
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.GhoulDie], transform.position);
+                break;
+            case EnemyType.Skeleton:
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.SkeletonDie], transform.position);
+                break;
+            case EnemyType.Mummy:
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.MummyDie], transform.position);
+                break;
+            case EnemyType.Undead:
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.UndeadDie], transform.position);
+                break;
+            case EnemyType.Vampire:
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.VampireDie], transform.position);
+                break;
+            case EnemyType.EvilWatcher:
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.EvilWatcherDie], transform.position);
+                break;
+        }
         playerStatus.ExperiencePoint += expPoint;
         playerQuest.onEnemyKill?.Invoke(enemyType);
         onDie?.Invoke();

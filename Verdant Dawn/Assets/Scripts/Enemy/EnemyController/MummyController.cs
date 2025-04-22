@@ -29,6 +29,7 @@ public class MummyController : EnemyController
     /// </summary>
     protected override void AttackEffect1()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemyScratch], attackTransform.position);
         Factory.Instance.GetMummyAttack1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -37,6 +38,7 @@ public class MummyController : EnemyController
     /// </summary>
     protected override void AttackEffect2()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemyBite], attackTransform.position);
         Factory.Instance.GetMummyAttack2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 }

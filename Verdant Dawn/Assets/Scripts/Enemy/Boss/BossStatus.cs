@@ -51,6 +51,7 @@ public class BossStatus : MonoBehaviour, IHealth, IBattle, IDamageable
 
     // 컴포넌트들
     Collider bossCollider;
+    AudioManager audioManager;
 
     /// <summary>
     /// 보스의 HP를 확인하고 설정하기 위한 프로퍼티
@@ -102,6 +103,7 @@ public class BossStatus : MonoBehaviour, IHealth, IBattle, IDamageable
     {
         playerStatus = GameManager.Instance.PlayerStatus;
         bossCollider = GetComponent<Collider>();
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void OnEnable()
@@ -143,6 +145,7 @@ public class BossStatus : MonoBehaviour, IHealth, IBattle, IDamageable
             }
 
             HP -= realDamage;
+            AudioSource.PlayClipAtPoint(audioManager[AudioCode.PlayerToEnemy], damagePoint);
             onHit?.Invoke(realDamage, damagePoint);
             playerStatus.IdentityGauge += 1;
         }

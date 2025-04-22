@@ -55,6 +55,7 @@ public class EnemyController : RecycleObject
     EnemyStatus status;
     NavMeshAgent agent;
     Collider enemyCollider;
+    protected AudioManager audioManager;
 
     // 쉐이터 프로퍼티용 ID들
     readonly int Fade_ID = Shader.PropertyToID("_Fade");
@@ -77,6 +78,7 @@ public class EnemyController : RecycleObject
         status = GetComponent<EnemyStatus>();
         agent = GetComponent<NavMeshAgent>();
         enemyCollider = GetComponent<Collider>();
+        audioManager = GameManager.Instance.AudioManager;
 
         pool = transform.parent;
     }

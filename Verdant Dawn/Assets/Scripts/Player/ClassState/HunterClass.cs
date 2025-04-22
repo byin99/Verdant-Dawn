@@ -147,6 +147,7 @@ public class HunterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.BaseAttack_H, 0.5f);
         Factory.Instance.GetRipleEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -156,6 +157,7 @@ public class HunterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.WSkill_H_1, 0.5f);
         w_SkillEffect = Factory.Instance.GetHunterWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -166,6 +168,7 @@ public class HunterClass : BaseClass, IClass
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_H_2, 0.5f);
         Factory.Instance.GetHunterWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -176,6 +179,7 @@ public class HunterClass : BaseClass, IClass
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_H_2, 0.5f);
         Factory.Instance.GetHunterWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -185,6 +189,7 @@ public class HunterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_H_1, 0.5f);
         e_SkillEffect = Factory.Instance.GetHunterESkill1(attackTransform.position, Vector3.zero);
         attack.StartCoroutine(OnZoom());
     }
@@ -194,6 +199,7 @@ public class HunterClass : BaseClass, IClass
     /// </summary>
     void E_Skill2(Transform _)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_H_2, 0.5f);
         Factory.Instance.GetHunterESkill2(e_SkillEffect.transform.position, e_SkillEffect.transform.rotation.eulerAngles);
     }
 
@@ -212,6 +218,7 @@ public class HunterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_H_1, 0.5f);
         Factory.Instance.GetHunterRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 

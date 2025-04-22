@@ -18,10 +18,12 @@ public class ClassSlotUI : MonoBehaviour, IPointerClickHandler
 
     // 컴포넌트들
     WeaponChangeUI weaponChange;
+    AudioManager audioManager;
 
     private void Awake()
     {
         weaponChange = GetComponentInParent<WeaponChangeUI>();
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Start()
@@ -36,6 +38,7 @@ public class ClassSlotUI : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f); // 클릭 소리 재생
             onChangeClass?.Invoke(classSlot);   // 델리게이트 실행
         }
     }

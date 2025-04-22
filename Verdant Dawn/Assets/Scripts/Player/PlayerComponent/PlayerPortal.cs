@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -56,6 +54,7 @@ public class PlayerPortal : MonoBehaviour
 
     // 컴포넌트들
     NavMeshAgent agent;
+    AudioManager audioManager;
 
     // 레이어 마스크
     int playerLayer;
@@ -63,6 +62,7 @@ public class PlayerPortal : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        audioManager = GameManager.Instance.AudioManager;
         portalLayer = LayerMask.NameToLayer("Portal");
     }
 
@@ -98,6 +98,7 @@ public class PlayerPortal : MonoBehaviour
     /// <param name="portal">포탈</param>
     public void GetPortal(Portal portal)
     {
+        audioManager.PlaySound2D(AudioCode.Portal);
         currentMap = portal.connectMap;
         onLocalPortal?.Invoke(currentMap);
         StartCoroutine(PortalCoroutine(portal));

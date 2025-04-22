@@ -142,6 +142,7 @@ public class FighterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.BaseAttack_F, 0.5f);
         Factory.Instance.GetFistEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -151,6 +152,7 @@ public class FighterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.WSkill_F_1, 0.5f);
         w_SkillEffect = Factory.Instance.GetFighterWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -161,6 +163,7 @@ public class FighterClass : BaseClass, IClass
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_F_2, 0.5f);
         Factory.Instance.GetFighterWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -171,6 +174,7 @@ public class FighterClass : BaseClass, IClass
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_F_2, 0.5f);
         Factory.Instance.GetFighterWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -180,6 +184,7 @@ public class FighterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_F_1, 0.5f);
         Factory.Instance.GetFighterESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -189,6 +194,7 @@ public class FighterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill2(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_F_2, 0.5f);
         Factory.Instance.GetFighterESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -198,6 +204,7 @@ public class FighterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill3(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_F_3, 0.5f);
         Factory.Instance.GetFighterESkill3(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -207,6 +214,7 @@ public class FighterClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_F_1, 0.5f);
         r_SkillEffect = Factory.Instance.GetFighterRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -217,6 +225,7 @@ public class FighterClass : BaseClass, IClass
     void R_Skill2(Transform attackTransform)
     {
         r_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.RSkill_F_2, 0.5f);
         Factory.Instance.GetFighterRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 

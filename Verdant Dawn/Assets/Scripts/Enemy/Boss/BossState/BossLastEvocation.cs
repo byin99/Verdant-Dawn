@@ -117,6 +117,7 @@ public class BossLastEvocation : BossBase
 
         // Evocation 시작
         animator.SetTrigger(Roar_Hash);
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.BossEvocation], sender.transform.position);
         Factory.Instance.GetBossEvocation_B(sender.transform.position);
         RandomEvocation(sender);
 

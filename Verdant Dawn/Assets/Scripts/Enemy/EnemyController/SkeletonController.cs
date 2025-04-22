@@ -29,6 +29,7 @@ public class SkeletonController : EnemyController
     /// </summary>
     protected override void AttackEffect1()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemySlash], attackTransform.position);
         Factory.Instance.GetSkeletonAttack(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 }

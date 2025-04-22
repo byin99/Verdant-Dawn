@@ -29,6 +29,7 @@ public class ItemData_HealingPotion : ItemData, IUsable
         {
             if (player.CanHeal)
             {
+                GameManager.Instance.AudioManager.PlaySound2D(AudioCode.ItemUse);
                 player.HealthHeal(healRatio);    // 최대 HP의 healRatio만큼 즉시 증가
                 Factory.Instance.GetHealingPotion();
                 result = true;

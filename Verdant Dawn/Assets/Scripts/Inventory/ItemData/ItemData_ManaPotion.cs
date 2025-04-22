@@ -32,6 +32,7 @@ public class ItemData_ManaPotion : ItemData, IUsable
         IUsablePotion player = target.GetComponent<IUsablePotion>();
         if (player != null)
         {
+            GameManager.Instance.AudioManager.PlaySound2D(AudioCode.ItemUse);
             ItemData itemData = GameManager.Instance.ItemDataManager[ItemCode.ManaPotion];
             player.BoostMaxMana(itemData, maxManaRatio, buffTime);    // 최대 MP의 maxManaRatio만큼 증가
             Factory.Instance.GetManaPotion();

@@ -36,6 +36,7 @@ public class QuestRewardUI : MonoBehaviour
     CanvasGroup canvasGroup;
     ItemDataManager itemDataManager;
     PlayerQuest player;
+    AudioManager audioManager;
     NPC npc;
 
     private void Awake()
@@ -48,12 +49,17 @@ public class QuestRewardUI : MonoBehaviour
 
         itemDataManager = GameManager.Instance.ItemDataManager;
         player = GameManager.Instance.PlayerQuest;
+        audioManager = GameManager.Instance.AudioManager;
         npc = GameManager.Instance.NPC;
     }
 
     private void Start()
     {
-        acceptButton.onClick.AddListener(OnAcceptButton);
+        acceptButton.onClick.AddListener(() => 
+        {
+            audioManager.PlaySound2D(AudioCode.ItemGet);
+            OnAcceptButton(); 
+        });
 
         npc.onQuestReward += ShowQuestRewardUI;
         player.onChangeQuest += ChangeRewardUI;

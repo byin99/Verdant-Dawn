@@ -137,6 +137,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.BaseAttack_B, 0.5f);
         Factory.Instance.GetGreatSwordEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -146,6 +147,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.WSkill_B_1, 0.5f);
         w_SkillEffect = Factory.Instance.GetBerserkerWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -156,6 +158,7 @@ public class BerserkerClass : BaseClass, IClass
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_B_2, 0.5f);
         Factory.Instance.GetBerserkerWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -166,6 +169,7 @@ public class BerserkerClass : BaseClass, IClass
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_B_2, 0.5f);
         Factory.Instance.GetBerserkerWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -175,6 +179,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_B_1, 0.5f);
         Factory.Instance.GetBerserkerESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -184,6 +189,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill2(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_B_2, 0.5f);
         Factory.Instance.GetBerserkerESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -193,6 +199,7 @@ public class BerserkerClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_B_1, 0.5f);
         r_SkillEffect = Factory.Instance.GetBerserkerRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
         Factory.Instance.GetBerserkerRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }

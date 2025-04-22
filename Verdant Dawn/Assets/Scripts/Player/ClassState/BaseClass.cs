@@ -26,6 +26,7 @@ public class BaseClass : IState<PlayerClass>
     protected PlayerAttack attack;
     protected PlayerInputController input;
     protected SkillBarUI skillBarUI;
+    protected AudioManager audioManager;
 
     /// <summary>
     /// 장비하는 코루틴 저장용(무기를 장비하는 도중에 다른 무기로 바꿀때 이전 코루틴 제거용)
@@ -77,6 +78,11 @@ public class BaseClass : IState<PlayerClass>
         if (skillBarUI == null)
         {
             skillBarUI = UIManager.Instance.SkillBarUI;
+        }
+
+        if (audioManager == null)
+        {
+            audioManager = GameManager.Instance.AudioManager;
         }
     }
 

@@ -115,6 +115,7 @@ public class BossController : RecycleObject
     // 컴포넌트들
     Animator animator;
     NavMeshAgent agent;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -137,6 +138,7 @@ public class BossController : RecycleObject
         attackTransform = transform.GetChild(4);
 
         skinnedMeshRenderer = transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
+        audioManager = GameManager.Instance.AudioManager;
 
         pool = transform.parent;
     }
@@ -194,6 +196,7 @@ public class BossController : RecycleObject
     /// </summary>
     void AttackEffect1()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.BossSlash], attackTransform.position);
         if (isBerserk)
             Factory.Instance.GetBossAttack1_B(attackTransform.position, attackTransform.rotation.eulerAngles);
         else
@@ -205,6 +208,7 @@ public class BossController : RecycleObject
     /// </summary>
     void AttackEffect2()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.BossWhip], attackTransform.position);
         if (isBerserk)
             Factory.Instance.GetBossAttack2_B(attackTransform.position, attackTransform.rotation.eulerAngles);
         else
@@ -216,6 +220,15 @@ public class BossController : RecycleObject
     /// </summary>
     void RoarEffect()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.BossRoar], attackTransform.position);
         Factory.Instance.GetBossRoar(attackTransform.position, attackTransform.rotation.eulerAngles);
+    }
+
+    /// <summary>
+    /// 보스가 걷는 소리를 입히는 함수(Animation Clip용)
+    /// </summary>
+    void BossFootStepSound()
+    {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.BossStep], transform.position);
     }
 }

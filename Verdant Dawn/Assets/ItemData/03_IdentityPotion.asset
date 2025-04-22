@@ -18,3 +18,4 @@ MonoBehaviour:
     \uCC44\uC6CC\uC90D\uB2C8\uB2E4."
   itemIcon: {fileID: 21300000, guid: 6556b1366ecf2cc378607c5238561531, type: 3}
   maxStackCount: 99
+  itemAudioClip: {fileID: 8300000, guid: bcb403ff48d65bf4ca88bf19d7c13e24, type: 3}

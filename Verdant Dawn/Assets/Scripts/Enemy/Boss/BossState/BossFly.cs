@@ -101,6 +101,7 @@ public class BossFly : BossBase
             yield return null;
         }
 
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.BossDown], bossRedFloorboard.transform.position);
         // 이펙트 및 데미지 주기
         if (sender.isBerserk)
         {

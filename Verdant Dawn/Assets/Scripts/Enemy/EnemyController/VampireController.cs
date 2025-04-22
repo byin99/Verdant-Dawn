@@ -30,6 +30,7 @@ public class VampireController : EnemyController
     /// </summary>
     protected override void AttackEffect1()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemyScratch], attackTransform.position);
         Factory.Instance.GetVampireAttack1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -38,6 +39,7 @@ public class VampireController : EnemyController
     /// </summary>
     protected override void AttackEffect2()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemyBite], attackTransform.position);
         Factory.Instance.GetVampireAttack2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 }

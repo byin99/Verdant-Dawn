@@ -146,6 +146,7 @@ public class MagicianClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.BaseAttack_M, 0.5f);
         Factory.Instance.GetStaffEffect(attackTransform.position, attack.transform.rotation.eulerAngles);
     }
 
@@ -155,6 +156,7 @@ public class MagicianClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.WSkill_M_1, 0.5f);
         w_SkillEffect = Factory.Instance.GetMagicianWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -165,6 +167,7 @@ public class MagicianClass : BaseClass, IClass
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_M_2, 0.5f);
         Factory.Instance.GetMagicianWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -175,6 +178,7 @@ public class MagicianClass : BaseClass, IClass
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_M_2, 0.5f);
         Factory.Instance.GetMagicianWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -184,6 +188,7 @@ public class MagicianClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_M_1, 0.5f);
         e_SkillEffect1 = Factory.Instance.GetMagicianESkill1(attackTransform.position, Vector3.zero);
     }
 
@@ -200,6 +205,7 @@ public class MagicianClass : BaseClass, IClass
     /// </summary>
     void E_Skill3(Transform _)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_M_2, 0.5f);
         Factory.Instance.GetMagicianESkill3(e_SkillEffect2.transform.position, e_SkillEffect2.transform.rotation.eulerAngles);
     }
 
@@ -217,6 +223,7 @@ public class MagicianClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_M_1, 0.5f);
         Factory.Instance.GetMagicianRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -226,6 +233,7 @@ public class MagicianClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill2(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_M_2, 0.5f);
         Factory.Instance.GetMagicianRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 

@@ -27,6 +27,7 @@ public class BossBase : IState<BossController>
     protected BossHPUI bossHPUI;
     protected BossEffect bossEffect;
     protected Volume volume;
+    protected AudioManager audioManager;
 
     // 애니메이터 해시값들
     protected readonly int Idle_Hash = Animator.StringToHash("Idle");
@@ -84,6 +85,11 @@ public class BossBase : IState<BossController>
         if (volume == null)
         {
             volume = GameManager.Instance.Volume;
+        }
+
+        if (audioManager == null)
+        {
+            audioManager = GameManager.Instance.AudioManager;
         }
     }
 

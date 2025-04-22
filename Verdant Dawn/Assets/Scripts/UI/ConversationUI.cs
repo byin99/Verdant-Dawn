@@ -19,6 +19,7 @@ public class ConversationUI : MonoBehaviour
     // 컴포넌트들
     CanvasGroup canvasGroup;
     NPC npc;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -27,16 +28,26 @@ public class ConversationUI : MonoBehaviour
 
         canvasGroup = GetComponent<CanvasGroup>();
         npc = GameManager.Instance.NPC;
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Start()
     {
         HideConversationUI();
-        offButton.onClick.AddListener(HideConversationUI);
 
-        npc.onConversation += ShowConversationUI;
+        offButton.onClick.AddListener(() =>
+        {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
+            HideConversationUI();
+        });
+
+        npc.onConversation += () => 
+        {
+            audioManager.PlaySound2D(AudioCode.Interaction, 1.0f);
+            ShowConversationUI();
+        };
+
         npc.onChangeConversation += ChangeConversationText;
-
     }
 
     /// <summary>

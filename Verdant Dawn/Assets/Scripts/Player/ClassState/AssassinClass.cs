@@ -148,6 +148,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void AttackEffect(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.BaseAttack_A, 0.25f);
         Factory.Instance.GetDaggerEffect(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -157,6 +158,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     public void W_Skill_Prepare(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.WSkill_A_1, 0.5f);
         w_SkillEffect = Factory.Instance.GetAssassinWSkill_Prepare(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -167,6 +169,7 @@ public class AssassinClass : BaseClass, IClass
     public void W_Skill_Success(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_A_2, 0.5f);
         w_SkillEffect = Factory.Instance.GetAssassinWSkill_Success(attackTransform.position, attackTransform.rotation.eulerAngles);
         attack.StartCoroutine(AssassinChargingSkill());
     }
@@ -178,6 +181,7 @@ public class AssassinClass : BaseClass, IClass
     public void W_Skill_Fail(Transform attackTransform)
     {
         w_SkillEffect.gameObject.SetActive(false);
+        audioManager.PlaySound2D(AudioCode.WSkill_A_2, 0.5f);
         w_SkillEffect = Factory.Instance.GetAssassinWSkill_Fail(attackTransform.position, attackTransform.rotation.eulerAngles);
         attack.StartCoroutine(AssassinChargingSkill());
     }
@@ -188,6 +192,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_A_1, 0.5f);
         Factory.Instance.GetAssassinESkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -197,6 +202,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill2(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_A_2, 0.5f);
         Factory.Instance.GetAssassinESkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -206,6 +212,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void E_Skill3(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.ESkill_A_3, 0.5f);
         Factory.Instance.GetAssassinESkill3(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -215,6 +222,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill1(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_A_1, 0.5f);
         r_SkillEffect = Factory.Instance.GetAssassinRSkill1(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 
@@ -224,6 +232,7 @@ public class AssassinClass : BaseClass, IClass
     /// <param name="attackTransform">LevelUpEffect 소환 트랜스폼</param>
     void R_Skill2(Transform attackTransform)
     {
+        audioManager.PlaySound2D(AudioCode.RSkill_A_2, 0.5f);
         r_SkillEffect.gameObject.SetActive(false);
         Factory.Instance.GetAssassinRSkill2(attackTransform.position, attackTransform.rotation.eulerAngles);
     }

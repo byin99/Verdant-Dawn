@@ -20,6 +20,7 @@ public class ItemData_IdentityPotion : ItemData, IUsable
         IUsablePotion player = target.GetComponent<IUsablePotion>();
         if (player != null)
         {
+            GameManager.Instance.AudioManager.PlaySound2D(AudioCode.ItemUse);
             player.FillIdentityGauge();    // 아이덴티티 게이지를 채워줌
             Factory.Instance.GetIdentityPotion();
             result = true;

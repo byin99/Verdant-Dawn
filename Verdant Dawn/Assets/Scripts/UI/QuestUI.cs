@@ -8,11 +8,6 @@ using UnityEngine.UI;
 public class QuestUI : MonoBehaviour
 {
     /// <summary>
-    /// 이 퀘스트의 데이터
-    /// </summary>
-    QuestData questData;
-
-    /// <summary>
     /// 거절 버튼
     /// </summary>
     Button cancelButton;
@@ -51,6 +46,7 @@ public class QuestUI : MonoBehaviour
     CanvasGroup canvasGroup;
     PlayerQuest player;
     ItemDataManager itemDataManager;
+    AudioManager audioManager;
     NPC npc;
 
     private void Awake()
@@ -66,15 +62,28 @@ public class QuestUI : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         player = GameManager.Instance.PlayerQuest;
         itemDataManager = GameManager.Instance.ItemDataManager;
+        audioManager = GameManager.Instance.AudioManager;
         npc = GameManager.Instance.NPC;
     }
 
     private void Start()
     {
-        acceptButton.onClick.AddListener(AcceptQuest);
-        cancelButton.onClick.AddListener(CancelQuest);
+        acceptButton.onClick.AddListener(() => {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
+            AcceptQuest();
+        });
 
-        npc.onQuestStart += ShowQuestUI;
+        cancelButton.onClick.AddListener(() => {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
+            CancelQuest();
+        });
+
+        npc.onQuestStart += () =>
+        {
+            audioManager.PlaySound2D(AudioCode.Interaction, 1.0f);
+            ShowQuestUI();
+        };
+
         npc.onQuestChanged += ChangeQuest;
 
         HideQuestUI();
@@ -87,7 +96,6 @@ public class QuestUI : MonoBehaviour
     /// <param name="content">퀘스트 내용</param>
     void ChangeQuest(QuestData currentQuest)
     {
-        questData = currentQuest;
         questTitle.text = currentQuest.questTitle;
         questContent.text = currentQuest.questContent;
         questRewardItemImage.sprite = itemDataManager[currentQuest.questItemCode].itemIcon;

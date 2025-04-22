@@ -374,6 +374,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     Rigidbody rigid;
     NavMeshAgent agent;
     Player player;
+    AudioManager audioManager;
 
     // 애니메이터용 해시값
     readonly int Hit_Hash = Animator.StringToHash("Hit");
@@ -389,6 +390,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
         rigid = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         player = GetComponent<Player>();
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Start()
@@ -477,6 +479,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     /// </summary>
     public void Die()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.PlayerDie], transform.position);
         animator.SetTrigger(Die_Hash);
         gameObject.layer = invincibleLayer;
         onDie?.Invoke();
@@ -501,6 +504,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
             HP -= realDamage;
             hitPoint = damagePoint;
             hitPoint.y = 0;
+            AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemyToPlayer], damagePoint);
             onHit?.Invoke(realDamage, damagePoint);
         }
     }
@@ -551,6 +555,7 @@ public class PlayerStatus : MonoBehaviour, IHealth, IMana, IBattle, IDamageable,
     /// </summary>
     void LevelUp()
     {
+        audioManager.PlaySound2D(AudioCode.LevelUp, 0.05f);
         level++;
         baseAttackPower *= 1.2f;
         baseDefensePower *= 1.2f;

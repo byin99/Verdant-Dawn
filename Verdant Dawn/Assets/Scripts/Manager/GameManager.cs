@@ -77,6 +77,11 @@ public class GameManager : Singleton<GameManager>
     SubmapManager submapManager;
 
     /// <summary>
+    /// AudioManager
+    /// </summary>
+    AudioManager audioManager;
+
+    /// <summary>
     /// Intensity 조절을 위한 컴포넌트
     /// </summary>
     [SerializeField]
@@ -293,6 +298,21 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
+    /// SoundManager를 공유받을 프로퍼티(읽기 전용)
+    /// </summary>
+    public AudioManager AudioManager
+    {
+        get
+        {
+            if (audioManager == null)
+            {
+                audioManager = FindAnyObjectByType<AudioManager>();
+            }
+            return audioManager;
+        }
+    }
+
+    /// <summary>
     /// Volume를 공유받을 프로퍼티(읽기 전용)
     /// </summary>
     public Volume Volume
@@ -305,6 +325,7 @@ public class GameManager : Singleton<GameManager>
         base.OnPreInitialize();
         itemDataManager = GetComponent<ItemDataManager>();
         questManager = GetComponent<QuestManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
         submapManager = GetComponent<SubmapManager>();
         submapManager.PreInitialize();
     }

@@ -15,7 +15,6 @@ public class WeaponChangeUI : MonoBehaviour
     PlayerInputActions inputActions;
     CanvasGroup canvasGroup;
     PlayerClass playerClass;
-    PlayerAttack playerAttack;
     Player player;
 
     private void Awake()
@@ -24,7 +23,6 @@ public class WeaponChangeUI : MonoBehaviour
         inputActions = new PlayerInputActions();
         canvasGroup = GetComponent<CanvasGroup>();
         playerClass = GameManager.Instance.PlayerClass;
-        playerAttack = GameManager.Instance.PlayerAttack;
         player = GameManager.Instance.Player;
     }
 

@@ -21,6 +21,7 @@ public class ReviveUI : MonoBehaviour
     Player player;
     PlayerStatus playerStatus;
     Vignette vignette;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -29,13 +30,15 @@ public class ReviveUI : MonoBehaviour
         player = GameManager.Instance.Player;
         playerStatus = GameManager.Instance.PlayerStatus;
         GameManager.Instance.Volume.profile.TryGet<Vignette>(out vignette);
-        
+        audioManager = GameManager.Instance.AudioManager;
+
     }
 
     private void Start()
     {
         reviveButton.onClick.AddListener(() =>
         {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
             HideReviveUI();
             player.onRevive?.Invoke();
         });

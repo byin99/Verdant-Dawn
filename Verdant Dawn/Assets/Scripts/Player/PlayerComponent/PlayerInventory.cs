@@ -28,6 +28,9 @@ public class PlayerInventory : MonoBehaviour, IInitializable
     /// </summary>
     public float ItemPickUpRange => itemPickUpRange;
 
+    // 컴포넌트들
+    AudioManager audioManager;   // 오디오 매니저
+
     /// <summary>
     /// 인벤토리 초기화 함수
     /// </summary>
@@ -36,6 +39,7 @@ public class PlayerInventory : MonoBehaviour, IInitializable
         PlayerStatus player = GetComponent<PlayerStatus>();
         inventory = new Inventory(player);
         UIManager.Instance.InventoryUI.InitializeInventory(inventory);
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     /// <summary>
@@ -43,6 +47,7 @@ public class PlayerInventory : MonoBehaviour, IInitializable
     /// </summary>
     public void GetPickUpItems()
     {
+
         // 주변에 있는 아이템(Item레이어로 되어있다)을 모두 획득해서 인벤토리에 추가하기
         Collider[] itemColliders = Physics.OverlapSphere(transform.position, itemPickUpRange, LayerMask.GetMask("Item"));
         foreach (Collider collider in itemColliders)
@@ -54,7 +59,11 @@ public class PlayerInventory : MonoBehaviour, IInitializable
                 // 인베토리로 들어가는 아이템
                 if (inventory.AddItem(item.ItemData.code))  // 인벤토리에 추가 시도
                 {
-                    item.ItemCollected();   // 추가에 성공했으면 비활성화시켜서 풀에 되돌리기
+                    // 주변에 있는 아이템을 줍는 소리 재생
+                    audioManager.PlaySound2D(AudioCode.ItemGet);
+
+                    // 추가에 성공했으면 비활성화시켜서 풀에 되돌리기
+                    item.ItemCollected();   
                 }
             }
         }

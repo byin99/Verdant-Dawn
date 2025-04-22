@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour
     /// <summary>
     /// 마우스가 UI위에 있는지 체크하는 변수
     /// </summary>
+    [HideInInspector]
     public bool onPointer = false;
 
     /// <summary>
@@ -38,6 +39,7 @@ public class InventoryUI : MonoBehaviour
 
     // 컴포넌트들
     PlayerInputActions inputActions;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -59,6 +61,8 @@ public class InventoryUI : MonoBehaviour
 
         child = transform.GetChild(4);
         tempSlotUI = child.GetComponent<InvenTempSlotUI>();
+
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void OnEnable()
@@ -109,6 +113,7 @@ public class InventoryUI : MonoBehaviour
     /// <param name="index">드래그가 시작된 슬롯의 인덱스</param>
     private void OnItemMoveBegin(uint index)
     {
+        audioManager.PlaySound2D(AudioCode.ItemPick);
         detailInfoUI.isPause = true;        // 상세정보창 일시 정지
         inven.MoveItem(index, tempSlotUI.Index);
     }
@@ -121,6 +126,7 @@ public class InventoryUI : MonoBehaviour
     {
         if (index.HasValue)
         {
+            audioManager.PlaySound2D(AudioCode.ItemDrop);
             inven.MoveItem(tempSlotUI.Index, index.Value);
 
             if (tempSlotUI.InvenSlot.IsEmpty)       // 임시슬롯이 비어있을 때만 상세정보창 열기
@@ -143,6 +149,8 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
+            // 임시 슬롯에 아이템이 있을 때는 아이템을 드랍
+            audioManager.PlaySound2D(AudioCode.ItemDrop);
             OnItemMoveEnd(index);
         }
     }

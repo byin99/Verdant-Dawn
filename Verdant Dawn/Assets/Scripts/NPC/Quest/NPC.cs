@@ -176,6 +176,11 @@ public class NPC : MonoBehaviour, IQuestGiver
     /// <param name="player">퀘스트를 받는 사람</param>
     public void GiveQuest(IQuestReceiver player)
     {
+        if (currentQuest is QuestData_Suppression)
+        {
+            QuestData_Suppression suppressionQuest = currentQuest as QuestData_Suppression;
+            suppressionQuest.currentEnemyCount = 0;
+        }
         player.ReceiveQuest(currentQuest);
         onQuestProccess?.Invoke();
         CurrentState = QuestState.InProgress;

@@ -52,6 +52,7 @@ public class StatusUI : MonoBehaviour
     PlayerClass playerClass;
     CanvasGroup canvasGroup;
     PlayerInputActions playerInputActions;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -81,6 +82,8 @@ public class StatusUI : MonoBehaviour
         manaText = child.GetComponent<TextMeshProUGUI>();
 
         playerInputActions = new PlayerInputActions();
+
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Start()
@@ -92,7 +95,11 @@ public class StatusUI : MonoBehaviour
         playerStatus.onStatus += UpdateStatus;
 
         // 클릭했을 때 창이 닫히게 만들기
-        closeButton.onClick.AddListener(CloseStatusUI);
+        closeButton.onClick.AddListener(() => 
+        {
+            audioManager.PlaySound2D(AudioCode.Click, 1.0f);
+            CloseStatusUI(); 
+        });
     }
 
     private void OnEnable()
@@ -127,6 +134,7 @@ public class StatusUI : MonoBehaviour
     /// </summary>
     void ShowStatusUI()
     {
+        audioManager.PlaySound2D(AudioCode.Interaction, 1.0f);
         canvasGroup.alpha = 1.0f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;

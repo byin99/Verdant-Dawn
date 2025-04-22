@@ -78,6 +78,7 @@ public class UndeadController : EnemyController
     /// </summary>
     protected override void AttackEffect1()
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.EnemySlash], attackTransform.position);
         Factory.Instance.GetUndeadAttack(attackTransform.position, attackTransform.rotation.eulerAngles);
     }
 }

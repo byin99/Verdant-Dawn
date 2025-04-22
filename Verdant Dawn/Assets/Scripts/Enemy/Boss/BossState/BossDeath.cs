@@ -38,6 +38,7 @@ public class BossDeath : BossBase
     /// <returns></returns>
     IEnumerator Dissolve(BossController sender)
     {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.DemonLoadDie], sender.transform.position); // 보스 사망 사운드 재생
         bossHPUI.StartCoroutine(bossHPUI.OffBossUICoroutine()); // 보스 체력바 비활성화
         animator.SetTrigger(Death_Hash);                        // 죽는 애니메이션 실행
 

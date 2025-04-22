@@ -15,10 +15,14 @@ public class DungeonResultUI : MonoBehaviour
     /// </summary>
     TextMeshProUGUI clearText;
 
+    // 컴포넌트들
+    AudioManager audioManager;
+
     private void Awake()
     {
         Transform child = transform.GetChild(0);
         clearText = child.GetComponent<TextMeshProUGUI>();
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     /// <summary>
@@ -26,6 +30,7 @@ public class DungeonResultUI : MonoBehaviour
     /// </summary>
     public void ClearDungeon()
     {
+        audioManager.PlaySound2D(AudioCode.DungeonClear);
         StartCoroutine(ClearDungeonCoroutine());
     }
 

@@ -21,6 +21,9 @@ public class InvenTempSlotUI : SlotUI_Base
     /// </summary>
     PlayerInventory owner;
 
+    // 컴포넌트들
+    AudioManager audioManager;
+
     protected override void Awake()
     {
         base.Awake();
@@ -28,6 +31,7 @@ public class InvenTempSlotUI : SlotUI_Base
         rectTransform = GetComponent<RectTransform>();
         owner = GameManager.Instance.PlayerInventory;
         canvas = GetComponentInParent<Canvas>();
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Update()
@@ -58,6 +62,8 @@ public class InvenTempSlotUI : SlotUI_Base
             Ray ray = Camera.main.ScreenPointToRay(screen);     // 레이 구하기
             if (Physics.Raycast(ray, out RaycastHit hitInfo, 1000.0f, LayerMask.GetMask("Ground"))) // Ground레이어를 가진 물체와 충돌 확인
             {
+                audioManager.PlaySound2D(AudioCode.ItemDrop);
+
                 Vector3 dropPosition = hitInfo.point;           // 충돌한 위치를 드랍위치로 설정
                 dropPosition.y = 0;
     

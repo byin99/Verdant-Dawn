@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
     /// <summary>
     /// 구르는 힘
     /// </summary>
-    public float rollPower = 10.0f;
+    public float rollPower = 3.0f;
 
     /// <summary>
     /// 구르기 쿨타임
@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
     Rigidbody rigid;
     Animator animator;
     Player player;
+    AudioManager audioManager;
 
     // Animator에 있는 Parameter를 Hash값으로 저장하기
     readonly int Move_Hash = Animator.StringToHash("Move");
@@ -80,6 +81,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
         rigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         player = GetComponent<Player>();
+        audioManager = GameManager.Instance.AudioManager;
     }
 
     private void Update()
@@ -128,7 +130,7 @@ public class PlayerMovement : MonoBehaviour, IInitializable
 
                 // 플레이어 마우스 방향으로 몸 회전하기
                 transform.LookAt(position);
-
+                AudioSource.PlayClipAtPoint(audioManager[AudioCode.Roll], transform.position); // 구르기 소리 재생
                 StartCoroutine(PerformedRoll());
             }
         }
@@ -184,5 +186,13 @@ public class PlayerMovement : MonoBehaviour, IInitializable
     public void Initialize()
     {
         agent.enabled = true; // NavMeshAgent 활성화
+    }
+
+    /// <summary>
+    /// 발자국 소리 재생 함수(Animation Clip용)
+    /// </summary>
+    void FootSteopSound()
+    {
+        AudioSource.PlayClipAtPoint(audioManager[AudioCode.FootStep], transform.position);
     }
 }
